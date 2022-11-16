@@ -3,7 +3,7 @@
 Sektionen har hovedsageligt tekniske medarbejdere med kompetencer i dataudtræk og datafremstilling (7) og økonomi medarbejdere (2), samt ledelsesmedarbejdere (2) til at understøtte disse.
 
 ### Formål
-Denne wiki er tiltænkt som introduktionsmateriale til nye medarbejdere og som et opslagværk til erfarne medarbejdere hos Data og Rapportering. De forskellige sektioner og sider er underbygget øvelser som kan findes i dette private *[repository](https://github.com/MedTekHuset/CHRU-DATA)*.
+Denne wiki er tiltænkt som introduktionsmateriale til nye medarbejdere og som et opslagværk til erfarne medarbejdere hos Data og Rapportering. De forskellige sektioner og sider er underbygget øvelser som kan findes i dette private *[repository](https://github.com/DataOgDigitalisering/FortroligInformation)*.
 
 ### SOFTWARE OG OPSÆTNING
 Følgende software er en forudsætning og kan findes i Softwareshoppen. Versioner pr. 2022-09-08.
@@ -26,7 +26,7 @@ Hvor specifikke emner med fordel kan gennemgås ifm. løsning af opgaver er rele
 
 > ### **ØVELSE 1 - TJEK AF ADGANGE**
 > Denne øvelse går ud på at teste adgange. Følg nedenstående link til et SQL-script. Åbn og eksekver dette script i SQL Server Management Studio for at undersøge om du har alle nødvendige adgange. Kørslen bør tage omkring 10-15 minutter og returnere en tabel, der beskriver dine adgange.
->*[Link til SQL-SCRIPT.](https://github.com/MedTekHuset/CHRU-DATA/blob/main/%C3%98velse1/ex_dataadgange.sql)*
+>*[Link til SQL-SCRIPT.](https://github.com/DataOgDigitalisering/FortroligInformation/blob/main/%C3%98velse1/ex_dataadgange.sql)*
 
 > ### **ØVELSE 2 - BRUG AF ADGANGE**
 > Hospital XXX ønsker optælling af alle pr. dd. månedslønnede hhv. fuld- og deltidsansatte sygeplejersker udspecificeret for alle sygeplejegrupper under fællesbetegnelsen STILKO2TXT = ’Sygepl. Pers’
