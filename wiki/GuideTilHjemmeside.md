@@ -10,7 +10,7 @@ En ny side oprettes i Github Pages-repositoriet, dokumentation. Navigér ind I m
 Herfra kan indholdet til den nye wiki-side skrives ind med markdown-syntax. Formateringen på indholdet kan løbende tjekkes ved at benytte ”Preview” funktionen.
 Når indholdet er færdigt og filen er gemt, navigeres der ud til roden og derefter ind til ’_includes’. Her åbnes filen ’sidebar-html’. Denne skal man redigere ved at trykke på blyanten og tilføje følgende linje
 ```
-<li><a href="{{ '/NavnPåSide| relative_url }}">SidebarNavnTilSide</a></li>.
+<li><a href="{{ '/NavnPåSide| relative_url }}">Sidebar titelnavn til side</a></li>.
 ```
 
 NavnPåSide er det fil-navn, siden er gemt som under dokumentation/wiki/. SidebarNavnTilSide er det navn, der kommer til at stå i sidebaren, der linker til wiki-siden.
