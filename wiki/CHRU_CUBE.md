@@ -68,7 +68,6 @@ https://www.tablesgenerator.com/markdown_tables
 | 31     | OffsetAar                  | int      |             |
 | 32     | Filterdatoer               | varchar  |             |
 
-
 ### v_DimAnsættelse
 |     KolNum    |     KolNavn                    |     Datatype    |     Beskrivelse    |
 |---------------|--------------------------------|-----------------|--------------------|
@@ -110,14 +109,12 @@ https://www.tablesgenerator.com/markdown_tables
 |     36        |     AnsLængdeTjnr_Aktuel       |     int         |                    |
 |     37        |     AnsLængdeCPR_Aktuel        |     int         |                    |
 
-
 ### v_DimPerson
 |     KolNum    |     KolNavn        |     Datatype    |     Beskrivelse    |
 |---------------|--------------------|-----------------|--------------------|
 |     1         |     ID             |     int         |                    |
 |     2         |     Navn           |     varchar     |                    |
 |     3         |     Fødselsdato    |     date        |                    |
-
 
 ### v_DimOrganisation
 |     KolNum    |     KolNavn              |     Datatype    |     Beskrivelse    |
@@ -153,6 +150,3 @@ https://www.tablesgenerator.com/markdown_tables
 |     10        |     Uddannelseslæge       |     varchar     |                    |
 |     11        |     Leder                 |     varchar     |                    |
 |     12        |     AtypiskeStillinger    |     varchar     |                    |
-
-
-
