@@ -63,11 +63,20 @@ site_root:
 # git-wiki includes some internal themes that you can choose
 # check _layouts folder
 #
+#markdown: kramdown
+#highlighter: rouge
+
+# kramdown:
+#  input: GFM
+#  syntax_highlighter: rouge
+  
+  
 markdown: kramdown
-highlighter: prism
 kramdown:
-  input: GFM
-  syntax_highlighter: prism
+   syntax_highlighter_opts:
+      disable : true
+
+
 
 
 defaults:
