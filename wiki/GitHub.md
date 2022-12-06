@@ -3,7 +3,7 @@ I .....
 ## Best practice
 
 ### Second Code test
-```dax
+```java
 EVALUATE
 ADDCOLUMNS (
     FILTER (
