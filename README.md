@@ -8,11 +8,11 @@ Denne wiki er tiltænkt som introduktionsmateriale til nye medarbejdere og som e
 ### SOFTWARE OG OPSÆTNING
 Følgende software er en forudsætning og kan findes i Softwareshoppen. Versioner pr. 2022-09-08.
 
-* Microsoft SQL Server Management Studio v16.3 eller v18
-* Power BI september 2021
-* SQL Server Data Tools 15.9.3 Bundle
-  * Dax Studio v2.14.0
-  * Tabular Editor v2.13
+* Microsoft SQL Server Management Studio
+* Power BI desktop
+* SQL Server Data Tools Bundle
+  * Dax Studio
+  * Tabular Editor
 
 Hvor specifikke emner med fordel kan gennemgås ifm. løsning af opgaver er relevant for forståelse i en given kontekst kan anbefales, vil link være indsat.
 
