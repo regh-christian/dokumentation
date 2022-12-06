@@ -24,13 +24,11 @@ SELECT
 FROM INFORMATION_SCHEMA.COLUMNS
 WHERE TABLE_NAME = @tbl
 ```
+
 https://www.tablesgenerator.com/markdown_tables
 
 
-
-## Basis
-![Icons](https://github.com/DataOgDigitalisering/dokumentation/blob/master/Images/cube_model_basis.png?raw=true)
-
+## Tabeller
 
 ### v_DimTidDato
 | KolNum | KolNavn                    | Datatype | Beskrivelse |
