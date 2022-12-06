@@ -30,7 +30,8 @@ https://www.tablesgenerator.com/markdown_tables
 
 ## Tabeller
 
-### v_DimTidDato
+### v_DimTidData
+
 | KolNum | KolNavn                    | Datatype | Beskrivelse |
 |--------|----------------------------|----------|-------------|
 | 1      | Dato                       | date     |             |
@@ -66,85 +67,60 @@ https://www.tablesgenerator.com/markdown_tables
 | 31     | OffsetAar                  | int      |             |
 | 32     | Filterdatoer               | varchar  |             |
 
+
 ### v_DimAnsættelse
-|     KolNum    |     KolNavn                    |     Datatype    |     Beskrivelse    |
-|---------------|--------------------------------|-----------------|--------------------|
-|     1         |     ID                         |     int         |                    |
-|     2         |     StillingsID                |     int         |                    |
-|     3         |     OrganisationsID            |     int         |                    |
-|     4         |     NuværendeOrganisationID    |     int         |                    |
-|     5         |     AnsættelsesformID          |     int         |                    |
-|     6         |     PersonID                   |     int         |                    |
-|     7         |     Tjnr                       |     varchar     |                    |
-|     8         |     Jubilæumsdato              |     date        |                    |
-|     9         |     Ansættelsesdato            |     date        |                    |
-|     10        |     Anciennitetsdato           |     date        |                    |
-|     11        |     Start                      |     date        |                    |
-|     12        |     Slut                       |     date        |                    |
-|     13        |     OverenskomstID             |     int         |                    |
-|     14        |     Stat                       |     char        |                    |
-|     15        |     Tjko                       |     char        |                    |
-|     16        |     Beskdec                    |     numeric     |                    |
-|     17        |     Ansat                      |     varchar     |                    |
-|     18        |     Fuldtid                    |     varchar     |                    |
-|     19        |     AktuelRække                |     varchar     |                    |
-|     20        |     Månedslønnet               |     varchar     |                    |
-|     21        |     AnsatDagsDato              |     varchar     |                    |
-|     22        |     AnsatSeneste14Mdr          |     varchar     |                    |
-|     23        |     AktuelHovedansættelse      |     varchar     |                    |
-|     24        |     EksterntFinansieret        |     varchar     |                    |
-|     25        |     Standardpopulation         |     varchar     |                    |
-|     26        |     Hændelse                   |     varchar     |                    |
-|     27        |     Opdateringsdato            |     datetime    |                    |
-|     28        |     InstTjek                   |     varchar     |                    |
-|     29        |     AfdelingTjek               |     varchar     |                    |
-|     30        |     AfsnitTjek                 |     varchar     |                    |
-|     31        |     HændelseMellem             |     varchar     |                    |
-|     32        |     Hændelsesdato              |     date        |                    |
-|     33        |     TilInst                    |     varchar     |                    |
-|     34        |     AnsLængdeTjnr              |     int         |                    |
-|     35        |     AnsLængdeCPR               |     int         |                    |
-|     36        |     AnsLængdeTjnr_Aktuel       |     int         |                    |
-|     37        |     AnsLængdeCPR_Aktuel        |     int         |                    |
+
+| KolNum | KolNavn                 | Datatype | Beskrivelse |
+|--------|-------------------------|----------|-------------|
+| 1      | ID                      | int      |             |
+| 2      | StillingsID             | int      |             |
+| 3      | OrganisationsID         | int      |             |
+| 4      | NuværendeOrganisationID | int      |             |
+| 5      | AnsættelsesformID       | int      |             |
+| 6      | PersonID                | int      |             |
+| 7      | Tjnr                    | varchar  |             |
+| 8      | Jubilæumsdato           | date     |             |
+| 9      | Ansættelsesdato         | date     |             |
+| 10     | Anciennitetsdato        | date     |             |
+| 11     | Start                   | date     |             |
+| 12     | Slut                    | date     |             |
+| 13     | OverenskomstID          | int      |             |
+| 14     | Stat                    | char     |             |
+| 15     | Tjko                    | char     |             |
+| 16     | Beskdec                 | numeric  |             |
+| 17     | Ansat                   | varchar  |             |
+| 18     | Fuldtid                 | varchar  |             |
+| 19     | AktuelRække             | varchar  |             |
+| 20     | Månedslønnet            | varchar  |             |
+| 21     | AnsatDagsDato           | varchar  |             |
+| 22     | AnsatSeneste14Mdr       | varchar  |             |
+| 23     | AktuelHovedansættelse   | varchar  |             |
+| 24     | EksterntFinansieret     | varchar  |             |
+| 25     | Standardpopulation      | varchar  |             |
+| 26     | Hændelse                | varchar  |             |
+| 27     | Opdateringsdato         | datetime |             |
+| 28     | InstTjek                | varchar  |             |
+| 29     | AfdelingTjek            | varchar  |             |
+| 30     | AfsnitTjek              | varchar  |             |
+| 31     | HændelseMellem          | varchar  |             |
+| 32     | Hændelsesdato           | date     |             |
+| 33     | TilInst                 | varchar  |             |
+| 34     | AnsLængdeTjnr           | int      |             |
+| 35     | AnsLængdeCPR            | int      |             |
+| 36     | AnsLængdeTjnr_Aktuel    | int      |             |
+| 37     | AnsLængdeCPR_Aktuel     | int      |             |
 
 ### v_DimPerson
-|     KolNum    |     KolNavn        |     Datatype    |     Beskrivelse    |
-|---------------|--------------------|-----------------|--------------------|
-|     1         |     ID             |     int         |                    |
-|     2         |     Navn           |     varchar     |                    |
-|     3         |     Fødselsdato    |     date        |                    |
+
+| KolNum | KolNavn     | Datatype | Beskrivelse |
+|--------|-------------|----------|-------------|
+| 1      | ID          | int      |             |
+| 2      | Navn        | varchar  |             |
+| 3      | Fødselsdato | date     |             |
 
 ### v_DimOrganisation
-|     KolNum    |     KolNavn              |     Datatype    |     Beskrivelse    |
-|---------------|--------------------------|-----------------|--------------------|
-|     1         |     ID                   |     int         |                    |
-|     2         |     L1Code               |     varchar     |                    |
-|     3         |     L1Name               |     varchar     |                    |
-|     4         |     L2Code               |     varchar     |                    |
-|     5         |     L2Name               |     varchar     |                    |
-|     6         |     L3Code               |     varchar     |                    |
-|     7         |     L3Name               |     varchar     |                    |
-|     8         |     L4Code               |     varchar     |                    |
-|     9         |     L4Name               |     varchar     |                    |
-|     10        |     L5Code               |     varchar     |                    |
-|     11        |     L5Name               |     varchar     |                    |
-|     12        |     L6Code               |     varchar     |                    |
-|     13        |     L6Name               |     varchar     |                    |
-|     14        |     MedarbejdereAnsat    |     int         |                    |
+
 
 
 ### v_DimStilling
-|     KolNum    |     KolNavn               |     Datatype    |     Beskrivelse    |
-|---------------|---------------------------|-----------------|--------------------|
-|     1         |     ID                    |     int         |                    |
-|     2         |     L1Code                |     varchar     |                    |
-|     3         |     L1Name                |     varchar     |                    |
-|     4         |     L2Code                |     varchar     |                    |
-|     5         |     L2Name                |     varchar     |                    |
-|     6         |     L3Code                |     varchar     |                    |
-|     7         |     L3Name                |     varchar     |                    |
-|     8         |     L4Code                |     varchar     |                    |
-|     9         |     L4Name                |     varchar     |                    |
-|     10        |     Uddannelseslæge       |     varchar     |                    |
-|     11        |     Leder                 |     varchar     |                    |
-|     12        |     AtypiskeStillinger    |     varchar     |                    |
+
