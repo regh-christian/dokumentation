@@ -18,7 +18,7 @@ FROM INFORMATION_SCHEMA.COLUMNS
 WHERE TABLE_NAME = @tbl
 ```
 
-[https://www.tablesgenerator.com/markdown_tables](https://www.tablesgenerator.com/markdown_tables)
+<a href="https://www.tablesgenerator.com/markdown_tables" target="_blank">www.tablesgenerator.com/markdown_tables</a>
 
 
 
