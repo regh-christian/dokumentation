@@ -20,6 +20,9 @@ WHERE TABLE_NAME = @tbl
 
 <a href="https://www.tablesgenerator.com/markdown_tables" target="_blank">www.tablesgenerator.com/markdown_tables</a>
 
+[tables-generator](https://www.tablesgenerator.com/markdown_tables)
+
+
 
 
 ## Basis
