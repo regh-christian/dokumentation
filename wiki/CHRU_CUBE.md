@@ -14,6 +14,8 @@ FROM INFORMATION_SCHEMA.COLUMNS
 WHERE TABLE_NAME = @tbl
 ```
 
+
+
 ## Basis
 ![Icons](https://github.com/DataOgDigitalisering/dokumentation/blob/master/Images/cube_model_basis.png)
 
