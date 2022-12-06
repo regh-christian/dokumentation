@@ -17,7 +17,8 @@ Om konventioner for navngivning i hhv. measures og tabeller.
 ###	Oprydning
 Skal diskuteres og vedtages
 - Kontroller?
-- Roller?
+- Roller. Hvem gør/har ansvar for hvad?
+  - SQL, Git, dashboards, dokumentation
 - Intervaller
 
 <!--
@@ -27,6 +28,8 @@ Kuben består hovedsageligt af bearbejdet data fra SD. For at blive bekendt med 
 Du vil i det følgende blive præsenteret for overvejelser ifm. databearbejdning, ETL og measures. 
 •	Tabeller, views, measures mm. 
 -->
+
+
 
 > ### ØVELSE - XXX
 > TEKST TEKST TEKST
