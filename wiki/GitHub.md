@@ -3,7 +3,7 @@ I .....
 ## Best practice
 
 ### Second Code test
-```DAX
+```dax
 EVALUATE
 ADDCOLUMNS (
     FILTER (
