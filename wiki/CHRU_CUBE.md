@@ -120,22 +120,22 @@ https://www.tablesgenerator.com/markdown_tables
 
 ### v_DimOrganisation
 
-| KolNum | KolNavn           | Datatype | Beskrivelse |
-|--------|-------------------|----------|-------------|
-| 1      | ID                | int      |             |
-| 2      | L1Code            | varchar  |             |
-| 3      | L1Name            | varchar  |             |
-| 4      | L2Code            | varchar  |             |
-| 5      | L2Name            | varchar  |             |
-| 6      | L3Code            | varchar  |             |
-| 7      | L3Name            | varchar  |             |
-| 8      | L4Code            | varchar  |             |
-| 9      | L4Name            | varchar  |             |
-| 10     | L5Code            | varchar  |             |
-| 11     | L5Name            | varchar  |             |
-| 12     | L6Code            | varchar  |             |
-| 13     | L6Name            | varchar  |             |
-| 14     | MedarbejdereAnsat | int      |             |
+| KolNum | KolNavn           | Datatype | Beskrivelse                                                     |
+|--------|-------------------|----------|-----------------------------------------------------------------|
+| 1      | ID                | int      |                                                                 |
+| 2      | L1Code            | varchar  | Institution/virksomhed/hospitals                                |
+| 3      | L1Name            | varchar  |                                                                 |
+| 4      | L2Code            | varchar  | Drift/finansiering                                              |
+| 5      | L2Name            | varchar  |                                                                 |
+| 6      | L3Code            | varchar  | Center                                                          |
+| 7      | L3Name            | varchar  |                                                                 |
+| 8      | L4Code            | varchar  | Afdeling (på hospital), klinik (på RH), enhed (i koncerncentre) |
+| 9      | L4Name            | varchar  |                                                                 |
+| 10     | L5Code            | varchar  | Samleafsnit                                                     |
+| 11     | L5Name            | varchar  |                                                                 |
+| 12     | L6Code            | varchar  | Afsnit/lønafsnit (på hospital), sektion (i koncerncentre)       |
+| 13     | L6Name            | varchar  |                                                                 |
+| 14     | MedarbejdereAnsat | int      |                                                                 |
 
 
 ### v_DimStilling
