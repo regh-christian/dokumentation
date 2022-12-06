@@ -22,7 +22,7 @@ WHERE TABLE_NAME = @tbl
 
 <a href="{https://www.tablesgenerator.com/markdown_tables  }" target="_blank">tables-generator</a>
 
-<a href="'https://www.tablesgenerator.com/markdown_tables'" target="_blank">Brugerstyring</a>
+<a href={"https://www.tablesgenerator.com/markdown_tables" target="_blank"}>Brugerstyring</a>
 
 [tables-generator](https://www.tablesgenerator.com/markdown_tables)
 
