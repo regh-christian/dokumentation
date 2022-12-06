@@ -1,4 +1,4 @@
-# CHRU_CUBE {#section_chru_cube}
+# chru_cube
 Tabeldata om alle tabeller i kuben.
 - dim
 - fact
