@@ -55,6 +55,48 @@ WHERE TABLE_NAME = @tbl
 | 32     | Filterdatoer               | varchar  |             |
 
 
+### v_DimAnsættelse
+|     KolNum    |     KolNavn                    |     Datatype    |     Beskrivelse    |
+|---------------|--------------------------------|-----------------|--------------------|
+|     1         |     ID                         |     int         |                    |
+|     2         |     StillingsID                |     int         |                    |
+|     3         |     OrganisationsID            |     int         |                    |
+|     4         |     NuværendeOrganisationID    |     int         |                    |
+|     5         |     AnsættelsesformID          |     int         |                    |
+|     6         |     PersonID                   |     int         |                    |
+|     7         |     Tjnr                       |     varchar     |                    |
+|     8         |     Jubilæumsdato              |     date        |                    |
+|     9         |     Ansættelsesdato            |     date        |                    |
+|     10        |     Anciennitetsdato           |     date        |                    |
+|     11        |     Start                      |     date        |                    |
+|     12        |     Slut                       |     date        |                    |
+|     13        |     OverenskomstID             |     int         |                    |
+|     14        |     Stat                       |     char        |                    |
+|     15        |     Tjko                       |     char        |                    |
+|     16        |     Beskdec                    |     numeric     |                    |
+|     17        |     Ansat                      |     varchar     |                    |
+|     18        |     Fuldtid                    |     varchar     |                    |
+|     19        |     AktuelRække                |     varchar     |                    |
+|     20        |     Månedslønnet               |     varchar     |                    |
+|     21        |     AnsatDagsDato              |     varchar     |                    |
+|     22        |     AnsatSeneste14Mdr          |     varchar     |                    |
+|     23        |     AktuelHovedansættelse      |     varchar     |                    |
+|     24        |     EksterntFinansieret        |     varchar     |                    |
+|     25        |     Standardpopulation         |     varchar     |                    |
+|     26        |     Hændelse                   |     varchar     |                    |
+|     27        |     Opdateringsdato            |     datetime    |                    |
+|     28        |     InstTjek                   |     varchar     |                    |
+|     29        |     AfdelingTjek               |     varchar     |                    |
+|     30        |     AfsnitTjek                 |     varchar     |                    |
+|     31        |     HændelseMellem             |     varchar     |                    |
+|     32        |     Hændelsesdato              |     date        |                    |
+|     33        |     TilInst                    |     varchar     |                    |
+|     34        |     AnsLængdeTjnr              |     int         |                    |
+|     35        |     AnsLængdeCPR               |     int         |                    |
+|     36        |     AnsLængdeTjnr_Aktuel       |     int         |                    |
+|     37        |     AnsLængdeCPR_Aktuel        |     int         |                    |
+
+
 ### v_DimPerson
 |     KolNum    |     KolNavn        |     Datatype    |     Beskrivelse    |
 |---------------|--------------------|-----------------|--------------------|
