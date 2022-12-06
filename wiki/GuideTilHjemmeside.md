@@ -6,8 +6,8 @@ Forudsætninger
 2.	Adgang til organisationen-profilen i GitHub DataOgDigitalisering (gives af Admin: Stefan)
 
 ## Oprettelse af ny wiki-side
-En ny side oprettes i Github Pages-repositoriet, dokumentation. Navigér ind I mappen ’wiki’.  Klik på ’Add file’ -> ’Create new file’. Navngiv din nye side ’NavnPåSide.md’ med fil-suffixet ’.md’ for at skabe en ny tom markdown fil.
-Herfra kan indholdet til den nye wiki-side skrives ind med markdown-syntax. Formateringen på indholdet kan løbende tjekkes ved at benytte ”Preview” funktionen.
+En ny side oprettes i Github Pages-repositoriet, [**_dokumentation_**](https://github.com/DataOgDigitalisering/dokumentation). Navigér ind I mappen ’wiki’.  Klik på ’Add file’ -> ’Create new file’. Navngiv din nye side ’NavnPåSide.md’ med fil-suffixet ’.md’ for at skabe en ny tom markdown fil.
+Herfra kan indholdet til den nye wiki-side skrives ind med [**_markdown-syntax_**](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet). Formateringen på indholdet kan løbende tjekkes ved at benytte ”Preview” funktionen.
 Når indholdet er færdigt og filen er gemt, navigeres der ud til roden og derefter ind til ’_includes’. Her åbnes filen ’sidebar-html’. Denne skal man redigere ved at trykke på blyanten og tilføje følgende linje
 ```
 <li><a href="{{ '/NavnPåSide| relative_url }}">Sidebar titelnavn til side</a></li>.
@@ -17,11 +17,11 @@ NavnPåSide er det fil-navn, siden er gemt som under dokumentation/wiki/. Sideba
 Vent 5-10 minutter på at Github bygger siden. Kontroller om det ser korrekt ud.
 
 ## Rediger eksisterende wiki-side
-Åbn Github Page-repo’et, dokumentation og navigér ind I mappen ’wiki’. Åbn den side du ønsker at redigere. Klik på blyanten for at redigere. Når ændringer er foretaget, klikkes der på ’Commit changes’.
+Åbn Github Page-repo’et, [**_dokumentation_**](https://github.com/DataOgDigitalisering/dokumentation) og navigér ind I mappen ’wiki’. Åbn den side du ønsker at redigere. Klik på blyanten for at redigere. Når ændringer er foretaget, klikkes der på ’Commit changes’.
 Vent 5-10 minutter på at Github bygger siden. Kontroller om det ser korrekt ud.
 
 ## Konfigurering af siden
-Store dele af wiki-siden konfigureres i config.yml filen.
+Store dele af wiki-siden konfigureres i [**_config.yml_**](https://github.com/DataOgDigitalisering/dokumentation/blob/master/_config.yml) filen.
 ### Scripting
 Funktionalitet kan tilføjes til siden gennem scripting. F.eks. er dag/nat-tilstand en funtion tilføjet gennem scripting. Desuden hentes der en matematik-syntaks fortolker (MathJax), så siden kan vise matematisk notation. 
 Scripting kan lade sig gøre ved at navigere ind til _includes  og enten redigere en eksisterende HTML-fil eller tilføje en ny, og referere til dit script i denne.
