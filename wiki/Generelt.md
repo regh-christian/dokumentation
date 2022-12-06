@@ -8,6 +8,10 @@ Om konventioner for navngivning i hhv. measures og tabeller.
 - Engelsk/dansk? Å eller aa. 
 - Find afvigelser og list dem mhp. ensartning. 
 
+## Dokumentation
+Tjekliste til opdatering af dokumentation:
+- Tilføj ny(e) tabel(ler) til afsnittet {#CHRU_CUBE}
+
 ##	Aftaler for ændringer i CHRU_CUBE
 
 ###	Fra Udvikling til produktion
