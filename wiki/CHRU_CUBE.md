@@ -30,7 +30,7 @@ https://www.tablesgenerator.com/markdown_tables
 
 ## Tabeller
 
-### v_DimTidData
+### v_DimTidDato
 
 | KolNum | KolNavn                    | Datatype | Beskrivelse |
 |--------|----------------------------|----------|-------------|
