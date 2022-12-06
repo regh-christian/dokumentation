@@ -1,16 +1,24 @@
 # Generelt
 
 ##	Nomenklatur
-Om konventioner for navngivning i hhv. measures og tabeller. Hvilket ord bruger vi; kolonner, variable, attributes, parametre osv. ? Rækker, records, tuples? SammansatteOrd eller sammensatte_ord. Engelsk/dansk? Å eller aa. Find afvigelser og list dem mhp. ensartning. v_, tally, slicer osv…
+Om konventioner for navngivning i hhv. measures og tabeller. 
+- Hvilket ord bruger vi; kolonner, variable, attributes, parametre osv. ? 
+- Rækker, records, tuples? 
+- SammansatteOrd eller sammensatte_ord. 
+- Engelsk/dansk? Å eller aa. 
+- Find afvigelser og list dem mhp. ensartning. 
 
 ##	Aftaler for ændringer i CHRU_CUBE
 
 ###	Fra Udvikling til produktion
-Aftaler, kommunikation, roller, dokumentation skal besluttes
-Flow 
-chru_cube fra udv til p02. >>noter 2022-10-27<< dependencies, aktører, kongruens i views og tabeller (scripts, opdateringsdato, opdateringsjob)
+- Beskriv arbejdsgang for migrering af chru_cube fra UDV til P02. 
+(noter 2022-10-27<< dependencies, aktører, kongruens i views og tabeller (scripts, opdateringsdato, opdateringsjob)
 
 ###	Oprydning
+Skal diskuteres og vedtages
+- Kontroller?
+- Roller?
+- Intervaller
 
 <!--
 ##	Om CHRU_
@@ -20,6 +28,6 @@ Du vil i det følgende blive præsenteret for overvejelser ifm. databearbejdning
 •	Tabeller, views, measures mm. 
 -->
 
-> ## ØVELSE - XXX
+> ### ØVELSE - XXX
 > TEKST TEKST TEKST
 >*[Link til SQL-SCRIPT](  )*.
