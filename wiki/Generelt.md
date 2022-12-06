@@ -20,6 +20,6 @@ Du vil i det følgende blive præsenteret for overvejelser ifm. databearbejdning
 •	Tabeller, views, measures mm. 
 -->
 
-> ## **ØVELSE - XXX **
+> ## *ØVELSE - XXX *
 > TEKST TEKST TEKST
 >*[Link til SQL-SCRIPT](  )*.
