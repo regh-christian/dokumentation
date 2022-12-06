@@ -117,6 +117,7 @@ plugins:
   - jekyll-titles-from-headings
   - jemoji
   - jekyll-gitlab-metadata
+  - prism
 
 
 #
