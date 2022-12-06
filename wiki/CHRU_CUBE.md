@@ -140,17 +140,17 @@ https://www.tablesgenerator.com/markdown_tables
 
 ### v_DimStilling
 
-| KolNum | KolNavn            | Datatype | Beskrivelse |
-|--------|--------------------|----------|-------------|
-| 1      | ID                 | int      |             |
-| 2      | L1Code             | varchar  |             |
-| 3      | L1Name             | varchar  |             |
-| 4      | L2Code             | varchar  |             |
-| 5      | L2Name             | varchar  |             |
-| 6      | L3Code             | varchar  |             |
-| 7      | L3Name             | varchar  |             |
-| 8      | L4Code             | varchar  |             |
-| 9      | L4Name             | varchar  |             |
-| 10     | Uddannelseslæge    | varchar  |             |
-| 11     | Leder              | varchar  |             |
-| 12     | AtypiskeStillinger | varchar  |             |
+| KolNum | KolNavn            | Datatype | Beskrivelse                                |
+|--------|--------------------|----------|--------------------------------------------|
+| 1      | ID                 | int      |                                            |
+| 2      | L1Code             | varchar  | Hovedstillingskode                         |
+| 3      | L1Name             | varchar  | Hovedstillingsnavn                         |
+| 4      | L2Code             | varchar  | Fagstillingskode                           |
+| 5      | L2Name             | varchar  | Fagstillingsnavn                           |
+| 6      | L3Code             | varchar  | Stillingsgruppekode                        |
+| 7      | L3Name             | varchar  | Stillingsgruppenavn                        |
+| 8      | L4Code             | varchar  | Stillingskode                              |
+| 9      | L4Name             | varchar  | Fritekst. Stillingskodenavn                |
+| 10     | Uddannelseslæge    | varchar  | J for stillingskoderne 1133-1139 og 1161   |
+| 11     | Leder              | varchar  |                                            |
+| 12     | AtypiskeStillinger | varchar  |                                            |
