@@ -16,7 +16,7 @@ Følgende software er en forudsætning og kan findes i Softwareshoppen. Versione
 
 Hvor specifikke emner med fordel kan gennemgås ifm. løsning af opgaver er relevant for forståelse i en given kontekst kan anbefales, vil link være indsat.
 
-![Icons](https://raw.githubusercontent.com/ElvinIruthayam/elviniruthayam.github.io/master/Images/IconArrayWBR.png)
+<!-- ![Icons](https://raw.githubusercontent.com/ElvinIruthayam/elviniruthayam.github.io/master/Images/IconArrayWBR.png) -->
 
 | Server        | Second Header | Beskrivelse |
 | ------------- | ------------- |-------------|
