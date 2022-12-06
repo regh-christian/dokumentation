@@ -21,7 +21,7 @@ Vent 5-10 minutter på at Github bygger siden. Kontroller om det ser korrekt ud.
 Vent 5-10 minutter på at Github bygger siden. Kontroller om det ser korrekt ud.
 
 ## Konfigurering af siden
-Store dele af wiki-siden konfigureres i [**_config.yml_**](https://github.com/DataOgDigitalisering/dokumentation/blob/master/_config.yml) filen.
+Store dele af wiki-siden konfigureres i [**_config.yml_**](https://github.com/DataOgDigitalisering/dokumentation/blob/master/_config.yml) filen. Her kan layoutet fuldstændig ændres ved at ændre [to linjer](http://www.drassil.org/git-wiki/customize). Det er også muligt at skrive sin egen CSS-fil med layout-konfigurationer.
 ### Scripting
 Funktionalitet kan tilføjes til siden gennem scripting. F.eks. er dag/nat-tilstand en funtion tilføjet gennem scripting. Desuden hentes der en matematik-syntaks fortolker (MathJax), så siden kan vise matematisk notation. 
 Scripting kan lade sig gøre ved at navigere ind til _includes  og enten redigere en eksisterende HTML-fil eller tilføje en ny, og referere til dit script i denne.
