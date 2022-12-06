@@ -64,10 +64,10 @@ site_root:
 # check _layouts folder
 #
 markdown: kramdown
-highlighter: none
+highlighter: prism
 kramdown:
   input: GFM
-  syntax_highlighter: none
+  syntax_highlighter: prism
 
 
 defaults:
