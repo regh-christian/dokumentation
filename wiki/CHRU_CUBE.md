@@ -1,4 +1,11 @@
 # CHRU_CUBE {#section_chru_cube}
+Tabeldata om alle tabeller i kuben.
+- dim
+- fact
+- tally
+- slicer
+- security
+- info
 
 ## Tilføj til denne side
 
