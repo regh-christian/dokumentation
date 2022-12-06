@@ -5,7 +5,7 @@ Sektionen har hovedsageligt tekniske medarbejdere med kompetencer i dataudtræk 
 ### Formål
 Denne wiki er tiltænkt som introduktionsmateriale til nye medarbejdere og som et opslagværk til erfarne medarbejdere hos Data og Rapportering. De forskellige sektioner og sider er underbygget øvelser som kan findes i dette private *[repository](https://github.com/DataOgDigitalisering/FortroligInformation)*.
 
-### SOFTWARE OG OPSÆTNING
+### Software og opsætning
 Følgende software er en forudsætning og kan findes i Softwareshoppen. Versioner pr. 2022-09-08.
 
 * Microsoft SQL Server Management Studio
@@ -29,6 +29,6 @@ Hvor specifikke emner med fordel kan gennemgås ifm. løsning af opgaver er rele
 >*[Link til SQL-SCRIPT](https://github.com/DataOgDigitalisering/FortroligInformation/blob/main/%C3%98velse1/ex_dataadgange.sql)*.
 
 > ### **ØVELSE 2 - BRUG AF ADGANGE**
-> Hospital XXX ønsker optælling af alle pr. dd. månedslønnede hhv. fuld- og deltidsansatte sygeplejersker udspecificeret for alle sygeplejegrupper under fællesbetegnelsen STILKO2TXT = ’Sygepl. Pers’
-Hvor mange af disse er autoriserede med speciale indenfor anæstesi?
-
+> Hospital XXX ønsker optælling af alle pr. dd. månedslønnede hhv. fuld- og deltidsansatte sygeplejersker 
+> udspecificeret for alle sygeplejegrupper under fællesbetegnelsen STILKO2TXT = ’Sygepl. Pers’
+> Hvor mange af disse er autoriserede med speciale indenfor anæstesi?
