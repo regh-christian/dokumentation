@@ -1,4 +1,8 @@
-# CHRU_CUBE
+# CHRU_CUBE {#section_chru_cube}
+
+## Tilføj til denne side
+
+Når en ny tabel tilføjes til kuben
 
 
 ```SQL
@@ -14,10 +18,12 @@ FROM INFORMATION_SCHEMA.COLUMNS
 WHERE TABLE_NAME = @tbl
 ```
 
+[https://www.tablesgenerator.com/markdown_tables](https://www.tablesgenerator.com/markdown_tables)
+
 
 
 ## Basis
-![Icons](https://github.com/DataOgDigitalisering/dokumentation/blob/master/Images/cube_model_basis.png)
+![Icons](https://github.com/DataOgDigitalisering/dokumentation/blob/master/Images/cube_model_basis.png?raw=true)
 
 
 ### v_DimTidDato
