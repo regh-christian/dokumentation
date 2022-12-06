@@ -64,13 +64,11 @@ site_root:
 # check _layouts folder
 #
 markdown: kramdown
-highlighter: rouge
+highlighter: none
 kramdown:
   input: GFM
-  syntax_highlighter: rouge
-  
-  syntax_highlighter_opts:
-      disable : true
+  syntax_highlighter: none
+
 
 defaults:
  - 
