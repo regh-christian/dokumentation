@@ -1,5 +1,7 @@
 # Øvelser
 
+Alle øvelser samles her. Fordeles efterfølgende rundt på siden, hvor de passer til emner.
+
 > #### ØVELSE – KONTROL AF ADGANGE
 > - Find og kør SQL-scriptet, XXXX. Dette kan tage 10-15min! 
 > - Gennemgå listen med en kollega. Hvad ser I? Har du adgang til de data, du har behov for?
