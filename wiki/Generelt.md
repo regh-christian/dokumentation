@@ -10,7 +10,7 @@ Om konventioner for navngivning i hhv. measures og tabeller.
 
 ## Dokumentation
 Tjekliste til opdatering af dokumentation:
-- Tilføj ny(e) tabel(ler) til afsnittet [CHRU_CUBE](https://dataogdigitalisering.github.io/dokumentation/CHRU_CUBE)
+- Tilføj ny(e) tabel(ler) til afsnittet <a href="https://dataogdigitalisering.github.io/dokumentation/CHRU_CUBE" target="_blank">Guide til hjemmeside</a>
 - Tilføj side til hjemmeside hér. Se <a href="https://dataogdigitalisering.github.io/dokumentation/GuideTilHjemmeside" target="_blank">Guide til hjemmeside</a>
 - ANDET???
 
