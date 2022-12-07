@@ -22,5 +22,30 @@
 
 
 ## Resume af tabeller
+
+### v_DimHændelser
+Udvalgte hændelser vedrørende en ansættelse.
+Ved en hændelse forstås en af følgende mærkedage: datoer for fødsels- og jubilæumsdage, til- og fratrædelser, flytter afdeling, termin samt orlov. 
+Tabellen er niveaudelt i L1 og L2, hvor L2 er en uddybende tekst knyttet til den overordnede hændelse, L1; fx om ’Flytter afdeling’ er et skift fra- eller til en afdeling.
+
+
+### v_FactHændelser
+Alle hændelser i intervallet -7dage≤i dag≤13mdr. 
+Bemærk, at tabellen er koblet på v_SecurityOrganisationBridge via HændelseOrganisationID.
+- TILFØJ DOKUMENTATION I VIEW 
+- OPSUMMÉR DEREFTER HER
+PersonBase: Alle fødseldags- og jubilæumsdatoer på alle aktuelt ansatte tjnr
+PersonLags: Evt. tidligere og efterfølgende ansættelser samt afd. Bruges til bestemmelse af skift mellem afdelinger/inst
+MasterTable: Definér hændelser. Tiltrædelse hvis ansat=J og forskellig fra den tidligere. Aftrædelse hvis Ansat=N og forskellig fra den tidligere. SkiftFraAfdeling hvis OrganisationID forskellig fra det tidligere. SkiftTilAfdeling hvis OrganisationID forskellig fra det følgende. Går på orlov hvis statuskode=3 og denne er forskellig fra tidligere. Tilbage fra orlov hvis Statuskode {0,1} og før var 3. Definer unikt ID baseret på rækkenummer.
+
+
+### v_TallyAlder
+
+### v_TallyAnsættelseslængde
+
+
 ## Dashboard
+
+
+
 ## Measures
