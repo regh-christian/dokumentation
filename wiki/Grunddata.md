@@ -49,11 +49,23 @@ En person kan i sin ansættelseshistorik have flere ansættelser, hvor AktuelHov
 Dermed sikrer vi, at det altid kun er den ledergruppe, der aktuelt har en person ansat, som kan se data om denne, når brugerstyringen er knyttet til denne kolonne.
 
 **Hændelse**: Angiver om ansættelsesforholdet er en til- eller fratrædelse. Har ansættelsesforholdet værdien Ansat=J og denne er forskellig fra et evt. tidligere ansættelsesforhold, er dette en tiltrædelse. I modsat fald en fratrædelse.
-HændelseMellem: Angiver om en hændelse er sket mellem afdelinger (samme institution) eller mellem to institutioner. I sidste tilfælde er modtagende institution anført i TilInst. Værdien ’Udenfor Region Hovedstaden’ hvis der på ansættelsesforholdet er enten til- eller fratrædelse og ingen af kriterierne ’mellem afdelinger’ eller ’mellem institutioner’ er opfyldt.
+
+**HændelseMellem**: Angiver om en hændelse er sket mellem afdelinger (samme institution) eller mellem to institutioner. I sidste tilfælde er modtagende institution anført i TilInst. Værdien ’Udenfor Region Hovedstaden’ hvis der på ansættelsesforholdet er enten til- eller fratrædelse og ingen af kriterierne ’mellem afdelinger’ eller ’mellem institutioner’ er opfyldt.
 - BESKRIV Inst=2P (tjenestemandsfunktion)<<
 I kuben er desuden indført unikke nøgler for organisation og stillingsbenævnelser, her hhv. OrganisationsID og StillingsID. 
 
-> ØVELSE 3 – xxxx
+
+### v_DimPerson
+Dimensionstabel med PersonID som nøgle. Derudover navn og fødselsdato.
+
+### v_DimStilling
+Stillingshieraki i 4 niveauer (L1-L4) med ID som nøgle. Hoved-, fag- og stillingsgruppe samt stilling.
+
+
+
+
+
+> #### ØVELSE – Tæl årsværk
 > Udregn vha. SD.SD_Person hvor mange årsværk, der arbejdes i din sektion baseret på aktuelt ansatte i dag. 
 > Gruppér dit resultat på time- hhv. månedslønnede, del- og fuldtidsansatte.
 > Lav samme beregning og gruppering baseret på data fra kuben.
