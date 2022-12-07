@@ -56,7 +56,7 @@ I kuben er desuden indført unikke nøgler for organisation og stillingsbenævne
 
 
 ### v_DimPerson
-Dimensionstabel med PersonID som nøgle. Derudover navn og fødselsdato.
+Dimensionstabel med ID som nøgle. Derudover navn og fødselsdato.
 
 ### v_DimStilling
 Stillingshieraki i 4 niveauer (L1-L4) med ID som nøgle. Hoved-, fag- og stillingsgruppe samt stilling.
