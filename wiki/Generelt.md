@@ -1,4 +1,4 @@
-# Generelt(#Generelt)
+# Generelt
 
 ##	Nomenklatur
 Om konventioner for navngivning i hhv. measures og tabeller. 
