@@ -60,13 +60,16 @@ Dimensionstabel med PersonID som nøgle. Derudover navn og fødselsdato.
 
 ### v_DimStilling
 Stillingshieraki i 4 niveauer (L1-L4) med ID som nøgle. Hoved-, fag- og stillingsgruppe samt stilling.
+Desuden er stillingskoderne 1133-1139 og 1161 defineret (hard-codet i viewet) som uddannelseslæger. (Se UDV for øvrige definitioner af ledere og AtypiskeStillinger).
+Current_row=1 sikrer opdateret stillingshieraki men ignorerer evt. historiske ændringer.
 
-
+### v_DimOrganisation
+Organisationshieraki i 6 niveauer (L1-L6) med ID som nøgle.
 
 
 
 > #### ØVELSE – Tæl årsværk
-> Udregn vha. SD.SD_Person hvor mange årsværk, der arbejdes i din sektion baseret på aktuelt ansatte i dag. 
+> Udregn vha. data i databasen, LON_HR, hvor mange årsværk, der arbejdes i din sektion baseret på aktuelt ansatte i dag. 
 > Gruppér dit resultat på time- hhv. månedslønnede, del- og fuldtidsansatte.
 > Lav samme beregning og gruppering baseret på data fra kuben.
 > (Har vi tilladelse til at bruge en specifik persons ansættelseshistorik?)	 
