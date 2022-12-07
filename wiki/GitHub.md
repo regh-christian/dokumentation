@@ -2,7 +2,7 @@
 I .....
 ## Best practice
 ### Second Code test
-```java
+```SQL
 EVALUATE
 ADDCOLUMNS (
     FILTER (
