@@ -66,13 +66,3 @@ Current_row=1 sikrer opdateret stillingshieraki men ignorerer evt. historiske æ
 
 ### v_DimOrganisation
 Organisationshieraki i 6 niveauer (L1-L6) med ID som nøgle.
-
-
-
-> #### ØVELSE – Tæl årsværk
-> Udregn vha. data i databasen, LON_HR, hvor mange årsværk, der arbejdes i din sektion baseret på aktuelt ansatte i dag. 
-> Gruppér dit resultat på time- hhv. månedslønnede, del- og fuldtidsansatte.
-> Lav samme beregning og gruppering baseret på data fra kuben.
-> (Har vi tilladelse til at bruge en specifik persons ansættelseshistorik?)	 
-
-
