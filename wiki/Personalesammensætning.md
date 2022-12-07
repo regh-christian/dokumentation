@@ -45,7 +45,9 @@ MasterTable: Definér hændelser. Tiltrædelse hvis ansat=J og forskellig fra de
 
 
 ## Dashboard
+[HR-Lederdashboard\Personalesammensætning](https://flis.regionh.top.local:444/PBIReports/powerbi/L%C3%B8n%20og%20HR/HRDashboard/Personalesammens%C3%A6tning?RC:Toolbar=False?Target="_blank")
 
+![Lederdashboard, info om personalesammensætning](https://raw.githubusercontent.com/DataOgDigitalisering/dokumentation/master/Images/dashboard_personalesammensætning_info.png)
 
 
 ## Measures
