@@ -49,5 +49,9 @@ MasterTable: Definér hændelser. Tiltrædelse hvis ansat=J og forskellig fra de
 
 ![Lederdashboard, info om personalesammensætning](https://raw.githubusercontent.com/DataOgDigitalisering/dokumentation/master/Images/dashboard_personalesammensætning_info.png)
 
+- Overordnet om beregninger 
+-   Ikke decideret gennemgant af measures, da dette vil kræve omstændig vedligehold af hjemmesiden
+
 
 ## Measures
+- Measures dokumenteres grundigt direkte i kuben, så de er selvforklarende, når de importeres på siden hér
