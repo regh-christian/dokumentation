@@ -50,7 +50,7 @@ MasterTable: Definér hændelser. Tiltrædelse hvis ansat=J og forskellig fra de
 ![Lederdashboard, info om personalesammensætning](https://raw.githubusercontent.com/DataOgDigitalisering/dokumentation/master/Images/dashboard_personalesammensætning_info.png)
 
 - Overordnet om beregninger 
--   Ikke decideret gennemgant af measures, da dette vil kræve omstændig vedligehold af hjemmesiden
+  - Ikke decideret gennemgant af measures, da dette vil medføre omstændig vedligehold af hjemmesiden
 
 
 ## Measures
