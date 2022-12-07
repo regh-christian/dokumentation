@@ -24,7 +24,7 @@ Tjekliste til opdatering af dokumentation:
 
 ###	Oprydning
 Skal diskuteres og vedtages
-- Kontroller?
+- Kontrol-scripts. Til hvad? Afdæk behov.
 - Roller. Hvem gør/har ansvar for hvad?
   - SQL, Git, dashboards, dokumentation
 - Intervaller
@@ -36,9 +36,3 @@ Kuben består hovedsageligt af bearbejdet data fra SD. For at blive bekendt med 
 Du vil i det følgende blive præsenteret for overvejelser ifm. databearbejdning, ETL og measures. 
 •	Tabeller, views, measures mm. 
 -->
-
-
-
-> ### ØVELSE - XXX
-> TEKST TEKST TEKST
->*[Link til SQL-SCRIPT](  )*.
