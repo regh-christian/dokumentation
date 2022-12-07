@@ -13,6 +13,10 @@ Følgende software er en forudsætning og kan findes i Softwareshoppen. Versione
 * SQL Server Data Tools Bundle
   * Dax Studio
   * Tabular Editor
+  
+### Kilder og adgange
+- L:\, ad-hoc
+- [Link til Christians dokument]()
 
 Hvor specifikke emner med fordel kan gennemgås via andre kilder fx ifm. løsning af opgaver eller kan bidrage med forståelse i en given kontekst, vil link til supplerende materiale være indsat.
 
