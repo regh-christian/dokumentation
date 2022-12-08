@@ -1,7 +1,7 @@
 # GitHub versionsstyring
 I .....
 ## Best practice
-### Second Code test
+### First Code test
 ```SQL
 EVALUATE
 ADDCOLUMNS (
@@ -45,4 +45,21 @@ ORDER BY
     Customer[Customer] ASC
 ```
 
-## Hello world
+### Third Code test
+```cpp
+struct my_promise_type
+{
+  void* operator new(std::size_t size)
+  {
+    void* ptr = my_custom_allocate(size);
+    if (!ptr) throw std::bad_alloc{};
+    return ptr;
+  }
+
+  void operator delete(void* ptr, std::size_t size)
+  {
+    my_custom_free(ptr, size);
+  }
+  ...
+};
+```
