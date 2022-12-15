@@ -1,7 +1,7 @@
 # Git & GitHub 
 Med versionsstyring kan man let kan holde styr på ændringer i filer. Det vigtigt at differentiere mellem Git og GitHub.
 ## Git
-Git er et open-source versionsstyringssystem, som kan hentes via Softwareshoppen. For at kontrollere at du har Git installeret, kan du køre følgende linje i din terminal/kommandoprompt git –version. 
+Git er et open-source versionsstyringssystem, som kan hentes via Softwareshoppen. For at kontrollere at du har Git installeret, kan du køre følgende linje i din terminal/kommandoprompt ```git –version```. 
 
 ## GitHub
 GitHub er en service (ejet af Microsoft), hvor Git-projekter kan hostes på en ekstern server (cloud). Vi bruger også GitHub til at hoste denne wiki.
