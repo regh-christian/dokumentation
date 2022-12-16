@@ -33,7 +33,7 @@ Et eksempel kunne være:
 Hvis det er en ny HTML-fil skal der efterfølges refereres til denne i config_yml filen i Include Hooks-sektionen.
 
 ### Brug af kodeblokke
-En kodeblok kan genereres i markdown ved at benytte sig af **tre backticks** før og efter en kodeblok, *\`\`\`* [Selve koden] *\`\`\`*. Såfremt man ønsker syntaks markeringer, gøres dette ved inkludere navnet på syntaksen efter de første tre backticks, dvs. 
+En kodeblok kan genereres i markdown ved at benytte sig af **tre backticks** før og efter en kodeblok, f.eks. *\`\`\`* [Selve koden] *\`\`\`*. Såfremt man ønsker syntaks markeringer, gøres dette ved inkludere navnet på syntaksen efter de første tre backticks, dvs. 
 
  *\`\`\`dax* [Selve koden] *\`\`\`*.
 
