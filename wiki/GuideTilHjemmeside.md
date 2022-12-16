@@ -14,7 +14,8 @@ Når indholdet er færdigt og filen er gemt, navigeres der ud til roden og deref
 ```
 
 NavnPåSide er det fil-navn, siden er gemt som under dokumentation/wiki/. SidebarNavnTilSide er det navn, der kommer til at stå i sidebaren, der linker til wiki-siden.
-Vent 5-10 minutter på at Github bygger siden. Kontroller om det ser korrekt ud.
+Vent 5-10 minutter på at Github bygger siden. Kontroller om det ser korrekt ud. 
+> **TIP:** Man kan følge med i byggeprocessen af siden på [Actionsfanen](https://github.com/DataOgDigitalisering/dokumentation/actions)
 
 ## Rediger eksisterende wiki-side
 Åbn Github Page-repo’et, [**_dokumentation_**](https://github.com/DataOgDigitalisering/dokumentation) og navigér ind I mappen ’wiki’. Åbn den side du ønsker at redigere. Klik på blyanten for at redigere. Når ændringer er foretaget, klikkes der på ’Commit changes’.
