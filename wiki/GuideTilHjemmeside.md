@@ -37,4 +37,4 @@ En kodeblok kan genereres i markdown ved at benytte sig af **tre backticks** fø
 
  *\`\`\`dax* [Selve koden] *\`\`\`*.
 
-Syntaksmarkeringsredskabet, der benyttes er Prism js, og det er valgt, da det understøtter DAX samt de mest gængse programmeringssprog. 
+Syntaksmarkeringsredskabet, der benyttes er [Prism js](https://prismjs.com/#supported-languages), og det er valgt, da det understøtter DAX samt de mest gængse programmeringssprog. 
