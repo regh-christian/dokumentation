@@ -6,9 +6,9 @@ Forudsætninger
 2.	Adgang til organisationen-profilen i GitHub DataOgDigitalisering (gives af Admin: Stefan)
 
 ## Oprettelse af ny wiki-side
-En ny side oprettes i Github Pages-repositoriet, [**_dokumentation_**](https://github.com/DataOgDigitalisering/dokumentation). Navigér ind I mappen ’wiki’.  Klik på ’Add file’ -> ’Create new file’. Navngiv din nye side ’NavnPåSide.md’ med fil-suffixet ’.md’ for at skabe en ny tom markdown fil.
-Herfra kan indholdet til den nye wiki-side skrives ind med [**_markdown-syntax_**](https://www.markdownguide.org/basic-syntax/). Formateringen på indholdet kan løbende tjekkes ved at benytte ”Preview” funktionen.
-Når indholdet er færdigt og filen er gemt, navigeres der ud til roden og derefter ind til ’_includes’. Her åbnes filen ’sidebar-html’. Denne skal man redigere ved at trykke på blyanten og tilføje følgende linje
+En ny side oprettes i Github Pages-repositoriet, [**_dokumentation_**](https://github.com/DataOgDigitalisering/dokumentation). Navigér ind I mappen *wiki*.  Klik på *’Add file’* -> *’Create new file’*. Navngiv din nye side *NavnPåSide.md* med fil-suffixet *.md* for at skabe en ny tom markdown fil.
+Herfra kan indholdet til den nye wiki-side skrives ind med [**_markdown-syntax_**](https://www.markdownguide.org/basic-syntax/). Formateringen på indholdet kan løbende tjekkes ved at benytte *Preview* funktionen.
+Når indholdet er færdigt og filen er gemt, navigeres der ud til [roden](https://github.com/DataOgDigitalisering/dokumentation) og derefter ind til [*_includes*](https://github.com/DataOgDigitalisering/dokumentation/tree/master/_includes). Her åbnes filen *sidebar-html*. Denne skal man redigere ved at trykke på blyanten og tilføje følgende linje
 ```
 <li><a href="{{ '/NavnPåSide| relative_url }}">Sidebar titelnavn til side</a></li>.
 ```
@@ -18,7 +18,7 @@ Vent 5-10 minutter på at Github bygger siden. Kontroller om det ser korrekt ud.
 > **TIP:** Man kan følge med i byggeprocessen af siden på [Actionsfanen](https://github.com/DataOgDigitalisering/dokumentation/actions)
 
 ## Rediger eksisterende wiki-side
-Åbn Github Page-repo’et, [**_dokumentation_**](https://github.com/DataOgDigitalisering/dokumentation) og navigér ind I mappen ’wiki’. Åbn den side du ønsker at redigere. Klik på blyanten for at redigere. Når ændringer er foretaget, klikkes der på ’Commit changes’.
+Åbn Github Page-repo’et, [**_dokumentation_**](https://github.com/DataOgDigitalisering/dokumentation) og navigér ind I mappen *wiki*. Åbn den side du ønsker at redigere. Klik på blyanten for at redigere. Når ændringer er foretaget, klikkes der på *Commit changes*.
 Vent 5-10 minutter på at Github bygger siden. Kontroller om det ser korrekt ud. Browsere gemmer ofte en cache af siden, dom kan få siden til at se ud, som om den ikke er opdateret, selvom den er. Her anbefales det, enten rydde ens cache, eller teste siden i en privat/inkognito-instans af din browser.
 
 ## Konfigurering af siden
