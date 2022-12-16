@@ -11,7 +11,6 @@ Herfra kan indholdet til den nye wiki-side skrives ind med [**_markdown-syntax_*
 Når indholdet er færdigt og filen er gemt, navigeres der ud til [roden](https://github.com/DataOgDigitalisering/dokumentation) og derefter ind til [*_includes*](https://github.com/DataOgDigitalisering/dokumentation/tree/master/_includes). Her åbnes filen *sidebar-html*. Denne skal man redigere ved at trykke på blyanten og tilføje følgende linje
 ```html
 <li><a href="{{ '/NavnPåSide| relative_url }}">Sidebar titelnavn til side</a></li>.
-
 ```
 
 NavnPåSide er det fil-navn, siden er gemt som under dokumentation/wiki/. SidebarNavnTilSide er det navn, der kommer til at stå i sidebaren, der linker til wiki-siden.
@@ -28,7 +27,7 @@ Store dele af wiki-siden konfigureres i [**_config.yml_**](https://github.com/Da
 Funktionalitet kan tilføjes til siden gennem scripting. F.eks. er dag/nat-tilstand en funtion tilføjet gennem scripting. Desuden hentes der en matematik-syntaks fortolker (MathJax), så siden kan vise matematisk notation. 
 Scripting kan lade sig gøre ved at navigere ind til _includes  og enten redigere en eksisterende HTML-fil eller tilføje en ny, og referere til dit script i denne.
 Et eksempel kunne være:
-```
+```html
 <script src="/dokumentation/_includes/darkscript.js"></script>
 ```
 Hvis det er en ny HTML-fil skal der efterfølges refereres til denne i config_yml filen i Include Hooks-sektionen.
