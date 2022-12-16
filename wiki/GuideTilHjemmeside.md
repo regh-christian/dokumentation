@@ -9,8 +9,9 @@ Forudsætninger
 En ny side oprettes i Github Pages-repositoriet, [**_dokumentation_**](https://github.com/DataOgDigitalisering/dokumentation). Navigér ind I mappen *wiki*.  Klik på *’Add file’* -> *’Create new file’*. Navngiv din nye side *NavnPåSide.md* med fil-suffixet *.md* for at skabe en ny tom markdown fil.
 Herfra kan indholdet til den nye wiki-side skrives ind med [**_markdown-syntax_**](https://www.markdownguide.org/basic-syntax/). Formateringen på indholdet kan løbende tjekkes ved at benytte *Preview* funktionen.
 Når indholdet er færdigt og filen er gemt, navigeres der ud til [roden](https://github.com/DataOgDigitalisering/dokumentation) og derefter ind til [*_includes*](https://github.com/DataOgDigitalisering/dokumentation/tree/master/_includes). Her åbnes filen *sidebar-html*. Denne skal man redigere ved at trykke på blyanten og tilføje følgende linje
-```
+```html
 <li><a href="{{ '/NavnPåSide| relative_url }}">Sidebar titelnavn til side</a></li>.
+
 ```
 
 NavnPåSide er det fil-navn, siden er gemt som under dokumentation/wiki/. SidebarNavnTilSide er det navn, der kommer til at stå i sidebaren, der linker til wiki-siden.
