@@ -21,7 +21,7 @@ Man kan vælge enten bruge Git med kommandoer gennem terminalen eller vha. et br
 ### Nyt Projekt
 Når et nyt projekt startes, som skal versionsstyres, skal der oprettes en folder til projektet. Herefter skabes der et git repository ved at køre kommandoen git init i stien til den nyoprettede folder. Der vil nu blive oprettet en skjult mappe .git, som er git repository’et. Den sørger for registrere og gemme alle ændringer, der sker på filer i projektmappen – et såkaldt lokalt repository.
 
-For at kunne samarbejde med andre og have backup af projekter er det dog vigtigt at benytte sig repositories, der ligger i ”skyen”. Det er her GitHub kommer ind i billedet, hvor man ”pusher” sit lokale repository til en webserver på GitHub.
+For at kunne samarbejde med andre og have backup af projekter er det dog vigtigt at benytte sig repositories, der ligger i ”skyen”. Det er her GitHub kommer ind i billedet, hvor man ”pusher” sit lokale repository til en server på GitHub.
 
 ### Eksisterende projekt
 Hvis du skal arbejde på et eksisterende projekt, der ligger på github kan du ”clone” denne ned på din computer lokalt, arbejde på den, og derefter ”pushe” den op på ”skyen” igen, hvor ændringerne bliver flettet ind. 
