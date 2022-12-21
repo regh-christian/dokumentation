@@ -38,3 +38,6 @@ En kodeblok kan genereres i markdown ved at benytte sig af **tre backticks** fø
  *\`\`\`dax* [Selve koden] *\`\`\`*.
 
 Syntaksmarkeringsredskabet, der benyttes er [Prism js](https://prismjs.com/#supported-languages), og det er valgt, da det understøtter DAX samt de mest gængse programmeringssprog. 
+
+### Teknisk opsætning af siden
+Denne statiske side er genereret vha. [Jekyll](https://jekyllrb.com/) og hostet vha. [GitHub Pages](https://pages.github.com/). Skabelonen til siden er forked [herfra](https://github.com/Drassil/git-wiki-skeleton).
