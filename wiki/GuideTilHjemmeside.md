@@ -24,13 +24,14 @@ Vent 5-10 minutter på at Github bygger siden. Kontroller om det ser korrekt ud.
 ## Konfigurering af siden
 Store dele af wiki-siden konfigureres i [**_config.yml_**](https://github.com/DataOgDigitalisering/dokumentation/blob/master/_config.yml) filen. Her kan layoutet fuldstændig ændres ved at ændre [to linjer](http://www.drassil.org/git-wiki/customize). Det er også muligt at skrive sin egen CSS-fil med layout-konfigurationer.
 ### Scripting
-Funktionalitet kan tilføjes til siden gennem scripting. F.eks. er dag/nat-tilstand en funtion tilføjet gennem scripting. Desuden hentes der en matematik-syntaks fortolker (MathJax), så siden kan vise matematisk notation. 
-Scripting kan lade sig gøre ved at navigere ind til _includes  og enten redigere en eksisterende HTML-fil eller tilføje en ny, og referere til dit script i denne.
+Funktionalitet kan tilføjes til siden gennem scripting. F.eks. hentes der en matematik-syntaks fortolker (MathJax), så siden kan vise matematisk notation. 
+Scripting kan lade sig gøre ved at navigere ind til [_includes/footer.html](https://github.com/DataOgDigitalisering/dokumentation/blob/master/_includes/footer.html)  referere til dit script i denne. **footer.html** bliver refereret i config_yml filen i Include Hooks-sektionen.
+
 Et eksempel kunne være:
 ```html
-<script src="/dokumentation/_includes/darkscript.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.21.0/plugins/line-numbers/prism-line-numbers.min.js"></script>
 ```
-Hvis det er en ny HTML-fil skal der efterfølges refereres til denne i config_yml filen i Include Hooks-sektionen.
+Ovenstående script tilføjer linjenummerering til kodeblokke.
 
 ### Brug af kodeblokke
 En kodeblok kan genereres i markdown ved at benytte sig af **tre backticks** før og efter en kodeblok, f.eks. *\`\`\`* [Selve koden] *\`\`\`*. Såfremt man ønsker syntaks markeringer, gøres dette ved inkludere navnet på syntaksen efter de første tre backticks, dvs. 
