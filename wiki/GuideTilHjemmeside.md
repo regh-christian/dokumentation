@@ -23,7 +23,8 @@ Vent 5-10 minutter på at Github bygger siden. Kontroller om det ser korrekt ud.
 Vent 5-10 minutter på at Github bygger siden. Kontroller om det ser korrekt ud. Browsere gemmer ofte en cache af siden, dom kan få siden til at se ud, som om den ikke er opdateret, selvom den er. Her anbefales det, enten rydde ens cache, eller teste siden i en privat/inkognito-instans af din browser.
 
 ## Konfigurering af siden
-Store dele af wiki-siden konfigureres i [**_config.yml_**](https://github.com/DataOgDigitalisering/dokumentation/blob/master/_config.yml) filen. Her kan layoutet fuldstændig ændres ved at ændre [to linjer](http://www.drassil.org/git-wiki/customize). Det er også muligt at skrive sin egen CSS-fil med layout-konfigurationer.
+Store dele af wiki-siden konfigureres i [**_config.yml_**](https://github.com/DataOgDigitalisering/dokumentation/blob/master/_config.yml) filen. Her kan layoutet fuldstændig ændres ved at ændre [to linjer](http://www.drassil.org/git-wiki/customize) til nogle prædefinerede temaer. Det er også muligt at skrive sin egen CSS-fil med layout-konfigurationer.
+
 ### Scripting
 Funktionalitet kan tilføjes til siden gennem scripting. F.eks. hentes der en matematik-syntaks fortolker (MathJax), så siden kan vise matematisk notation. 
 Scripting kan lade sig gøre ved at navigere ind til [_includes/footer.html](https://github.com/DataOgDigitalisering/dokumentation/blob/master/_includes/footer.html)  referere til dit script i denne. **footer.html** bliver refereret i config_yml filen i Include Hooks-sektionen.
