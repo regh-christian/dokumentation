@@ -49,10 +49,5 @@ Syntaksmarkeringsredskabet, der benyttes er [Prism js](https://prismjs.com/#supp
 ### Brug af matematisk notation
 For at vise matematisk notation kan syntaksen kendt fra Tex og LaTex benyttes. Hvis man vil bruge matematisk notation **in-line**, dvs. midt i tekst benyttes `$$` afgrænserer rundt om notationen, f.eks.  $$\sqrt{3x-1}+(1+x)^2$$
 
-**The Cauchy-Schwarz Inequality**
-
-$$\left( \sum_{k=1}^n a_k b_k \right)^2 \leq \left( \sum_{k=1}^n a_k^2 \right) \left( \sum_{k=1}^n b_k^2 \right)$$
-
-
 ### Teknisk opsætning af siden
 Denne statiske side er genereret vha. [Jekyll](https://jekyllrb.com/) og hostet vha. [GitHub Pages](https://pages.github.com/). Skabelonen til siden er forked [herfra](https://github.com/Drassil/git-wiki-skeleton).
