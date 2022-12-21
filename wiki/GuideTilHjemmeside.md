@@ -46,7 +46,6 @@ En kodeblok kan genereres i markdown ved at benytte sig af **tre backticks** fø
 Syntaksmarkeringsredskabet, der benyttes er [Prism js](https://prismjs.com/#supported-languages), og det er valgt, da det understøtter DAX samt de mest gængse programmeringssprog. 
 
 ### Brug af matematisk notation
-## Matematik
 This sentence uses `$$` delimiters to show math inline:  $$\sqrt{3x-1}+(1+x)^2$$
 
 **The Cauchy-Schwarz Inequality**
