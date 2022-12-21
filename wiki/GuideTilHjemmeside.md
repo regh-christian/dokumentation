@@ -37,7 +37,9 @@ Ovenstående script tilføjer linjenummerering til kodeblokke.
 ### Brug af kodeblokke
 En kodeblok kan genereres i markdown ved at benytte sig af **tre backticks** før og efter en kodeblok, f.eks. *\`\`\`* [Selve koden] *\`\`\`*. Såfremt man ønsker syntaks markeringer, gøres dette ved inkludere navnet på syntaksen efter de første tre backticks, dvs. 
 
- *\`\`\`dax* [Selve koden] *\`\`\`*.
+ *\`\`\`dax* 
+ [Selve koden] 
+ *\`\`\`*.
 
 Syntaksmarkeringsredskabet, der benyttes er [Prism js](https://prismjs.com/#supported-languages), og det er valgt, da det understøtter DAX samt de mest gængse programmeringssprog. 
 
