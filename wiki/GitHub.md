@@ -31,5 +31,8 @@ Næste gang du arbejder projektet kan du så lave et ”pull” i stedet for ”
 
 [Basics om brug af git og GitHub](https://www.freecodecamp.org/news/learn-the-basics-of-git-in-under-10-minutes-da548267cc91/)
 
+[Workflow git](https://towardsdatascience.com/learn-enough-git-to-be-useful-281561eef959)
+
 [Teknisk forklaring om git](https://how-to.dev/how-git-stores-data)
+
 
