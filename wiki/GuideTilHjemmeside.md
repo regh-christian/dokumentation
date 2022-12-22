@@ -50,4 +50,4 @@ Syntaksmarkeringsredskabet, der benyttes er [Prism js](https://prismjs.com/#supp
 For at vise matematisk notation kan syntaksen kendt fra Tex og LaTex benyttes. Hvis man vil bruge matematisk notation **in-line**, dvs. midt i tekst benyttes `$$` afgrænserer rundt om notationen, f.eks.  $$\sqrt{3x-1}+(1+x)^2$$
 
 ### Teknisk opsætning af siden
-Denne statiske side er genereret vha. [Jekyll](https://jekyllrb.com/) og hostet vha. [GitHub Pages](https://pages.github.com/). Skabelonen til siden er forked [herfra](https://github.com/Drassil/git-wiki-skeleton).
+Denne statiske side er genereret vha. [Jekyll](https://jekyllrb.com/) og hostet vha. [GitHub Pages](https://pages.github.com/). Skabelonen til siden er genereret [herfra](https://github.com/Drassil/git-wiki-skeleton).
