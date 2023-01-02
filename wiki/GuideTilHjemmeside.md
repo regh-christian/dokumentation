@@ -13,7 +13,7 @@ Herfra kan indholdet til den nye wiki-side skrives ind med [**_markdown-syntax_*
     <source src="https://github.com/DataOgDigitalisering/dokumentation/raw/master/Images/Nyfil.webm" type="video/webm">
 </video>
 
-<script
+<script>
 var vid = document.getElementById("nyfil");
 vid.defaultPlaybackRate = 2.0;
 </script>
