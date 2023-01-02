@@ -28,7 +28,7 @@ Vent 5-10 minutter på at Github bygger siden. Kontroller om det ser korrekt ud.
 Åbn Github Page-repo’et, [**_dokumentation_**](https://github.com/DataOgDigitalisering/dokumentation) og navigér ind I mappen *wiki*. Åbn den side du ønsker at redigere. Klik på blyanten for at redigere. Når ændringer er foretaget, klikkes der på *Commit changes*.
 Vent 5-10 minutter på at Github bygger siden. Kontroller om det ser korrekt ud. Browsere gemmer ofte en cache af siden, dom kan få siden til at se ud, som om den ikke er opdateret, selvom den er. Her anbefales det, enten rydde ens cache, eller teste siden i en privat/inkognito-instans af din browser.
 
-<video autoplay="autoplay" loop="loop" width="957" height="815">
+<video autoplay="autoplay" loop="loop" width="479" height="408">
     <source src="https://github.com/DataOgDigitalisering/dokumentation/raw/master/Images/ændring.webm" type="video/webm">
 </video>
 
