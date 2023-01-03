@@ -11,9 +11,11 @@ Herfra kan indholdet til den nye wiki-side skrives ind med [**_markdown-syntax_*
 
 <details>
    <summary><b>Se gennemgang</b></summary>
-   <video autoplay controls muted loop="loop" width="718" height="611">
-      <source src="https://github.com/DataOgDigitalisering/dokumentation/raw/master/Images/Nyfil.webm" type="video/webm">
-   </video>
+   <center>
+      <video autoplay controls muted loop="loop" width="718" height="611">
+         <source src="https://github.com/DataOgDigitalisering/dokumentation/raw/master/Images/Nyfil.webm" type="video/webm">
+      </video>
+   </center>
 </details>
 
 
@@ -33,10 +35,13 @@ Vent 5-10 minutter på at Github bygger siden. Kontroller om det ser korrekt ud.
 
 <details>
    <summary><b>Se gennemgang</b></summary>
-   <video autoplay controls muted loop="loop" width="718" height="611">
-      <source src="https://github.com/DataOgDigitalisering/dokumentation/raw/master/Images/ændring.webm" type="video/webm">
-   </video>
+   <center>
+      <video autoplay controls muted loop="loop" width="718" height="611">
+         <source src="https://github.com/DataOgDigitalisering/dokumentation/raw/master/Images/ændring.webm" type="video/webm">
+      </video>
+   </center>
 </details>
+
 
 ## HTML
 Det er desuden også muligt inkludere [HTML-kode](https://www.w3schools.com/html/default.asp) i markdown-filen, så der kan, som vist ovenover, inkluderes fold-ud sektioner og videoklips - videorne vil dog kun ses i den færdig byggede side og ikke gennem GitHubs *Preview* funktion. Dette kan gøres med følgende kode: 
