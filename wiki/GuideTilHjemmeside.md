@@ -7,13 +7,22 @@ Forudsætninger
 
 ## Oprettelse af ny wiki-side
 En ny side oprettes i Github Pages-repositoriet, [**_dokumentation_**](https://github.com/DataOgDigitalisering/dokumentation). Navigér ind I mappen *wiki*.  Klik på *’Add file’* -> *’Create new file’*. Navngiv din nye side *NavnPåSide.md* med fil-suffixet *.md* for at skabe en ny tom markdown fil.
-Herfra kan indholdet til den nye wiki-side skrives ind med [**_markdown-syntax_**](https://www.markdownguide.org/basic-syntax/). Formateringen på indholdet kan løbende tjekkes ved at benytte *Preview* funktionen. Det er desuden også muligt inkludere HTML-kode i markdown-filen, så kan der f.eks inkluderes videoklips - dette vil dog kunne ses i den færdig byggede side og ikke gennem GitHubs *Preview* funktion. 
+Herfra kan indholdet til den nye wiki-side skrives ind med [**_markdown-syntax_**](https://www.markdownguide.org/basic-syntax/). Formateringen på indholdet kan løbende tjekkes ved at benytte *Preview* funktionen. Det er desuden også muligt inkludere HTML-kode i markdown-filen, så kan der f.eks inkluderes fold-ud sektioner og videoklips - videorne vil dog kun ses i den færdig byggede side og ikke gennem GitHubs *Preview* funktion. Et eksemplel på dette ses herunder:
 
 <details>
-   <summary>Se video</summary>
+   <summary>Se gennemgang</summary>
    <video autoplay controls muted loop="loop" width="718" height="611">
       <source src="https://github.com/DataOgDigitalisering/dokumentation/raw/master/Images/Nyfil.webm" type="video/webm">
    </video>
+   
+ ```html
+<details>
+   <summary>Se gennemgang</summary>
+   <video autoplay controls muted loop="loop" width="718" height="611">
+      <source src="https://github.com/DataOgDigitalisering/dokumentation/raw/master/Images/ændring.webm" type="video/webm">
+   </video>
+</details>
+```
 </details>
 
 
@@ -31,9 +40,13 @@ Vent 5-10 minutter på at Github bygger siden. Kontroller om det ser korrekt ud.
 Åbn Github Page-repo’et, [**_dokumentation_**](https://github.com/DataOgDigitalisering/dokumentation) og navigér ind I mappen *wiki*. Åbn den side du ønsker at redigere. Klik på blyanten for at redigere. Når ændringer er foretaget, klikkes der på *Commit changes*.
 Vent 5-10 minutter på at Github bygger siden. Kontroller om det ser korrekt ud. Browsere gemmer ofte en cache af siden, dom kan få siden til at se ud, som om den ikke er opdateret, selvom den er. Her anbefales det, enten rydde ens cache, eller teste siden i en privat/inkognito-instans af din browser.
 
-<video autoplay controls muted loop="loop" width="718" height="611">
-    <source src="https://github.com/DataOgDigitalisering/dokumentation/raw/master/Images/ændring.webm" type="video/webm">
-</video>
+<details>
+   <summary>Se gennemgang</summary>
+   <video autoplay controls muted loop="loop" width="718" height="611">
+      <source src="https://github.com/DataOgDigitalisering/dokumentation/raw/master/Images/ændring.webm" type="video/webm">
+   </video>
+</details>
+
 
 
 ## Konfigurering af siden
