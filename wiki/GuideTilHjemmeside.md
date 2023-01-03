@@ -7,7 +7,7 @@ Forudsætninger
 
 ## Oprettelse af ny wiki-side
 En ny side oprettes i Github Pages-repositoriet, [**_dokumentation_**](https://github.com/DataOgDigitalisering/dokumentation). Navigér ind I mappen *wiki*.  Klik på *’Add file’* -> *’Create new file’*. Navngiv din nye side *NavnPåSide.md* med fil-suffixet *.md* for at skabe en ny tom markdown fil.
-Herfra kan indholdet til den nye wiki-side skrives ind med [**_markdown-syntax_**](https://www.markdownguide.org/basic-syntax/). Formateringen på indholdet kan løbende tjekkes ved at benytte *Preview* funktionen.
+Herfra kan indholdet til den nye wiki-side skrives ind med [**_markdown-syntax_**](https://www.markdownguide.org/basic-syntax/). Formateringen på indholdet kan løbende tjekkes ved at benytte *Preview* funktionen. Det er desuden også muligt inkludere HTML-kode i markdown-filen, så kan der f.eks inkluderes videoklips - dette vil dog kunne ses i den færdig byggede side og ikke gennem GitHubs *Preview* funktion. 
 
 <video autoplay controls muted loop="loop" width="718" height="611">
     <source src="https://github.com/DataOgDigitalisering/dokumentation/raw/master/Images/Nyfil.webm" type="video/webm">
