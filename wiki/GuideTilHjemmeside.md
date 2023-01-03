@@ -27,18 +27,6 @@ SideNavn er det fil-navn, siden er gemt som under dokumentation/wiki/. Sidebar t
 Vent 5-10 minutter på at Github bygger siden. Kontroller om det ser korrekt ud. 
 > **TIP:** Man kan følge med i byggeprocessen af siden på [Actionsfanen](https://github.com/DataOgDigitalisering/dokumentation/actions)
 
-### HTML
-Det er desuden også muligt inkludere [HTML-kode](https://www.w3schools.com/html/default.asp) i markdown-filen, så der kan, som vist ovenover, inkluderes fold-ud sektioner og videoklips - videorne vil dog kun ses i den færdig byggede side og ikke gennem GitHubs *Preview* funktion. Dette kan gøres med følgende kode: 
-```html
-<details>
-   <summary>Se gennemgang</summary>
-   <video autoplay controls muted loop="loop" width="718" height="611">
-      <source src="https://github.com/DataOgDigitalisering/dokumentation/raw/master/Images/ændring.webm" type="video/webm">
-   </video>
-</details>
-```
-Til videoer er det vigtigt at *autoplay* er sat som muted - ellers kan Chromium browsere ikke afspille dem.
-
 ## Rediger eksisterende wiki-side
 Åbn Github Page-repo’et, [**_dokumentation_**](https://github.com/DataOgDigitalisering/dokumentation) og navigér ind I mappen *wiki*. Åbn den side du ønsker at redigere. Klik på blyanten for at redigere. Når ændringer er foretaget, klikkes der på *Commit changes*.
 Vent 5-10 minutter på at Github bygger siden. Kontroller om det ser korrekt ud. Browsere gemmer ofte en cache af siden, dom kan få siden til at se ud, som om den ikke er opdateret, selvom den er. Her anbefales det, enten rydde ens cache, eller teste siden i en privat/inkognito-instans af din browser.
@@ -50,6 +38,17 @@ Vent 5-10 minutter på at Github bygger siden. Kontroller om det ser korrekt ud.
    </video>
 </details>
 
+## HTML
+Det er desuden også muligt inkludere [HTML-kode](https://www.w3schools.com/html/default.asp) i markdown-filen, så der kan, som vist ovenover, inkluderes fold-ud sektioner og videoklips - videorne vil dog kun ses i den færdig byggede side og ikke gennem GitHubs *Preview* funktion. Dette kan gøres med følgende kode: 
+```html
+<details>
+   <summary>Se gennemgang</summary>
+   <video autoplay controls muted loop="loop" width="718" height="611">
+      <source src="https://github.com/DataOgDigitalisering/dokumentation/raw/master/Images/ændring.webm" type="video/webm">
+   </video>
+</details>
+```
+Til videoer er det vigtigt at *autoplay* er sat som muted - ellers kan Chromium browsere ikke afspille dem.
 
 
 ## Konfigurering af siden
