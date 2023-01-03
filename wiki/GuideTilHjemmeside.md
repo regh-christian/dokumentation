@@ -48,7 +48,7 @@ Det er desuden også muligt inkludere [HTML-kode](https://www.w3schools.com/html
    </video>
 </details>
 ```
-Til videoer er det vigtigt at *autoplay* er sat som muted - ellers kan Chromium browsere ikke afspille dem.
+Til videoer er det vigtigt at *autoplay* er sat som muted - ellers kan Chromium-baserede browsere ikke afspille dem.
 
 
 ## Konfigurering af siden
