@@ -1,6 +1,7 @@
 # Guide til hjemmeside
 Denne guide beskriver hvordan man opretter og redigere wiki-sider.
-Forudsætninger
+
+**Forudsætninger:**
 
 1.	[GitHub account](https://github.com/) oprettet med RegionH mail med et identificerbart brugernavn
 2.	Adgang til organisationen-profilen i GitHub [DataOgDigitalisering](https://github.com/DataOgDigitalisering) (gives af Admin: Stefan)
