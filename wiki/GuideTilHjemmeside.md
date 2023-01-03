@@ -44,7 +44,7 @@ Et eksempel kunne være:
 ```html
 <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.21.0/plugins/line-numbers/prism-line-numbers.min.js"></script>
 ```
-Ovenstående script tilføjer linjenummerering til kodeblokke.
+Ovenstående script er et plugin, der tilføjer linjenummerering til kodeblokke.
 
 ### Brug af kodeblokke
 En kodeblok kan genereres i markdown ved at benytte sig af **tre backticks** før og efter en kodeblok, f.eks. *\`\`\`* [Selve koden] *\`\`\`*. Såfremt man ønsker syntaks markeringer, gøres dette ved inkludere navnet på syntaksen efter de første tre backticks, dvs. 
