@@ -20,11 +20,20 @@ Herfra kan indholdet til den nye wiki-side skrives ind med [**_markdown-syntax_*
 </details>
 
 
-Når indholdet er færdigt og filen er gemt, navigeres der ud til [roden](https://github.com/DataOgDigitalisering/dokumentation) og derefter ind til [*_includes*](https://github.com/DataOgDigitalisering/dokumentation/tree/master/_includes). Her åbnes filen [sidebar-html](https://github.com/DataOgDigitalisering/dokumentation/blob/master/_includes/sidebar.html). Denne skal man redigere ved at trykke på blyanten og tilføje følgende linje 
+Når indholdet er færdigt og filen er gemt, navigeres der ud til [roden](https://github.com/DataOgDigitalisering/dokumentation) og derefter ind til [*_includes*](https://github.com/DataOgDigitalisering/dokumentation/tree/master/_includes). Her åbnes filen [sidebar-html](https://github.com/DataOgDigitalisering/dokumentation/blob/master/_includes/sidebar.html). Denne skal man redigere ved at trykke på blyanten og tilføje følgende linje uden kommentarmarkeringen udenom ```<!-- -->```.
 
 ```html
-<li><a href="{{'/SideNavn'| relative_url}}">Sidebar titel til side</a></li>.
+<!-- <li><a href="{{'/SideNavn'| relative_url}}">Sidebar titel til side</a></li> -->.
 ```
+<details>
+   <summary><b>Se gennemgang</b></summary>
+   <center>
+      <video autoplay controls muted loop="loop" width="718" height="611">
+         <source src="https://github.com/DataOgDigitalisering/dokumentation/raw/master/Images/NyfilSidebar.webm" type="video/webm">
+      </video>
+   </center>
+</details>
+
 
 SideNavn er det fil-navn, siden er gemt som under dokumentation/wiki/. Sidebar titel er det navn, der kommer til at stå i sidebaren, der linker til wiki-siden.
 Vent 5-10 minutter på at Github bygger siden og kontroller om det ser korrekt ud. 
