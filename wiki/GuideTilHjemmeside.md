@@ -25,6 +25,9 @@ Når indholdet er færdigt og filen er gemt, navigeres der ud til [roden](https:
 ```html
 <!-- <li><a href="{{'/SideNavn'| relative_url}}">Sidebar titel til side</a></li> -->.
 ```
+SideNavn er det fil-navn, siden er gemt som under dokumentation/wiki/. Sidebar titel er det navn, der kommer til at stå i sidebaren, der linker til wiki-siden. Vent 5-10 minutter på at Github bygger siden og kontroller om det ser korrekt ud. 
+> **TIP:** Man kan følge med i byggeprocessen af siden på [Actionsfanen](https://github.com/DataOgDigitalisering/dokumentation/actions)
+
 <details>
    <summary><b>Se gennemgang</b></summary>
    <center>
@@ -33,11 +36,6 @@ Når indholdet er færdigt og filen er gemt, navigeres der ud til [roden](https:
       </video>
    </center>
 </details>
-
-
-SideNavn er det fil-navn, siden er gemt som under dokumentation/wiki/. Sidebar titel er det navn, der kommer til at stå i sidebaren, der linker til wiki-siden.
-Vent 5-10 minutter på at Github bygger siden og kontroller om det ser korrekt ud. 
-> **TIP:** Man kan følge med i byggeprocessen af siden på [Actionsfanen](https://github.com/DataOgDigitalisering/dokumentation/actions)
 
 ## Rediger eksisterende wiki-side
 Åbn Github Page-repo’et, [**_dokumentation_**](https://github.com/DataOgDigitalisering/dokumentation) og navigér ind I mappen *wiki*. Åbn den side du ønsker at redigere. Klik på blyanten for at redigere. Når ændringer er foretaget, klikkes der på *Commit changes*.
