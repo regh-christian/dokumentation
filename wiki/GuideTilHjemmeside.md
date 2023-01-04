@@ -25,7 +25,10 @@ Når indholdet er færdigt og filen er gemt, navigeres der ud til [roden](https:
 ```html
 <!-- <li><a href="{{'/SideNavn'| relative_url}}">Sidebar titel til side</a></li> -->.
 ```
-SideNavn er det fil-navn, siden er gemt som under dokumentation/wiki/. Sidebar titel er det navn, der kommer til at stå i sidebaren, der linker til wiki-siden. Vent 5-10 minutter på at Github bygger siden og kontroller om det ser korrekt ud. 
+SideNavn er det fil-navn, siden er gemt som under dokumentation/wiki/. Sidebar titel er det navn, der kommer til at stå i sidebaren, der linker til wiki-siden. Vent 5-10 minutter på at Github bygger siden og kontroller om det ser korrekt ud. Det er også muligt at referer til eksterne links, og det ønskes at linket åbnes i en ny fane tilføjes ```target="_blank"``` i linjen. F.eks. 
+```html
+<li><a href="{{ 'https://www.markdownguide.org/cheat-sheet/'}}" target="_blank" >Markdown cheatsheet</a></li>
+```
 > **TIP:** Man kan følge med i byggeprocessen af siden på [Actionsfanen](https://github.com/DataOgDigitalisering/dokumentation/actions)
 
 <details>
