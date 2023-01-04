@@ -25,7 +25,7 @@ Når indholdet er færdigt og filen er gemt, navigeres der ud til [roden](https:
 ```html
 <!-- <li><a href="{{'/SideNavn'| relative_url}}">Sidebar titel til side</a></li> -->.
 ```
-SideNavn er det fil-navn, siden er gemt som under dokumentation/wiki/. Sidebar titel er det navn, der kommer til at stå i sidebaren, der linker til wiki-siden. Vent 5-10 minutter på at Github bygger siden og kontroller om det ser korrekt ud. Det er også muligt at referer til eksterne links, og det ønskes at linket åbnes i en ny fane tilføjes ```target="_blank"``` i linjen. F.eks. 
+SideNavn er det fil-navn, siden er gemt som under dokumentation/wiki/. Sidebar titel er det navn, der kommer til at stå i sidebaren, der linker til wiki-siden. Vent 5-10 minutter på at Github bygger siden og kontroller om det ser korrekt ud. Det er også muligt at refererer til eksterne links, og hvis det ønskes at linket åbnes i en ny fane tilføjes ```target="_blank"``` i linjen. F.eks. 
 ```html
 <li><a href="{{ 'https://www.markdownguide.org/cheat-sheet/'}}" target="_blank" >Markdown cheatsheet</a></li>
 ```
@@ -42,7 +42,7 @@ SideNavn er det fil-navn, siden er gemt som under dokumentation/wiki/. Sidebar t
 
 ## Rediger eksisterende wiki-side
 Åbn Github Page-repo’et, [**_dokumentation_**](https://github.com/DataOgDigitalisering/dokumentation) og navigér ind I mappen *wiki*. Åbn den side du ønsker at redigere. Klik på blyanten for at redigere. Når ændringer er foretaget, klikkes der på *Commit changes*.
-Vent 5-10 minutter på at Github bygger siden. Kontroller om det ser korrekt ud. Browsere gemmer ofte en cache af siden, dom kan få siden til at se ud, som om den ikke er opdateret, selvom den er. Her anbefales det, enten rydde ens cache, eller teste siden i en privat/inkognito-instans af din browser.
+Vent 5-10 minutter på at Github bygger siden. Kontroller om det ser korrekt ud. Browsere gemmer ofte en cache af siden, som kan få siden til at se ud, som om den ikke er opdateret, selvom den er. Her anbefales det, enten rydde ens cache, eller teste siden i en privat/inkognito-instans af din browser.
 
 <details>
    <summary><b>Se gennemgang</b></summary>
