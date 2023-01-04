@@ -27,7 +27,7 @@ Når indholdet er færdigt og filen er gemt, navigeres der ud til [roden](https:
 ```
 
 SideNavn er det fil-navn, siden er gemt som under dokumentation/wiki/. Sidebar titel er det navn, der kommer til at stå i sidebaren, der linker til wiki-siden.
-Vent 5-10 minutter på at Github bygger siden. Kontroller om det ser korrekt ud. 
+Vent 5-10 minutter på at Github bygger siden og kontroller om det ser korrekt ud. 
 > **TIP:** Man kan følge med i byggeprocessen af siden på [Actionsfanen](https://github.com/DataOgDigitalisering/dokumentation/actions)
 
 ## Rediger eksisterende wiki-side
