@@ -18,7 +18,7 @@ Herfra kan indholdet til den nye wiki-side skrives ind med [**_markdown-syntax_*
       </video>
    </center>
 </details>
-</br>
+<br>
 
 
 Når indholdet er færdigt og filen er gemt, navigeres der ud til [roden](https://github.com/DataOgDigitalisering/dokumentation) og derefter ind til [*_includes*](https://github.com/DataOgDigitalisering/dokumentation/tree/master/_includes). Her åbnes filen [sidebar-html](https://github.com/DataOgDigitalisering/dokumentation/blob/master/_includes/sidebar.html). Denne skal man redigere ved at trykke på blyanten og tilføje følgende linje uden kommentarmarkeringen udenom ```<!-- -->```.
