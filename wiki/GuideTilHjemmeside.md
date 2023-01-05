@@ -54,6 +54,13 @@ Vent 5-10 minutter på at Github bygger siden. Kontroller om det ser korrekt ud.
    </center>
 </details>
 
+## Privat side
+Hvis en side ikke ønskes offentlig tilgængelig lægges den op i dette sekundære, men private [repository](https://github.com/DataOgDigitalisering/FortroligInformation). Der kan herefter linkes til siden fra sidebaren ved tilføje linjen
+
+```html
+<li><a href="{{ 'DirekteLink'}}" target="_blank" >Sidebar titel til side</a></li>
+```
+
 
 ## HTML
 Det er desuden også muligt inkludere [HTML-kode](https://www.w3schools.com/html/default.asp) i markdown-filen. Der kan f.eks., som vist ovenover, inkluderes fold-ud sektioner og videoklips - videorne vil dog kun ses i den færdig byggede side og ikke gennem GitHubs *Preview* funktion. Dette blev gjort med følgende kode: 
