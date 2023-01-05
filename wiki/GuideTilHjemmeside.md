@@ -1,10 +1,10 @@
 # Guide til hjemmeside
-Denne guide beskriver hvordan man opretter og redigere wiki-sider.
+Denne guide beskriver, hvordan wiki-sider oprettes og redigeres.
 
 **Forudsætninger:**
 
-1.	[GitHub account](https://github.com/) oprettet med RegionH mail med et identificerbart brugernavn
-2.	Adgang til organisationen-profilen i GitHub [DataOgDigitalisering](https://github.com/DataOgDigitalisering) (gives af Admin: Stefan)
+1.	[GitHub konto](https://github.com/) oprettet med RegionH mail med et identificerbart brugernavn
+2.	Adgang til organisationsprofilen i GitHub [DataOgDigitalisering](https://github.com/DataOgDigitalisering) (gives af Admin: Stefan)
 
 ## Oprettelse af ny wiki-side
 En ny side oprettes i Github Pages-repositoriet, [**_dokumentation_**](https://github.com/DataOgDigitalisering/dokumentation). Navigér ind I mappen *wiki*.  Klik på *’Add file’* -> *’Create new file’*. Navngiv din nye side *NavnPåSide.md* med fil-suffixet *.md* for at skabe en ny tom markdown fil.
@@ -21,12 +21,12 @@ Herfra kan indholdet til den nye wiki-side skrives ind med [**_markdown-syntax_*
 <br>
 
 
-Når indholdet er færdigt og filen er gemt, navigeres der ud til [roden](https://github.com/DataOgDigitalisering/dokumentation) og derefter ind til [*_includes*](https://github.com/DataOgDigitalisering/dokumentation/tree/master/_includes). Her åbnes filen [sidebar-html](https://github.com/DataOgDigitalisering/dokumentation/blob/master/_includes/sidebar.html). Denne skal man redigere ved at trykke på blyanten og tilføje følgende linje uden kommentarmarkeringen udenom ```<!-- -->```.
+Når indholdet er færdigt og filen er gemt, navigeres der ud til [roden](https://github.com/DataOgDigitalisering/dokumentation) og derefter ind til [*_includes*](https://github.com/DataOgDigitalisering/dokumentation/tree/master/_includes). Her åbnes filen [sidebar-html](https://github.com/DataOgDigitalisering/dokumentation/blob/master/_includes/sidebar.html). Denne skal man redigere ved at trykke på blyanten og tilføje følgende linje **uden** kommentarmarkeringen udenom ```<!-- -->```.
 
 ```html
 <!-- <li><a href="{{'/SideNavn'| relative_url}}">Sidebar titel til side</a></li> -->.
 ```
-SideNavn er det fil-navn, siden er gemt som under dokumentation/wiki/. Sidebar titel er det navn, der kommer til at stå i sidebaren, der linker til wiki-siden. Vent 5-10 minutter på at Github bygger siden og kontroller om det ser korrekt ud. Det er også muligt at refererer til eksterne links, og hvis det ønskes at linket åbnes i en ny fane tilføjes ```target="_blank"``` i linjen. F.eks. 
+SideNavn er det fil-navn, siden er gemt som under dokumentation/wiki/. Sidebar titel er det navn, der kommer til at stå i sidebaren, der linker til wiki-siden. Vent 3-5 minutter på at Github bygger siden og kontroller om det ser korrekt ud. Det er også muligt at referere til eksterne links, og hvis det ønskes at linket åbnes i en ny fane tilføjes ```target="_blank"``` i linjen. F.eks. 
 ```html
 <li><a href="{{ 'https://www.markdownguide.org/cheat-sheet/'}}" target="_blank" >Markdown cheatsheet</a></li>
 ```
@@ -56,7 +56,7 @@ Vent 5-10 minutter på at Github bygger siden. Kontroller om det ser korrekt ud.
 
 
 ## HTML
-Det er desuden også muligt inkludere [HTML-kode](https://www.w3schools.com/html/default.asp) i markdown-filen, så der kan, som vist ovenover, inkluderes fold-ud sektioner og videoklips - videorne vil dog kun ses i den færdig byggede side og ikke gennem GitHubs *Preview* funktion. Dette kan gøres med følgende kode: 
+Det er desuden også muligt inkludere [HTML-kode](https://www.w3schools.com/html/default.asp) i markdown-filen. Der kan f.eks., som vist ovenover, inkluderes fold-ud sektioner og videoklips - videorne vil dog kun ses i den færdig byggede side og ikke gennem GitHubs *Preview* funktion. Dette blev gjort med følgende kode: 
 ```html
 <details>
    <summary>Se gennemgang</summary>
@@ -69,7 +69,7 @@ Til videoer er det vigtigt at *autoplay* er sat som muted - ellers kan Chromium-
 
 
 ## Konfigurering af siden
-Store dele af wiki-siden konfigureres i [**_config.yml_**](https://github.com/DataOgDigitalisering/dokumentation/blob/master/_config.yml) filen. Her kan layoutet fuldstændig ændres ved at ændre [to linjer](http://www.drassil.org/git-wiki/customize) til nogle prædefinerede temaer. Det er også muligt at skrive sin egen CSS-fil med layout-konfigurationer.
+Store dele af wiki-siden konfigureres i [**_config.yml_**](https://github.com/DataOgDigitalisering/dokumentation/blob/master/_config.yml) filen. Her kan layoutet fuldstændig ændres ved at ændre [to linjer](http://www.drassil.org/git-wiki/customize) til nogle prædefinerede temaer. Det er også muligt at skrive sin egen CSS-fil med layout-konfigurationer, og erstatte de eksisterende.
 
 ### Scripting
 Funktionalitet kan tilføjes til siden gennem scripting. F.eks. hentes der en matematik-syntaks fortolker (MathJax), så siden kan vise matematisk notation. 
