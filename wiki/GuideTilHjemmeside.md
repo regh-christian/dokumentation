@@ -55,7 +55,7 @@ Vent 5-10 minutter på at Github bygger siden. Kontroller om det ser korrekt ud.
 </details>
 
 ## Privat side
-Hvis en side ikke ønskes offentlig tilgængelig lægges den op i dette sekundære, men private [repository](https://github.com/DataOgDigitalisering/FortroligInformation). Der kan herefter linkes til siden fra sidebaren ved tilføje linjen
+Hvis en side ikke ønskes offentlig tilgængelig lægges den op i dette sekundære, men private [repository](https://github.com/DataOgDigitalisering/FortroligInformation). Der kan herefter linkes til siden fra sidebaren ved tilføje nedensåtende linje her [sidebar-html](https://github.com/DataOgDigitalisering/dokumentation/blob/master/_includes/sidebar.html).
 
 ```html
 <li><a href="{{ 'DirekteLink'}}" target="_blank" >Sidebar titel til side</a></li>
