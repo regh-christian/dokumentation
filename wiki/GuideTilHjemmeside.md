@@ -63,7 +63,7 @@ Hvis en side ikke ønskes offentlig tilgængelig lægges den op i dette sekundæ
 
 
 ## HTML
-Det er desuden også muligt inkludere [HTML-kode](https://www.w3schools.com/html/default.asp) i markdown-filen. Der kan f.eks., som vist ovenover, inkluderes fold-ud sektioner og videoklips - videorne vil dog kun ses i den færdig byggede side og ikke gennem GitHubs *Preview* funktion. Dette blev gjort med følgende kode: 
+Det er desuden også muligt indlejre [HTML-kode](https://www.w3schools.com/html/default.asp) i markdown-filen. Der kan f.eks., som vist ovenover, inkluderes fold-ud sektioner og videoklips - videorne vil dog kun ses i den færdig byggede side og ikke gennem GitHubs *Preview* funktion. Dette blev gjort med følgende kode: 
 ```html
 <details>
    <summary>Se gennemgang</summary>
@@ -74,6 +74,7 @@ Det er desuden også muligt inkludere [HTML-kode](https://www.w3schools.com/html
 ```
 Til videoer er det vigtigt at *autoplay* er sat som muted - ellers kan Chromium-baserede browsere ikke afspille dem.
 
+Yderligere HTML funktionalitet, der kan implementeres, kan bl.a. findes [her](https://www.w3schools.com/html/default.asp).
 
 ## Konfigurering af siden
 Store dele af wiki-siden konfigureres i [**_config.yml_**](https://github.com/DataOgDigitalisering/dokumentation/blob/master/_config.yml) filen. Her kan layoutet fuldstændig ændres ved at ændre [to linjer](http://www.drassil.org/git-wiki/customize) til nogle prædefinerede temaer. Det er også muligt at skrive sin egen CSS-fil med layout-konfigurationer, og erstatte de eksisterende.
