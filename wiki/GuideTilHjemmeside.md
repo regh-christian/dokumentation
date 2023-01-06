@@ -100,7 +100,8 @@ En kodeblok kan genereres i markdown ved at benytte sig af **tre backticks** fø
 Syntaksmarkeringsredskabet, der benyttes er [Prism js](https://prismjs.com/#supported-languages), og det er valgt, da det understøtter DAX samt de mest gængse programmeringssprog. 
 
 ### Brug af matematisk notation
-For at vise matematisk notation kan syntaksen kendt fra Tex og LaTex benyttes. Hvis man vil bruge matematisk notation **in-line**, dvs. midt i tekst benyttes `$$` afgrænserer rundt om notationen, f.eks.  $$\sqrt{3x-1}+(1+x)^2$$
+For at vise matematisk notation kan syntaksen kendt fra Tex og LaTex benyttes. For at gøre dette benyttes `$$` som afgrænserer rundt om notationen, f.eks. bliver  ```$$\sqrt{3x-1}+(1+x)^2$$``` til $$\sqrt{3x-1}+(1+x)^2$$
+En reference til syntaksen for den matematiske notation kan findes [her](https://tilburgsciencehub.com/building-blocks/collaborate-and-share-your-work/write-your-paper/amsmath-latex-cheatsheet/).
 
 ### Teknisk opsætning af siden
 Denne statiske side er genereret vha. [Jekyll](https://jekyllrb.com/) og hostet vha. [GitHub Pages](https://pages.github.com/). Skabelonen til siden er genereret [herfra](https://github.com/Drassil/git-wiki-skeleton).
