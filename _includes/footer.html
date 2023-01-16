@@ -14,8 +14,12 @@
 
 
 <!-- To ensure dynamic sizing of iframes-->
-<script type="text/javascript">
-  function resizeIframe(iframe) {
-    iframe.height = iframe.contentWindow.document.body.scrollHeight + "px";
-  }
-</script>  
+<script>
+// Selecting the iframe element
+var iframe = document.getElementById("myIframe");
+
+// Adjusting the iframe height onload event
+iframe.onload = function(){
+    iframe.style.height = iframe.contentWindow.document.body.scrollHeight + 'px';
+}
+</script>
