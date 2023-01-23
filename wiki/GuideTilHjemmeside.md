@@ -75,7 +75,7 @@ Det er desuden også muligt indlejre [HTML-kode](https://www.w3schools.com/html/
 Til videoer er det vigtigt at *autoplay* er sat som muted - ellers kan Chromium-baserede browsere ikke afspille dem.
 
 ### HTML Iframe
-HTML Iframe er et nyttigt HTML-element. Det kan benyttes til at indlejre f.eks. Excelfiler, wordfiler og powerpoint filer. Filer skal dog ligge på SharePoint eller OneDrive.
+HTML Iframe er et nyttigt HTML-element. Det kan benyttes til at indlejre f.eks. Excel-, word- og powerpoint-filer. Filer skal dog ligge på SharePoint eller OneDrive.
 
 ```html
 <center>
