@@ -83,6 +83,17 @@ HTML Iframe er et nyttigt HTML-element. Det kan benyttes til at indlejre f.eks. 
 </center>
 ```
 
+<details>
+   <summary><b>Se hvordan Iframe link hentes</b></summary>
+   <center>
+      <video autoplay controls muted loop="loop" width="718" height="611">
+         <source src="https://github.com/DataOgDigitalisering/dokumentation/raw/master/Images/Iframe.webm" type="video/webm">
+      </video>
+   </center>
+</details>
+<br>
+
+
 Yderligere HTML funktionalitet, der kan implementeres, kan bl.a. findes [her](https://www.w3schools.com/html/default.asp).
 
 ## Konfigurering af siden
