@@ -126,16 +126,3 @@ En reference til syntaksen for den matematiske notation kan findes [her](https:/
 
 ### Teknisk opsætning af siden
 Denne statiske side er genereret vha. [Jekyll](https://jekyllrb.com/) og hostet vha. [GitHub Pages](https://pages.github.com/). Skabelonen til siden er genereret [herfra](https://github.com/Drassil/git-wiki-skeleton).
-
-# Playground
-{::options parse_block_html="true" /}
-
-<details><summary markdown="span">Let's see some code!</summary>
-```python
-print('Hello World!')
-```
-Of course, it has to be Hello World, right?
-</details>
-<br/>
-
-{::options parse_block_html="false" /}
