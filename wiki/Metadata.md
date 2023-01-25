@@ -5,7 +5,7 @@
    <summary><b>Query metadata om tabeller i chru_cube</b></summary>
    <center>
       ```sql
-      USE [Flis2_LønHR_v2];
+      USE [Flis2_LønHR_v2]
       SELECT
          col.TABLE_SCHEMA AS 'Skema'
          ,col.TABLE_NAME AS 'Tabel'
