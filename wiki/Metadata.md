@@ -4,7 +4,7 @@
 <details>
    <summary><b>Se gennemgang</b></summary>
    <center>
-   ```
+   ```sql
    USE [Flis2_LønHR_v2];
    SELECT
       col.TABLE_SCHEMA AS 'Skema'
