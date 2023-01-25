@@ -64,8 +64,11 @@ ORDER BY Skema asc, Tabel ASC, ' ' ASC
 ```
 </details>
 <br/>
+{::options parse_block_html="false" /}
 
 
+
+{::options parse_block_html="true" /}
 <!-- MEASURES -->
 <details><summary markdown="span">Measures: DMV-query til træk af metadata om measures i DaxStudio</summary>
 ```sql
