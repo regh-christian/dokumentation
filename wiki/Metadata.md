@@ -3,7 +3,6 @@
 ## Tabeller
 
 {::options parse_block_html="true" /}
-
 <details><summary markdown="span">SQL-query til træk af metadata om tabeller</summary>
 ```sql
 USE [Flis2_LønHR_v2];
@@ -47,11 +46,10 @@ WHERE 1=1
    AND col.TABLE_SCHEMA in ('chru_cube', 'DM_FL_HR')
 ORDER BY Skema asc, Tabel ASC, ' ' ASC  
 ```
-
 </details>
-
-
 <br/>
+{::options parse_block_html="false" /}
+
 
 
 Bliver denne tekst vist ??
@@ -69,7 +67,7 @@ Bliver denne tekst vist ??
 
 
 
-{::options parse_block_html="false" /}
+
 
 <!--
 &action=embedview
