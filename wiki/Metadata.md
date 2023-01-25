@@ -1,7 +1,7 @@
 # Metadata
 
 <center>
-<iframe src="https://regionh-my.sharepoint.com/personal/nicolai_schmidt_01_regionh_dk1/_layouts/15/Doc.aspx?sourcedoc={e61ce2ee-cd72-4689-813d-6beefb41a13d}&amp;action=embedview&amp;wdAr=1.7777777777777777&amp;wdEaaCheck=0" width="100%" height="100%" frameborder="0">This is an embedded <a target="_blank" href="https://office.com">Microsoft Office</a> presentation, powered by <a target="_blank" href="https://office.com/webapps">Office</a>.</iframe>
+<iframe src="https://regionh-my.sharepoint.com/personal/nicolai_schmidt_01_regionh_dk1/_layouts/15/Doc.aspx?sourcedoc={e61ce2ee-cd72-4689-813d-6beefb41a13d}&amp;action=embedview&amp;wdAr=1.7777777777777777&amp;wdEaaCheck=0" width="476" height="288" frameborder="0">This is an embedded <a target="_blank" href="https://office.com">Microsoft Office</a> presentation, powered by <a target="_blank" href="https://office.com/webapps">Office</a>.</iframe>
 </center>
 	
 	
