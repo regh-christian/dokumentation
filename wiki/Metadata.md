@@ -3,7 +3,6 @@
 ## Tabeller
 
 {::options parse_block_html="true" /}
-
 <details><summary markdown="span">SQL-query til træk af metadata om tabeller</summary>
 ```sql
 USE [Flis2_LønHR_v2];
@@ -49,7 +48,6 @@ ORDER BY Skema asc, Tabel ASC, ' ' ASC
 ```
 </details>
 <br/>
-
 {::options parse_block_html="false" /}
 
 
