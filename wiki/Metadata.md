@@ -17,6 +17,7 @@
 
 ## Kode til træk af metadata
 
+<!-- TABELLER -->
 {::options parse_block_html="true" /}
 <details><summary markdown="span">Tabeller: SQL-query til træk af metadata om tabeller i SSMS</summary>
 ```sql
@@ -65,16 +66,7 @@ ORDER BY Skema asc, Tabel ASC, ' ' ASC
 <br/>
 
 
-
-
-
-
-
-
-
-
-
-
+<!-- MEASURES -->
 <details><summary markdown="span">Measures: DMV-query til træk af metadata om measures i DaxStudio</summary>
 ```sql
 SELECT
