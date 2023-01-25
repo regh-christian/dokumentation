@@ -75,10 +75,7 @@ ORDER BY Skema asc, Tabel ASC, ' ' ASC
 
 
 
-
-
-{::options parse_block_html="true" /}
-<details><summary markdown="span">Tabeller: DMV-query til træk af metadata om measures i DaxStudio</summary>
+<details><summary markdown="span">Measures: DMV-query til træk af metadata om measures i DaxStudio</summary>
 ```sql
 SELECT
 	[DisplayFolder] AS [Mappe]
