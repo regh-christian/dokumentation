@@ -18,7 +18,7 @@
 ## Kode til træk af metadata
 
 {::options parse_block_html="true" /}
-<details><summary markdown="span">SQL-query til træk af metadata om tabeller</summary>
+<details><summary markdown="span">Tabeller: SQL-query til træk af metadata om tabeller i SSMS</summary>
 ```sql
 USE [Flis2_LønHR_v2];
 
@@ -70,6 +70,28 @@ ORDER BY Skema asc, Tabel ASC, ' ' ASC
 
 
 
+
+
+
+
+
+
+
+{::options parse_block_html="true" /}
+<details><summary markdown="span">Tabeller: DMV-query til træk af metadata om measures i DaxStudio</summary>
+```sql
+SELECT
+	[DisplayFolder] AS [Mappe]
+	,[Name] AS [Measure]
+	--,[DataType] AS [Type]
+	,[FormatString] AS [Format]
+	,[Expression] AS [DAX]
+	,[Description] AS [Beskrivelse]
+	,[ModifiedTime] AS [Redigeret]
+  FROM $SYSTEM.TMSCHEMA_MEASURES
+ORDER BY [Name]
+```
+</details>
 {::options parse_block_html="false" /}
 
 
