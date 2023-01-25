@@ -2,7 +2,7 @@
 
 ## Tabeller
 <details>
-   <summary><b>Se gennemgang</b></summary>
+   <summary><b>Query metadata om tabeller i chru_cube</b></summary>
    <center>
       ```sql
       USE [Flis2_LønHR_v2];
