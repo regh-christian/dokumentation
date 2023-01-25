@@ -6,7 +6,6 @@
    <center>
       ```SQL
       USE [Flis2_LønHR_v2];
-
       SELECT
          col.TABLE_SCHEMA AS 'Skema'
          ,col.TABLE_NAME AS 'Tabel'
