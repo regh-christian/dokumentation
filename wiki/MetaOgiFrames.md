@@ -89,9 +89,10 @@ SELECT
 ORDER BY [Name]
 ```
 </details>
+<br>
 {::options parse_block_html="false" /}
 
-<br>
+
 ## Christians guide til bestilling af dataadgange
 
 <center>
