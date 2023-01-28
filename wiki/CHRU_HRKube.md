@@ -9,15 +9,12 @@ Tabeldata om alle tabeller i kuben.
 - info
 
 
-| Dimensioner       | Fact              | Brugerstyring     | Øvrige            |
-|-------------------|-------------------|-------------------|-------------------|
-| Content Cell      | Content Cell      |                   |                   |
-| Content Cell      | Content Cell      |                   |                   |
-|                   |                   |                   |                   |
-|                   |                   |                   |                   |
-|                   |                   |                   |                   |
-|                   |                   |                   |                   |
 
+| Dimensionstabeller                 | Facttabeller                      | Brugerstyring | Øvrige                                                                         |
+|------------------------------------|-----------------------------------|---------------|-------------------------------------------------------------------------------|
+| - Alle tabeller er døbt v_Dim... -  | - Alle tabeller døbt v_Fact... -  | v_Security... | v_Tally... og v_Slicer...  v_InfoLeveranceOpdateringsdato v_Servicemeddelelser |
+|                                     |                                   |               |                                                                                |
+|                                     |                                   |               |                                                                                |
 
 
 
