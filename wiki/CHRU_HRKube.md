@@ -1,4 +1,5 @@
-# chru_cube
+# CHRU_KRKube
+
 Tabeldata om alle tabeller i kuben.
 - dim
 - fact
@@ -7,23 +8,6 @@ Tabeldata om alle tabeller i kuben.
 - security
 - info
 
-## Tilføj til denne side
-
-Når en ny tabel tilføjes til kuben
-
-
-```SQL
-USE [Flis2_LønHR_v2];
-DECLARE @tbl AS CHAR(50) = 'v_DimAnsættelse';
-SELECT
-	ORDINAL_POSITION AS KolNum
-	,COLUMN_NAME AS KolNavn
-	,DATA_TYPE AS Datatype
-	,'' AS Beskrivelse
-		
-FROM INFORMATION_SCHEMA.COLUMNS
-WHERE TABLE_NAME = @tbl
-```
 
 https://www.tablesgenerator.com/markdown_tables
 
