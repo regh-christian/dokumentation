@@ -1,6 +1,5 @@
 # Metadata & iFrames
 
-Tjek [relationer](/grunddata.html#relationer)
 
 ## Tabeller
 
