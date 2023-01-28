@@ -1,6 +1,6 @@
 # Metadata & iFrames
 
-Tjek [relationer](grunddata.md#relationer)
+Tjek [relationer](/grunddata.md#relationer)
 
 ## Tabeller
 
