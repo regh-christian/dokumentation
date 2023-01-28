@@ -10,10 +10,9 @@ Tabeldata om alle tabeller i kuben.
 
 
 
-| Dimensionstabeller                 | Facttabeller                      | Brugerstyring | Øvrige                                                                         |
-|------------------------------------|-----------------------------------|---------------|-------------------------------------------------------------------------------|
-| - Alle tabeller er døbt v_Dim... -  | - Alle tabeller døbt v_Fact... -  | v_Security... | v_Tally... og v_Slicer...  v_InfoLeveranceOpdateringsdato v_Servicemeddelelser |
-|                                     |                                   |               |                                                                                |
+| Dimensionstabeller                 | Facttabeller                      | Brugerstyring | Øvrige                               |
+|------------------------------------|-----------------------------------|---------------|-------------------------------------------------------------------------------
+| - Alle tabeller er døbt v_Dim...   | - Alle tabeller døbt v_Fact... -  | v_Security... | v_Tally... og v_Slicer...  v_InfoLeveranceOpdateringsdatov_Servicemeddelelser |                                     |                                     |                                   |               |                                                                                |
 |                                     |                                   |               |                                                                                |
 
 
