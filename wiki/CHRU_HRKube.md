@@ -1,25 +1,10 @@
 # CHRU_KRKube
 
-Tabeldata om alle tabeller i kuben.
-- dim
-- fact
-- tally
-- slicer
+Alle tabeller i kuben tilhører en af følgende:
+- **Dimensionstabeller** er alle døbt v_Dim[...]
+- ****
+- **Tally-tabeller** er støttetabeller, som anvendes til sortering og inddeling af fx alder i ønskede intervaller. Bruges på figurakser og i diagrammer til at kontrollere grupperinger.
+- **Slicer tabeller** anvendes som bridge-tabeller. 
 - security
 - info
-
-
-
-| Dimensionstabeller                 | Facttabeller                      | Brugerstyring | Øvrige                               |
-|------------------------------------|-----------------------------------|---------------|-------------------------------------------------------------------------------
-| - Alle tabeller er døbt v_Dim...   | - Alle tabeller døbt v_Fact... -  | v_Security... | v_Tally... og v_Slicer...  v_InfoLeveranceOpdateringsdatov_Servicemeddelelser |                                     |                                     |                                   |               |                                                                                |
-|                                     |                                   |               |                                                                                |
-
-
-
-
-
-
-[https://www.tablesgenerator.com/markdown_tables](https://www.tablesgenerator.com/markdown_tables)
-
 
