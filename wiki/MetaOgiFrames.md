@@ -2,11 +2,6 @@
 
 Tjek [relationer](grunddata.md#relationer)
 
-<center>
-<iframe src="https://regionh-my.sharepoint.com/personal/nicolai_schmidt_01_regionh_dk1/_layouts/15/Doc.aspx?sourcedoc={e61ce2ee-cd72-4689-813d-6beefb41a13d}&amp;action=embedview&amp;wdAr=1.7777777777777777&amp;wdEaaCheck=0&wdAllowInteractivity=FALSE" width="476" height="288" frameborder="0"></iframe>
-</center>
-	
-	
 ## Tabeller
 
 <center>
@@ -98,7 +93,7 @@ ORDER BY [Name]
 ## Christians guide til bestilling af dataadgange
 
 <center>
-<iframe src="https://regionh-my.sharepoint.com/personal/stefan_sajin-henningsen_regionh_dk/_layouts/15/Doc.aspx?sourcedoc={c652f92d-8025-4f11-9b4c-3e0f0e0dadba}&amp;action=embedview&amp;wdEmbedCode=0&amp;wdPrint=0" width="700" height="700" frameborder="0" seamless="TRUE"></iframe>
+<iframe src="https://regionh-my.sharepoint.com/personal/stefan_sajin-henningsen_regionh_dk/_layouts/15/Doc.aspx?sourcedoc={c652f92d-8025-4f11-9b4c-3e0f0e0dadba}&amp;action=embedview&amp;wdEmbedCode=0&amp;wdPrint=0" width="100%" height="720" frameborder="0" seamless="TRUE"></iframe>
 </center>
 
 <!--
