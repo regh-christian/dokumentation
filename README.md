@@ -12,6 +12,7 @@ Sektionen har hovedsageligt tekniske medarbejdere med kompetencer i dataudtræk 
 <br>
 
 Tjek [øvelse 1](#øvelse---kontrol-af-dataadgange)
+Tjek [measures tabel](/metaogiframes#kode-til-trak-af-metadata)
 
 ### Formål
 Denne wiki er tiltænkt som introduktionsmateriale til nye medarbejdere og som et opslagværk til erfarne medarbejdere hos Data og Rapportering. 
