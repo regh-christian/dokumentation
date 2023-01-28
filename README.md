@@ -7,7 +7,7 @@
 Sektionen har hovedsageligt tekniske medarbejdere med kompetencer i dataudtræk og datafremstilling (7) og økonomi medarbejdere (2), samt ledelsesmedarbejdere (2) til at understøtte disse.
 
 <center>
-<iframe src="https://regionh-my.sharepoint.com/personal/stefan_sajin-henningsen_regionh_dk/_layouts/15/Doc.aspx?sourcedoc={9eae6cfa-732f-48a1-81f3-246e3b6a2e86}&amp;action=embedview&amp;wdAr=1.7777777&showNavigation=FALSE" width="800" height="480" frameborder="0" seamless="TRUE"></iframe>
+<iframe src="https://regionh-my.sharepoint.com/personal/stefan_sajin-henningsen_regionh_dk/_layouts/15/Doc.aspx?sourcedoc={9eae6cfa-732f-48a1-81f3-246e3b6a2e86}&amp;action=embedview&amp;wdAr=1.7777777&showNavigation=FALSE" width="800" height="475" frameborder="0" seamless="TRUE"></iframe>
 </center>
 <br>
 
