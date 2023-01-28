@@ -9,6 +9,21 @@ Tabeldata om alle tabeller i kuben.
 - info
 
 
+| Dimensioner       | Fact              | Brugerstyring     | Øvrige            |
+|-------------------|-------------------|-------------------|-------------------|
+| Content Cell      | Content Cell      |                   |                   |
+| Content Cell      | Content Cell      |                   |                   |
+|                   |                   |                   |                   |
+|                   |                   |                   |                   |
+|                   |                   |                   |                   |
+|                   |                   |                   |                   |
+
+
+
+
+
+
+
 https://www.tablesgenerator.com/markdown_tables
 
 
