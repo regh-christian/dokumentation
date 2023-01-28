@@ -13,7 +13,7 @@ Sektionen har hovedsageligt tekniske medarbejdere med kompetencer i dataudtræk 
 
 Tjek [øvelse 1](#øvelse---kontrol-af-dataadgange)
 
-Tjek [measures tabel](../wiki/grunddata.html#relationer)
+Tjek [grunddata\relationer](/wiki/grunddata.html#relationer)
 
 ### Formål
 Denne wiki er tiltænkt som introduktionsmateriale til nye medarbejdere og som et opslagværk til erfarne medarbejdere hos Data og Rapportering. 
