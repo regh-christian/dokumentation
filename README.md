@@ -11,7 +11,7 @@ Sektionen har hovedsageligt tekniske medarbejdere med kompetencer i dataudtræk 
 </center>
 <br>
 
-Tjek [øvelse 1](#øvelse)
+Tjek [øvelse 1](#øvelse---kontrol-af-dataadgange)
 
 ### Formål
 Denne wiki er tiltænkt som introduktionsmateriale til nye medarbejdere og som et opslagværk til erfarne medarbejdere hos Data og Rapportering. 
@@ -43,7 +43,7 @@ Hvor specifikke emner med fordel kan gennemgås via andre kilder fx ifm. løsnin
 -->
 
 
-> ### ØVELSE
+> ### ØVELSE - KONTROL AF DATAADGANGE
 > Denne øvelse går ud på at teste adgange. Følg nedenstående link til et SQL-script. Åbn og eksekver dette script i SQL Server Management Studio for at undersøge om du har alle nødvendige adgange. Kørslen bør tage omkring 10-15 minutter og returnere en tabel, der beskriver dine adgange.
 >*[Link til SQL-SCRIPT](https://github.com/DataOgDigitalisering/FortroligInformation/blob/main/%C3%98velse1/ex_dataadgange.sql)*.
 
