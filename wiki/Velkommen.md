@@ -13,6 +13,7 @@
 
 # Introduktion til CHRU_HRKube
 
+<br>
 ## ***Kuben***
 I dit arbejde får du brug for at kende og kunne arbejde med data i "**kuben**" (med kuben menes—indtil videre—CHRU_HRKube). 
 I kuben processeres data fra mange forskellige kilder til en række forskellige formål. Kuben er datamodel i bl.a. <a href="https://flis.regionh.top.local:444/PBIReports/powerbi/L%C3%B8n%20og%20HR/HR%20Lederdashboard/HR%20Lederdashboard?RC:Toolbar=False" target="_blank">___HR Lederdashboard___</a> og <a href="https://flis.regionh.top.local:444/PBIReports/powerbi/L%C3%B8n%20og%20HR/HR%20Strategisk%20Dashboard/HR%20Strategisk%20Dashboard?RC:Toolbar=False" target="_blank">___HR Strategisk Dashboard___</a>. 
@@ -23,7 +24,7 @@ På produktions- og udviklingsserverne findes data under skemaet, **chru_cube**.
 Som introduktion til kuben anbefales at gennemgå materialet hér på siden ét tema ad gangen. Du kan med fordel prøve at bygge din egen version af kuben tabel for tabel; measure for measure; figur for figur. I hvert tema findes små øvelser, hvor du kan testen din viden.
 
 
-
+<br>
 ### Tabeller
 
 I grove træk falder al data i kuben indenfor kategorierne
@@ -41,6 +42,7 @@ Kuben udvides løbende med nye datakilder, i takt med, at flere temaer skal kunn
 
 
 
+<br>
 ### Measures
 Via measures implementeres vores standardiserede beregningsmetoder. De er grupperet temavis. I gruppen ___Diverse_ indgår beregninger på stamdata og dette kan være et godt sted at starte med at skabe overblik over kuben. Foruden indblik i de mere centrale tabeller vil du hér se eksempler på, hvordan viden om stamdata er essentielt for at kunne definere fx hvilken personalegruppe, der skal indgå i en given beregning; hvordan dette kan variere fra tema til tema; hvordan antallet af personer, der indgår i en beregning, er afgørende for, om et resultat nødvendigvis skal anonymiseres mm.
 
@@ -48,8 +50,11 @@ Andre measures—lokaliseret i mapperne, ___Farver_ og ___Tekster_—bruges til 
 
 
 
+<br>
 # Dataadgange
 Du skal have adgang til ..........
+
+
 <!-- Embed iFrame. word-doc: "Guide til bestilling af adgange.docx" på OneDrive-->
 {::options parse_block_html="true" /}
 <details><summary markdown="span">Guide til bestilling af dataadgange</summary>
@@ -61,7 +66,7 @@ Du skal have adgang til ..........
 {::options parse_block_html="false" /}
 
 
-
+<br>
 <!-- Embed iFrame. PowerPoint: "SQL-kursus.pptx" på OneDrive-->
 {::options parse_block_html="true" /}
 <details><summary markdown="span">Guide til bestilling af dataadgange</summary>
