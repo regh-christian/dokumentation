@@ -62,5 +62,17 @@ Du skal have adgang til ..........
 
 
 
+<!-- Embed iFrame. word-doc: "Guide til bestilling af adgange.docx" på OneDrive-->
+{::options parse_block_html="true" /}
+<details><summary markdown="span">One pager — Design guidelines til rapporter i FLIS</summary>
+<center>
+<iframe src="https://regionh-my.sharepoint.com/personal/stefan_sajin-henningsen_regionh_dk/_layouts/15/Doc.aspx?sourcedoc={89bc13a3-2f00-4dec-a49c-49033d194d1a}&amp;action=embedview&amp;wdEmbedCode=0&amp;wdPrint=0&wdToolbar=FALSE" width="100%" height="700" frameborder="0" seamless="yes"></iframe>
+</center>
+<br>
+</details>
+{::options parse_block_html="false" /}
+
+
+
 
 
