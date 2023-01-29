@@ -52,7 +52,6 @@ Andre measures—lokaliseret i mapperne, ___Farver_ og ___Tekster_—bruges til 
 
 <br>
 # Dataadgange
-Du skal have adgang til ..........
 
 <!-- Embed iFrame. word-doc: "Guide til bestilling af adgange.docx" på OneDrive-->
 {::options parse_block_html="true" /}
