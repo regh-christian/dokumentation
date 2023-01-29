@@ -62,6 +62,22 @@ Du skal have adgang til ..........
 
 
 
+<!-- Embed iFrame. PowerPoint: "SQL-kursus.pptx" på OneDrive-->
+{::options parse_block_html="true" /}
+<details><summary markdown="span">Guide til bestilling af dataadgange</summary>
+<center>
+<iframe src="https://regionh-my.sharepoint.com/personal/stefan_sajin-henningsen_regionh_dk/_layouts/15/Doc.aspx?sourcedoc={ee7ec7a1-d13c-4855-a459-c1717f9aa646}&amp;action=embedview&amp;wdEmbedCode=0&amp;wdPrint=0&wdToolbar=FALSE" width="100%" height="700" frameborder="0" seamless="yes"></iframe>
+</center>
+<br>
+</details>
+{::options parse_block_html="false" /}
+
+
+
+
+
+
+<br>
 > **ØVELSE - KONTROL AF DATAADGANGE**
 > 
 > Denne øvelse går ud på at teste adgange. Følg nedenstående link til et SQL-script. Åbn og eksekver dette script i SQL Server Management Studio for at undersøge om du har alle nødvendige adgange. Kørslen bør tage omkring 10-15 minutter og returnere en tabel, der beskriver dine adgange.
