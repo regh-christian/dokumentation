@@ -22,12 +22,19 @@ På produktions- og udviklingsserverne findes data under skemaet, **chru_cube**.
 
 
 ### Tabeller
-Al data i kuben tilhører én af følgende:
-- **Dimensionstabeller** er alle døbt v_Dim[...]
+
+| Grunddata     | Temaer        | Brugerstyring   | Gruppering | Serviceinformation |
+| ------------- | ------------- |-----------------|------------|--------------------|
+
+
+Grunddata, temaer, brugerstyring, gruppering og serviceinformation.
+
+Al data i kuben tilhører én af følgende typer:
+- **Dimensionstabeller**. Tabeller hvis navn starter v_Dim... Nogle er næsten identisk kildedata såsom organisations- og stillingshieraki. Andre er mere komplekse og lavet specifikt til enkelte temaer. 
 - **Fact-tabeller**
 - **Tally-tabeller** er støttetabeller, som anvendes til sortering og inddeling af fx alder i ønskede intervaller. Bruges på figurakser og i diagrammer til at kontrollere grupperinger.
 - **Slicer tabeller** anvendes som bridge-tabeller. 
-- **Brugerstyring**
+- **Brugerstyring**. Tabeller med navnet v_Security... indgår i måden hvorpå, data filtreres afhængig af hvilken bruger, der tilgår kuben. Det er vigtigt at kende til disse tabeller, og hvordan de anvendes, da 
 - **Info**
 
 
