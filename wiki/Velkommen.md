@@ -24,7 +24,7 @@ På produktions- og udviklingsserverne findes data under skemaet, **chru_cube**.
 ### Tabeller
 
 | Grunddata     | Temaer        | Brugerstyring   | Gruppering | Serviceinformation |
-| ------------- | ------------- |-----------------|------------|--------------------|
+
 
 
 Grunddata, temaer, brugerstyring, gruppering og serviceinformation.
