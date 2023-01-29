@@ -134,7 +134,7 @@ FLERE VARIABLE ER INDFØRT SIDEN SIDST!
 <br>
 ### v_DimPerson
 
-Dimensionstabel med ID som primærnøgle. Derudover navn, fødselsdato.
+Dimensionstabel med ID som primærnøgle. Derudover navn og fødselsdato.
 
 
 
