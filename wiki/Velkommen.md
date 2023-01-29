@@ -26,7 +26,7 @@ På produktions- og udviklingsserverne findes data under skemaet, **chru_cube**.
 
 I grove træk falder al data i kuben indenfor kategorierne
 
-|     Grunddata     |       Temaespecifik     |     Hjælpetabeller      |     Info      |
+| **Grunddata** | **Temaespecifik** | **Hjælpetabeller** | **Info** |
 
 - Med **grunddata** menes den data, som er fællesmængde på tværs af temaer, uanset om der beregnes på sygefravær eller ferieafholdelse. I grunddata indgår
   - **Stamdata** (personaledata, organisations- og stillingshieraki, tidstabel mm.) 
