@@ -45,14 +45,18 @@ CASE WHEN chru_cube.DanskeHelligdage(Dato) = 1 THEN 'Helligdag'
 
 
 
-
 ### v_DimPerson
-Dimensionstabel med ID som nøgle. Derudover navn og fødselsdato.
+
+
 
 ### v_DimStilling
 
 
 
 ### v_DimOrganisation
+
+
+
+### v_Servicemeddelelser
 
 
