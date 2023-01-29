@@ -25,8 +25,8 @@ Med grunddata menes de tabeller, som foruden stamdata (v_DimPerson, v_DimAnsætt
 ## Resume af tabeller
 
 ### v_DimTidDato
-| | **BASERET PÅ**  |
-|-|-----------------------|
+| | **BASERET PÅ** |
+|-|-|
 | &darr;| [chru_cube].[v_DimTidDato] |
 | &darr;| [DM_FL_HR].[DimDato] |
 
@@ -46,12 +46,11 @@ CASE WHEN chru_cube.DanskeHelligdage(Dato) = 1 THEN 'Helligdag'
 
 ### v_DimAnsættelse
 | | **BASERET PÅ** |
-|-|----------------|
+|-|-|
 | &darr; | [chru_cube].[v_DimAnsættelse] |
 | &darr; | [DM_FL_HR].[DimAnsættelse] |
 | &darr; | CØK: 07_FL_110_SD_DimAnsaettelse.sas |
-
-<a href="https://www.silkeborgdata.dk/sites/default/files/files/start.sd.dk/produkter/Datawarehouse/Dataleverancer/Snitflade%20PERSON.pdf" target="_blank">SD</a>
+| &darr; | <a href="https://www.silkeborgdata.dk/sites/default/files/files/start.sd.dk/produkter/Datawarehouse/Dataleverancer/Snitflade%20PERSON.pdf" target="_blank">SD.SD_PERSON</a> |
 
 View er baseret på SD-tabellen, SD_Person. ID er primærnøgle for det enkelte ansættelsesforhold. PersonID er nøgle henvisende til den enkelte person (CPR). En person kan have flere ansættelser på forskellige institutioner/afdelinger overlappende i tid—dog aldrig overlappende i tid på samme lønafsnit med samme tjenestenummer.
 På den måde anvendes tabellen både som fact og dimension afhængig af kontekst; om vi henviser til datostyrede variable knyttet til ansættelsen såsom stillingskode, overenskomst og beskæftigelsesdecimal eller foretager optællinger på personniveau. Vi anvender fx denne sondring mellem ansættelsesforhold og person til at sikre, at en leder kun kan se data relevant for det afsnit, hvor leder har beføjelser—via ’NuværendeOrganisationID’. Har en person fx flere samtidige ansættelser på forskellige institutioner, vil respektive ledere i udgangspunktet kun kunne se data for ansættelsesforholdet relevant for dem. Se desuden afsnit om <a href="https://github.com/DataOgDigitalisering/FortroligInformation/blob/main/Brugerstyring.md" target="_blank">Brugerstyring</a>.
@@ -147,11 +146,12 @@ Dimensionstabel med ID som primærnøgle. Derudover navn, fødselsdato.
 | &darr; | [Flis2_LønHR_vs].[DM_FL_HR].[DimStillingskode] |
 
 Stillingshieraki i 4 niveauer (L1-L4) med ID som primærnøgle. Hoved-, fag- og stillingsgruppe samt stilling. Afhængig af kontekst og datakilde omtales disse værdier også:
-LEVEL	SD	I TALE	BETYDNING
-1	STILKO3	Hovedstillingsgruppe	Hovedstillingsgruppe
-2	STILKO2	Fagstillingsgruppe	Fagstillingsgruppe
-3	STILKO1	Stillingsgruppe	Stillingsgruppe
-4	STILKO0	Stilling	Stilling
+|     LEVEL    |     SD         |     I TALE                  |     BETYDNING               |
+|--------------|----------------|-----------------------------|-----------------------------|
+|     1        |     STILKO3    |     Hovedstillingsgruppe    |     Hovedstillingsgruppe    |
+|     2        |     STILKO2    |     Fagstillingsgruppe      |     Fagstillingsgruppe      |
+|     3        |     STILKO1    |     Stillingsgruppe         |     Stillingsgruppe         |
+|     4        |     STILKO0    |     Stilling                |     Stilling                |
 Desuden er stillingskoderne 1133-1139 samt 1161 defineret (hard-codet i viewet) som uddannelseslæger. (Se UDV for øvrige definitioner af ledere og AtypiskeStillinger). Leder antager værdien ’J’ baseret på Stillingruppe eller Stilling—ellers ’N’. AtypiskStilling=’J’, når L1Code=’0000’—ellers ’N’.
 Current_row=1 indikerer, at rækken er gældende i nuværende stillingskodehieraki.
 
