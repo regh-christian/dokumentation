@@ -14,9 +14,9 @@
 # Introduktion til CHRU_HRKube
 
 ## ***Kuben***
-I dit arbejde får du brug for at kende og kunne arbejde med data i "kuben" (med kuben menes—indtil videre—CHRU_HRKube). 
+I dit arbejde får du brug for at kende og kunne arbejde med data i "**kuben**" (med kuben menes—indtil videre—CHRU_HRKube). 
 I kuben processeres data fra mange forskellige kilder til en række forskellige formål. Kuben er datamodel i bl.a. 'HR Lederdashboard' og 'Strategisk Dahboard'. I disse implementeres vores standardiserede beregningsmetoder indenfor temaer som sygefravær, ferieafholdelse, personalesammensætning, løn, vagtplan m.fl.
-<p>På produktions- og udviklingsserverne findes data under skemaet, *chru_cube*. I Tabular Editor findes kuben under navnet CHRU_HRKube.
+<p>På produktions- og udviklingsserverne findes data under skemaet, **chru_cube**. I Tabular Editor findes kuben under navnet **CHRU_HRKube**.
 
 
 
