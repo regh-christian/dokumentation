@@ -25,16 +25,15 @@ Med grunddata menes de tabeller, som foruden stamdata (v_DimPerson, v_DimAnsætt
 ## Resume af tabeller
 
 ### v_DimTidDato
-
 | | **BASERET PÅ**  |
 |-|-----------------------|
-| &darr;| [Flis2_LønHR_v2].[chru_cube].[v_DimTidDato] |
-| &darr;| [Flis2_LønHR_v2].[DM_FL_HR].[DimDato] |
-| &darr;| CØK: 07_FL_110_SD_DimAnsaettelse.sas |
+| &darr;| [chru_cube].[v_DimTidDato] |
+| &darr;| [DM_FL_HR].[DimDato] |
 
 Baseret på tidstabellen, [DM_FL_HR].[DimDato] med en række mindre modifikationer og enkelte tilføjelser. Å erstattes med aa i hht. >>konvention<< om navngivning af kolonner. Formater såsom Y2016-M06 erstattes af 2016-06 og enkelte nye variable indføres pba. eksisterende. Fx er >>’DagKortmaanedAar’<< (10. jan. 2016) sammensat af ’DagMåned’, ’MånedNavn’ og ’År’. 
-     Enkelte ny kolonner beregnes; Kolonnen ’Arbejdsdag’ er tilføjet og udregner, om dato er en arbejds-, helligdag eller i en weekend (https://www.computerworld.dk/uploads/eksperten-guider/107-Beregning-af-arbejdsdage-og-skaeve-helligdage.pdf). 
-Til beregning heraf anvendes tre stored procedures; funktionen chru_cube.DanskeHelligdage matcher dato mod kendte og faste helligdage og returnerer binært udfald; chru_cube.PaaskeDage implementerer Gauás algoritme til bestemmelse af påskedag det givne år, hvorefter også ikke-faste helligdage da bestemmes (antal dage efter påske); I den sidste bestemmes, om dato er i en weekend. I praksis kaldes første stored procedure med dato som argument. Hvis dato er en kendt helligdag, er output ’Helligdag’. I modsat fald kaldes næste procedure til bestemmelse af påskedag, hvorefter dato igen matches mod de ikke-faste helligdage. Ved fortsat manglende match kaldes sidste procedure til beregning af, om datoen er en lørdag eller søndag.
+Enkelte ny kolonner beregnes; Kolonnen ’Arbejdsdag’ er tilføjet og udregner, om dato er en arbejds-, helligdag eller i en weekend. 
+[Metode](https://www.computerworld.dk/uploads/eksperten-guider/107-Beregning-af-arbejdsdage-og-skaeve-helligdage.pdf). 
+Til beregning heraf anvendes tre stored procedures; funktionen _chru_cube.DanskeHelligdage_ matcher dato mod kendte og faste helligdage og returnerer binært udfald; _chru_cube.PaaskeDage_ implementerer Gauás algoritme til bestemmelse af påskedag det givne år, hvorefter også ikke-faste helligdage da bestemmes (antal dage efter påske); I den sidste bestemmes, om dato er i en weekend. I praksis kaldes første stored procedure med dato som argument. Hvis dato er en kendt helligdag, er output ’Helligdag’. I modsat fald kaldes næste procedure til bestemmelse af påskedag, hvorefter dato igen matches mod de ikke-faste helligdage. Ved fortsat manglende match kaldes sidste procedure til beregning af, om datoen er en lørdag eller søndag.
 ```sql
 CASE WHEN chru_cube.DanskeHelligdage(Dato) = 1 THEN 'Helligdag'
      WHEN chru_cube.DanskeHelligdage(Dato) = 0 AND chru_cube.Arbejdsdage(Dato) = 0 THEN 'Weekend'
@@ -45,9 +44,85 @@ CASE WHEN chru_cube.DanskeHelligdage(Dato) = 1 THEN 'Helligdag'
 
 
 
-
-
 ### v_DimAnsættelse
+| | **BASERET PÅ**  |
+|-|-----------------------|
+| &darr;| [chru_cube].[v_DimAnsættelse] |
+| &darr;| [DM_FL_HR].[DimAnsættelse] |
+| &darr;| CØK: 07_FL_110_SD_DimAnsaettelse.sas |
+[SD-dok](https://www.silkeborgdata.dk/sites/default/files/files/start.sd.dk/produkter/Datawarehouse/Dataleverancer/Snitflade%20PERSON.pdf)
+
+Viewet er baseret på SD-tabellen, SD_Person. ID er primærnøgle for det enkelte ansættelsesforhold. PersonID er nøgle henvisende til den enkelte person (CPR). En person kan have flere ansættelser på forskellige institutioner/afdelinger overlappende i tid—dog aldrig overlappende i tid på samme lønafsnit med samme tjenestenummer.
+På den måde anvendes tabellen både som fact og dimension afhængig af kontekst; om vi henviser til datostyrede variable knyttet til ansættelsen såsom stillingskode, overenskomst og beskæftigelsesdecimal eller foretager optællinger på personniveau. Vi anvender fx denne sondring mellem ansættelsesforhold og person til at sikre, at en leder kun kan se data relevant for det afsnit, hvor leder har beføjelser—via ’NuværendeOrganisationID’. Har en person fx flere samtidige ansættelser på forskellige institutioner, vil respektive ledere i udgangspunktet kun kunne se data for ansættelsesforholdet relevant for dem. Se desuden afsnit om >>BRUGERSTYRING<<
+     I dataindlæsningen hos CØK fjernes ansættelser med status ’S’, institution ’2P’ (tjenestemandspensioner)
+     Baseret på den i SD_Person-tabellen datostyrede del, indfører vi nedenstående dikotomiserede variable mhp. lettere til- og fravalg i population for både os selv i opbygning af scripts og measures og for brugere af dashboards i form af slicere.
+
+Fuldtid og Månedslønnet: Kolonnerne ’DEL’ og ’BESKDEC’ angiver, om et ansættelsesforhold er fuld- eller deltid hhv. måneds- eller timelønnet. Dette er opsummeret i kolonnerne ’Fuldtid’ og ’Månedslønnet’ hvor Fuldtid=J hvis BESKDEC>=0 og Månedslønnet=N hvis DEL=2 eller 6 OR BESKDEC=0. 
+
+Ansat: J hvis statuskode er enten 0, 1 eller 3.
+
+AktuelRække: J hvis dags dato ligger indenfor ansættelsesforholdets start- og slutdato.
+FRA SØRENS SAS: ”07_FL_110_SD_DimAnsaettelse.sas
+(CASE  
+    WHEN STAT IN ('0', '1', '3') THEN 1 
+    ELSE 0 
+  END) as Ansat length = 3,
+(CASE
+    WHEN BESKDEC >= 1 THEN 1
+    ELSE 0
+  END) as Fuldtid length = 3,
+(CASE 
+    WHEN TODAY() BETWEEN START AND SLUT THEN 1 
+    ELSE 0 
+  END) as AktuelRække length = 3,
+(CASE 
+    WHEN DEL IN ('2', '6') OR BESKDEC = 0 THEN 0
+    ELSE 1
+  END) as Månedslønnet length = 3,
+
+AnsatDagsDato: J hvis Ansat=J og AktuelRække=J. Dvs. J hvis statuskode er 0, 1 eller 3 og dags dato ligger indenfor ansættelsesforholdets start- og slutdato.
+
+AnsatSeneste14Mdr: J hvis Ansat=J indenfor seneste 14 mdr. Dette for altid at kunne se ét helt år tilbage uanset tilfælde, hvor ansættelsesstart var fx midt- eller sidst i en måned.
+
+AktuelHovedansættelse: Hvor flere ansættelsesforhold er sammenfaldende i tid, er et og kun et en hovedansættelse. Samtlige ansættelser en person har / har haft, arrangeres ud fra parametrene AktuelRække, Ansat, MånedsLønnet, Fuldtid og ansættelsesstartdato. Alle i faldende orden. Dette sikrer, at der i ethvert tidsrum hvor en person har et eller flere ansættelsesforhold uagtet beskæftigelsesgrad og aflønningsmetode, kan peges på ét og kun ét ansættelsesforhold som værende en hovedansættelse—nemlig ansættelsen jf. nævnte sortering, der desuden opfylder kriterierne Ansat=J OG AktuelRække=J.
+En person kan i sin ansættelseshistorik have flere ansættelser, hvor AktuelHovedansættelse=J, men så fald vil de aldrig overlappe i tid.
+EksterntFinansieret: J hvis afdelingen på ansættelsesstarttidspunktet var eksternt finansieret.  
+
+StandardPopulation: Aktuelt ansatte, der er månedslønnede, fuldtidsansatte og ikke eksternt finansierede.
+>>FIG: Peters matrix<<
+   
+
+NuværendeOrganisationID: Lønafsnit, hvor ansættelsesforhold er gældende dags dato. Har en person ansættelsesforhold med fremtidig startdato eller tidligere ansættelser med andet tjenestenummer, antager ’NuværendeOrganisationID’ blot værdien af ’OrganisationID’. 
+,CASE
+   WHEN [Start] >= CONVERT(date, GETDATE()) THEN OrganisationsID
+   ELSE
+     (SELECT OrganisationsID 
+        FROM DM_FL_HR.DimAnsættelse sub 
+      WHERE 1 = 1
+         AND sub.Tjnr = src.Tjnr 
+         AND CONVERT(date, GETDATE()) BETWEEN sub.[Start] AND sub.Slut
+     )
+  END AS NuværendeOrganisationID
+ØVELSE 1 – xxxx
+Udregn vha. SD.SD_Person hvor mange årsværk, der arbejdes i din sektion baseret på aktuelt ansatte i dag. Gruppér dit resultat på time- hhv. månedslønnede, del- og fuldtidsansatte.
+Lav samme beregning og gruppering baseret på data fra kuben.	 
+
+Hændelse: Angiver om et månedslønnet ansættelsesforhold er en til- eller fratrædelse. Har ansættelsesforholdet værdien Ansat=J og denne er forskellig fra et evt. tidligere ansættelsesforhold med samme tjenestenummer, er dette en tiltrædelse. I modsat fald en fratrædelse.
+,CASE 
+   WHEN Ansat != COALESCE(LAG(Ansat) OVER(PARTITION BY Tjnr ORDER BY [Start] ASC), 99) 
+     AND Månedslønnet = 1
+   THEN CASE WHEN Ansat = 1 THEN 'Tiltrædelse' ELSE 'Fratrædelse' END
+  END AS Hændelse
+
+HændelseMellem: Angiver, hvor denne er anført, om en hændelse er sket mellem afdelinger (samme institution), mellem institutioner eller om denne er en afbrudt ansættelse på mindre end 3 måneder. Værdien ’Til/fra Region Hovedstaden’ hvis der på ansættelsesforholdet er en hændelseer, men ingen af førnævnte kriterier er opfyldt.
+HændelsesDato: Startdatoen på ansættelser, hvor ’Hændelse’ er en tiltrædelse. På ansættelser hvor ’Hændelse’ er en fratrædelse, anvendes dagen før ansættelsens startdato som hændelsesdato—svt. sidste egentlige arbejdsdag.
+
+TillInst: Hvor ’HændelseImellem’ er ”Mellem institutioner”, er denne udfyldt med institutionen på personens nye/kommende ansættelsesforhold.
+FLERE VARIABLE ER INDFØRT SIDEN SIDST!
+
+
+
+
 
 
 
