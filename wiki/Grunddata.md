@@ -47,7 +47,7 @@ CASE WHEN chru_cube.DanskeHelligdage(Dato) = 1 THEN 'Helligdag'
 <br>
 ### v_DimAnsættelse
 
-| **View** | **&rarr;** | **Baseret på*** | 
+| **View** | **&rarr;** | **Baseret på** | 
 | - | - | - |
 | [chru_cube].[v_DimAnsættelse] | &rarr; | [DM_FL_HR].[DimAnsættelse] &rarr; CØK: 07_FL_110_SD_DimAnsaettelse.sas &rarr; <a href="https://www.silkeborgdata.dk/sites/default/files/files/start.sd.dk/produkter/Datawarehouse/Dataleverancer/Snitflade%20PERSON.pdf" target="_blank">SD.SD_PERSON</a> |
 
