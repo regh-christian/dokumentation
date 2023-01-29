@@ -125,9 +125,9 @@ EksterntFinansieret: J hvis afdelingen på ansættelsesstarttidspunktet var ekst
 FLERE VARIABLE ER INDFØRT SIDEN SIDST!
 
 
-> **ØVELSE - ÅRSVÆRK**
-> - Udregn vha. SD.SD_Person hvor mange årsværk, der arbejdes i din sektion baseret på aktuelt ansatte i dag. Gruppér dit resultat på time- hhv. månedslønnede, del- og fuldtidsansatte.
-> - Lav samme beregning og gruppering baseret på data fra kuben.
+>> **ØVELSE - ÅRSVÆRK**
+>> - Udregn vha. SD.SD_Person hvor mange årsværk, der arbejdes i din sektion baseret på aktuelt ansatte i dag. Gruppér dit resultat på time- hhv. månedslønnede, del- og fuldtidsansatte.
+>> - Lav samme beregning og gruppering baseret på data fra kuben.
 
 
 
