@@ -16,11 +16,12 @@
 ## ***Kuben***
 I dit arbejde får du brug for at kende og kunne arbejde med data i "kuben" (med kuben menes—indtil videre—CHRU_HRKube). 
 I kuben processeres data fra mange forskellige kilder til en række forskellige formål. Kuben er datamodel i bl.a. 'HR Lederdashboard' og 'Strategisk Dahboard'. I disse implementeres vores standardiserede beregningsmetoder indenfor temaer som sygefravær, ferieafholdelse, personalesammensætning, løn, vagtplan m.fl.
-   På produktions- og udviklingsserverne findes data under skemaet, *chru_cube*. I Tabular Editor findes kuben under navnet CHRU_HRKube.
+<p>På produktions- og udviklingsserverne findes data under skemaet, *chru_cube*. I Tabular Editor findes kuben under navnet CHRU_HRKube.
+
 
 
 ### Tabeller
-Alle tabeller i kuben tilhører en af typer:
+Al data i kuben tilhører én af følgende:
 - **Dimensionstabeller** er alle døbt v_Dim[...]
 - **Fact-tabeller**
 - **Tally-tabeller** er støttetabeller, som anvendes til sortering og inddeling af fx alder i ønskede intervaller. Bruges på figurakser og i diagrammer til at kontrollere grupperinger.
