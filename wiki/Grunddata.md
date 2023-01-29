@@ -63,7 +63,8 @@ Fuldtid og Månedslønnet: Kolonnerne ’DEL’ og ’BESKDEC’ angiver, om et 
 Ansat: J hvis statuskode er enten 0, 1 eller 3.
 
 AktuelRække: J hvis dags dato ligger indenfor ansættelsesforholdets start- og slutdato.
-FRA SØRENS SAS: ”07_FL_110_SD_DimAnsaettelse.sas
+```sas
+--FRA SØRENS SAS: ”07_FL_110_SD_DimAnsaettelse.sas
 (CASE  
     WHEN STAT IN ('0', '1', '3') THEN 1 
     ELSE 0 
@@ -80,6 +81,7 @@ FRA SØRENS SAS: ”07_FL_110_SD_DimAnsaettelse.sas
     WHEN DEL IN ('2', '6') OR BESKDEC = 0 THEN 0
     ELSE 1
   END) as Månedslønnet length = 3,
+```
 
 AnsatDagsDato: J hvis Ansat=J og AktuelRække=J. Dvs. J hvis statuskode er 0, 1 eller 3 og dags dato ligger indenfor ansættelsesforholdets start- og slutdato.
 
