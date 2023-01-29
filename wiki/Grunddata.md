@@ -58,11 +58,11 @@ På den måde anvendes tabellen både som fact og dimension afhængig af konteks
      I dataindlæsningen hos CØK fjernes ansættelser med status ’S’, institution ’2P’ (tjenestemandspensioner)
      Baseret på den i SD_Person-tabellen datostyrede del, indfører vi nedenstående dikotomiserede variable mhp. lettere til- og fravalg i population for både os selv i opbygning af scripts og measures og for brugere af dashboards i form af slicere.
 
-Fuldtid og Månedslønnet: Kolonnerne ’DEL’ og ’BESKDEC’ angiver, om et ansættelsesforhold er fuld- eller deltid hhv. måneds- eller timelønnet. Dette er opsummeret i kolonnerne ’Fuldtid’ og ’Månedslønnet’ hvor Fuldtid=J hvis BESKDEC>=0 og Månedslønnet=N hvis DEL=2 eller 6 OR BESKDEC=0. 
+**Fuldtid** og **Månedslønnet**: Kolonnerne ’DEL’ og ’BESKDEC’ angiver, om et ansættelsesforhold er fuld- eller deltid hhv. måneds- eller timelønnet. Dette er opsummeret i kolonnerne ’Fuldtid’ og ’Månedslønnet’ hvor Fuldtid=J hvis BESKDEC>=0 og Månedslønnet=N hvis DEL=2 eller 6 OR BESKDEC=0. 
 
-Ansat: J hvis statuskode er enten 0, 1 eller 3.
+**Ansat**: J hvis statuskode er enten 0, 1 eller 3.
 
-AktuelRække: J hvis dags dato ligger indenfor ansættelsesforholdets start- og slutdato.
+**AktuelRække**: J hvis dags dato ligger indenfor ansættelsesforholdets start- og slutdato.
 ```sas
 --FRA SØRENS SAS: ”07_FL_110_SD_DimAnsaettelse.sas
 (CASE  
@@ -83,19 +83,19 @@ AktuelRække: J hvis dags dato ligger indenfor ansættelsesforholdets start- og 
   END) as Månedslønnet length = 3,
 ```
 
-AnsatDagsDato: J hvis Ansat=J og AktuelRække=J. Dvs. J hvis statuskode er 0, 1 eller 3 og dags dato ligger indenfor ansættelsesforholdets start- og slutdato.
+**AnsatDagsDato**: J hvis Ansat=J og AktuelRække=J. Dvs. J hvis statuskode er 0, 1 eller 3 og dags dato ligger indenfor ansættelsesforholdets start- og slutdato.
 
-AnsatSeneste14Mdr: J hvis Ansat=J indenfor seneste 14 mdr. Dette for altid at kunne se ét helt år tilbage uanset tilfælde, hvor ansættelsesstart var fx midt- eller sidst i en måned.
+**AnsatSeneste14Mdr**: J hvis Ansat=J indenfor seneste 14 mdr. Dette for altid at kunne se ét helt år tilbage uanset tilfælde, hvor ansættelsesstart var fx midt- eller sidst i en måned.
 
-AktuelHovedansættelse: Hvor flere ansættelsesforhold er sammenfaldende i tid, er et og kun et en hovedansættelse. Samtlige ansættelser en person har / har haft, arrangeres ud fra parametrene AktuelRække, Ansat, MånedsLønnet, Fuldtid og ansættelsesstartdato. Alle i faldende orden. Dette sikrer, at der i ethvert tidsrum hvor en person har et eller flere ansættelsesforhold uagtet beskæftigelsesgrad og aflønningsmetode, kan peges på ét og kun ét ansættelsesforhold som værende en hovedansættelse—nemlig ansættelsen jf. nævnte sortering, der desuden opfylder kriterierne Ansat=J OG AktuelRække=J.
+**AktuelHovedansættelse**: Hvor flere ansættelsesforhold er sammenfaldende i tid, er et og kun et en hovedansættelse. Samtlige ansættelser en person har / har haft, arrangeres ud fra parametrene AktuelRække, Ansat, MånedsLønnet, Fuldtid og ansættelsesstartdato. Alle i faldende orden. Dette sikrer, at der i ethvert tidsrum hvor en person har et eller flere ansættelsesforhold uagtet beskæftigelsesgrad og aflønningsmetode, kan peges på ét og kun ét ansættelsesforhold som værende en hovedansættelse—nemlig ansættelsen jf. nævnte sortering, der desuden opfylder kriterierne Ansat=J OG AktuelRække=J.
 En person kan i sin ansættelseshistorik have flere ansættelser, hvor AktuelHovedansættelse=J, men så fald vil de aldrig overlappe i tid.
 EksterntFinansieret: J hvis afdelingen på ansættelsesstarttidspunktet var eksternt finansieret.  
 
-StandardPopulation: Aktuelt ansatte, der er månedslønnede, fuldtidsansatte og ikke eksternt finansierede.
+**StandardPopulation**: Aktuelt ansatte, der er månedslønnede, fuldtidsansatte og ikke eksternt finansierede.
 >>FIG: Peters matrix<<
    
-
-NuværendeOrganisationID: Lønafsnit, hvor ansættelsesforhold er gældende dags dato. Har en person ansættelsesforhold med fremtidig startdato eller tidligere ansættelser med andet tjenestenummer, antager ’NuværendeOrganisationID’ blot værdien af ’OrganisationID’. 
+**NuværendeOrganisationID**: Lønafsnit, hvor ansættelsesforhold er gældende dags dato. Har en person ansættelsesforhold med fremtidig startdato eller tidligere ansættelser med andet tjenestenummer, antager ’NuværendeOrganisationID’ blot værdien af ’OrganisationID’. 
+```sql
 ,CASE
    WHEN [Start] >= CONVERT(date, GETDATE()) THEN OrganisationsID
    ELSE
@@ -106,6 +106,9 @@ NuværendeOrganisationID: Lønafsnit, hvor ansættelsesforhold er gældende dags
          AND CONVERT(date, GETDATE()) BETWEEN sub.[Start] AND sub.Slut
      )
   END AS NuværendeOrganisationID
+```
+
+
 ØVELSE 1 – xxxx
 Udregn vha. SD.SD_Person hvor mange årsværk, der arbejdes i din sektion baseret på aktuelt ansatte i dag. Gruppér dit resultat på time- hhv. månedslønnede, del- og fuldtidsansatte.
 Lav samme beregning og gruppering baseret på data fra kuben.	 
@@ -124,7 +127,9 @@ TillInst: Hvor ’HændelseImellem’ er ”Mellem institutioner”, er denne ud
 FLERE VARIABLE ER INDFØRT SIDEN SIDST!
 
 
-
+> ** ØVELSE - ÅRSVÆRK **
+> - Udregn vha. SD.SD_Person hvor mange årsværk, der arbejdes i din sektion baseret på aktuelt ansatte i dag. Gruppér dit resultat på time- hhv. månedslønnede, del- og fuldtidsansatte.
+> Lav samme beregning og gruppering baseret på data fra kuben.
 
 
 
