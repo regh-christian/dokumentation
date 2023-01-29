@@ -22,9 +22,9 @@ Med grunddata menes de tabeller, som foruden stamdata (v_DimPerson, v_DimAnsætt
 |     v_DimAnsættelse                 |     [StillingsID]                |     →        |     v_DimStilling                   |     [ID]                         |     *:1             |     J        |
 
 
-
+<br>
 ## Resume af tabeller
-
+<br>
 ### v_DimTidDato
 
 | **View** | **&rarr;** | **Baseret på** | 
@@ -44,7 +44,7 @@ CASE WHEN chru_cube.DanskeHelligdage(Dato) = 1 THEN 'Helligdag'
 ```
 
 
-
+<br>
 ### v_DimAnsættelse
 
 | **View** | **&rarr;** | **Baseret på*** | 
@@ -131,6 +131,7 @@ FLERE VARIABLE ER INDFØRT SIDEN SIDST!
 
 
 
+<br>
 ### v_DimPerson
 
 Dimensionstabel med ID som primærnøgle. Derudover navn, fødselsdato.
@@ -138,6 +139,7 @@ Dimensionstabel med ID som primærnøgle. Derudover navn, fødselsdato.
 
 
 
+<br>
 ### v_DimStilling
 
 | **View** | &rarr; | **Baseret på** |
@@ -159,6 +161,7 @@ Current_row=1 indikerer, at rækken er gældende i nuværende stillingskodehiera
 
 
 
+<br>
 ### v_DimOrganisation
 
 | **View** | **&rarr;** | **BASERET PÅ** |
@@ -183,10 +186,12 @@ Current_row=1 sikrer opdateret organisationshieraki men ignorerer evt. historisk
 
 
 
+<br>
 ### v_DimLønart
 
 
 
+<br>
 ### v_Servicemeddelelser
 View oprettet til at give brugere af dashboardet information om ændringer og nye features, samt dato for og status på disse. Kolonnen ’Dahboard’ indikerer med ’L’, ’S’ eller ’L,S’, om en meddelelse er tilegnet visning på hhv. leder- strategisk- eller begge dashboards.
 Tabellen vises datosorteret på velkomstsiden af dashboards uden kolonnen ’Dashboard’—denne skjules og anvendes til at filtrere på relevant for respektive dashboard.
