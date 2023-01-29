@@ -45,8 +45,8 @@ CASE WHEN chru_cube.DanskeHelligdage(Dato) = 1 THEN 'Helligdag'
 
 
 ### v_DimAnsættelse
-| | **BASERET PÅ**  |
-|-|-----------------------|
+| | **BASERET PÅ** |
+|-|----------------|
 | &darr; | [chru_cube].[v_DimAnsættelse] |
 | &darr; | [DM_FL_HR].[DimAnsættelse] |
 | &darr; | CØK: 07_FL_110_SD_DimAnsaettelse.sas |
