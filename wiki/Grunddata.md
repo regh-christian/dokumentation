@@ -27,10 +27,9 @@ Med grunddata menes de tabeller, som foruden stamdata (v_DimPerson, v_DimAnsætt
 
 ### v_DimTidDato
 
-| | **BASERET PÅ** |
-|-|-|
-| &darr; | [chru_cube].[v_DimTidDato] |
-| &darr; | [DM_FL_HR].[DimDato] |
+| **View** | **&rarr;**| **Baseret på** | 
+| - | - |
+| [chru_cube].[v_DimTidDato] | &rarr; | [DM_FL_HR].[DimDato] |
 
 Baseret på tidstabellen, [DM_FL_HR].[DimDato] med en række mindre modifikationer og enkelte tilføjelser. Å erstattes med aa i hht. >>konvention<< om navngivning af kolonner. Formater såsom Y2016-M06 erstattes af 2016-06 og enkelte nye variable indføres pba. eksisterende. Fx er >>’DagKortmaanedAar’<< (10. jan. 2016) sammensat af ’DagMåned’, ’MånedNavn’ og ’År’. 
 Enkelte ny kolonner beregnes; Kolonnen ’Arbejdsdag’ er tilføjet og udregner, om dato er en arbejds-, helligdag eller i en weekend. 
