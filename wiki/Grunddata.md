@@ -50,6 +50,7 @@ CASE WHEN chru_cube.DanskeHelligdage(Dato) = 1 THEN 'Helligdag'
 | &darr;| [chru_cube].[v_DimAnsættelse] |
 | &darr;| [DM_FL_HR].[DimAnsættelse] |
 | &darr;| CØK: 07_FL_110_SD_DimAnsaettelse.sas |
+
 [SD-dok](https://www.silkeborgdata.dk/sites/default/files/files/start.sd.dk/produkter/Datawarehouse/Dataleverancer/Snitflade%20PERSON.pdf)
 
 Viewet er baseret på SD-tabellen, SD_Person. ID er primærnøgle for det enkelte ansættelsesforhold. PersonID er nøgle henvisende til den enkelte person (CPR). En person kan have flere ansættelser på forskellige institutioner/afdelinger overlappende i tid—dog aldrig overlappende i tid på samme lønafsnit med samme tjenestenummer.
