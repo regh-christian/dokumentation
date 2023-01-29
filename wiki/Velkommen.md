@@ -15,7 +15,7 @@
 
 ## ***Kuben***
 I dit arbejde får du brug for at kende og kunne arbejde med data i "**kuben**" (med kuben menes—indtil videre—CHRU_HRKube). 
-I kuben processeres data fra mange forskellige kilder til en række forskellige formål. Kuben er datamodel i bl.a. 'HR Lederdashboard' og 'Strategisk Dahboard'. I disse implementeres vores standardiserede beregningsmetoder indenfor temaer som sygefravær, ferieafholdelse, personalesammensætning, løn, vagtplan m.fl.
+I kuben processeres data fra mange forskellige kilder til en række forskellige formål. Kuben er datamodel i bl.a. ___HR Lederdashboard___ og ___Strategisk Dahboard___. I disse implementeres vores standardiserede beregningsmetoder indenfor temaer som sygefravær, ferieafholdelse, personalesammensætning, løn, vagtplan m.fl.
 
 På produktions- og udviklingsserverne findes data under skemaet, **chru_cube**. I Tabular Editor findes kuben under navnet CHRU_HRKube.
 
@@ -35,17 +35,8 @@ I grove træk falder al data i kuben indenfor kategorierne
 - Hjælpetabeller er **tally**- og **slicer**-tabeller. Disse bruges til definereing af intervaller (fx aldersintervaller), grupperings-, sorterings- og filtreringsmuligheder
 - Info er data som fx dato på **dataleverancer** og **servicemeddelelser** til brugere af dashboard om nye opdateringer eller tilføjelser
 
-
 Kuben udvides løbende med nye datakilder, i takt med, at flere temaer skal kunne besvares.
-- 
 
-Al data i kuben tilhører én af følgende typer:
-- **Dimensionstabeller**. Tabeller hvis navn starter v_Dim... Nogle er næsten identisk kildedata såsom organisations- og stillingshieraki. Andre er mere komplekse og lavet specifikt til enkelte temaer. 
-- **Fact-tabeller**
-- **Tally-tabeller** er støttetabeller, som anvendes til sortering og inddeling af fx alder i ønskede intervaller. Bruges på figurakser og i diagrammer til at kontrollere grupperinger.
-- **Slicer tabeller** anvendes som bridge-tabeller. 
-- **Brugerstyring**. Tabeller med navnet v_Security... indgår i måden hvorpå, data filtreres afhængig af hvilken bruger, der tilgår kuben. Det er vigtigt at kende til disse tabeller, og hvordan de anvendes, da 
-- **Info**
 
 
 
