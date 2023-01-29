@@ -10,10 +10,15 @@
 <br>
 
 
+[link til p:\](file:///P:\CHR\Data Digitalisering\Sektion for Data og Rapportering\Datateamet\Databestillinger og godkendelsesformularer\Godkendelsesformular Datavarehus/)
+
+https://gist.github.com/TobiasPalludan/5948533e97d260a04ea47e44ea7cc6b0#same-file-anchors-for-github
+
 ## Introduktion til CHRU_HRKube
 
 ### Tabeller
 I "kuben" processeres data fra mange forskellige kilder til en række forskellige formål.
+     Som ny i enheden kan det være en fordel først at blive dus med datakilder i et mere råt format på ved at udforske skemaerne
 
 
 ### Measures
