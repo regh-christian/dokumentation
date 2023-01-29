@@ -43,7 +43,7 @@ Al data i kuben tilhører én af følgende typer:
 ### Measures
 Via measures implementeres vores standardiserede beregningsmetoder. De er grupperet temavis. Gruppen diverse indeholder beregninger på stamdata og kan være et godt sted at starte med at skabe overblik over kuben. Foruden indblik i de mere centrale tabeller vil du hér se eksempler på, hvordan viden om stamdata er essentielt for at kunne definere fx hvilken personalegruppe, der skal indgå i en beregning afhængig af temaet; hvordan dette kan bruges til at regne i årsværk; hvordan antallet af personer, der indgår i en beregning, er afgørende for, om et resultat nødvendigvis skal anonymiseres mm.
 
-Andre—measures—lokaliseret i mapperne  _ _Farver_ og _ _Tekster_—bruges til kontrol af layout på dashboards. Farvetemaer, akselængder, dynamiske tekstetiketter meddelelser, kolonnebredder mm. 
+Andre—measures—lokaliseret i mapperne, ___Farver_ og ___Tekster_—bruges til kontrol af layout på dashboards. Farvetemaer, akselængder, dynamiske tekstetiketter meddelelser, kolonnebredder mm. 
 
 
 
