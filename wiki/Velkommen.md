@@ -21,19 +21,14 @@ På produktions- og udviklingsserverne findes data under skemaet, **chru_cube**.
 
 
 
-
-
 ### Tabeller
 
 |     Grunddata     |       Temaer      |   Brugerstyring   |     Gruppering    | Serviceinformation |
-
-
 
 - Med grunddata menes stamdata, brugerstyring og datotabel. Disse indgår på tværs af alle temaer. 
 - - **Brugerstyring** er 
 - Kuben udvides løbende med nye datakilder, i takt med, at flere temaer skal kunne besvares.
 - 
-
 
 Al data i kuben tilhører én af følgende typer:
 - **Dimensionstabeller**. Tabeller hvis navn starter v_Dim... Nogle er næsten identisk kildedata såsom organisations- og stillingshieraki. Andre er mere komplekse og lavet specifikt til enkelte temaer. 
@@ -46,7 +41,7 @@ Al data i kuben tilhører én af følgende typer:
 
 
 ### Measures
-
+Via measures implementeres vores standardiserede beregningsmetoder. De er grupperet temavis. Gruppen diverse indeholder beregninger på stamdata og kan være et godt sted at starte med at skabe overblik over kuben. Foruden indblik i de mere centrale tabeller vil du se, at viden om stamdata er essentielt for at vide hvilken personalegruppe, der indgår i forskellige beregninger; hvordan dette kan bruges til at regne i årsværk; hvordan antallet af personer, der indgår i en beregning er afgørende for, om et resultat skal anonymiseres mm.
 
 
 # Dataadgange
