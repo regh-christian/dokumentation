@@ -191,5 +191,8 @@ Current_row=1 sikrer opdateret organisationshieraki men ignorerer evt. historisk
 
 
 ### v_Servicemeddelelser
+View oprettet til at give brugere af dashboardet information om ændringer og nye features, samt dato for og status på disse. Kolonnen ’Dahboard’ indikerer med ’L’, ’S’ eller ’L,S’, om en meddelelse er tilegnet visning på hhv. leder- strategisk- eller begge dashboards.
+Tabellen vises datosorteret på velkomstsiden af dashboards uden kolonnen ’Dashboard’—denne skjules og anvendes til at filtrere på relevant for respektive dashboard.
+Opdateres hvert 10-15min.
 
 
