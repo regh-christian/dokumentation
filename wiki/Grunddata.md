@@ -145,16 +145,18 @@ Dimensionstabel med ID som primærnøgle. Derudover navn, fødselsdato.
 
 | | **BASERET PÅ** |
 |-|-|
-| &darr; | [chru_cube].[v_DimStilling]  |
+| &darr; | [chru_cube].[v_DimStilling] |
 | &darr; | [DM_FL_HR].[DimStillingskode] |
 
 Stillingshieraki i 4 niveauer (L1-L4) med ID som primærnøgle. Hoved-, fag- og stillingsgruppe samt stilling. Afhængig af kontekst og datakilde omtales disse værdier også:
+
 | LEVEL | SD | I TALE | BETYDNING |
 |-|-|-|-|
 | 1 | STILKO3 | Hovedstillingsgruppe | Hovedstillingsgruppe |
 | 2 | STILKO2 | Fagstillingsgruppe | Fagstillingsgruppe |
 | 3 | STILKO1 | Stillingsgruppe | Stillingsgruppe |
 | 4 | STILKO0 | Stilling | Stilling |
+
 Desuden er stillingskoderne 1133-1139 samt 1161 defineret (hard-codet i viewet) som uddannelseslæger. (Se UDV for øvrige definitioner af ledere og AtypiskeStillinger). Leder antager værdien ’J’ baseret på Stillingruppe eller Stilling—ellers ’N’. AtypiskStilling=’J’, når L1Code=’0000’—ellers ’N’.
 Current_row=1 indikerer, at rækken er gældende i nuværende stillingskodehieraki.
 
