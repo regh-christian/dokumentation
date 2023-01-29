@@ -5,7 +5,9 @@ Med grunddata menes de tabeller, som foruden stamdata (v_DimPerson, v_DimAnsætt
 
 
 ## Datamodel
-<center>[Power BI-model, grunddata](https://raw.githubusercontent.com/DataOgDigitalisering/dokumentation/master/Images/cube_model_basis.png)</center>
+<center>
+     [Power BI-model, grunddata](https://raw.githubusercontent.com/DataOgDigitalisering/dokumentation/master/Images/cube_model_basis.png)
+</center>
 
      
      
@@ -126,9 +128,9 @@ EksterntFinansieret: J hvis afdelingen på ansættelsesstarttidspunktet var ekst
 FLERE VARIABLE ER INDFØRT SIDEN SIDST!
 
 
-> ** ØVELSE - ÅRSVÆRK **
+> **ØVELSE - ÅRSVÆRK**
 > - Udregn vha. SD.SD_Person hvor mange årsværk, der arbejdes i din sektion baseret på aktuelt ansatte i dag. Gruppér dit resultat på time- hhv. månedslønnede, del- og fuldtidsansatte.
-> Lav samme beregning og gruppering baseret på data fra kuben.
+> - Lav samme beregning og gruppering baseret på data fra kuben.
 
 
 
