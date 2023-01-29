@@ -19,6 +19,7 @@ I kuben processeres data fra mange forskellige kilder til en række forskellige 
 
 På produktions- og udviklingsserverne findes data under skemaet, **chru_cube**. I Tabular Editor findes kuben under navnet CHRU_HRKube.
 
+Som introduktion til kuben anbefales at gennemgå materialet hér på siden ét tema ad gangen. I hvert tema findes små øvelser, hvor du kan testen din viden. Spørgs gern dine kollegaer om hjælp.
 
 
 
@@ -35,6 +36,7 @@ I grove træk falder al data i kuben indenfor kategorierne
 - Hjælpetabeller er **tally**- og **slicer**-tabeller. Disse bruges til definereing af intervaller (fx aldersintervaller), grupperings-, sorterings- og filtreringsmuligheder
 - Info er data som fx dato på **dataleverancer** og **servicemeddelelser** til brugere af dashboard om nye opdateringer eller tilføjelser
 
+Det kan være en hjælp først at blive dus 
 Kuben udvides løbende med nye datakilder, i takt med, at flere temaer skal kunne besvares.
 
 
