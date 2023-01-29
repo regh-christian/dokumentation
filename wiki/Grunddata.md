@@ -25,8 +25,9 @@ Med grunddata menes de tabeller, som foruden stamdata (v_DimPerson, v_DimAnsætt
 ## Resume af tabeller
 
 ### v_DimTidDato
+
 | **BASERET PÅ**                                  | **KOLONNE 2** |
-|-------------------------------------------------| |
+|-------------------------------------------------|---------------|
 |    [Flis2_LønHR_v2].[chru_cube].[v_DimTidDato]  | |
 |    [Flis2_LønHR_v2].[DM_FL_HR].[DimDato]        | |
 | Script fra Søren Jessen: ”07_FL_110_SD_DimAnsaettelse.sas” | | 
