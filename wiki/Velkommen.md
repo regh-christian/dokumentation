@@ -79,4 +79,4 @@ Andre measures—lokaliseret i mapperne, ___Farver_ og ___Tekster_—bruges til 
 <br>
 > **ØVELSE - KONTROL AF DATAADGANGE**
 > - Følg <a href="https://github.com/DataOgDigitalisering/FortroligInformation/blob/main/%C3%98velse1/ex_dataadgange.sql" target="_blank"> dette link til SQL-script</a>.
-> - Åbn og eksekver scriptet i SQL Server Management Studio for at undersøge om du har alle nødvendige adgange. Kørslen bør tage omkring 10-15 minutter og returnere en tabel, der beskriver dine adgange.
+> - Åbn og eksekver scriptet i SQL Server Management Studio. Kørslen bør tage omkring 10-15 minutter og returnere en tabel, der beskriver dine adgange. Spørg en kollega om du har de adgange, du har brug for.
