@@ -10,7 +10,7 @@
 <br>
 
 
-[link til p:\](file:///P:\CHR\Data Digitalisering\Sektion for Data og Rapportering\Datateamet\Databestillinger og godkendelsesformularer\Godkendelsesformular Datavarehus/)
+[link til p:\](file:///P:/CHR/Data Digitalisering/Sektion for Data og Rapportering/Datateamet/Databestillinger og godkendelsesformularer/Godkendelsesformular Datavarehus/)
 
 https://gist.github.com/TobiasPalludan/5948533e97d260a04ea47e44ea7cc6b0#same-file-anchors-for-github
 
