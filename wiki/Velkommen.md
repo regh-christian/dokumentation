@@ -26,10 +26,10 @@ På produktions- og udviklingsserverne findes data under skemaet, **chru_cube**.
 
 |     Grunddata     |       Temaer      |   Brugerstyring   |     Gruppering    | Serviceinformation |
 
-- Med **grunddata** menes 
-  - stamdata (personaledata, organisations- og stillingshieraki, tidstabel mm.), 
-  - brugerstyring (data om personales grugerroller bestemmende for, hvilken data, de må se). Disse indgår på tværs af alle temaer. 
-- - **Brugerstyring** er 
+- Med **grunddata** menes den data, som er fællesmængde på tværs af temaer, uanset om der beregnes på sygefravær eller ferieafholdelse. I grunddata indgår
+  - **stamdata** (personaledata, organisations- og stillingshieraki, tidstabel mm.) 
+  - **brugerstyring** (data om personales brugerroller, som er bestemmende for hvilke data, de må se) 
+- -  
 - Kuben udvides løbende med nye datakilder, i takt med, at flere temaer skal kunne besvares.
 - 
 
