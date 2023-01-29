@@ -14,12 +14,15 @@
 # Introduktion til CHRU_HRKube
 
 ## *Kuben*
-I dit arbejde får du brug for at kende og kunne arbejde med data i "kuben" (med kuben menes—indtil videre—CHRU_HRKube). I kuben processeres data fra mange forskellige kilder til en række forskellige formål.
+I dit arbejde får du brug for at kende og kunne arbejde med data i "kuben" (med kuben menes—indtil videre—CHRU_HRKube). 
+I kuben processeres data fra mange forskellige kilder til en række forskellige formål. Kuben er datamodel i bl.a. 'HR Lederdashboard' og 'Strategisk Dahboard'. I disse implementeres vores standardiserede beregningsmetoder indenfor temaer som sygefravær, ferieafholdelse, personalesammensætning, løn, vagtplan m.fl.
 
-i enheden kan det være en fordel først at blive dus med datakilder i et mere råt format ved at udforske LON_HR-databasen
+### 
 
 
-## Measures
+
+
+### Measures
 
 
 
