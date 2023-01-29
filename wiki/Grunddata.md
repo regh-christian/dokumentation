@@ -25,6 +25,7 @@ Med grunddata menes de tabeller, som foruden stamdata (v_DimPerson, v_DimAnsætt
 ## Resume af tabeller
 
 ### v_DimTidDato
+
 | | **BASERET PÅ** |
 |-|-|
 | &darr; | [chru_cube].[v_DimTidDato] |
@@ -45,6 +46,7 @@ CASE WHEN chru_cube.DanskeHelligdage(Dato) = 1 THEN 'Helligdag'
 
 
 ### v_DimAnsættelse
+
 | | **BASERET PÅ** |
 |-|-|
 | &darr; | [chru_cube].[v_DimAnsættelse] |
@@ -133,6 +135,7 @@ FLERE VARIABLE ER INDFØRT SIDEN SIDST!
 
 
 ### v_DimPerson
+
 Dimensionstabel med ID som primærnøgle. Derudover navn, fødselsdato.
 
 
@@ -159,6 +162,7 @@ Current_row=1 indikerer, at rækken er gældende i nuværende stillingskodehiera
 
 
 ### v_DimOrganisation
+
 | | **BASERET PÅ** |
 |-|-| 
 | &darr; | [Flis2_LønHR_v2].[chru_cube].[v_DimOrganisation] |
