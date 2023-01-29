@@ -63,7 +63,7 @@ På den måde anvendes tabellen både som fact og dimension afhængig af konteks
 
 **AktuelRække**: J hvis dags dato ligger indenfor ansættelsesforholdets start- og slutdato.
 ```sql
-// FRA SØREN: ”07_FL_110_SD_DimAnsaettelse.sas
+-- FRA SØREN: ”07_FL_110_SD_DimAnsaettelse.sas
 (CASE  
     WHEN STAT IN ('0', '1', '3') THEN 1 
     ELSE 0 
