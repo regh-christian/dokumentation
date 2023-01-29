@@ -108,22 +108,21 @@ EksterntFinansieret: J hvis afdelingen på ansættelsesstarttidspunktet var ekst
   END AS NuværendeOrganisationID
 ```
 
-
-ØVELSE 1 – xxxx
-Udregn vha. SD.SD_Person hvor mange årsværk, der arbejdes i din sektion baseret på aktuelt ansatte i dag. Gruppér dit resultat på time- hhv. månedslønnede, del- og fuldtidsansatte.
-Lav samme beregning og gruppering baseret på data fra kuben.	 
-
-Hændelse: Angiver om et månedslønnet ansættelsesforhold er en til- eller fratrædelse. Har ansættelsesforholdet værdien Ansat=J og denne er forskellig fra et evt. tidligere ansættelsesforhold med samme tjenestenummer, er dette en tiltrædelse. I modsat fald en fratrædelse.
+**Hændelse**: Angiver om et månedslønnet ansættelsesforhold er en til- eller fratrædelse. Har ansættelsesforholdet værdien Ansat=J og denne er forskellig fra et evt. tidligere ansættelsesforhold med samme tjenestenummer, er dette en tiltrædelse. I modsat fald en fratrædelse.
+```sql
 ,CASE 
    WHEN Ansat != COALESCE(LAG(Ansat) OVER(PARTITION BY Tjnr ORDER BY [Start] ASC), 99) 
      AND Månedslønnet = 1
    THEN CASE WHEN Ansat = 1 THEN 'Tiltrædelse' ELSE 'Fratrædelse' END
   END AS Hændelse
+```
 
-HændelseMellem: Angiver, hvor denne er anført, om en hændelse er sket mellem afdelinger (samme institution), mellem institutioner eller om denne er en afbrudt ansættelse på mindre end 3 måneder. Værdien ’Til/fra Region Hovedstaden’ hvis der på ansættelsesforholdet er en hændelseer, men ingen af førnævnte kriterier er opfyldt.
-HændelsesDato: Startdatoen på ansættelser, hvor ’Hændelse’ er en tiltrædelse. På ansættelser hvor ’Hændelse’ er en fratrædelse, anvendes dagen før ansættelsens startdato som hændelsesdato—svt. sidste egentlige arbejdsdag.
+**HændelseMellem**: Angiver, hvor denne er anført, om en hændelse er sket mellem afdelinger (samme institution), mellem institutioner eller om denne er en afbrudt ansættelse på mindre end 3 måneder. Værdien ’Til/fra Region Hovedstaden’ hvis der på ansættelsesforholdet er en hændelseer, men ingen af førnævnte kriterier er opfyldt.
 
-TillInst: Hvor ’HændelseImellem’ er ”Mellem institutioner”, er denne udfyldt med institutionen på personens nye/kommende ansættelsesforhold.
+**HændelsesDato**: Startdatoen på ansættelser, hvor ’Hændelse’ er en tiltrædelse. På ansættelser hvor ’Hændelse’ er en fratrædelse, anvendes dagen før ansættelsens startdato som hændelsesdato—svt. sidste egentlige arbejdsdag.
+
+**TillInst**: Hvor ’HændelseImellem’ er ”Mellem institutioner”, er denne udfyldt med institutionen på personens nye/kommende ansættelsesforhold.
+
 FLERE VARIABLE ER INDFØRT SIDEN SIDST!
 
 
