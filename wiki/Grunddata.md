@@ -62,8 +62,8 @@ På den måde anvendes tabellen både som fact og dimension afhængig af konteks
 **Ansat**: J hvis statuskode er enten 0, 1 eller 3.
 
 **AktuelRække**: J hvis dags dato ligger indenfor ansættelsesforholdets start- og slutdato.
-```sas
-* FRA SØRENS SAS: ”07_FL_110_SD_DimAnsaettelse.sas
+```sql
+// FRA SØREN: ”07_FL_110_SD_DimAnsaettelse.sas
 (CASE  
     WHEN STAT IN ('0', '1', '3') THEN 1 
     ELSE 0 
