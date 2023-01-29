@@ -25,6 +25,8 @@ På produktions- og udviklingsserverne findes data under skemaet, **chru_cube**.
 
 |     Grunddata     |       Temaer      |   Brugerstyring   |     Gruppering    | Serviceinformation |
 |-------------------|-------------------|-------------------|-------------------|--------------------|
+|-------------------|-------------------|-------------------|-------------------|--------------------|
+
 
 - Med grunddata menes stamdata, brugerstyring og datotabel. Disse indgår på tværs af alle temaer. 
 - - **Brugerstyring** er 
