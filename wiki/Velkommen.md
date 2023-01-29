@@ -29,8 +29,11 @@ På produktions- og udviklingsserverne findes data under skemaet, **chru_cube**.
 - Med **grunddata** menes den data, som er fællesmængde på tværs af temaer, uanset om der beregnes på sygefravær eller ferieafholdelse. I grunddata indgår
   - **stamdata** (personaledata, organisations- og stillingshieraki, tidstabel mm.) 
   - **brugerstyring** (data om personales brugerroller, som er bestemmende for hvilke data, de må se) 
-- -  
-- Kuben udvides løbende med nye datakilder, i takt med, at flere temaer skal kunne besvares.
+- **tally- og slicer-tabeller** bruges som støttetabeller til definereing af intervaller (fx aldersintervaller), grupperings-, sorterings- og filtreringsmuligheder
+- **info** og **servicemeddelelser** er fx dato på dataleverancer og information til brugere af dashboard om ny opdateringer eller tilføjelser
+
+
+Kuben udvides løbende med nye datakilder, i takt med, at flere temaer skal kunne besvares.
 - 
 
 Al data i kuben tilhører én af følgende typer:
