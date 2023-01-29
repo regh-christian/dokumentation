@@ -164,7 +164,7 @@ Current_row=1 indikerer, at rækken er gældende i nuværende stillingskodehiera
 <br>
 ### v_DimOrganisation
 
-| **View** | **&rarr;** | **BASERET PÅ** |
+| **View** | **&rarr;** | **Baseret på** |
 |-|-|-|
 | [chru_cube].[v_DimOrganisation] | &rarr; | [DM_FL_HR].[DimOrganisation] |
 
