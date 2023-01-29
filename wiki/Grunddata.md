@@ -142,8 +142,8 @@ Dimensionstabel med ID som primærnøgle. Derudover navn, fødselsdato.
 
 | | **BASERET PÅ** |
 |-|-|
-| &darr; | [Flis2_LønHR_v2].[chru_cube].[v_DimStilling]  |
-| &darr; | [Flis2_LønHR_vs].[DM_FL_HR].[DimStillingskode] |
+| &darr; | [chru_cube].[v_DimStilling]  |
+| &darr; | [DM_FL_HR].[DimStillingskode] |
 
 Stillingshieraki i 4 niveauer (L1-L4) med ID som primærnøgle. Hoved-, fag- og stillingsgruppe samt stilling. Afhængig af kontekst og datakilde omtales disse værdier også:
 | LEVEL | SD | I TALE | BETYDNING |
@@ -159,6 +159,26 @@ Current_row=1 indikerer, at rækken er gældende i nuværende stillingskodehiera
 
 
 ### v_DimOrganisation
+| | **BASERET PÅ** |
+|-|-| 
+| &darr; | [Flis2_LønHR_v2].[chru_cube].[v_DimOrganisation] |
+| &darr; | [Flis2_LønHR_v2].[DM_FL_HR].[DimOrganisation] |
+
+Organisationshieraki i 6 niveauer (L1-L6) med ID som primærnøgle. Afhængig af kontekst og organisation lokalt omtales disse værdier også:
+
+| LEVEL | SD   | I TALE   | BETYDNING                                                   |
+|-------|------|----------|-------------------------------------------------------------|
+| L1    | ORG6 | Inst     | Institution/virksomhed/hospital                             |
+| L2    | ORG5 | NY4      | Drift/finansiering                                          |
+| L3    | ORG4 | NY3      | Center                                                      |
+| L4    | ORG3 | NY2      | Afdeling. (Klinik på RH og enhed i Koncerncentre)           |
+| L5    | ORG2 | NY1      | Samleafsnit                                                 |
+| L6    | ORG1 | Afdeling | Afsnit/lønafsnit (på hospitaler), sektion (i koncerncentre) |
+
+Variablen MedarbejdereAnsat=1 angiver, om der er >0 ansatte på afdelingen (optalt i v_DimAnsættelse hvor AnsatDagsDato=J og AktuelRække=J). Bruges fx som filtre på slicere, hvor der ikke ønskes at kunne vælge niveauer med 0 ansatte.
+Current_row=1 sikrer opdateret organisationshieraki men ignorerer evt. historiske ændringer.
+
+
 
 
 
