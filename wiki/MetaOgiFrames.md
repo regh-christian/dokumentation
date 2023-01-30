@@ -22,6 +22,9 @@
 </center>
 <br>
 
+**Cross filter behaviour**—CFB—angiver ....
+**Security-filter behaviour**—SFR—angiver ...
+
 
 
 ## Kode til træk af metadata
