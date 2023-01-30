@@ -24,7 +24,7 @@ På produktions- og udviklingsserverne findes data under skemaet, **chru_cube**.
 <center>
 ![Power BI-model, grunddata](https://github.com/DataOgDigitalisering/dokumentation/blob/master/Images/CHRU_HRKube_ERD_PBI.png)
 
-  CHRU_HRKube, 2023-01-30
+CHRU_HRKube, 2023-01-30
 </center>
 </details>
 {::options parse_block_html="false" /}
@@ -56,6 +56,17 @@ Kuben udvides løbende med nye datakilder, i takt med, at flere temaer skal kunn
 Via measures implementeres vores standardiserede beregningsmetoder. De er grupperet temavis. I gruppen ___Diverse_ indgår beregninger på stamdata og dette kan være et godt sted at starte med at skabe overblik over kuben. Foruden indblik i de mere centrale tabeller vil du hér se eksempler på, hvordan viden om stamdata er essentielt for at kunne definere fx hvilken personalegruppe, der skal indgå i en given beregning; hvordan dette kan variere fra tema til tema; hvordan antallet af personer, der indgår i en beregning, er afgørende for, om et resultat nødvendigvis skal anonymiseres mm.
 
 Andre measures—lokaliseret i mapperne, ___Farver_ og ___Tekster_—bruges til kontrol af layout på dashboards. Farvetemaer, akselængder, dynamiske tekstetiketter meddelelser, kolonnebredder mm. 
+
+
+
+# Software
+Følgende software er en forudsætning og kan findes i Softwareshoppen. Versioner pr. 2022-09-08.
+
+* Microsoft SQL Server Management Studio
+* Power BI desktop
+* SQL Server Data Tools Bundle
+  * Dax Studio
+  * Tabular Editor
 
 
 
@@ -103,20 +114,8 @@ Tjek [øvelse 1](#øvelse---kontrol-af-dataadgange)
 Denne wiki er tiltænkt som introduktionsmateriale til nye medarbejdere og som et opslagværk til erfarne medarbejdere hos Data og Rapportering. 
 Temaer er underbygget af øvelser, som kan findes i dette private *<a href="https://github.com/DataOgDigitalisering/FortroligInformation" target="_blank">repository</a>*.
 
-### Software og opsætning
-Følgende software er en forudsætning og kan findes i Softwareshoppen. Versioner pr. 2022-09-08.
 
-* Microsoft SQL Server Management Studio
-* Power BI desktop
-* SQL Server Data Tools Bundle
-  * Dax Studio
-  * Tabular Editor
-  
-### Kilder og adgange
-- L:\, ad-hoc
-- [Link til Christians dokument]()
 
-Hvor specifikke emner med fordel kan gennemgås via andre kilder fx ifm. løsning af opgaver eller kan bidrage med forståelse i en given kontekst, vil link til supplerende materiale være indsat.
 
 
 
