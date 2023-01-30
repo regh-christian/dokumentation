@@ -12,6 +12,6 @@ Sektionen har hovedsageligt tekniske medarbejdere med kompetencer i dataudtræk 
 &wdEnd=10 - this parameter sets the ending page number of the embedded document
 -->
 <center>
-<iframe src="https://regionh-my.sharepoint.com/personal/stefan_sajin-henningsen_regionh_dk/_layouts/15/Doc.aspx?sourcedoc={9eae6cfa-732f-48a1-81f3-246e3b6a2e86}&amp;action=embedview&amp;wdAr=1.7777777&showNavigation=FALSE&wdStart=18&wdEnd=21" width="850" height="503" frameborder="0" seamless="TRUE" start="18" end="21"></iframe>
+<iframe src="https://regionh-my.sharepoint.com/personal/stefan_sajin-henningsen_regionh_dk/_layouts/15/Doc.aspx?sourcedoc={9eae6cfa-732f-48a1-81f3-246e3b6a2e86}&amp;action=embedview&amp;wdAr=1.7777777&showNavigation=FALSE&wdStart=18&wdEnd=21" width="100%" height="700" frameborder="0" seamless="TRUE" start="18" end="21"></iframe>
 </center>
 <br>
