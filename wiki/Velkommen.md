@@ -20,7 +20,7 @@ I disse implementeres vores standardiserede beregningsmetoder indenfor temaer so
 
 På produktions- og udviklingsserverne findes data under skemaet, **chru_cube**. I Tabular Editor findes kuben under navnet CHRU_HRKube.
 
-<details><summary markdown="span">XOverblik over kuben (ERSTAT MED ERD !)</summary>
+<details><summary markdown="span">Se overblik over kuben (ERSTAT MED ERD !)</summary>
 <center>
 [Power BI-model, grunddata](https://raw.githubusercontent.com/DataOgDigitalisering/dokumentation/master/Images/CHRU_HRKube_ERD_PBI.png)
 </center>
