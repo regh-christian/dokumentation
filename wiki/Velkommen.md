@@ -20,7 +20,7 @@ I disse implementeres vores standardiserede beregningsmetoder indenfor temaer so
 
 På produktions- og udviklingsserverne findes data under skemaet, **chru_cube**. I Tabular Editor findes kuben under navnet CHRU_HRKube.
 
-<details><summary markdown="span">ERSTAT MED ERD!! Overblik over kuben</summary>
+<details><summary markdown="span">XOverblik over kuben (ERSTAT MED ERD !)</summary>
 <center>
 [Power BI-model, grunddata](https://raw.githubusercontent.com/DataOgDigitalisering/dokumentation/master/Images/CHRU_HRKube_ERD_PBI.png)
 </center>
@@ -87,3 +87,45 @@ Andre measures—lokaliseret i mapperne, ___Farver_ og ___Tekster_—bruges til 
 > **ØVELSE - KONTROL AF DATAADGANGE**
 > - Følg <a href="https://github.com/DataOgDigitalisering/FortroligInformation/blob/main/%C3%98velse1/ex_dataadgange.sql" target="_blank"> dette link til SQL-script</a>.
 > - Åbn og eksekver scriptet i SQL Server Management Studio. Kørslen bør tage omkring 10-15 minutter og returnere en tabel, der beskriver dine adgange. Spørg en kollega om du har de adgange, du har brug for.
+
+
+
+
+
+
+
+Tjek [øvelse 1](#øvelse---kontrol-af-dataadgange)
+
+
+### Formål
+Denne wiki er tiltænkt som introduktionsmateriale til nye medarbejdere og som et opslagværk til erfarne medarbejdere hos Data og Rapportering. 
+Temaer er underbygget af øvelser, som kan findes i dette private *<a href="https://github.com/DataOgDigitalisering/FortroligInformation" target="_blank">repository</a>*.
+
+### Software og opsætning
+Følgende software er en forudsætning og kan findes i Softwareshoppen. Versioner pr. 2022-09-08.
+
+* Microsoft SQL Server Management Studio
+* Power BI desktop
+* SQL Server Data Tools Bundle
+  * Dax Studio
+  * Tabular Editor
+  
+### Kilder og adgange
+- L:\, ad-hoc
+- [Link til Christians dokument]()
+
+Hvor specifikke emner med fordel kan gennemgås via andre kilder fx ifm. løsning af opgaver eller kan bidrage med forståelse i en given kontekst, vil link til supplerende materiale være indsat.
+
+
+
+<!-- SKAL FLYTTES -->
+> ** ØVELSE - BRUG AF ADGANGE **
+> Hospital XXX ønsker optælling af alle pr. dd. månedslønnede hhv. fuld- og deltidsansatte sygeplejersker 
+> udspecificeret for alle sygeplejegrupper under fællesbetegnelsen STILKO2TXT = ’Sygepl. Pers’
+> Hvor mange af disse er autoriserede med speciale indenfor anæstesi?
+
+
+
+
+
+
