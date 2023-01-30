@@ -23,6 +23,7 @@ På produktions- og udviklingsserverne findes data under skemaet, **chru_cube**.
 <details><summary markdown="span">Se overblik over kuben (ERSTAT MED ERD !)</summary>
 <center>
 [Power BI-model, grunddata](https://raw.githubusercontent.com/DataOgDigitalisering/dokumentation/master/Images/CHRU_HRKube_ERD_PBI.png)
+CHRU_HRKube, 2023-01-30
 </center>
 </details>
 <br>
