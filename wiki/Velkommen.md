@@ -24,7 +24,7 @@ På produktions- og udviklingsserverne findes data under skemaet, **chru_cube**.
 <br>
 <details><summary markdown="span">Kuben pr. 2023-01-30<summary>
  <center>
-  <img src="Images/chru_hrkube_pbi_erd.png" height="300" weight="500" alt="CHRU_HRKube, 2023-01-30" style="vertical-align:middle"/>
+  <img src="Images/chru_hrkube_pbi_erd.png" height="420" weight="700" alt="CHRU_HRKube, 2023-01-30" style="vertical-align:middle"/>
  </center>
 </details>
 <br>
