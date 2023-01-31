@@ -8,14 +8,17 @@ Om konventioner for navngivning i hhv. measures og tabeller.
 - **Views** navngives fx v_DimAnsættelse
   - 'v_' — fordi det er et view. Alt *efter* skrives i camelCase
   - Dim, Fact, Security, Info, Slicer, Tally afhængig af **formål**
-  - Alt efter er entydige og letforståelig(e) *substantiver*. (Gerne noget der minder om rådatatabellens oprindelige navn hvis muligt). Sammensatte ord skrives i camesCase
-  - **Kolonnenavne** er entydige og letforståelige *substantiver*. 
-  - æ, ø å er tilladt
+  - Alt efter er entydig(e) og letforståelig(e) *substantiv(er)*. (Gerne noget der minder om rådatatabellens oprindelige navn hvis muligt). Sammensatte ord skrives i camesCase
+  - **Kolonnenavne** er entydige og letforståelige *substantiver*
+  - æ, ø, å tilladt
 
-- **Tabeller** navngives som views med undtagelse af indledende 'v_' 
+- **Tabeller** navngives som views. 'v_' udelades 
+
+
 
 ### Measures
-
+- Measures grupperes temaspecifikke mapperne
+- Enkelte basis-measures placeres i diverse, når de bruges på tværs af temaer. Fx [Antal fuldtidsansatte]
 
 
 
