@@ -5,9 +5,9 @@ Om konventioner for navngivning i hhv. measures og tabeller.
 
 
 ### Tabeller
-- **Views** navngives fx v_DimAnsættelse
-  - 'v_' — fordi det er et view. Alt *efter* skrives i camelCase
-  - Dim, Fact, Security, Info, Slicer, Tally afhængig af **formål**
+- **Views** navngives fx v_DimAnsættelse. [tabeltype]+[Formål]+[BeskrivendeNavn]
+  - 'v_' — fordi det er et view. Alt *derefter* skrives i camelCase
+  - Dim, Fact, Security, Info, Slicer, Tally afhængig af **formål**. **S**tort**B**egyndelsesbogstav
   - Alt efter er entydig(e) og letforståelig(e) *substantiv(er)*. (Gerne noget der minder om rådatatabellens oprindelige navn hvis muligt). Sammensatte ord skrives i camesCase
   - **Kolonnenavne** er entydige og letforståelige *substantiver*
   - æ, ø, å tilladt
