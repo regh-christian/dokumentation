@@ -7,7 +7,8 @@ Om konventioner for navngivning i hhv. measures og tabeller.
 ### Tabeller
 - **Views** navngives fx v_DimAnsættelse. [tabeltype]+[\_]+[Formål]+[BeskrivendeNavn]
   - 'v_' — fordi det er et view. Alt *efterfølgende* skrives i camelCase
-  - Dim, Fact, Security, Info, Slicer, Tally afhængig af **formål**. **S**tort**B**egyndelsesbogstav
+  - **Formål**: Dim, Fact, Security, Info, Slicer, Tally.
+    - **S**tort**B**egyndelsesbogstav
   - Alt efterfølgende er entydig(e) og letforståelig(e) *substantiv(er)*. (Gerne noget der minder om rådatatabellens oprindelige navn hvis muligt). Sammensatte ord skrives i camesCase
   - **Kolonnenavne** er entydige og letforståelige *substantiver*
 - **Tabeller** navngives som views. [Formål]+[BeskrivendeNavn]. Fx DimLønart
@@ -26,16 +27,6 @@ Om konventioner for navngivning i hhv. measures og tabeller.
 - æ ø å tilladt
 
 
-
-
-
-
-
-- Hvilket ord bruger vi; kolonner, variable, attributes, parametre osv. ? 
-- Rækker, records, tuples? 
-- SammansatteOrd eller sammensatte_ord. 
-- Engelsk/dansk? Å eller aa. 
-- Find afvigelser og list dem mhp. ensartning. 
 
 ## Dokumentation
 Tjekliste til opdatering af dokumentation:
