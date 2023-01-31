@@ -42,8 +42,9 @@ Om konventioner for navngivning tabeller og measures.
 
 - Aftaler for ændringer i CHRU_HRKube
   - Roller. Hvem gør/har ansvar for hvad?
-  - SQL, Dax, Git, dok
-  - Intervaller
+    - SQL, Dax, Git, dok
+  - Hvordan sikrer/ved vi, at dok er opdateret?  
+    - Intervaller
 
 - Kontrol-scripts
   - Til hvad? Afdæk behov
