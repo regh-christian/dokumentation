@@ -26,8 +26,11 @@ På produktions- og udviklingsserverne findes data under skemaet, **chru_cube**.
   <img src="Images/chru_hrkube_pbi_erd.png" height="480" weight="800" alt="CHRU_HRKube, 2023-01-30" style="vertical-align:middle"/>
  </center>
 </details>
- 
-Som introduktion til kuben anbefales at gennemgå materialet hér på siden ét tema ad gangen. Du kan med fordel prøve at bygge din egen version af kuben i Power BI tabel for tabel; measure for measure; figur for figur. I hvert tema findes små øvelser, hvor du kan testen din viden.
+<br> 
+Som introduktion til kuben anbefales at gennemgå materialet hér på siden ét tema ad gangen. Husk dog, at denne data er processeret til brug i datamodellen, hvorfor det er en nødvendighed, at du også har indblik i rådata fra fx Silkeborg Data (**SD**). 
+Du kan med fordel prøve at bygge din egen version af kuben i Power BI tabel for tabel; measure for measure; figur for figur. I hvert tema findes små øvelser, hvor du kan testen din viden.
+
+
 <br>
 
 
@@ -41,14 +44,12 @@ I grove træk falder al data i kuben indenfor kategorierne
   - **Stamdata** (personaledata, organisations- og stillingshieraki, tidstabel mm.) 
   - **Brugerstyring** (data om personales brugerroller, som er bestemmende for hvilke data, de må se) 
 
-Af screenshottet heruver ses, hvordan vores grunddata groft kan grupperes i temaer.
+Af screenshottet herover ses, hvordan vores grunddata groft kan grupperes i temaer.
 
 Derudover findes en række øvrige tabeller, herunder:
 - **Temaspecifik data** er data, der anvendes specifikt til beregning på fx sygefravær, ferieafholdelse eller personalesammensætning
 - Hjælpetabeller er **tally**- og **slicer**-tabeller. Disse bruges til definereing af intervaller (fx aldersintervaller), grupperings-, sorterings- og filtreringsmuligheder
 - Info er data som fx dato på **dataleverancer** og **servicemeddelelser** til brugere af dashboard om nye opdateringer eller tilføjelser
-
-Kuben udvides løbende med nye datakilder, i takt med, at flere temaer skal kunne besvares.
 <br>
 
 
