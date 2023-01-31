@@ -27,7 +27,8 @@ På produktions- og udviklingsserverne findes data under skemaet, **chru_cube**.
   <img src="Images/chru_hrkube_pbi_erd.png" height="300" weight="500" alt="CHRU_HRKube, 2023-01-30" style="vertical-align:middle"/>
  </center>
 </details>
-
+<br>
+ 
 Som introduktion til kuben anbefales at gennemgå materialet hér på siden ét tema ad gangen. Du kan med fordel prøve at bygge din egen version af kuben tabel for tabel; measure for measure; figur for figur. I hvert tema findes små øvelser, hvor du kan testen din viden.
 
 
