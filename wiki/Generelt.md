@@ -10,13 +10,12 @@ Om konventioner for navngivning i hhv. measures og tabeller.
   - Dim, Fact, Security, Info, Slicer, Tally afhængig af **formål**. **S**tort**B**egyndelsesbogstav
   - Alt efterfølgende er entydig(e) og letforståelig(e) *substantiv(er)*. (Gerne noget der minder om rådatatabellens oprindelige navn hvis muligt). Sammensatte ord skrives i camesCase
   - **Kolonnenavne** er entydige og letforståelige *substantiver*
-  - æ, ø, å tilladt
 - **Tabeller** navngives som views. [Formål]+[BeskrivendeNavn]. Fx DimLønart
   - 'v_' udelades
 - **Stored procedures** navngives kort og præcist beskrivende fx 'DanskeHelligdage'
   - Brug så vidt muligt verber
   - camelCase
-
+- æ, ø, å tilladt
 
 ### Measures
 - Navngives [tema]+[-]+[beskrivende og letforståelig tekst]
@@ -24,6 +23,7 @@ Om konventioner for navngivning i hhv. measures og tabeller.
 - Measures grupperes i temaspecifikke mapper
   - Enkelte basis-measures placeres i mappen _Diverse_, hvis de bruges på tværs af temaer. Fx [Antal fuldtidsansatte] og [FilterSlicer]
 - For eksempler se mappen _Sygefravær_
+- æ ø å tilladt
 
 
 
