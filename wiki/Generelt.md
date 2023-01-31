@@ -34,10 +34,11 @@ Om konventioner for navngivning tabeller og measures.
   - Enkelte basis-measures placeres i mappen _Diverse_, hvis de bruges på tværs af temaer. Fx [Antal fuldtidsansatte] og [FilterSlicer]
 - æ ø å tilladt
 - Ikke alle measures er navngivet efter denne konvention. Ved tvivl se mappen _Sygefravær_
+<br>
 
 
 
-##	Opgaver og ansvar
+#	Opgaver og ansvar
 
 - Aftaler for ændringer i CHRU_HRKube
   - Roller. Hvem gør/har ansvar for hvad?
@@ -50,5 +51,6 @@ Om konventioner for navngivning tabeller og measures.
 - Oprydning
   - Hvordan implementerer vi vedtaget nomenklatur?
   - Prioriter. Hvad kan vi leve med?
+    - performance vs æstetik
     - slette ubrugte measures vs ændre æ ø å 
 
