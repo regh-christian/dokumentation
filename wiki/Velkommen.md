@@ -44,10 +44,8 @@ I grove træk falder al data i kuben indenfor kategorierne
   - **Stamdata** (personaledata, organisations- og stillingshieraki, tidstabel mm.) 
   - **Brugerstyring** (data om personales brugerroller, som er bestemmende for hvilke data, de må se) 
 
-Af screenshottet herover ses, hvordan vores grunddata groft kan grupperes i temaer.
-
 Derudover findes en række øvrige tabeller, herunder:
-- **Temaspecifik data** er data, der anvendes specifikt til beregning på fx sygefravær, ferieafholdelse eller personalesammensætning
+- **Temaspecifik data** er data, der anvendes specifikt til beregning på fx sygefravær, ferieafholdelse eller personalesammensætning. Af screenshottet herover ses, hvordan vores grunddata groft kan grupperes i temaer.
 - Hjælpetabeller er **tally**- og **slicer**-tabeller. Disse bruges til definereing af intervaller (fx aldersintervaller), grupperings-, sorterings- og filtreringsmuligheder
 - Info er data som fx dato på **dataleverancer** og **servicemeddelelser** til brugere af dashboard om nye opdateringer eller tilføjelser
 <br>
