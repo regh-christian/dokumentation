@@ -10,7 +10,7 @@ Om konventioner for navngivning tabeller og measures.
 - **Views** indledes med __v\___' 
   - Alt *efterfølgende* skrives i camelCase (**S**tort**B**egyndelsesbogstav)
   - **Formål**: Dim, Fact, Security, Info, Slicer, Tally.
-  - **B**eskrivende**N**avn er entydig(e) og letforståelig(e) *substantiv(er)*. (Gerne noget der minder om rådatatabellens oprindelige navn hvis muligt). Sammensatte ord skrives i camesCase
+  - **Beskrivende navn** er entydig(e) og letforståelig(e) *substantiv(er)*. (Gerne noget der minder om rådatatabellens oprindelige navn hvis muligt). Sammensatte ord skrives i camesCase
 
 - **Tabeller** navngives som views. [Formål]+[BeskrivendeNavn]. Fx DimLønart
   - 'v_' udelades
