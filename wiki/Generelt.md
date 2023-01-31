@@ -7,14 +7,16 @@ Om konventioner for navngivning tabeller og measures.
 ### Tabeller
 - Navngives som fx v_DimAnsættelse
 - Skabelon: [tabeltype]+[\_]+[Formål]+[BeskrivendeNavn]
-- **Views** indledes med __v\___' 
+- **Views** indledes med __v\___ 
   - Alt *efterfølgende* skrives i camelCase (**S**tort**B**egyndelsesbogstav)
   - **Formål**: Dim, Fact, Security, Info, Slicer, Tally.
   - **Beskrivende navn** er entydig(e) og letforståelig(e) *substantiv(er)*. (Gerne noget der minder om rådatatabellens oprindelige navn hvis muligt). Sammensatte ord skrives i camesCase
 
-- **Tabeller** navngives som views. [Formål]+[BeskrivendeNavn]. Fx DimLønart
-  - 'v_' udelades
+- **Tabeller** navngives som views. [Formål]+[**B**eskrivende**N**avn]. Fx DimLønart
+  - __v\___ udelades
+
 - **Kolonnenavne** er entydige og letforståelige *substantiver*
+  - camelCase
 
 - **Stored procedures** navngives kort og præcist beskrivende fx 'DanskeHelligdage'
   - Brug så vidt muligt verber
@@ -26,6 +28,7 @@ Om konventioner for navngivning tabeller og measures.
 - Navngives fx [Fravær - vægtede fuldtidsfraværsdage]. 
 - Skabelon: [tema]+[-]+[beskrivende og letforståelig tekst]
   - Kombinationer af substantiver og verber er
+  - (ikke nødvendigvis camelCase)
 - Measures grupperes i temaspecifikke mapper
   - Enkelte basis-measures placeres i mappen _Diverse_, hvis de bruges på tværs af temaer. Fx [Antal fuldtidsansatte] og [FilterSlicer]
 - æ ø å tilladt
