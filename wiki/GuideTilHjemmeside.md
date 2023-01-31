@@ -3,7 +3,7 @@ Denne guide beskriver, hvordan wiki-sider oprettes og redigeres.
 
 **Forudsætninger:**
 
-1.	[GitHub konto](https://github.com/) oprettet med RegionH mail med et identificerbart brugernavn
+1.	<a href="https://github.com/" target="_blank">GitHub konto</a> oprettet med RegionH mail med et identificerbart brugernavn
 2.	Adgang til organisationsprofilen i GitHub [DataOgDigitalisering](https://github.com/DataOgDigitalisering) (gives af Admin: Stefan)
 
 ## Oprettelse af ny wiki-side
