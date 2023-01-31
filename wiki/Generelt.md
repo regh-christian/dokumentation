@@ -2,6 +2,26 @@
 
 ##	Nomenklatur
 Om konventioner for navngivning i hhv. measures og tabeller. 
+
+
+### Tabeller
+- **Views** navngives fx v_DimAnsættelse
+  - 'v_' — fordi det er et view. Alt *efter* skrives i camelCase
+  - Dim, Fact, Security, Info, Slicer, Tally afhængig af **formål**
+  - Alt efter er entydige og letforståelig(e) *substantiver*. (Gerne noget der minder om rådatatabellens oprindelige navn hvis muligt). Sammensatte ord skrives i camesCase
+  - **Kolonnenavne** er entydige og letforståelige *substantiver*. 
+  - æ, ø å er tilladt
+
+- **Tabeller** navngives som views med undtagelse af indledende 'v_' 
+
+### Measures
+
+
+
+
+
+
+
 - Hvilket ord bruger vi; kolonner, variable, attributes, parametre osv. ? 
 - Rækker, records, tuples? 
 - SammansatteOrd eller sammensatte_ord. 
