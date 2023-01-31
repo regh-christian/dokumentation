@@ -17,7 +17,8 @@ I kuben processeres data fra mange forskellige kilder til en række forskellige 
 <a href="https://flis.regionh.top.local:444/PBIReports/powerbi/L%C3%B8n%20og%20HR/HR%20Lederdashboard/HR%20Lederdashboard?RC:Toolbar=False" target="_blank">___HR Lederdashboard___</a> 
 og 
 <a href="https://flis.regionh.top.local:444/PBIReports/powerbi/L%C3%B8n%20og%20HR/HR%20Strategisk%20Dashboard/HR%20Strategisk%20Dashboard?RC:Toolbar=False" target="_blank">___HR Strategisk Dashboard___</a>. 
-I disse implementeres vores standardiserede beregningsmetoder indenfor temaer som sygefravær, ferieafholdelse, personalesammensætning, løn, vagtplan m.fl. Flere temaer tilføjes løbende i takt med efterspørgsel og tilgængelige datakilder.
+I disse implementeres vores standardiserede beregningsmetoder indenfor temaer som sygefravær, ferieafholdelse, personalesammensætning, løn, vagtplan m.fl. 
+Flere temaer tilføjes løbende i takt med efterspørgsel og tilgængelige datakilder, hvorfor vi altid bestræber os på, at kuben skal være en adaptiv størrelse. Hér er din indsigt i både muligheder og begrænsninger med den nuværende model værdifuld, da vi altid gerne vil kunne tilføje nye temaer *og* samtidig bevare muligheden for at foretage vores nuværende beregninger.
 
 På produktions- og udviklingsserverne findes data under skemaet, **chru_cube**. I Tabular Editor findes kuben under navnet CHRU_HRKube.
 
