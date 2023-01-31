@@ -21,14 +21,11 @@ I disse implementeres vores standardiserede beregningsmetoder indenfor temaer so
 
 På produktions- og udviklingsserverne findes data under skemaet, **chru_cube**. I Tabular Editor findes kuben under navnet CHRU_HRKube.
 
-<br>
 <details><summary markdown="span">Kuben pr. 2023-01-30</summary>
  <center>
   <img src="Images/chru_hrkube_pbi_erd.png" height="480" weight="800" alt="CHRU_HRKube, 2023-01-30" style="vertical-align:middle"/>
  </center>
 </details>
-
-<br>
  
 Som introduktion til kuben anbefales at gennemgå materialet hér på siden ét tema ad gangen. Du kan med fordel prøve at bygge din egen version af kuben tabel for tabel; measure for measure; figur for figur. I hvert tema findes små øvelser, hvor du kan testen din viden.
 
