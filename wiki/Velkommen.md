@@ -23,14 +23,17 @@ På produktions- og udviklingsserverne findes data under skemaet, **chru_cube**.
 
 
 
-<!-- ![Power BI-model, grunddat](https://github.com/DataOgDigitalisering/dokumentation/blob/master/Images/CHRU_HRKube_ERD_PBI.png) -->
-
-
-<center><img src="Images/cube_model_basis.png" height="300" weight="500" alt="CHRU_HRKube, 2023-01-30" style="vertical-align:middle"/></center>
 <br>
-<center><img src="Images/chru_hrkube_pbi_erd.png" height="300" weight="500" alt="CHRU_HRKube, 2023-01-30" style="vertical-align:middle"/></center>
-
- 
+<!-- Embed iFrame. PowerPoint: "SQL-kursus.pptx" på OneDrive-->
+{::options parse_block_html="true" /}
+<details><summary markdown="span">Slides til SQL-kursus</summary>
+ <center>
+  <img src="Images/cube_model_basis.png" height="300" weight="500" alt="CHRU_HRKube, 2023-01-30" style="vertical-align:middle"/>
+  <br>
+  <img src="Images/chru_hrkube_pbi_erd.png" height="300" weight="500" alt="CHRU_HRKube, 2023-01-30" style="vertical-align:middle"/>
+  </center>
+</details>
+{::options parse_block_html="false" /}
 
 
 Som introduktion til kuben anbefales at gennemgå materialet hér på siden ét tema ad gangen. Du kan med fordel prøve at bygge din egen version af kuben tabel for tabel; measure for measure; figur for figur. I hvert tema findes små øvelser, hvor du kan testen din viden.
