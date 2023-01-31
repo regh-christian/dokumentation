@@ -20,5 +20,4 @@ Sektionen har hovedsageligt tekniske medarbejdere med kompetencer i dataudtræk 
 
 ## Formål
 Denne wiki er tiltænkt som introduktionsmateriale til nye medarbejdere og som et opslagværk til erfarne medarbejdere hos Data og Rapportering. 
-Temaer er underbygget af øvelser, som kan findes i dette private *<a href="https://github.com/DataOgDigitalisering/FortroligInformation" target="_blank">repository</a>*.
 <br>
