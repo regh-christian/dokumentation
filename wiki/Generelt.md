@@ -18,10 +18,12 @@ Om konventioner for navngivning i hhv. measures og tabeller.
 
 
 ### Measures
-- Measures grupperes temaspecifikke mapperne
-- Enkelte basis-measures placeres i diverse, hvis de bruges på tværs af temaer. Fx [Antal fuldtidsansatte] og [FilterSlicer]
-- Navngives [tema] - [beskrivende og letforståelig tekst]
--   Kombinationer af substantiver og verber er 
+- Navngives [tema]+[-]+[beskrivende og letforståelig tekst]
+  - Kombinationer af substantiver og verber er
+- Measures grupperes i temaspecifikke mapper
+  - Enkelte basis-measures placeres i mappen _Diverse_, hvis de bruges på tværs af temaer. Fx [Antal fuldtidsansatte] og [FilterSlicer]
+- For eksempler se mappen _Sygefravær_
+
 
 
 
