@@ -23,7 +23,7 @@
 
 **CFB**—Cross-filter behaviour—angiver ....
 
-**SFB**—Security-filter behaviour—angiver ...
+**SFB**—Security-filter behaviour—angiver ... beskriv vigtigheden af denne ifm brugerstyring
 
 
 
