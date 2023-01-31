@@ -61,13 +61,13 @@ Andre measures—lokaliseret i mapperne, ___Farver_ og ___Tekster_—bruges til 
 
 
 # Software
-Følgende software er en forudsætning og kan findes i Softwareshoppen. Versioner pr. 2022-09-08.
+Følgende software er en forudsætning og kan findes i <a href="https://softwarecentral.regionh.top.local/Shop" target"_blank">Softwareshoppen</a>. Hav altid nyeste version af Power BI Desktop installeret for at sikre funktionalitet med raportservere. For versioner af øvrig software spørg en kollega, hvad de bruger.
 
-* Microsoft SQL Server Management Studio
-* Power BI desktop
-* SQL Server Data Tools Bundle
-  * Dax Studio
-  * Tabular Editor
+- Microsoft SQL Server Management Studio
+- Power BI desktop
+- SQL Server Data Tools Bundle
+  - Dax Studio
+  - Tabular Editor
 <br>
 
 
