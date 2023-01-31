@@ -97,21 +97,14 @@ Følgende software er en forudsætning og kan findes i Softwareshoppen. Versione
 
 
 
-### Formål
-Denne wiki er tiltænkt som introduktionsmateriale til nye medarbejdere og som et opslagværk til erfarne medarbejdere hos Data og Rapportering. 
-Temaer er underbygget af øvelser, som kan findes i dette private *<a href="https://github.com/DataOgDigitalisering/FortroligInformation" target="_blank">repository</a>*.
-<br>
-
-
-
-> **ØVELSE - KONTROL AF DATAADGANGE**
+> **ØVELSE — KONTROL AF DATAADGANGE**
 > - Følg <a href="https://github.com/DataOgDigitalisering/FortroligInformation/blob/main/%C3%98velse1/ex_dataadgange.sql" target="_blank"> dette link til SQL-script</a>.
 > - Åbn og eksekver scriptet i SQL Server Management Studio. Kørslen bør tage omkring 10-15 minutter og returnere en tabel, der beskriver dine adgange. Spørg en kollega om du har de adgange, du har brug for.
 <br>
 
 
 <!-- SKAL FLYTTES -->
-> ** ØVELSE - BRUG AF ADGANGE **
+> **ØVELSE — BRUG AF ADGANGE**
 > Hospital XXX ønsker optælling af alle pr. dd. månedslønnede hhv. fuld- og deltidsansatte sygeplejersker 
 > udspecificeret for alle sygeplejegrupper under fællesbetegnelsen STILKO2TXT = ’Sygepl. Pers’
 > Hvor mange af disse er autoriserede med speciale indenfor anæstesi?
