@@ -81,10 +81,10 @@ Følgende software er en forudsætning og kan findes i Softwareshoppen. Versione
 </center>
 </details>
 {::options parse_block_html="false" /}
-
-
-
 <br>
+
+
+
 <!-- Embed iFrame. PowerPoint: "SQL-kursus.pptx" på OneDrive-->
 {::options parse_block_html="true" /}
 <details><summary markdown="span">Slides til SQL-kursus</summary>
@@ -93,6 +93,7 @@ Følgende software er en forudsætning og kan findes i Softwareshoppen. Versione
 </center>
 </details>
 {::options parse_block_html="false" /}
+<br>
 
 
 
