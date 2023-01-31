@@ -20,7 +20,7 @@ og
 I disse implementeres vores standardiserede beregningsmetoder indenfor temaer som sygefravær, ferieafholdelse, personalesammensætning, løn, vagtplan m.fl. 
 Flere temaer tilføjes løbende i takt med efterspørgsel og tilgængelige datakilder, hvorfor vi altid bestræber os på, at kuben skal være en adaptiv størrelse. Hér er din indsigt i både muligheder og begrænsninger med den nuværende model værdifuld, da vi altid gerne vil kunne tilføje nye temaer *og* samtidig bevare muligheden for at foretage vores nuværende beregninger.
 
-På produktions- og udviklingsserverne findes data under skemaet, **chru_cube**. I Tabular Editor findes kuben under navnet CHRU_HRKube.
+På produktions- og udviklingsserverne findes data under skemaet, **chru_cube**. I Tabular Editor findes kuben under navnet **CHRU_HRKube**.
 
 <details><summary markdown="span">Kuben pr. 2023-01-30</summary>
  <center>
@@ -43,11 +43,11 @@ I grove træk falder al data i kuben indenfor kategorierne
 | **Grunddata** | **Temaespecifik data** | **Hjælpetabeller** | **Infotabeller** |
  
 - Med **grunddata** menes den data, som er fællesmængde på tværs af temaer, uanset om der beregnes på sygefravær, ferieafholdelse eller andet. I grunddata indgår:
-  - **Stamdata** (personaledata, organisations- og stillingshieraki, tidstabel mm.) 
+  - **Stamdata** (personaledata, organisations-, stillings- og lønarthieraki, tidstabel mm.) 
   - **Brugerstyring** (data om personales brugerroller, som er bestemmende for hvilke data, de må se) 
+- **Temaspecifik data** er data, der anvendes specifikt til beregning på fx sygefravær, ferieafholdelse eller personalesammensætning. Af screenshottet herover ses, hvordan vores grunddata groft kan grupperes i temaer.
 
 Derudover findes en række øvrige tabeller, herunder:
-- **Temaspecifik data** er data, der anvendes specifikt til beregning på fx sygefravær, ferieafholdelse eller personalesammensætning. Af screenshottet herover ses, hvordan vores grunddata groft kan grupperes i temaer.
 - Hjælpetabeller er **tally**- og **slicer**-tabeller. Disse bruges til definereing af intervaller (fx aldersintervaller), grupperings-, sorterings- og filtreringsmuligheder
 - Info er data som fx dato på **dataleverancer** og **servicemeddelelser** til brugere af dashboard om nye opdateringer eller tilføjelser
 <br>
