@@ -31,7 +31,6 @@ Som introduktion til kuben anbefales at gennemgå materialet hér på siden ét 
 
 
 
-<br>
 ### Tabeller
 
 I grove træk falder al data i kuben indenfor kategorierne
