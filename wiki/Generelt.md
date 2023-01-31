@@ -6,16 +6,18 @@ Om konventioner for navngivning i hhv. measures og tabeller.
 
 ### Tabeller
 - **Views** navngives fx v_DimAnsættelse. [tabeltype]+[\_]+[Formål]+[BeskrivendeNavn]
-  - 'v_' — fordi det er et view. Alt *efterfølgende* skrives i camelCase
+  - 'v_' — fordi det er et view. Alt *efterfølgende* skrives i camelCase (**S**tort**B**egyndelsesbogstav)
   - **Formål**: Dim, Fact, Security, Info, Slicer, Tally.
-    - **S**tort**B**egyndelsesbogstav
   - Alt efterfølgende er entydig(e) og letforståelig(e) *substantiv(er)*. (Gerne noget der minder om rådatatabellens oprindelige navn hvis muligt). Sammensatte ord skrives i camesCase
   - **Kolonnenavne** er entydige og letforståelige *substantiver*
+
 - **Tabeller** navngives som views. [Formål]+[BeskrivendeNavn]. Fx DimLønart
   - 'v_' udelades
+
 - **Stored procedures** navngives kort og præcist beskrivende fx 'DanskeHelligdage'
   - Brug så vidt muligt verber
   - camelCase
+
 - æ, ø, å tilladt
 
 ### Measures
