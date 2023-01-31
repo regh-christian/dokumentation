@@ -36,17 +36,18 @@ Om konventioner for navngivning tabeller og measures.
 
 
 
-#	Aftaler for ændringer i CHRU_CUBE
+##	Opgaver og ansvar
 
-##	Fra Udvikling til produktion
-- Beskriv arbejdsgang for migrering af chru_cube fra UDV til P02. 
-(noter 2022-10-27<< dependencies, aktører, kongruens i views og tabeller (scripts, opdateringsdato, opdateringsjob)
+- Aftaler for ændringer i CHRU_HRKube
+  - Roller. Hvem gør/har ansvar for hvad?
+  - SQL, Dax, Git, dok
+  - Intervaller
 
+- Kontrol-scripts
+  - Til hvad? Afdæk behov
 
+- Oprydning
+  - Hvordan implementerer vi vedtaget nomenklatur?
+  - Prioriter. Hvad kan vi leve med?
+    - slette ubrugte measures vs ændre æ ø å 
 
-##	Oprydning
-Skal diskuteres og vedtages
-- Kontrol-scripts. Til hvad? Afdæk behov.
-- Roller. Hvem gør/har ansvar for hvad?
-  - SQL, Git, dashboards, dokumentation
-- Intervaller
