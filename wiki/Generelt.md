@@ -13,12 +13,16 @@ Om konventioner for navngivning i hhv. measures og tabeller.
   - æ, ø, å tilladt
 
 - **Tabeller** navngives som views. 'v_' udelades 
-
+- **Stored procedures** navngive kort og præcist beskrivende fx 'DanskeHelligdage'
+  - Brug så vidt muligt verber
+  - camelCase
 
 
 ### Measures
 - Measures grupperes temaspecifikke mapperne
-- Enkelte basis-measures placeres i diverse, når de bruges på tværs af temaer. Fx [Antal fuldtidsansatte]
+- Enkelte basis-measures placeres i diverse, hvis de bruges på tværs af temaer. Fx [Antal fuldtidsansatte] og [FilterSlicer]
+- Navngives [tema] - [beskrivende og letforståelig tekst]
+-   Kombinationer af substantiver og verber er 
 
 
 
