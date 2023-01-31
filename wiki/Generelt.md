@@ -11,7 +11,8 @@ Om konventioner for navngivning i hhv. measures og tabeller.
   - Alt efterfølgende er entydig(e) og letforståelig(e) *substantiv(er)*. (Gerne noget der minder om rådatatabellens oprindelige navn hvis muligt). Sammensatte ord skrives i camesCase
   - **Kolonnenavne** er entydige og letforståelige *substantiver*
   - æ, ø, å tilladt
-- **Tabeller** navngives som views. 'v_' udelades. [Formål]+[BeskrivendeNavn]. Fx DimLønart
+- **Tabeller** navngives som views. [Formål]+[BeskrivendeNavn]. Fx DimLønart
+  - 'v_' udelades
 - **Stored procedures** navngives kort og præcist beskrivende fx 'DanskeHelligdage'
   - Brug så vidt muligt verber
   - camelCase
