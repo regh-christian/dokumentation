@@ -24,6 +24,7 @@ Om konventioner for navngivning tabeller og measures.
 
 - æ, ø, å tilladt
 
+
 ### Measures
 - Navngives fx [Fravær - vægtede fuldtidsfraværsdage]. 
 - Skabelon: [tema]+[-]+[beskrivende og letforståelig tekst]
