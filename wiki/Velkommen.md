@@ -21,20 +21,12 @@ I disse implementeres vores standardiserede beregningsmetoder indenfor temaer so
 
 På produktions- og udviklingsserverne findes data under skemaet, **chru_cube**. I Tabular Editor findes kuben under navnet CHRU_HRKube.
 
-
-
 <br>
-<!-- Embed iFrame. PowerPoint: "SQL-kursus.pptx" på OneDrive-->
-{::options parse_block_html="true" /}
-<details><summary markdown="span">Slides til SQL-kursus</summary>
+<details><summary markdown="span">Kuben pr. 2023-01-30<summary>
  <center>
-  <img src="Images/cube_model_basis.png" height="300" weight="500" alt="CHRU_HRKube, 2023-01-30" style="vertical-align:middle"/>
-  <br>
   <img src="Images/chru_hrkube_pbi_erd.png" height="300" weight="500" alt="CHRU_HRKube, 2023-01-30" style="vertical-align:middle"/>
-  </center>
+ </center>
 </details>
-{::options parse_block_html="false" /}
-
 
 Som introduktion til kuben anbefales at gennemgå materialet hér på siden ét tema ad gangen. Du kan med fordel prøve at bygge din egen version af kuben tabel for tabel; measure for measure; figur for figur. I hvert tema findes små øvelser, hvor du kan testen din viden.
 
