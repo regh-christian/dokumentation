@@ -44,7 +44,7 @@ I grove træk falder al data i kuben indenfor kategorierne
  
 - Med **grunddata** menes den data, som er fællesmængde på tværs af temaer, uanset om der beregnes på sygefravær, ferieafholdelse eller andet. I grunddata indgår:
   - **Stamdata** (personaledata, organisations-, stillings- og lønarthieraki, tidstabel mm.) 
-  - **Brugerstyring** (data om personales brugerroller, som er bestemmende for hvilke data, de må se) 
+  - **Brugerstyring** (data om personales brugerroller, som er bestemmende for hvilke data, brugere af vores produkter må se) 
 - **Temaspecifik data** er data, der anvendes specifikt til beregning på fx sygefravær, ferieafholdelse eller personalesammensætning. Af screenshottet herover ses, hvordan vores grunddata groft kan grupperes i temaer.
 
 Derudover findes en række øvrige tabeller, herunder:
