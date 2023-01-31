@@ -7,7 +7,7 @@ Om konventioner for navngivning tabeller og measures.
 ### Tabeller
 - Navngives som fx v_DimAnsættelse
 - Skabelon: [tabeltype]+[\_]+[Formål]+[BeskrivendeNavn]
-- **Views** indledes med _v\__' 
+- **Views** indledes med __v\___' 
   - Alt *efterfølgende* skrives i camelCase (**S**tort**B**egyndelsesbogstav)
   - **Formål**: Dim, Fact, Security, Info, Slicer, Tally.
   - Alt efterfølgende er entydig(e) og letforståelig(e) *substantiv(er)*. (Gerne noget der minder om rådatatabellens oprindelige navn hvis muligt). Sammensatte ord skrives i camesCase
