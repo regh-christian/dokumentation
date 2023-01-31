@@ -56,7 +56,7 @@ Kuben udvides løbende med nye datakilder, i takt med, at flere temaer skal kunn
 ### Measures
 Via measures implementeres vores standardiserede beregningsmetoder. De er grupperet temavis. I gruppen ___Diverse_ indgår beregninger på stamdata og dette kan være et godt sted at starte med at skabe overblik over kuben. Foruden indblik i de mere centrale tabeller vil du hér se eksempler på, hvordan viden om stamdata er essentielt for at kunne definere fx hvilken personalegruppe, der skal indgå i en given beregning; hvordan dette kan variere fra tema til tema; hvordan antallet af personer, der indgår i en beregning, er afgørende for, om et resultat nødvendigvis skal anonymiseres mm.
 
-Andre measures—lokaliseret i mapperne, ___Farver_ og ___Tekster_—bruges til kontrol af layout på dashboards. Farvetemaer, akselængder, dynamiske tekstetiketter meddelelser, kolonnebredder mm. 
+Andre measures—lokaliseret i mapperne, ___Farver_ og ___Tekster_—bruges til kontrol af layout på dashboards; Farvetemaer, akselængder, dynamiske tekstetiketter, meddelelser, kolonnebredder mm. 
 
 
 
