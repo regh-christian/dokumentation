@@ -116,7 +116,7 @@ EksterntFinansieret: J hvis afdelingen på ansættelsesstarttidspunktet var ekst
 
 **TillInst**: Hvor ’HændelseImellem’ er ”Mellem institutioner”, er denne udfyldt med institutionen på personens nye/kommende ansættelsesforhold.
 
-FLERE VARIABLE ER INDFØRT SIDEN SIDST!
+***FLERE VARIABLE ER INDFØRT SIDEN SIDST!***
 <br>
 
 >> **ØVELSE - ÅRSVÆRK**
