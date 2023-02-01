@@ -134,11 +134,6 @@ EksterntFinansieret: J hvis afdelingen på ansættelsesstarttidspunktet var ekst
 ***FLERE VARIABLE ER INDFØRT SIDEN SIDST!***
 <br>
 
->> **ØVELSE - ÅRSVÆRK**
->> - Udregn vha. SD.SD_Person hvor mange årsværk, der arbejdes i din sektion baseret på aktuelt ansatte i dag. Gruppér dit resultat på time- hhv. månedslønnede, del- og fuldtidsansatte.
->> - Lav samme beregning og gruppering baseret på data fra kuben.
-<br>
-
 
 
 ### v_DimPerson
@@ -227,4 +222,11 @@ Opdateres hvert 10-15min.
 <iframe src="https://regionh-my.sharepoint.com/personal/stefan_sajin-henningsen_regionh_dk/_layouts/15/Doc.aspx?sourcedoc={c652f92d-8025-4f11-9b4c-3e0f0e0dadba}&amp;action=embedview&amp;wdEmbedCode=0&amp;wdPrint=0&wdToolbar=FALSE" width="100%" height="700" frameborder="0" seamless="yes"></iframe>
 </center>
 
+<br>
+
+
+
+> **ØVELSE - ÅRSVÆRK**
+> - Udregn vha. SD.SD_Person hvor mange årsværk, der arbejdes i din sektion baseret på aktuelt ansatte i dag. Gruppér dit resultat på time- hhv. månedslønnede, del- og fuldtidsansatte.
+> - Lav samme beregning og gruppering baseret på data fra kuben.
 <br>
