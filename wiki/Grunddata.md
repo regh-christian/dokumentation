@@ -99,6 +99,16 @@ En person kan i sin ansættelseshistorik have flere ansættelser, hvor AktuelHov
 EksterntFinansieret: J hvis afdelingen på ansættelsesstarttidspunktet var eksternt finansieret.  
 
 **StandardPopulation**: Aktuelt ansatte, der er månedslønnede, fuldtidsansatte og ikke eksternt finansierede.
+```sql
+-- FRA SØREN: ”07_FL_110_SD_DimAnsaettelse.sas
+(CASE  
+   WHEN Månedslønnet = 0 THEN 0 
+   WHEN EksterntFinansieret = 1 THEN 0 
+   When L1Code IN( '_S2_','0000','9007','9008') THEN 0
+   ELSE 1 
+  END) as Standardpopulation length = 3,
+```
+
 >>FIG: Peters matrix<<
    
 **NuværendeOrganisationID**: Lønafsnit, hvor ansættelsesforhold er gældende dags dato. Har en person ansættelsesforhold med fremtidig startdato eller tidligere ansættelser med andet tjenestenummer, antager ’NuværendeOrganisationID’ blot værdien af ’OrganisationID’. 
