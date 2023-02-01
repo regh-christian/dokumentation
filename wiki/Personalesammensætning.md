@@ -59,8 +59,8 @@ MasterTable: Definér hændelser. Tiltrædelse hvis ansat=J og forskellig fra de
 
 
 
-<!-- SKAL FLYTTES -->
 > **ØVELSE — BRUG AF ADGANGE**
+> 
 > Hospital XXX ønsker optælling af alle pr. dd. månedslønnede hhv. fuld- og deltidsansatte sygeplejersker 
 > udspecificeret for alle sygeplejegrupper under fællesbetegnelsen STILKO2TXT = ’Sygepl. Pers’
 > Hvor mange af disse er autoriserede med speciale indenfor anæstesi?
