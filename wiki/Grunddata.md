@@ -20,11 +20,11 @@ Med grunddata menes de tabeller, som foruden stamdata (v_DimPerson, v_DimAnsætt
 |     v_DimAnsættelse                 |     [OrganisationsID]            |     →        |     v_DimOrganisation               |     [ID]                         |     *:1             |     J        |
 |     v_DimAnsættelse                 |     [NuværendeOrganisationID]    |     →        |     v_DimOrganisation               |     [ID]                         |     *:1             |     N        |
 |     v_DimAnsættelse                 |     [StillingsID]                |     →        |     v_DimStilling                   |     [ID]                         |     *:1             |     J        |
-
-
 <br>
+
+
 ## Resume af tabeller
-<br>
+
 ### v_DimTidDato
 
 | **View** | **&rarr;** | **Baseret på** | 
@@ -42,9 +42,10 @@ CASE WHEN chru_cube.DanskeHelligdage(Dato) = 1 THEN 'Helligdag'
   END AS Arbejdsdag
      Kolonnen Filterdatoer markerer udvalgte nedslagsdatoer såsom ’I dag’, ’1. dag i året’ m.fl.  
 ```
-
-
 <br>
+
+
+
 ### v_DimAnsættelse
 
 | **View** | **&rarr;** | **Baseret på** | 
