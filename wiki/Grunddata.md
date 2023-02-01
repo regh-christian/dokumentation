@@ -25,7 +25,7 @@ Med grunddata menes de tabeller, som foruden stamdata (v_DimPerson, v_DimAnsætt
 | - | - |
 | [chru_cube].[v_DimTidDato] | [DM_FL_HR].[DimDato] |
 
-```
+```mermaid
 flowchart LR
 
 A[Hard] -->|Text| B(Round)
