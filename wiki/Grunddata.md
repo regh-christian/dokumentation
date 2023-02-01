@@ -233,10 +233,3 @@ Opdateres hvert 10-15min.
 </center>
 
 <br>
-
-
-
-> **ØVELSE - ÅRSVÆRK**
-> - Udregn vha. SD.SD_Person hvor mange årsværk, der arbejdes i din sektion baseret på aktuelt ansatte i dag. Gruppér dit resultat på time- hhv. månedslønnede, del- og fuldtidsansatte.
-> - Lav samme beregning og gruppering baseret på data fra kuben.
-<br>
