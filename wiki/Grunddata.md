@@ -64,7 +64,7 @@ I dataindlæsningen hos CØK fjernes ansættelser med status ’S’ og institut
 
 Baseret på den i SD_Person-tabellen datostyrede del, indfører vi nedenstående dikotomiserede variable mhp. lettere til- og fravalg i population for både os selv i opbygning af scripts og measures og for brugere af dashboards i form af slicere.
 
-**Fuldtid** og **Månedslønnet**: Kolonnerne ’DEL’ og ’BESKDEC’ angiver, om et ansættelsesforhold er fuld- eller deltid hhv. måneds- eller timelønnet. Dette er opsummeret i kolonnerne ’Fuldtid’ og ’Månedslønnet’ hvor Fuldtid=J hvis BESKDEC>=0 og Månedslønnet=N hvis DEL=2 eller 6 OR BESKDEC=0. 
+**Fuldtid** og **Månedslønnet**: Kolonnerne ’DEL’ og ’BESKDEC’ angiver, om et ansættelsesforhold er fuld- eller deltid hhv. måneds- eller timelønnet. Dette er opsummeret i kolonnerne ’Fuldtid’ og ’Månedslønnet’ hvor Fuldtid=J hvis BESKDEC $\geq$ 0 og Månedslønnet=N hvis DEL=2 eller 6 OR BESKDEC=0. 
 
 **Ansat**: J hvis statuskode er enten 0, 1 eller 3.
 
