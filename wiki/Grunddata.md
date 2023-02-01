@@ -35,6 +35,15 @@ C -->|One| D[Result 1]
 C -->|Two| E[Result 2]
 ```
 
+<div class="mermaid">
+graph TD;
+    A-->B;
+    A-->C;
+    B-->D;
+    C-->D;
+</div>
+
+
 
 Baseret på tidstabellen, [DM_FL_HR].[DimDato] med en række mindre modifikationer og enkelte tilføjelser. Å erstattes med aa i hht. >>konvention<< om navngivning af kolonner. Formater såsom Y2016-M06 erstattes af 2016-06 og enkelte nye variable indføres pba. eksisterende. Fx er >>’DagKortmaanedAar’<< (10. jan. 2016) sammensat af ’DagMåned’, ’MånedNavn’ og ’År’. 
 Enkelte ny kolonner beregnes; Kolonnen ’Arbejdsdag’ er tilføjet og udregner, om dato er en arbejds-, helligdag eller i en weekend. 
