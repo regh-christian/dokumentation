@@ -11,6 +11,10 @@ Med grunddata menes de tabeller, som foruden stamdata (v_DimPerson, v_DimAnsætt
      
      
 ## Relationer
+..... ..... .....
+<br>
+
+
 
 
 ## Resume af tabeller
