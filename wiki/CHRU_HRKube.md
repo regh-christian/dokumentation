@@ -31,7 +31,7 @@
 
 
 
-## Kode til træk af metadata
+## Metadata
 
 <!-- TABELLER -->
 {::options parse_block_html="true" /}
@@ -106,3 +106,7 @@ ORDER BY [Name]
 
 
 
+<center>
+<iframe width="100%" height="700" frameborder="0" scrolling="no" seamless="yes" src="https://regionh-my.sharepoint.com/personal/stefan_sajin-henningsen_regionh_dk/_layouts/15/Doc.aspx?sourcedoc={5dfb432a-a9ed-4505-8f64-7202958be769}&action=embedview&Item=qry_tables&wdAllowInteractivity=FALSE&&wdHideGridlines=TRUE&wdHideHeaders=TRUE&wdInConfigurator=TRUE&wdInConfigurator=TRUE&edesNext=TRUE&edrtees6=FALSE&resen=FALSE&ed1JS=FALSE&wdHideSheetTabs=TRUE&ActiveCell=Z1000"></iframe>
+</center>
+<br>
