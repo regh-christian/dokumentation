@@ -1,3 +1,12 @@
+```mermaid
+flowchart LR
+
+A[Hard] -->|Text| B(Round)
+B --> C{Decision}
+C -->|One| D[Result 1]
+C -->|Two| E[Result 2]
+```
+
 # Grunddata
 
 Med grunddata menes de tabeller, som foruden stamdata (v_DimPerson, v_DimAnsættelse, v_DimOrganisation, v_DimStilling, v_DimLønart), indgår på tværs af temaer, der behandles i kuben. Dvs. datotabellen, tabeller anvendt ved brugerstyring, tabel med info om seneste dataleverancer og tabel med servicemeddelelser.
@@ -25,30 +34,11 @@ Med grunddata menes de tabeller, som foruden stamdata (v_DimPerson, v_DimAnsætt
 | - | - |
 | [chru_cube].[v_DimTidDato] | [DM_FL_HR].[DimDato] |
 
-
-```mermaid
-flowchart LR
-
-A[Hard] -->|Text| B(Round)
-B --> C{Decision}
-C -->|One| D[Result 1]
-C -->|Two| E[Result 2]
-```
-
-<div class="mermaid">
-graph TD;
-    A-->B;
-    A-->C;
-    B-->D;
-    C-->D;
-</div>
-
-
-
 Baseret på tidstabellen, [DM_FL_HR].[DimDato] med en række mindre modifikationer og enkelte tilføjelser. Å erstattes med aa i hht. >>konvention<< om navngivning af kolonner. Formater såsom Y2016-M06 erstattes af 2016-06 og enkelte nye variable indføres pba. eksisterende. Fx er >>’DagKortmaanedAar’<< (10. jan. 2016) sammensat af ’DagMåned’, ’MånedNavn’ og ’År’. 
 Enkelte ny kolonner beregnes; Kolonnen ’Arbejdsdag’ er tilføjet og udregner, om dato er en arbejds-, helligdag eller i en weekend. 
 [Metode](https://www.computerworld.dk/uploads/eksperten-guider/107-Beregning-af-arbejdsdage-og-skaeve-helligdage.pdf). 
 Til beregning heraf anvendes tre stored procedures; funktionen _chru_cube.DanskeHelligdage_ matcher dato mod kendte og faste helligdage og returnerer binært udfald; _chru_cube.PaaskeDage_ implementerer Gauás algoritme til bestemmelse af påskedag det givne år, hvorefter også ikke-faste helligdage da bestemmes (antal dage efter påske); I den sidste bestemmes, om dato er i en weekend. I praksis kaldes første stored procedure med dato som argument. Hvis dato er en kendt helligdag, er output ’Helligdag’. I modsat fald kaldes næste procedure til bestemmelse af påskedag, hvorefter dato igen matches mod de ikke-faste helligdage. Ved fortsat manglende match kaldes sidste procedure til beregning af, om datoen er en lørdag eller søndag.
+
 ```sql
 CASE WHEN chru_cube.DanskeHelligdage(Dato) = 1 THEN 'Helligdag'
      WHEN chru_cube.DanskeHelligdage(Dato) = 0 AND chru_cube.Arbejdsdage(Dato) = 0 THEN 'Weekend'
@@ -76,6 +66,7 @@ På den måde anvendes tabellen både som fact og dimension afhængig af konteks
 **Ansat**: J hvis statuskode er enten 0, 1 eller 3.
 
 **AktuelRække**: J hvis dags dato ligger indenfor ansættelsesforholdets start- og slutdato.
+
 ```sql
 -- FRA SØREN: ”07_FL_110_SD_DimAnsaettelse.sas
 (CASE  
@@ -108,6 +99,7 @@ EksterntFinansieret: J hvis afdelingen på ansættelsesstarttidspunktet var ekst
 >>FIG: Peters matrix<<
    
 **NuværendeOrganisationID**: Lønafsnit, hvor ansættelsesforhold er gældende dags dato. Har en person ansættelsesforhold med fremtidig startdato eller tidligere ansættelser med andet tjenestenummer, antager ’NuværendeOrganisationID’ blot værdien af ’OrganisationID’. 
+
 ```sql
 ,CASE
    WHEN [Start] >= CONVERT(date, GETDATE()) THEN OrganisationsID
