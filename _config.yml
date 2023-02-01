@@ -146,7 +146,7 @@ inc_before_head :
 inc_after_head : header.html
 inc_before_meta : 
 inc_after_meta : 
-inc_before_scripts : # footer.html
+inc_before_scripts : footer.html
 inc_after_scripts : 
 inc_before_styles : 
 inc_after_styles : # style.html
