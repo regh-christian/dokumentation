@@ -216,7 +216,7 @@ Current_row=1 sikrer opdateret organisationshieraki men ignorerer evt. historisk
 
 | **View** | **Baseret på** |
 |-|-|
-| [chru_cube].[v_Seervicemeddelelser] | - |
+| [chru_cube].[v_Servicemeddelelser] | - |
 
 View oprettet til at give brugere af dashboardet information om ændringer og nye features, samt dato for og status på disse. Kolonnen ’Dahboard’ indikerer med ’L’, ’S’ eller ’L,S’, om en meddelelse er tilegnet visning på hhv. leder- strategisk- eller begge dashboards.
 Tabellen vises datosorteret på velkomstsiden af dashboards uden kolonnen ’Dashboard’—denne skjules og anvendes til at filtrere på relevant for respektive dashboard.
@@ -232,3 +232,8 @@ Opdateres hvert 10-15min.
 <iframe src="https://regionh-my.sharepoint.com/personal/stefan_sajin-henningsen_regionh_dk/_layouts/15/Doc.aspx?sourcedoc={0e624a26-13b0-4f1c-8729-b16bf20cb610}&amp;action=embedview&amp;wdEmbedCode=0&amp;wdPrint=0&wdToolbar=FALSE" width="100%" height="900" frameborder="0" seamless="yes"></iframe>
 </center>
 <br>
+
+
+<center>
+    <iframe class="frame" src="http://apple.com"></iframe>
+</center>
