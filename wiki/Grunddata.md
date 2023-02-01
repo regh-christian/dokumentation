@@ -52,8 +52,17 @@ CASE WHEN chru_cube.DanskeHelligdage(Dato) = 1 THEN 'Helligdag'
 
 View er baseret på SD-tabellen, SD_Person. ID er primærnøgle for det enkelte ansættelsesforhold. PersonID er nøgle henvisende til den enkelte person (CPR). En person kan have flere ansættelser på forskellige institutioner/afdelinger overlappende i tid—dog aldrig overlappende i tid på samme lønafsnit med samme tjenestenummer.
 På den måde anvendes tabellen både som fact og dimension afhængig af kontekst; om vi henviser til datostyrede variable knyttet til ansættelsen såsom stillingskode, overenskomst og beskæftigelsesdecimal eller foretager optællinger på personniveau. Vi anvender fx denne sondring mellem ansættelsesforhold og person til at sikre, at en leder kun kan se data relevant for det afsnit, hvor leder har beføjelser—via ’NuværendeOrganisationID’. Har en person fx flere samtidige ansættelser på forskellige institutioner, vil respektive ledere i udgangspunktet kun kunne se data for ansættelsesforholdet relevant for dem. Se desuden afsnit om <a href="https://github.com/DataOgDigitalisering/FortroligInformation/blob/main/Brugerstyring.md" target="_blank">Brugerstyring</a>.
-     I dataindlæsningen hos CØK fjernes ansættelser med status ’S’, institution ’2P’ (tjenestemandspensioner)
-     Baseret på den i SD_Person-tabellen datostyrede del, indfører vi nedenstående dikotomiserede variable mhp. lettere til- og fravalg i population for både os selv i opbygning af scripts og measures og for brugere af dashboards i form af slicere.
+I dataindlæsningen hos CØK fjernes ansættelser med status ’S’, institution ’2P’ (tjenestemandspensioner).
+```sql
+-- FRA SØREN: ”07_FL_110_SD_DimAnsaettelse.sas
+/*Fjerner personer, der skal slettes*/
+  AND STAT ne 'S' 
+/*Fjerner tjenestemandspensioner*/ 
+  AND INST ne '2P' 
+  AND NAVN ne ''
+```
+
+Baseret på den i SD_Person-tabellen datostyrede del, indfører vi nedenstående dikotomiserede variable mhp. lettere til- og fravalg i population for både os selv i opbygning af scripts og measures og for brugere af dashboards i form af slicere.
 
 **Fuldtid** og **Månedslønnet**: Kolonnerne ’DEL’ og ’BESKDEC’ angiver, om et ansættelsesforhold er fuld- eller deltid hhv. måneds- eller timelønnet. Dette er opsummeret i kolonnerne ’Fuldtid’ og ’Månedslønnet’ hvor Fuldtid=J hvis BESKDEC>=0 og Månedslønnet=N hvis DEL=2 eller 6 OR BESKDEC=0. 
 
