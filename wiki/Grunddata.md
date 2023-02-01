@@ -54,7 +54,7 @@ CASE WHEN chru_cube.DanskeHelligdage(Dato) = 1 THEN 'Helligdag'
 
 | **View** | **Baseret på** | 
 | - | - |
-| [chru_cube].[v_DimAnsættelse] | [DM_FL_HR].[DimAnsættelse] &rarr; CØK: 07_FL_110_SD_DimAnsaettelse.sas &rarr; <a href="https://www.silkeborgdata.dk/sites/default/files/files/start.sd.dk/produkter/Datawarehouse/Dataleverancer/Snitflade%20PERSON.pdf" target="_blank">SD.SD_PERSON</a> |
+| [chru_cube].[v_DimAnsættelse] | [DM_FL_HR].[DimAnsættelse] &larr; CØK: 07_FL_110_SD_DimAnsaettelse.sas &larr; <a href="https://www.silkeborgdata.dk/sites/default/files/files/start.sd.dk/produkter/Datawarehouse/Dataleverancer/Snitflade%20PERSON.pdf" target="_blank">SD.SD_PERSON</a> |
 
 View er baseret på SD-tabellen, SD_Person. ID er primærnøgle for det enkelte ansættelsesforhold. PersonID er nøgle henvisende til den enkelte person (CPR). En person kan have flere ansættelser på forskellige institutioner/afdelinger overlappende i tid—dog aldrig overlappende i tid på samme lønafsnit med samme tjenestenummer.
 På den måde anvendes tabellen både som fact og dimension afhængig af kontekst; om vi henviser til datostyrede variable knyttet til ansættelsen såsom stillingskode, overenskomst og beskæftigelsesdecimal eller foretager optællinger på personniveau. Vi anvender fx denne sondring mellem ansættelsesforhold og person til at sikre, at en leder kun kan se data relevant for det afsnit, hvor leder har beføjelser—via ’NuværendeOrganisationID’. Har en person fx flere samtidige ansættelser på forskellige institutioner, vil respektive ledere i udgangspunktet kun kunne se data for ansættelsesforholdet relevant for dem. Se desuden afsnit om <a href="https://github.com/DataOgDigitalisering/FortroligInformation/blob/main/Brugerstyring.md" target="_blank">Brugerstyring</a>.
