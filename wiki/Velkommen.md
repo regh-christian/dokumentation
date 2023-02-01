@@ -91,7 +91,7 @@ Følgende software er en forudsætning og kan findes i <a href="https://software
 {::options parse_block_html="true" /}
 <details><summary markdown="span">Slides til SQL-kursus</summary>
 <center>
-<iframe src="https://regionh-my.sharepoint.com/personal/stefan_sajin-henningsen_regionh_dk/_layouts/15/Doc.aspx?sourcedoc={ee7ec7a1-d13c-4855-a459-c1717f9aa646}&amp;action=embedview&amp;wdEmbedCode=0&amp;wdPrint=0&wdToolbar=FALSE" height="590" width="1000" frameborder="0" seamless="yes"></iframe>
+<iframe src="https://regionh-my.sharepoint.com/personal/stefan_sajin-henningsen_regionh_dk/_layouts/15/Doc.aspx?sourcedoc={ee7ec7a1-d13c-4855-a459-c1717f9aa646}&amp;action=embedview&amp;wdEmbedCode=0&amp;wdPrint=0&wdToolbar=FALSE" height="590" width="995" frameborder="0" seamless="yes"></iframe>
 </center>
 </details>
 {::options parse_block_html="false" /}
