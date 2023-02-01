@@ -122,24 +122,22 @@ EksterntFinansieret: J hvis afdelingen på ansættelsesstarttidspunktet var ekst
 **TillInst**: Hvor ’HændelseImellem’ er ”Mellem institutioner”, er denne udfyldt med institutionen på personens nye/kommende ansættelsesforhold.
 
 FLERE VARIABLE ER INDFØRT SIDEN SIDST!
-
+<br>
 
 >> **ØVELSE - ÅRSVÆRK**
 >> - Udregn vha. SD.SD_Person hvor mange årsværk, der arbejdes i din sektion baseret på aktuelt ansatte i dag. Gruppér dit resultat på time- hhv. månedslønnede, del- og fuldtidsansatte.
 >> - Lav samme beregning og gruppering baseret på data fra kuben.
-
-
-
-
 <br>
+
+
+
 ### v_DimPerson
 
 Dimensionstabel med ID som primærnøgle. Derudover navn og fødselsdato.
-
-
-
-
 <br>
+
+
+
 ### v_DimStilling
 
 | **View** | &rarr; | **Baseret på** |
@@ -157,11 +155,11 @@ Stillingshieraki i 4 niveauer (L1-L4) med ID som primærnøgle. Hoved-, fag- og 
 
 Desuden er stillingskoderne 1133-1139 samt 1161 defineret (hard-codet i viewet) som uddannelseslæger. (Se UDV for øvrige definitioner af ledere og AtypiskeStillinger). Leder antager værdien ’J’ baseret på Stillingruppe eller Stilling—ellers ’N’. AtypiskStilling=’J’, når L1Code=’0000’—ellers ’N’.
 Current_row=1 indikerer, at rækken er gældende i nuværende stillingskodehieraki.
-
-
-
-
 <br>
+
+
+
+
 ### v_DimOrganisation
 
 | **View** | **&rarr;** | **Baseret på** |
@@ -181,18 +179,27 @@ Organisationshieraki i 6 niveauer (L1-L6) med ID som primærnøgle. Afhængig af
 
 Variablen MedarbejdereAnsat=1 angiver, om der er >0 ansatte på afdelingen (optalt i v_DimAnsættelse hvor AnsatDagsDato=J og AktuelRække=J). Bruges fx som filtre på slicere, hvor der ikke ønskes at kunne vælge niveauer med 0 ansatte.
 Current_row=1 sikrer opdateret organisationshieraki men ignorerer evt. historiske ændringer.
-
-
-
-
-
 <br>
+
+
+
 ### v_DimLønart
-
-
-
 <br>
+
+
+
 ### v_Servicemeddelelser
 View oprettet til at give brugere af dashboardet information om ændringer og nye features, samt dato for og status på disse. Kolonnen ’Dahboard’ indikerer med ’L’, ’S’ eller ’L,S’, om en meddelelse er tilegnet visning på hhv. leder- strategisk- eller begge dashboards.
 Tabellen vises datosorteret på velkomstsiden af dashboards uden kolonnen ’Dashboard’—denne skjules og anvendes til at filtrere på relevant for respektive dashboard.
 Opdateres hvert 10-15min.
+<br>
+
+
+
+# Brugerstyring
+
+<!-- Embed iFrame. word-doc: "Guide til bestilling af adgange.docx" på OneDrive-->
+<iframe src="https://regionh-my.sharepoint.com/personal/stefan_sajin-henningsen_regionh_dk/_layouts/15/Doc.aspx?sourcedoc={c652f92d-8025-4f11-9b4c-3e0f0e0dadba}&amp;action=embedview&amp;wdEmbedCode=0&amp;wdPrint=0&wdToolbar=FALSE" width="100%" height="700" frameborder="0" seamless="yes"></iframe>
+</center>
+
+<br>
