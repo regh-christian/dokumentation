@@ -1,5 +1,9 @@
 # CHRU_HRKube
 
+<iframe width="100%" height="700" frameborder="0" src="https://flis.regionh.top.local:444/PBIReports/powerbi/L%C3%B8n%20og%20HR/HR%20Lederdashboard/HR%20Lederdashboard?RC:Toolbar=False"></iframe>
+<br>
+
+
 ## Tabeller
 
 <center>
