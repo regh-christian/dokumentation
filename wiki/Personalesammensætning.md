@@ -1,23 +1,5 @@
 # Personalesammensætning
 
-## Dashboards
-Embed dashboard
-<!-- Embed dashboards -->
-<details><summary markdown="span">HR Lederdashboard</summary>
-<center>
-<iframe src="https://flis.regionh.top.local:444/PBIReports/powerbi/L%C3%B8n%20og%20HR/HR%20Lederdashboard/HR%20Lederdashboard?RC:Toolbar=False" style="border:1px #000000 solid;" frameborder="1" height="565" width="100%"></iframe>
-</center>
-</details>
-<br> 
-
-<details><summary markdown="span">Strategisk dashboard</summary>
-<center>
-<iframe src="https://flis.regionh.top.local:444/PBIReports/powerbi/L%C3%B8n%20og%20HR/HR%20Strategisk%20Dashboard/HR%20Strategisk%20Dashboard?RC:Toolbar=False" style="border:1px #000000 solid;" frameborder="1" height="565" width="100%"></iframe>
-</center>
-</details>
-<br>
-
-
 ## Datamodel
 ![Power BI-model af personalesammensætning](https://raw.githubusercontent.com/DataOgDigitalisering/dokumentation/master/Images/cube_model_personalesammensætning.png)
 
@@ -47,7 +29,23 @@ MasterTable: Definér hændelser. Tiltrædelse hvis ansat=J og forskellig fra de
 
 
 ## Dashboard
-[HR-Lederdashboard\Personalesammensætning](https://flis.regionh.top.local:444/PBIReports/powerbi/L%C3%B8n%20og%20HR/HRDashboard/Personalesammens%C3%A6tning?RC:Toolbar=False)
+
+
+<!-- Embed dashboards -->
+<details><summary markdown="span">HR Lederdashboard</summary>
+<center>
+<iframe src="https://flis.regionh.top.local:444/PBIReports/powerbi/L%C3%B8n%20og%20HR/HR%20Lederdashboard/HR%20Lederdashboard?RC:Toolbar=False" style="border:1px #000000 solid;" frameborder="1" height="565" width="100%"></iframe>
+</center>
+</details>
+<br> 
+
+<details><summary markdown="span">Strategisk dashboard</summary>
+<center>
+<iframe src="https://flis.regionh.top.local:444/PBIReports/powerbi/L%C3%B8n%20og%20HR/HR%20Strategisk%20Dashboard/HR%20Strategisk%20Dashboard?RC:Toolbar=False" style="border:1px #000000 solid;" frameborder="1" height="565" width="100%"></iframe>
+</center>
+</details>
+<br>
+
 
 ![Lederdashboard, info om personalesammensætning](https://raw.githubusercontent.com/DataOgDigitalisering/dokumentation/master/Images/dashboard_personalesammensætning_info.png)
 
