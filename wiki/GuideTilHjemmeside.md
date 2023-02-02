@@ -1,3 +1,7 @@
+---
+layout: page
+mermaid: true
+---
 # Guide til hjemmeside
 Denne guide beskriver, hvordan wiki-sider oprettes og redigeres.
 
