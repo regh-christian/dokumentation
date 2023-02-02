@@ -56,7 +56,7 @@ site_root:
 #
 # Jekyll configurations
 #
-
+mermaid: true
 # You can customize it changing default layout for all pages
 # More info: https://jekyllrb.com/docs/configuration/
 #
