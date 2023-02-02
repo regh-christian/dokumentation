@@ -9,7 +9,7 @@ Embed dashboard
 </center>
 </details>
 <br> 
--->
+
 
 <details><summary markdown="span">Strategisk dashboard</summary>
 <center>
@@ -17,6 +17,8 @@ Embed dashboard
 </center>
 </details>
 <br>
+
+-->
 
 ## Datamodel
 ![Power BI-model af personalesammensætning](https://raw.githubusercontent.com/DataOgDigitalisering/dokumentation/master/Images/cube_model_personalesammensætning.png)
