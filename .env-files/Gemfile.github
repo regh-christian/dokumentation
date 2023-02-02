@@ -1,4 +1,5 @@
 source 'http://rubygems.org'
 gem 'github-pages', group: :jekyll_plugins 
 gem "jekyll-gitlab-metadata" # for cross compatibility
-gem 'jekyll-spaceship'
+gem 'jekyll-spaceship', group: :jekyll_plugins
+
