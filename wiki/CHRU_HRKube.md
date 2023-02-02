@@ -1,9 +1,17 @@
 # CHRU_HRKube
 
-<iframe src="https://flis.regionh.top.local:444/PBIReports/powerbi/L%C3%B8n%20og%20HR/HR%20Lederdashboard/HR%20Lederdashboard?RC:Toolbar=False" style="border:0px #ffffff none;" name="myiFrame" scrolling="no" frameborder="1" height="400px" width="600px" allowfullscreen></iframe>
+<details><summary markdown="span">HR Lederdashboard</summary>
+<center>
+<iframe src="https://flis.regionh.top.local:444/PBIReports/powerbi/L%C3%B8n%20og%20HR/HR%20Lederdashboard/HR%20Lederdashboard?RC:Toolbar=False" style="border:1px #000000 none;" frameborder="1" height="400px" width="600px" ></iframe>
+</center>
+</details>
 <br>
 
-<iframe src="https://flis.regionh.top.local:444/PBIReports/powerbi/L%C3%B8n%20og%20HR/HR%20Lederdashboard/HR%20Lederdashboard?RC:Toolbar=False" style="border:0px #ffffff none;" name="myiFrame" scrolling="no" frameborder="1" height="400px" width="600px" allowfullscreen></iframe>
+<details><summary markdown="span">Strategisk dashboard</summary>
+<center>
+<iframe src="https://flis.regionh.top.local:444/PBIReports/powerbi/L%C3%B8n%20og%20HR/HR%20Strategisk%20Dashboard/HR%20Strategisk%20Dashboard?RC:Toolbar=False" style="border:1px #000000 solid;" frameborder="1" height="400px" width="600px" allowfullscreen></iframe>
+</center>
+</details
 <br>
 
 
