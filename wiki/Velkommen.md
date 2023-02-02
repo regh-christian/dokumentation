@@ -28,6 +28,7 @@ På produktions- og udviklingsserverne findes data under skemaet, **chru_cube**.
  </center>
 </details>
 <br> 
+
 Som introduktion til kuben kan anbefales at gennemgå materialet hér på siden ét tema ad gangen. Husk dog, at denne data er processeret til brug i datamodellen, hvorfor det er en nødvendighed, at du også har indblik i rådata fra fx Silkeborg Data (**SD**). 
 Du kan med fordel prøve at bygge din egen version af kuben i Power BI; tabel for tabel; measure for measure; figur for figur. 
 
