@@ -131,7 +131,7 @@ pie title Pets adopted by volunteers
   "Cats" : 85
   "Rats" : 35
   "Cows" : 10
-  "Racoons": 3
+  "Racoons": 6
 ```
 
 ### Teknisk opsætning af siden
