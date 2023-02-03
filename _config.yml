@@ -1,4 +1,4 @@
-remote_theme: Drassil/git-wiki-theme@master
+remote_theme: DataOgDigitalisering/git-wiki-theme@master
 # (string) Title of your wiki
 title: "Dokumentation"
 # (string) if you've installed your wiki in subfolder, you must change this configuration
@@ -56,7 +56,7 @@ site_root:
 #
 # Jekyll configurations
 #
-mermaid: true
+
 # You can customize it changing default layout for all pages
 # More info: https://jekyllrb.com/docs/configuration/
 #
