@@ -17,10 +17,20 @@ Om konventioner for navngivning af tabeller og measures.
 
 - **Kolonnenavne** er entydige og letforståelige *substantiver*
   - camelCase
+  - Dette udfyldes i Tabular Editor
+    - ......
 
-- **Stored procedures** navngives kort og præcist beskrivende fx 'DanskeHelligdage'
+### Stored procedures
+  - Navngives kort og præcist beskrivende fx 'DanskeHelligdage'
   - Brug så vidt muligt verber til at beskrive procedurens *funktion*
   - camelCase
+
+
+### Calculated columns
+  - Undgås så vidt muligt datatransformation i Tabular Editor. Det giver bedre overblik at have samlet i SQL.
+    - (Flyt evt disse til views og brug en mere robust metode til anonymisering:)
+      - v_DimAnsættelse[TjnrAnonymiseret]
+      - v_DimPerson[NavnAnonymiseret]   
 
 - æ, ø, å tilladt
 
