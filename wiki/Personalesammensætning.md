@@ -71,15 +71,6 @@ Ovenstående beregninger samles i sidste temporære tabel, FinalTable, hvor tids
 
 <center><img src="Images/dashboard_personalesammensætning_info.png" height="95%" width="95%" alt="Lederdashboard, info om personalesammensætning" class="center"/></center>
 
-![Lederdashboard, info om personalesammensætning](https://raw.githubusercontent.com/DataOgDigitalisering/dokumentation/master/Images/dashboard_personalesammensætning_info.png)
-
-- Overordnet om beregninger 
-  - Ikke decideret gennemgant af measures, da dette vil medføre omstændig vedligehold af hjemmesiden
-
-
-## Measures
-- Measures dokumenteres grundigt direkte i kuben, så de er selvforklarende, når de importeres på siden hér
-<br>
 
 
 
