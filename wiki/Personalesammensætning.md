@@ -25,7 +25,7 @@
 <center><img src="Images/cube_model_personalesammensætning.png" height="95%" width="95%" alt="CHRU_HRKube, 2023-01-30" class="center"/></center>
 
 
-## Resume af tabeller
+## Resume af tabeller — KLADDE
 
 ### v_DimHændelser
 
@@ -67,7 +67,7 @@ Ovenstående beregninger samles i sidste temporære tabel, FinalTable, hvor tids
 
 
 
-## Dashboard
+## Dashboard — KLADDE
 
 <center><img src="Images/dashboard_personalesammensætning_info.png" height="95%" width="95%" alt="Lederdashboard, info om personalesammensætning" class="center"/></center>
 
