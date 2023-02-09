@@ -46,7 +46,7 @@ I grove træk falder al data i kuben indenfor kategorierne
 - Med **grunddata** menes den data, som er fællesmængde på tværs af temaer, uanset om der beregnes på sygefravær, ferieafholdelse eller andet. I grunddata indgår:
   - **Stamdata** er personaledata, organisations-, stillings- og lønarthieraki, tidstabel mm. 
   - **Brugerstyring** er data om personales brugerroller, som er bestemmende for hvilke data, brugere af vores produkter må se. Det er essentielt at forstå, hvordan brugerstyringen er implementeret for at sikre, at denne også virker på tilføjelser i kuben. 
-- **Temaspecifik data** anvendes specifikt til beregning på fx sygefravær, ferieafholdelse eller personalesammensætning. Af screenshottet herover ses, hvordan vores grunddata groft kan grupperes i temaer.
+- **Temaspecifik data** anvendes specifikt til beregning på fx sygefravær, ferieafholdelse eller personalesammensætning. Af screenshottet herover ses, hvordan vores data groft er grupperet i temaer.
 
 Derudover findes en række øvrige tabeller, herunder:
 - Hjælpetabeller er **tally**- og **slicer**-tabeller. Disse bruges til definereing af intervaller (fx aldersintervaller), grupperings-, sorterings- og filtreringsmuligheder
@@ -56,14 +56,16 @@ Derudover findes en række øvrige tabeller, herunder:
 
 
 ### Measures
-Via measures implementeres vores standardiserede beregningsmetoder. De er grupperet temavis. I gruppen ___Diverse_ indgår beregninger på stamdata og dette kan være et godt sted at starte med at skabe overblik over kuben. Foruden indblik i de mere centrale tabeller vil du hér se eksempler på, hvordan viden om stamdata er essentielt for at kunne definere fx hvilken personalegruppe, der skal indgå i en given beregning; hvordan dette kan variere fra tema til tema; hvordan antallet af personer, der indgår i en beregning, er afgørende for, om et resultat nødvendigvis skal anonymiseres mm.
+Via measures implementeres vores standardiserede beregningsmetoder. De er grupperet temavis. I gruppen \__Diverse_ indgår beregninger på stamdata og dette kan være et godt sted at starte med at skabe overblik over kuben. Foruden indblik i de mere centrale tabeller vil du hér se eksempler på, hvordan viden om stamdata er essentielt for at kunne definere fx hvilken personalegruppe, der skal indgå i en given beregning; hvordan dette kan variere fra tema til tema; hvordan antallet af personer, der indgår i en beregning, er afgørende for, om et resultat nødvendigvis skal anonymiseres mm.
 
-Andre measures—lokaliseret i mapperne, ___Farver_ og ___Tekster_—bruges til kontrol af layout på dashboards; Farvetemaer, akselængder, dynamiske tekstetiketter, meddelelser, kolonnebredder mm. 
+Andre measures—lokaliseret i mapperne, \__Farver_ og \__Tekster_—bruges til kontrol af layout på dashboards; Farvetemaer, dynamiske akselængder og tekstetiketter, meddelelser, kolonnebredder mm. 
 
 
 
 # Software
-Følgende software er en forudsætning og kan findes i <a href="https://softwarecentral.regionh.top.local/Shop" target="_blank">Softwareshoppen</a>. Hav altid nyeste version af Power BI Desktop installeret for at sikre funktionalitet med raportservere. For versioner af øvrig software spørg en kollega, hvad de bruger.
+Følgende software er en forudsætning og kan findes i <a href="https://softwarecentral.regionh.top.local/Shop" target="_blank">Softwareshoppen</a>. 
+
+Hav altid nyeste version af Power BI Desktop installeret for at sikre nyeste og kompatibel funktionalitet med rapportserver. For versioner af øvrig software spørg en kollega, hvad de bruger.
 
 - Microsoft SQL Server Management Studio
 - Power BI desktop
