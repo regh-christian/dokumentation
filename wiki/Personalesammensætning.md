@@ -28,6 +28,8 @@
 
 <img src="Images/cube_model_personalesammensætning.png" height="480" width="800" alt="CHRU_HRKube, 2023-01-30" class="center"/>
 
+<center><img src="Images/cube_model_personalesammensætning.png" height="480" width="800" alt="CHRU_HRKube, 2023-01-30" class="center"/></center>
+
 
 ## Resume af tabeller
 
