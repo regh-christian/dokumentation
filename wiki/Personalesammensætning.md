@@ -28,12 +28,25 @@
 ## Resume af tabeller
 
 ### v_DimHændelser
+
+| **View** | **Baseret på** | 
+| - | - |
+| [chru_cube].[v_DimHændelser] | [DM_FL_HR].[DimHændelser] |
+
 Udvalgte hændelser vedrørende en ansættelse.
 Ved en hændelse forstås en af følgende mærkedage: datoer for fødsels- og jubilæumsdage, til- og fratrædelser, flytter afdeling, termin samt orlov. 
 Tabellen er niveaudelt i L1 og L2, hvor L2 er en uddybende tekst knyttet til den overordnede hændelse, L1; fx om ’Flytter afdeling’ er et skift fra- eller til en afdeling.
 
 
 ### v_FactHændelser
+
+| **View** | **Baseret på** | 
+| - | - |
+| [chru_cube].[v_FactHændelser] | [chru_cube].[v_DimAnsættelse] |
+| | [chru_cube].[v_Dimperson] |
+| | [chru_cube].[v_DimTidDato] |
+| | [DM_FL_HR].[FactTerminsdato] |
+
 Alle hændelser i intervallet -7dage≤i dag≤13mdr. 
 Bemærk, at tabellen er koblet på v_SecurityOrganisationBridge via HændelseOrganisationID.
 - TILFØJ DOKUMENTATION I VIEW 
