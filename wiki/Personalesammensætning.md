@@ -22,13 +22,7 @@
 
 ## Datamodel
 
-<img src="Images/cube_model_personalesammensætning.png" height="480" width="800" alt="CHRU_HRKube, 2023-01-30" style="vertical-align:middle"/>
-
-<img src="Images/cube_model_personalesammensætning.png" height="480" width="800" alt="CHRU_HRKube, 2023-01-30" style="text-align:center"/>
-
-<img src="Images/cube_model_personalesammensætning.png" height="480" width="800" alt="CHRU_HRKube, 2023-01-30" class="center"/>
-
-<center><img src="Images/cube_model_personalesammensætning.png" height="480" width="800" alt="CHRU_HRKube, 2023-01-30" class="center"/></center>
+<center><img src="Images/cube_model_personalesammensætning.png" height="600" width="1000" alt="CHRU_HRKube, 2023-01-30" class="center"/></center>
 
 
 ## Resume af tabeller
