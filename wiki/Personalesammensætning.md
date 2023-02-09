@@ -23,9 +23,8 @@
 
 
 ## Datamodel
-<center>
 ![Power BI-model af personalesammensætning](https://raw.githubusercontent.com/DataOgDigitalisering/dokumentation/master/Images/cube_model_personalesammensætning.png)
-</center>
+
 
 
 ## Resume af tabeller
