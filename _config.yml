@@ -77,6 +77,8 @@ kramdown:
       disable : true
 
 
+markdown.styles: "assets/css/watermark_draft.css"
+
 
 
 defaults:
