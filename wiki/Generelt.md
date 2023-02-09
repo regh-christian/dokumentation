@@ -39,16 +39,16 @@ Om konventioner for navngivning af tabeller og measures.
 
 #	Opgaver og ansvar
 
-Aftaler for ændringer i CHRU_HRKube
+**Aftaler for ændringer i CHRU_HRKube:**
 - Roller. Hvem gør/har ansvar for hvad?
   - SQL, Dax, Git, dok
 - Hvordan sikrer/ved vi, at dok er opdateret?  
   - Intervaller
 
-Kontrol-scripts
+**Kontrol-scripts:**
 - Til hvad? Afdæk behov
 
-Oprydning
+**Oprydning:**
 - Hvordan implementerer vi vedtaget nomenklatur?
 - Prioriter. Hvad kan vi leve med?
   - performance vs æstetik
