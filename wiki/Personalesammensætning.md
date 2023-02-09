@@ -48,13 +48,17 @@ Tabellen er niveaudelt i L1 og L2, hvor L2 er en uddybende tekst knyttet til den
 | | [chru_cube].[v_DimTidDato] |
 | | [DM_FL_HR].[FactTerminsdato] |
 
-Alle hændelser i intervallet -7dage≤i dag≤13mdr. 
-Bemærk, at tabellen er koblet på v_SecurityOrganisationBridge via HændelseOrganisationID.
-- TILFØJ DOKUMENTATION I VIEW 
-- OPSUMMÉR DEREFTER HER
-PersonBase: Alle fødseldags- og jubilæumsdatoer på alle aktuelt ansatte tjnr
-PersonLags: Evt. tidligere og efterfølgende ansættelser samt afd. Bruges til bestemmelse af skift mellem afdelinger/inst
-MasterTable: Definér hændelser. Tiltrædelse hvis ansat=J og forskellig fra den tidligere. Aftrædelse hvis Ansat=N og forskellig fra den tidligere. SkiftFraAfdeling hvis OrganisationID forskellig fra det tidligere. SkiftTilAfdeling hvis OrganisationID forskellig fra det følgende. Går på orlov hvis statuskode=3 og denne er forskellig fra tidligere. Tilbage fra orlov hvis Statuskode {0,1} og før var 3. Definer unikt ID baseret på rækkenummer.
+- Kan med fordel dokumenteres grundigere i script
+- Vær opmærksom på, at HændelsesID er er hard-codet i overensstemmelse med ID ’er i v_DimHændelser. Dvs. foretages modificeringer i **v_DimHændelser**, skal det tilsvarende modificeres i dette view.
+- Bemærk, at tabellen er koblet på v_SecurityOrganisationBridge via HændelseOrganisationID.
+
+Viewet er baseret på v_DimAnsættelser. ID er primærnøgle. Historiske og fremtidige hændelser—nærmere defineret i v_DimHændelser—vises for hvert år en aktuel medarbejder er ansat. Er hændelsen en fødsels- eller jubilæumsdag, er under ’AntalÅr’ anført hhv. personens alder det pågældende år, eller jubilæumslængde hvis det er et 1-, 5-, 10-, 15 (osv.) års jubilæum. 
+Endeligt filtreres på hændelser i intervallet . 
+     Viewet er defineret i et længere script, der opsummeret først sammensætter en temporær tabel, PersonBase, med rækker af fødsels- og jubilæumsdatoer alle år i en persons ansættelsesperiode. Dernæst en temporær tabel, PersonLags, med en række pr. ansættelse sammenfattende aktuelle samt evt. seneste og næstkommende ansættelsesforhold (OrganisationID og statuskode). 
+I en ny temporær tabel, MasterTable, listes for hvert tjenestenummer ’HændelsesID’ og tilsvarende ’HændelsesDato’. ’HændelsesID’ er her hard-codet i overensstemmelse med v_DimHændelser (1 for fødselsdag, 2 for jubilæum osv.). 
+For ’HændelsesID’ svt. ’Fødselsdag’ og ’Jubilæumsdag’ indsættes allerede beregnede ’HændelsesDato’(er) fra PersonBase. Ved ’HændelsesID’er svt. til til- og fratrædelser samt flyt til- og fra afdeling anvendes nu PersonLags; På ’HændelsesID’ svt. ’Tiltræder’ defineres ’HændelsesDato’ som værende en ansættelses startdato på ansættelser, hvor ’Ansat’=J og dette er forskelligt fra en evt. umiddelbart foregående ansættelse på samme tjenestenummer; omvendt defineres ved ’HændelsesID’ svt. ’Fratræder’, at ’HændelsesDato’ er slutdatoen på en ansættelse, hvor ’Ansat’=N og dette er forskelligt fra en umiddelbart foregående ansættelse på samme tjenestenummer. Til ’HændelsesID’ svt. ’Skifter fra anden afdeling’ og ’Skifter til anden afdeling’ anvendes hhv. start- og slutdatoen på den ansættelse hvor ’OrganisationsID’ er forskelligt fra det umiddelbart forrige respektivt efterfølgende. På ’HændelsesID’ svt. ’Går på orlov’ anvendes som ’HændelsesDato’ startdatoen på den ansættelse, hvor statuskode skifter til 3 og denne er forskellig fra foregående; For ’HændelsesID’ svt. ’Tilbage fra orlov’ anvendes omvendt ’HændelsesDato’ på ansættelsen hvor statuskode skifter fra 3 til 0 eller 1. På ’HændelsesID’ svt. termin anvendes som ’HændelsesDato’ ’Terminsdato’ fra tabellen [DM-FL-HR].[FactTerminsdato].
+Ovenstående beregninger samles i sidste temporære tabel, FinalTable, hvor tidssvarende ansættelses- og OrganisationsID tilføjes, relativ alder og jubilæumslængde beregnes og alt filtreres i tid, så kun hændelser i intervallet . medtages. Endeligt tilføjes tidssvarende Stillings- og PersonID og rækker indekseres
+
 
 
 ### v_TallyAlder
@@ -64,6 +68,8 @@ MasterTable: Definér hændelser. Tiltrædelse hvis ansat=J og forskellig fra de
 
 
 ## Dashboard
+
+<center><img src="Images/dashboard_personalesammensætning_info.png" height="95%" width="95%" alt="Lederdashboard, info om personalesammensætning" class="center"/></center>
 
 ![Lederdashboard, info om personalesammensætning](https://raw.githubusercontent.com/DataOgDigitalisering/dokumentation/master/Images/dashboard_personalesammensætning_info.png)
 
