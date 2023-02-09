@@ -1,5 +1,4 @@
-::draftWatermark
-::
+::draftWatermark::
 
 # Personalesammensætning
 
