@@ -205,6 +205,8 @@ Current_row=1 sikrer opdateret organisationshieraki men ignorerer evt. historisk
 |-|-|
 | [chru_cube].[v_DimLønart] | [DM_FL_HR].[DimLønart] |
 
+Dimensionstabel i ét niveau med ID som primærnøgle. Baseret på SD's tabel, SD_DIM_LOENART. L1Code og L1Name korresponderer hhv. *LOENART* og *LOENARTTXT*. Kun aktuelle
+lønarter er inkluderet svt *SD_DIM_LOENART[current_row]*=1. *DWReferenceKey* er lønarten, som anført i [SD Datawarehouse](https://www.silkeborgdata.dk/start/loenarter).
 <br>
 
 
