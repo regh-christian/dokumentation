@@ -21,11 +21,12 @@
 
 
 ## Datamodel
-![Power BI-model af personalesammensætning](https://raw.githubusercontent.com/DataOgDigitalisering/dokumentation/master/Images/cube_model_personalesammensætning.png)
-
 
 <img src="Images/cube_model_personalesammensætning.png" height="480" width="800" alt="CHRU_HRKube, 2023-01-30" style="vertical-align:middle"/>
 
+<img src="Images/cube_model_personalesammensætning.png" height="480" width="800" alt="CHRU_HRKube, 2023-01-30" style="text-align:center"/>
+
+<img src="Images/cube_model_personalesammensætning.png" height="480" width="800" alt="CHRU_HRKube, 2023-01-30" class="center"/>
 
 
 ## Resume af tabeller
