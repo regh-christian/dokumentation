@@ -1,7 +1,7 @@
 # Power BI
 
 ## Generelt
-- Links-til-tabs. Ikke faner.
+- Links-til-tabs. Ikke faner. (I lederdashboard). Begrund.
 - Peters tricks
   - Om brug af bookmarks. Navngivning, sektioner, grupperinger, lag mm. 
     - Farvetema (brug af measures). Hvor?
