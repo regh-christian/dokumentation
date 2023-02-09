@@ -33,9 +33,10 @@
 | - | - |
 | [chru_cube].[v_DimHændelser] | [DM_FL_HR].[DimHændelser] |
 
-Udvalgte hændelser vedrørende en ansættelse.
-Ved en hændelse forstås en af følgende mærkedage: datoer for fødsels- og jubilæumsdage, til- og fratrædelser, flytter afdeling, termin samt orlov. 
-Tabellen er niveaudelt i L1 og L2, hvor L2 er en uddybende tekst knyttet til den overordnede hændelse, L1; fx om ’Flytter afdeling’ er et skift fra- eller til en afdeling.
+Udvalgte hændelser vedrørende en ansættelse. ID er primærnøgle.
+Ved en hændelse forstås en af følgende mærkedage: dato for fødsels- og jubilæumsdag, til- og fratrædelser, flytter afdeling, termin samt orlov. 
+Tabellen er niveaudelt i L1 og L2, hvor L2 er en uddybende tekst knyttet til den overordnede hændelse, L1; fx om ’Flytter afdeling’ er et skift fra- eller til en afdeling. I kolonnen ’Note’ forklares, hvordan en hændelse er defineret—om den fx er direkte udledt vha. en dato, eller om der kigges på flere på hinanden følgende ansættelser og skift i statuskoder herimellem for at udlede, om en person går på eller kommer retur fra orlov.
+
 
 
 ### v_FactHændelser
