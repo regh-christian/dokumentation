@@ -17,7 +17,6 @@
 Subset af v_DimLønart med samme primærnøgle, ID. Indeholder kun lønarter relateret til fravær.
 Tabellen er i to niveuer. ’L1Code’ og ’L1Name’ er hard-codet kategorisering af visse lønarter i 3 forskellige fraværstyper; ’Sygefravær’, ’Barn syg’ eller ’Andet’.
 ’L2Code’ er 3-cifret lønartkode—svt. ’L1Code’ i v_DimLønart—og ’L2Name’ er hard-codet undergruppering af fraværstyper. 
-
 ```SQL
 ,case 
    when l1code in(510, 771, 772, 775,760) then 'Øvrigt fravær'
@@ -32,7 +31,6 @@ Tabellen er i to niveuer. ’L1Code’ og ’L1Name’ er hard-codet kategoriser
    when l1code in(910,929) then 'Barn syg'
 end as l2Name
 ```
-
 >> Vær opmærksom på, at gruppering på L2-niveau ikke er identisk er med SD's *LOENARTTXT*
 
 
