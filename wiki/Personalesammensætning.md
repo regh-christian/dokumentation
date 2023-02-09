@@ -81,7 +81,7 @@ Bruger (ledere) får her overblik over udvalgte parametre om de medarbejdere, de
 
 ### Beregninger
 
-Measuret, [Antal medarbejdere], summerer antallet af rækker i v_DimAnsættelser. Denne sum anvendes i flere andre measures i tilpassede filterkontekster. Antallet af henholdsvis månedslønnede, fuldtidsansatte, deltidsansatte og timelønnede fremgår af visninger (cards) til venstre, og er alle baseret på [Antal medarbejdere] evalueret i forskellige filterkontekster bestemt ved de dikotomiserede J/N-kolonner i v_DimAnsættelser.
+Measuret, [Antal medarbejdere], summerer antallet af rækker i v_DimAnsættelse. Denne sum anvendes i flere andre measures i tilpassede filterkontekster. Antallet af henholdsvis månedslønnede, fuldtidsansatte, deltidsansatte og timelønnede fremgår af visninger (cards) til venstre, og er alle baseret på [Antal medarbejdere] evalueret i forskellige filterkontekster bestemt ved de dikotomiserede J/N-kolonner i v_DimAnsættelser.
 Antal [Årsværk], vist sammen med de fire føromtalte, beregner summen af beskæftigelsesdecimaler, v_DimAnsættelse[Beskdec], som i definitionen er andelen af en 37 timers arbejdsuge en person er ansat til, og her i praksis oversættes til årsværk.
 Specifikt på visningen af årsværk filtreres v_DimAnsættelse[Månedslønnede]=’J’.
      [Ansættelseslængde] er et andet measure, der anvendes af flere andre. Det beregner antallet år fra en persons ansættelsesdato i kommunen (hvis en sådan findes) til i dag. 
