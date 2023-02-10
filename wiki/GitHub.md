@@ -1,5 +1,6 @@
 # Git & GitHub 
-Med versionsstyring kan man let kan holde styr på ændringer i filer. Det vigtigt at differentiere mellem Git og GitHub.
+Med versionsstyring kan man let holde styr på ændringer i filer. Det er vigtigt at differentiere mellem Git og GitHub.
+
 ## Git
 Git er et open-source versionsstyringssystem, som kan hentes via Softwareshoppen. For at kontrollere at du har Git installeret, kan du køre følgende linje i din terminal/kommandoprompt ```git –version```. 
 
