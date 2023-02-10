@@ -1,20 +1,11 @@
 # Velkommen hos Data & Rapportering
 
 <a href="./Brugerstyring">Brugerstyring</a> 
-
 <a href="./Brugerstyring" target="_blank">Brugerstyring</a> 
-
-
 [Brugerstyring](./Brugerstyring)
-
 [Brugerstyring](/Brugerstyring.md)
 [Brugerstyring](./Brugerstyring.md)
 [Brugerstyring](/./Brugerstyring.md)
-
-[Brugerstyring]("./Brugerstyring")
-[Brugerstyring]("./Brugerstyring" target="_blank")
-
-
 
 
 <!-- Embed iFrame. PowerPoint: "lntroduktion og onboarding 2022" s.18-21 -->
@@ -62,7 +53,7 @@ I grove træk falder al data i kuben indenfor kategorierne
  
 - Med **grunddata** menes den data, som er fællesmængde på tværs af temaer, uanset om der beregnes på sygefravær, ferieafholdelse eller andet. I grunddata indgår:
   - **Stamdata** er personaledata, organisations-, stillings- og lønarthieraki, tidstabel mm. 
-  - **Brugerstyring** er data om personales brugerroller, som er bestemmende for hvilke data, brugere af vores produkter må se. Det er essentielt at forstå, <a href="./Brugerstyring">hvordan brugerstyringen er implementeret</a> for at sikre, at denne også virker på tilføjelser i kuben. 
+  - **Brugerstyring** er data om personales brugerroller, som er bestemmende for hvilke data, brugere af vores produkter må se. Det er essentielt at forstå, [hvordan brugerstyring er implementeret](./Brugerstyring) for at sikre, at denne også virker på tilføjelser i kuben. 
 - **Temaspecifik data** anvendes specifikt til beregning på fx sygefravær, ferieafholdelse eller personalesammensætning. Af screenshottet herover ses, hvordan vores data groft er grupperet i temaer.
 
 Derudover findes en række øvrige tabeller, herunder:
