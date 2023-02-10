@@ -1,4 +1,9 @@
 # Opdatering af Kuben
+
+<iframe src="https://regionh-my.sharepoint.com/personal/stefan_sajin-henningsen_regionh_dk/_layouts/15/Doc.aspx?sourcedoc={44233ebe-3fd4-4653-8a56-9f3cd4fc6a0a}&action=embedview&wdEmbedCode=0&wdPrint=0&wdToolbar=FALSE" height="1120" width="800" frameborder="0" seamless="yes"></iframe>
+
+
+<!-- Udkommenteret til fordel for iFrame
 ## Generelt flow
 ![Flow](https://raw.githubusercontent.com/DataOgDigitalisering/dokumentation/master/Images/OpdateringKube.png)
 
@@ -18,3 +23,4 @@ SØREN laver ændringer til COKP1, hvorefter Morten og Christopher overfører de
 Script til at tjekke om VIEWS er ens i PROD og UDV.
 ## PowerBI
 Opdateringer og udvikling i PowerBI bør først laves i udviklingsserveren, og så derefter lagt op i produktionsserveren. Der er adgang til at gøre dette uden CØK’s indblanding. Nogle gange kan mindre opdateringer dog fortages direkte i produktionsserveren, hvorfor at BI-filen i Udviklingsserveren med jævne mellemrum overskrives med filen fra produktionen.
+-->
