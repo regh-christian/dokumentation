@@ -24,7 +24,7 @@ Om konventioner for navngivning af tabeller og measures.
 
 ### Calculated columns
   - Undgå så vidt muligt datatransformation i Tabular Editor. Det giver bedre overblik at have samlet i SQL.
-    - (Flyt evt disse til views og brug en mere robust metode til anonymisering:)
+    - (Flyt evt nedenstående til views og brug en mere robust metode til anonymisering:)
       - v_DimAnsættelse[TjnrAnonymiseret]
       - v_DimPerson[NavnAnonymiseret]   
 
