@@ -1,6 +1,6 @@
 # Velkommen hos Data & Rapportering
 
-[Brugerstyring](./Brugerstyring.md)
+[Brugerstyring](./Brugerstyring.md target="_blank")
 
 
 <!-- Embed iFrame. PowerPoint: "lntroduktion og onboarding 2022" s.18-21 -->
