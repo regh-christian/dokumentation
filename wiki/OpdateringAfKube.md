@@ -2,7 +2,7 @@
 
 <!-- Embed iFrame. word-doc: "CHRU_HRKube_opdatering.docx" på OneDrive-->
 <center>
-<iframe src="https://regionh-my.sharepoint.com/personal/stefan_sajin-henningsen_regionh_dk/_layouts/15/Doc.aspx?sourcedoc={44233ebe-3fd4-4653-8a56-9f3cd4fc6a0a}&action=embedview&wdEmbedCode=0&wdPrint=0&wdToolbar=FALSE" height="1120" width="800" frameborder="0" seamless="yes"></iframe>
+<iframe src="https://regionh-my.sharepoint.com/personal/stefan_sajin-henningsen_regionh_dk/_layouts/15/Doc.aspx?sourcedoc={44233ebe-3fd4-4653-8a56-9f3cd4fc6a0a}&action=embedview&wdEmbedCode=0&wdPrint=0&wdToolbar=FALSE&wdDownloadButton=FALSE" height="1120" width="800" frameborder="0" seamless="yes"></iframe>
 </center>
 
 <!-- Udkommenteret til fordel for iFrame
