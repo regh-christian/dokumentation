@@ -1,4 +1,4 @@
-# Sygefravær — KLADDE
+# Sygefravær
 
 
 
