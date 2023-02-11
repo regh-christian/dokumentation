@@ -8,7 +8,7 @@ Git er et open-source versionsstyringssystem, som kan hentes via Softwareshoppen
 GitHub er en service (ejet af Microsoft), hvor Git-projekter kan hostes på en ekstern server (cloud). Vi bruger også GitHub til at hoste denne wiki.
 
 ## Arbejdsgang med Git & GitHub
-Man kan vælge enten bruge Git med kommandoer gennem terminalen eller vha. et brugergrænseflade program som f.eks. GitHub Desktop. Denne kan også hentes via softwareshoppen.
+Man kan bruge Git med kommandoer via terminalen eller vha. et program som f.eks. GitHub Desktop. Dette kan også hentes via softwareshoppen.
 
 ### Arbejdsflowet med Git & GitHub
 
