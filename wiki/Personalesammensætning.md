@@ -1,5 +1,10 @@
 # Personalesammensætning
 
+<!-- ERD, datamodel -->
+<details><summary markdown="span">Datamodel</summary>
+<center><img src="Images/erd/erd_pbi_personalesammensætning.png" height="95%" width="95%" class="center"/></center>
+</details>  
+<br>
 
 
 <!-- Embed dashboards 
@@ -10,7 +15,6 @@
 </details>
 -->
 
-
 <!--
 <details><summary markdown="span">Strategisk dashboard</summary>
 <center>
@@ -18,12 +22,6 @@
 </center>
 </details>
 -->
-
-<!-- ERD -->
-<details><summary markdown="span">Datamodel</summary>
-<center><img src="Images/erd/erd_pbi_personalesammensætning.png" height="95%" width="95%" class="center"/></center>
-</details>  
-<br>
 
 
 
