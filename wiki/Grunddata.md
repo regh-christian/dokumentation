@@ -7,7 +7,7 @@ Med grunddata menes de tabeller, som foruden stamdata (v_DimPerson, v_DimAnsætt
 ## Datamodel
 
 <center>
- <img src="Images/erd/erd_pbi_grunddata.png" height="488" width="550" style="vertical-align:middle"/>
+ <img src="Images/erd/erd_pbi_grunddata.png" height="95%" width="95%" style="vertical-align:middle"/>
 </center>
 <br>
 
