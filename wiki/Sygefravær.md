@@ -16,10 +16,10 @@
 | [LINK ](https://www.daxpatterns.com/dynamic-segmentation/) | <img src="Images/ikon.png" height="70" width="70" class="center"/> |
 
 
-| [Daxpatterns.com\Dynamic segmentation](https://www.daxpatterns.com/dynamic-segmentation/) | <img src="Images/ikon.png" height="70" width="70" class="center"/> |
+| Om opbygning af [Fravær - antal i fraværsinterval Ikke anonymiseret] <br> [Daxpatterns.com\Dynamic segmentation](https://www.daxpatterns.com/dynamic-segmentation/) | <img src="Images/icon_daxpatterns.png" height="50" width="50" class="center"/> |
 | - | - |
 
-| [Daxpatterns.com\Dynamic segmentation](https://www.daxpatterns.com/dynamic-segmentation/) | <img src="Images/ikon.png" height="70" width="70"> |
+| [Daxpatterns.com\Dynamic segmentation](https://www.daxpatterns.com/dynamic-segmentation/) | <img src="Images/icon_daxpatterns.png" height="45" width="45"> |
 | - | - |
 
 
