@@ -6,6 +6,12 @@ Med grunddata menes de tabeller, som foruden stamdata (v_DimPerson, v_DimAnsætt
 
 ## Datamodel
 
+<!-- ERD -->
+<details><summary markdown="span">Datamodel</summary>
+<center><img src="Images/erd/erd_pbi_grunddata.png" height="95%" width="95%" style="vertical-align:middle"/></center>
+</details>  
+<br>
+
 <center>
  <img src="Images/erd/erd_pbi_grunddata.png" height="95%" width="95%" style="vertical-align:middle"/>
 </center>
