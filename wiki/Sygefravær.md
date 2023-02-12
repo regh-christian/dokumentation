@@ -1,15 +1,10 @@
 # Sygefravær
 
-## Datamodel
-
-<!-- ERD -->
+<!-- ERD, datamodel -->
 <details><summary markdown="span">Datamodel</summary>
 <center><img src="Images/erd/erd_pbi_sygefravær.png" height="95%" width="95%" class="center"/></center>
 </details>  
 <br>
-
-<center><img src="Images/erd/erd_pbi_sygefravær.png" height="95%" width="95%" class="center"/></center>
-
 
 
 ## Resume af tabeller
