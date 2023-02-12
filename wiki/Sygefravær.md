@@ -16,7 +16,7 @@
 | [LINK ](https://www.daxpatterns.com/dynamic-segmentation/) | <img src="Images/ikon.png" height="70" width="70" class="center"/> |
 
 
-| Om opbygning af [Fravær - antal i fraværsinterval Ikke anonymiseret] <br> [Daxpatterns.com\Dynamic segmentation](https://www.daxpatterns.com/dynamic-segmentation/) | <img src="Images/icon_daxpatterns.png" height="50" width="50" class="center"/> |
+| Om opbygning af [Fravær - antal i fraværsinterval Ikke anonymiseret] <br> [Daxpatterns.com\Dynamic segmentation](https://www.daxpatterns.com/dynamic-segmentation/) | <img src="Images/icons_daxpatterns.png" height="50" width="50" class="center"/> |
 | - | - |
 
 | [Daxpatterns.com\Dynamic segmentation](https://www.daxpatterns.com/dynamic-segmentation/) | <img src="Images/icon_daxpatterns.png" height="45" width="45"> |
@@ -25,6 +25,19 @@
 | **Om opbygning af [Fravær - antal i fraværsinterval Ikke anonymiseret]** | <img src="Images/ikon.png" height="70" width="70" class="center"/> | 
 | - | - |
 | [LINK ](https://www.daxpatterns.com/dynamic-segmentation/) | |
+
+| [Daxpatterns.com\Dynamic segmentation](https://www.daxpatterns.com/dynamic-segmentation/) | <img src="Images/icon_daxpatterns.png" height="45" width="45"> |
+
+| - | - |
+| [Daxpatterns.com\Dynamic segmentation](https://www.daxpatterns.com/dynamic-segmentation/) | <img src="Images/icon_daxpatterns.png" height="45" width="45"> |
+
+
+<center>
+   
+| - | - |
+| [Daxpatterns.com\Dynamic segmentation](https://www.daxpatterns.com/dynamic-segmentation/) | <img src="Images/icon_daxpatterns.png" height="45" width="45"> |
+
+</center>
 
 
 
