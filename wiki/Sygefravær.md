@@ -2,7 +2,8 @@
 
 ## Datamodel
 
-<!--  -->
+<center><img src="Images/erd_pbi_sygefravær.png" height="95%" width="95%" class="center"/></center>
+
 
 
 ## Resume af tabeller
@@ -30,7 +31,7 @@ Tabellen er i to niveuer. ’L1Code’ og ’L1Name’ er hard-codet kategoriser
    when l1code in(910,929) then 'Barn syg'
 end as l2Name
 ```
->> Vær opmærksom på, at gruppering på L2-niveau ikke er identisk er med SD's *LOENARTTXT*
+> Vær opmærksom på, at gruppering på L2-niveau ikke er identisk er med SD's *LOENARTTXT*
 
 
 
