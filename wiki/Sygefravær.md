@@ -142,11 +142,15 @@ Til beregning anvendes to measures, [Fravær – vægtede fuldtidsfraværsdage g
 
 | [**Sqlbi.com \ Rolling 12 Months Average in DAX**](https://www.sqlbi.com/articles/rolling-12-months-average-in-dax/) | <img src="Images/icons_ref/icon_sqlbi.png" height="45" width="45"> |
 
-| [**Sqlbi.com \ Rolling 12 Months Average in DAX**](https://www.sqlbi.com/articles/rolling-12-months-average-in-dax/) 
-| <img src="Images/icons_ref/icon_sqlbi.png" height="45" width="45"> |
+| [**Sqlbi.com \ Rolling 12 Months Average in DAX**](https://www.sqlbi.com/articles/rolling-12-months-average-in-dax/) <p>opg1</p>| <img src="Images/icons_ref/icon_sqlbi.png" height="45" width="45"> |
 
-| [**Sqlbi.com \ Rolling 12 Months Average in DAX**](https://www.sqlbi.com/articles/rolling-12-months-average-in-dax/) 
-| <img src="Images/icons_ref/icon_sqlbi.png" height="45" width="45"> |
+| [**Sqlbi.com \ Rolling 12 Months Average in DAX**](https://www.sqlbi.com/articles/rolling-12-months-average-in-dax/) <p>- opg1</p><p>opg2</p><p>opg3</p>| <img src="Images/icons_ref/icon_sqlbi.png" height="45" width="45"> |
+
+
+| 
+[**Sqlbi.com \ Rolling 12 Months Average in DAX**](https://www.sqlbi.com/articles/rolling-12-months-average-in-dax/) 
+- opg1
+- opg2 | <img src="Images/icons_ref/icon_sqlbi.png" height="45" width="45"> |
 
 
 Førstnævnte udregner i kontekst af v_DimTidDato[MaanedAar] og valgt(e) organisationsniveau(er) (1) for hver d. 1. i måneden i foregående 12 måneder den løbende gennemssnitssum af beskæftigelsesdecimaler på aktuelle ansættelser pågældende datoer—også selvom de ikke er ansatte længere—, (2) månedlig sum af fuldtidsfraværsdage indeværende måned, v_FactFravær[Fuldtidsdage]. Endeligt (3) andel af fuldtidsfraværsdage af den gennemsnitlige beskæftigelsessum. (4) Kurven ’Aktuel visning’ viser dermed—beregnet i en månedskontekst—for hver måned det løbende gennemsnit af antal fuldtidsfraværsdage pr. årsværk opgjort over seneste 12 måneder.
