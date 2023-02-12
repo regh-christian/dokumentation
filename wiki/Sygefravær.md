@@ -1,19 +1,16 @@
 # Sygefravær
 
-| - | - |
 | [Daxpatterns.com\Dynamic segmentation](https://www.daxpatterns.com/dynamic-segmentation/) | <img src="Images/icons_ref/icon_daxpatterns.png" height="45" width="45"> |
 
 
-| [Daxpatterns.com\Dynamic segmentation](https://www.daxpatterns.com/dynamic-segmentation/) | <img src="Images/icons_ref/icon_daxpatterns.png" height="45" width="45"> |
-
-
+<center>
 
 | [Daxpatterns.com\Dynamic segmentation](https://www.daxpatterns.com/dynamic-segmentation/) | <img src="Images/icons_ref/icon_daxpatterns.png" height="45" width="45"> |
 
+</center>
 
 
-
-
+<center>| [Daxpatterns.com\Dynamic segmentation](https://www.daxpatterns.com/dynamic-segmentation/) | <img src="Images/icons_ref/icon_daxpatterns.png" height="45" width="45"> |</center>
 
 
 
