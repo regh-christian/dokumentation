@@ -11,17 +11,20 @@
 | [LINK ](https://www.daxpatterns.com/dynamic-segmentation/) | <img src="Images/ikon.png" height="10" width="10" class="center"/> |
 
 
-<center>
 | **View** | **Baseret på** | 
 | - | - |
 | [LINK ](https://www.daxpatterns.com/dynamic-segmentation/) | <img src="Images/ikon.png" height="70" width="70" class="center"/> |
-</center>
 
 
-<center>
-| [Daxpatterns.com\Dynamic segmentation ](https://www.daxpatterns.com/dynamic-segmentation/) | <img src="Images/ikon.png" height="70" width="70" class="center"/> |
+| [Daxpatterns.com\Dynamic segmentation](https://www.daxpatterns.com/dynamic-segmentation/) | <img src="Images/ikon.png" height="70" width="70" class="center"/> |
 | - | - |
-</center>
+
+| [Daxpatterns.com\Dynamic segmentation](https://www.daxpatterns.com/dynamic-segmentation/) | <img src="Images/ikon.png" height="70" width="70"> |
+| - | - |
+
+
+
+
 
 
 ## Datamodel
