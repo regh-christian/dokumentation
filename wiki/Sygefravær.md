@@ -33,6 +33,23 @@
 </center>
 
 
+
+| - | - |
+| <h1>Om measure....</h1>
+<h2>[Daxpatterns.com\Dynamic segmentation](https://www.daxpatterns.com/dynamic-segmentation/)</h2> | <img src="Images/icons_ref/icon_daxpatterns.png" height="45" width="45"> |
+
+
+
+
+
+
+
+
+
+
+
+<!--  -->
+
 ## Datamodel
 
 
