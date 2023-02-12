@@ -2,7 +2,7 @@
 
 ## Datamodel
 
-<center><img src="Images/erd_pbi_sygefravær.png" height="95%" width="95%" class="center"/></center>
+<center><img src="Images/erd/erd_pbi_sygefravær.png" height="95%" width="95%" class="center"/></center>
 
 
 
