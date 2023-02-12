@@ -140,12 +140,12 @@ Filtrene, [Ansat på afdeling, nuværende afd]=1 og v_DimAnsættelse[AnsatDagsDa
 **FIGUR: Gns. løbende sygefravær opgjort over seneste 12 mdr.**
 Til beregning anvendes to measures, [Fravær – vægtede fuldtidsfraværsdage gnsnit 12 mdr Ikke anonymiseret] og [Fravær – Benchmark regionen 12 mdr.].
 
-| [**Sqlbi.com \ Rolling 12 MOnths Average in DAX**](https://www.sqlbi.com/articles/rolling-12-months-average-in-dax/) | <img src="Images/icons_ref/icon_sqlbi.png" height="45" width="45"> |
+| [**Sqlbi.com \ Rolling 12 Months Average in DAX**](https://www.sqlbi.com/articles/rolling-12-months-average-in-dax/) | <img src="Images/icons_ref/icon_sqlbi.png" height="45" width="45"> |
 
-| [**Sqlbi.com \ Rolling 12 MOnths Average in DAX**](https://www.sqlbi.com/articles/rolling-12-months-average-in-dax/) 
+| [**Sqlbi.com \ Rolling 12 Months Average in DAX**](https://www.sqlbi.com/articles/rolling-12-months-average-in-dax/) 
 | <img src="Images/icons_ref/icon_sqlbi.png" height="45" width="45"> |
 
-| [**Sqlbi.com \ Rolling 12 MOnths Average in DAX**](https://www.sqlbi.com/articles/rolling-12-months-average-in-dax/) 
+| [**Sqlbi.com \ Rolling 12 Months Average in DAX**](https://www.sqlbi.com/articles/rolling-12-months-average-in-dax/) 
 | <img src="Images/icons_ref/icon_sqlbi.png" height="45" width="45"> |
 
 
