@@ -2,19 +2,10 @@
 
 Med grunddata menes de tabeller, som foruden stamdata (v_DimPerson, v_DimAnsættelse, v_DimOrganisation, v_DimStilling, v_DimLønart), indgår på tværs af temaer, der behandles i kuben. Dvs. datotabellen, tabeller anvendt ved brugerstyring, tabel med info om seneste dataleverancer og tabel med servicemeddelelser.
 
-
-
-## Datamodel
-
 <!-- ERD -->
 <details><summary markdown="span">Datamodel</summary>
 <center><img src="Images/erd/erd_pbi_grunddata.png" height="95%" width="95%" style="vertical-align:middle"/></center>
 </details>  
-<br>
-
-<center>
- <img src="Images/erd/erd_pbi_grunddata.png" height="95%" width="95%" style="vertical-align:middle"/>
-</center>
 <br>
 
  
