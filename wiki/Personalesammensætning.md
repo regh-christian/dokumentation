@@ -26,7 +26,7 @@
 
 
 
-## Resume af tabeller — KLADDE
+## Resume af tabeller
 
 ### v_DimHændelser
 
@@ -68,7 +68,7 @@ Ovenstående beregninger samles i sidste temporære tabel, FinalTable, hvor tids
 
 
 
-## Dashboard — KLADDE
+## Dashboard
 
 <center><img src="Images/dashboard_personalesammensætning_info.png" height="95%" width="95%" alt="Lederdashboard, info om personalesammensætning" class="center"/></center>
 
