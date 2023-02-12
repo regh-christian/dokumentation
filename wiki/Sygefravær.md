@@ -1,5 +1,10 @@
 # Sygefravær
 
+| **View** | **Baseret på** | 
+| - | - |
+| [LINK ](https://www.daxpatterns.com/dynamic-segmentation/) | <center><img src="Images/ikon.png" height="10" width="10" class="center"/></center> |
+
+
 
 
 ## Datamodel
