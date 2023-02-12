@@ -15,7 +15,7 @@
 | [chru_cube].[v_DimLønartFravær] | [DM_FL_HR].[DimLønart] |
 
 Subset af v_DimLønart med samme primærnøgle, ID. Indeholder kun lønarter relateret til fravær.
-Tabellen er i to niveuer. ’L1Code’ og ’L1Name’ er hard-codet kategorisering af visse lønarter i 3 forskellige fraværstyper; ’Sygefravær’, ’Barn syg’ eller ’Andet’.
+Tabellen er i to niveuer. ’L1Code’ og ’L1Name’ er hard-codet kategorisering af visse lønarter i 3 fraværstyper; ’Sygefravær’, ’Barn syg’ og ’Andet’.
 ’L2Code’ er 3-cifret lønartkode—svt. ’L1Code’ i v_DimLønart—og ’L2Name’ er hard-codet undergruppering af fraværstyper. 
 ```SQL
 ,case 
@@ -32,6 +32,7 @@ Tabellen er i to niveuer. ’L1Code’ og ’L1Name’ er hard-codet kategoriser
 end as l2Name
 ```
 >> Vær opmærksom på, at gruppering på L2-niveau ikke er identisk er med SD's *LOENARTTXT*
+
 
 
 ### v_FactFravær
@@ -59,7 +60,6 @@ Tabellen aggregerer fravær pr. måned pr. afdeling med opgørelses(’Dato’) 
 ’AntalMedarbejdere’ er aktuelt ansatte på afsnittet opgjort på dagen, ’BeskSumMd’ er summen af beskæftigelsesdecimaler udgjort af aktuelt ansatte. 
 ’MaskeretFlag’ har tidligere været brugt til indikation af få ansatte mhp. anonymisering—har i dag ingen funktion.
 ’MaskeretBeskSum12Mdr’ og ’MaskeretFavSum12Mdr’ er månedligt gennemsnit af hhv. beskæftigelsesdecimaler og fraværsdage i seneste år.
-
 
 
 
@@ -170,6 +170,7 @@ Bruger får her overblik over organisationer, som denne i forvejen har adgang ti
 >> Anonymitetsgrænsen bruges i alle measures til beregning af sygefravær til at forhindre identifikation af enkeltindivider. Se desuden afsnit om dataintegritet , med gennemgang af øvrige tiltag anvendt til håndhævelse dette.
 
 Foruden brug af grunddata er oprettet views til brug for beregninger specifikt for dette tema. Se >>TABELLER<<.
+
 
 
 **Beregninger**
