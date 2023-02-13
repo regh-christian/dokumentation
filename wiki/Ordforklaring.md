@@ -70,7 +70,7 @@ I praksis defineres populationer med filtre på faner i kombination med filter i
 #### Årsværk
 I beregninger anvendes
 
-$$ 1924 \frac{timer}{år} = 52 \frac{uger}{år}∙37 \frac{timer}{uge} = 260 \frac{dag}{år} ∙ 7,4 \frac{timer}{dag} $$
+$$ 1924 \frac{timer}{år} = 52 \frac{uger}{år} \cdot 37 \frac{timer}{uge} = 260 \frac{dag}{år} \cdot 7,4 \frac{timer}{dag} $$
 
 #### Hændelse
 Pr. 2023-01-06 defineret som  en af følgende:
