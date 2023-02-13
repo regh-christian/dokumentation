@@ -62,10 +62,16 @@ I bredest forstand forstås ved v_DimAnsættelse[Standardpopulation]=J, alle må
 ```
 I praksis defineres populationer med filtre på faner i kombination med filter i beregninger og figurer. Kriterier for at indgå i populationen varierer med temaet; den tidslige dimension af en given analyse; samt hvem analysen er rettet imod.
 
+
+
+
 # Personalesammensætning
+
 #### Årsværk
 I beregninger anvendes
+$$ 
 1924 timer/år=52 uger/år∙37 timer/uge=260 dag/år∙7,4 timer/dag
+$$
 
 #### Hændelse
 Pr. 2023-01-06 defineret som  en af følgende:
