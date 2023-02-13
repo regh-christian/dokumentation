@@ -1,4 +1,4 @@
-#### Anciennitet
+### Anciennitet
 I SD har anciennitetsdato ikke en entydig betydning. Den kan betyde startdatoen i første ansættelse i regionen, men den kan også være resultat af omregnet anciennitet. Et bedre udtryk for en persons egentlige anciennitet i regionen er _AnsLængdeCPR_.
 
 
