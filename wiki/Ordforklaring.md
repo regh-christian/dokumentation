@@ -1,14 +1,12 @@
-# Grundddata
-
 #### Anciennitet
 I SD har anciennitetsdato ikke en entydig betydning. Den kan betyde startdatoen i første ansættelse i regionen, men den kan også være resultat af omregnet anciennitet. Et bedre udtryk for en persons egentlige anciennitet i regionen er _AnsLængdeCPR_.
 
 
-#### Ansættelse
+### Ansættelse
 Et ansættelsesforhold med status ansat uden løn (0), ansat/genåbnet (1) eller midlertidigt ude af løn (3). Alle ansættelser er unikt kendetegnet ved en stillings-, tjeneste- og overenskomstkode, en lønklasse og afdeling. Ændring i én eller flere af disse forhold, medfører et nyt registreret ansættelsesforhold. Ansættelsens varighed opgøres fra 1. dag til den sidste dag begge inklusiv i pågældende ansættelse. 
 
 
-#### Ansættelse, aktuel
+### Ansættelse, aktuel
 Med aktuel ansættelse henvises oftest til dét ansættelsesforhold, hvis start- og slutdato inkluderer dags dato og har status ansat/genåbnet (1), ansat uden løn (0) eller midlertidigt ude af løn (3).
 Vi vælger denne population med [Ansat]=J og [AktuelRække]=J. 
 ```SQL
@@ -27,7 +25,7 @@ Vi vælger denne population med [Ansat]=J og [AktuelRække]=J.
 _Ikke at forveksle med aktuel hovedansættelse_.
 
 
-#### Fuldtidsansat
+### Fuldtidsansat
 Ansættelser kendetegnet ved
 ```SQL
 -- Fuldtid, 07_FL_110_SD_DimAnsaettelse.sas
@@ -37,7 +35,7 @@ Ansættelser kendetegnet ved
 ```
 
 
-#### Månedslønnet
+### Månedslønnet
 Ansættelser kendetegnet ved 
 ```SQL
 -- Månedslønnet, 07_FL_110_SD_DimAnsaettelse.sas
@@ -47,7 +45,7 @@ Ansættelser kendetegnet ved
 ```
 
 
-#### Aktuel hovedansættelse
+### Aktuel hovedansættelse
 Den ansættelse som opfylder og sorterer højest på kriterierne, gældende dags dato; status 0, 1 eller 3; Månedslønnet; Fuldtid; Startdato. Dvs. et timelønnet ansættelsesforhold kan være en aktuel hovedansættelse, men kun hvis det ikke overlapper et månedslønnet. På samme måde kan en deltidsstilling være en aktuel hovedansættelse, men kun hvis dette ikke overlapper en anden fuldtidsansættelse.
 ```SQL
 -- AktuelHovedansættelse, 07_FL_110_SD_DimAnsaettelse.sas
@@ -57,7 +55,7 @@ else AktuelHovedansættelse=0;
 ```
 
 
-#### Standardpopulation
+### Standardpopulation
 En bred definition afhængig af kontekst. 
 I bredest forstand forstås ved v_DimAnsættelse[Standardpopulation]=J, alle månedslønnede og ikke-eksternt finansierede ansættelser.
 ```SQL
@@ -75,15 +73,12 @@ I praksis defineres populationer med filtre på faner i kombination med filter i
 
 
 
-# Personalesammensætning
-
-#### Årsværk
+### Årsværk
 I beregninger anvendes
-
 $$ 1924 \frac{timer}{år} = 52 \frac{uger}{år} \cdot 37 \frac{timer}{uge} = 260 \frac{dag}{år} \cdot 7,4 \frac{timer}{dag} $$
 
 
-#### Hændelse
+### Hændelse
 Pr. 2023-01-06 defineret som  en af følgende:
 
 | Fødselsdag | Hvert år |
@@ -96,31 +91,27 @@ Pr. 2023-01-06 defineret som  en af følgende:
 | Går på orlov | Når der skiftes til statuskode 0 eller 1 efter at have været i 3 eller omvendt for til |
 | Tilbage fra orlov | Når der skiftes til statuskode 0 eller 1 efter at have været i 3 eller omvendt for til |
 
-#### Jubilæum
+
+### Jubilæum
 Alle jubilæumsdatoer i 5-årsintervaller samt étårsjubilæum beregnes og betragtes som en hændelse.
 
 
-#### Tiltrædelse
+### Tiltrædelse
 Kendetegnet ved et skift i ansættelsesstatus fra ukendt, emigreret/død (7), fratrådt (8) eller pensioneret (9) til enten ansat uden løn (0), ansat/genåbnet (1) eller midlertidigt ude af løn (3). Tiltrædelsesdatoen er første dag i det nye ansættelsesforhold.
 
-#### Fratrædelse
+### Fratrædelse
 Kendetegnet ved et skift i ansættelsesstatus til enten emigreret/død (7), fratrådt (8) eller pensioneret (9) fra at have været enten ansat uden løn (0), ansat/genåbnet (1) eller midlertidigt ude af løn (3). Fratrædelsesdatoen er sidste dag i en ansættelsesperiode.
 
 
-#### Orlov
+### Orlov
 Kendetegnet ved et skift i ansættelsesstatus fra midlertidigt ude af løn (3) til enten ansat/genåbnet (1) eller ansat uden løn (0). Eller omvendt.
  
  
- 
- 
-# Sygefravær
-
-
-#### Fravær
+### Fravær
 Fravær er defineret som registreret arbejdstid med én af lønarterne i v_DimLønartFravær[L2Code]. Vi skelner groft imellem tre kategorier af fravær: Sygefravær, barn syg og andet.
 
 
-#### Fraværsdag
+### Fraværsdag
 En fraværsdag er defineret ved
 antal fraværstimer = antal planlagte timer
 Det er muligt at have delvise fraværsdage, hvor
@@ -129,24 +120,24 @@ En fraværsdag er ikke i sig selv et udtryk for antal timers fravær, men er rel
 Se også fuldtidsfraværsdag
 
 
-#### Fuldtidsfraværsdag
+### Fuldtidsfraværsdag
 En fuldtidsfraværsdag er defineret ved 7,4 timers fravær svt. ét dagsværk. Enhed kan sammenlignes på tværs i organisationen uagtet forskelle i enkeltindividers beskæftigelsesdecimal.
 
 
-#### Beskæftigelsessum
+### Beskæftigelsessum
 Sum af ansattes beskæftigelsesdecimaler. Anvendes flere steder direkte oversat i fx årsværk. Vi bruger denne i beregning af sygefravær til at eliminere evt intervariabilitet mellem fuld- og deltidsansatte
 
 
-#### Beskæftigelsessum, gennemsnitlig
+### Beskæftigelsessum, gennemsnitlig
 Gennemsnitlig beskæftigelsessum på udvalgte nedslagsdatoer—d. 1. i en måned. 
 Muligheden for at ansatte til- og aftræder eller skifter fra fuld- til deltid midt i en måned introducerer kompromisser, hvor vi må vælge imellem tunge og komplekse eller mere grovmaskede beregninger. Ét eksempel herpå er i beregning af det rullende gennemsnit af fuldtidsfraværsdage, hvor vi fx månedsvist d. 1. aggregerer indeværende månedens fravær relativt til beskæftigelsessum. Her antages, at beskæftigelsesdecimaler d. 1. er repræsentativ for hele perioden siden forrige nedslagsdato. 
 
 
-#### Anonymitetsgrænse
+### Anonymitetsgrænse
 I alle beregninger, hvor der er risiko for at kunne identificere enkeltindivider i små populationer—og hvor dette ikke er tilladt—implementeres en anonymitetsgrænse. I praksis maskeres et resultat, hvis dette er fundet pba. et antal af individer lavere en anonymitetsgrænsen. 
 
 >> Vær opmærksom på, at anonymitetsgrænse kan variere med tema.
 
 
-#### Måltal
+### Måltal
 Region H’s målsætning for fravær pr. 2023-01-20 er 11,7 dage/år.
