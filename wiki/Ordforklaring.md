@@ -24,7 +24,7 @@ Vi vælger denne population med [Ansat]=J og [AktuelRække]=J.
     WHEN STAT IN ('0', '1', '3') THEN 1 ELSE 0 
   END) as Ansat length = 3,
 ```
-Ikke at forveksle med aktuel hovedansættelse.
+_Ikke at forveksle med aktuel hovedansættelse_.
 
 
 #### Fuldtidsansat
