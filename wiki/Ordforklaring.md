@@ -149,4 +149,4 @@ I alle beregninger, hvor der er risiko for at kunne identificere enkeltindivider
 
 
 #### Måltal
-I kontekst af fravær er Region H’s målsætning om fravær pr. 2023-01-20 11,7 dage/år.
+Region H’s målsætning for fravær pr. 2023-01-20 er 11,7 dage/år.
