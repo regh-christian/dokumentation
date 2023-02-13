@@ -11,14 +11,14 @@ Med aktuel ansættelse henvises oftest til dét ansættelsesforhold, hvis start-
 Vi vælger denne population med [Ansat]=J og [AktuelRække]=J. 
 ```sql
 -- Aktuelrække, 07_FL_110_SD_DimAnsaettelse.sas
-(CASE
+,(CASE
     WHEN today() BETWEEN START and SLUT THEN 1 ELSE 0 
   END) as AktuelRække length = 3,
 ```
 
-```
+```procsql
 -- Ansat, 07_FL_110_SD_DimAnsaettelse.sas
-(CASE  
+,(CASE  
     WHEN STAT IN ('0', '1', '3') THEN 1 ELSE 0 
   END) as Ansat length = 3,
 ```
@@ -26,16 +26,18 @@ Ikke at forveksle med aktuel hovedansættelse.
 
 #### Fuldtidsansat
 Ansættelser kendetegnet ved
-```
-(CASE 
+```proc sql
+-- Fuldtid, 07_FL_110_SD_DimAnsaettelse.sas
+,(CASE 
     WHEN BESKDEC >= 1 THEN 1 ELSE 0
   END) as Fuldtid length = 3,
 ```
 
 #### Månedslønnet
 Ansættelser kendetegnet ved 
-```
-(CASE 
+```proc
+-- Månedslønnet, 07_FL_110_SD_DimAnsaettelse.sas
+,(CASE 
     WHEN DEL IN ('2', '6') OR BESKDEC = 0 THEN 0 ELSE 1
   END) as Månedslønnet length = 3,
 ```
@@ -43,6 +45,7 @@ Ansættelser kendetegnet ved
 #### Aktuel hovedansættelse
 Den ansættelse som opfylder og sorterer højest på kriterierne, gældende dags dato; status 0, 1 eller 3; Månedslønnet; Fuldtid; Startdato. Dvs. et timelønnet ansættelsesforhold kan være en aktuel hovedansættelse, men kun hvis det ikke overlapper et månedslønnet. På samme måde kan en deltidsstilling være en aktuel hovedansættelse, men kun hvis dette ikke overlapper en anden fuldtidsansættelse.
 ```
+-- AktuelHovedansættelse, 07_FL_110_SD_DimAnsaettelse.sas
 by cpr descending AktuelRække descending Ansat descending Månedslønnet descending Fuldtid descending start tjnr;
 if first.cpr AND AktuelRække = 1 AND Ansat = 1 then AktuelHovedansættelse=1;
 else AktuelHovedansættelse=0;
@@ -52,7 +55,8 @@ else AktuelHovedansættelse=0;
 En bred definition afhængig af kontekst. 
 I bredest forstand forstås ved v_DimAnsættelse[Standardpopulation]=J, alle månedslønnede og ikke-eksternt finansierede ansættelser.
 ```
-(CASE  
+-- Standardpopulation, 07_FL_110_SD_DimAnsaettelse.sas
+,(CASE  
     WHEN Månedslønnet = 0 THEN 0 
     WHEN EksterntFinansieret = 1 THEN 0 
     -- WHEN RelevantStilling = 0 THEN 0
