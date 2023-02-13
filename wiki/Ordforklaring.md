@@ -86,6 +86,7 @@ $$ 1924 \frac{timer}{år} = 52 \frac{uger}{år} \cdot 37 \frac{timer}{uge} = 260
 #### Hændelse
 Pr. 2023-01-06 defineret som  en af følgende:
 
+| hej | du |
 | - | - |
 | Fødselsdag | Hvert år |
 | Jubilæum | Ved år: 1, 5, 10, 15, 20, 25, 30, 35 |
