@@ -78,15 +78,15 @@ $$ 1924 \frac{timer}{år} = 52 \frac{uger}{år} \cdot 37 \frac{timer}{uge} = 260
 
 #### Hændelse
 Pr. 2023-01-06 defineret som  en af følgende:
-| Fødselsdag	| Hvert år |
-| Jubilæum	    | Ved år: 1, 5, 10, 15, 20, 25, 30, 35 |
-| Tiltræder	    | Når der skiftes til statuskode 0, 1, 3 efter ikke at have eksisteret eller været fratrådt |
-| Fratræder	    | Når der skiftes til statuskode 7, 8, 9 efter at have været ansat |
-| Skifter fra anden afdeling    | Når der skiftes fremkommer både skifter til og fra. Der tjekkes på AfdFmt. Denne er lidt speciel, da Skifter til-hændelsen kun kan ses så længe medarbejderen fortsat er ansat på afgivende afsnit |
-| Skifter til anden afdeling    | Når der skiftes fremkommer både skifter til og fra. Der tjekkes på AfdFmt. Denne er lidt speciel, da Skifter til-hændelsen kun kan ses så længe medarbejderen fortsat er ansat på afgivende afsnit |
-| Terminsdato   | Alle terminsdatoer |
-| Går på orlov  | Når der skiftes til statuskode 0 eller 1 efter at have været i 3 eller omvendt for til |
-| Tilbage fra orlov   |	Når der skiftes til statuskode 0 eller 1 efter at have været i 3 eller omvendt for til |
+| Fødselsdag | Hvert år |
+| Jubilæum | Ved år: 1, 5, 10, 15, 20, 25, 30, 35 |
+| Tiltræder | Når der skiftes til statuskode 0, 1, 3 efter ikke at have eksisteret eller været fratrådt |
+| Fratræder | Når der skiftes til statuskode 7, 8, 9 efter at have været ansat |
+| Skifter fra anden afdeling | Når der skiftes fremkommer både skifter til og fra. Der tjekkes på AfdFmt. Denne er lidt speciel, da Skifter til-hændelsen kun kan ses så længe medarbejderen fortsat er ansat på afgivende afsnit |
+| Skifter til anden afdeling | Når der skiftes fremkommer både skifter til og fra. Der tjekkes på AfdFmt. Denne er lidt speciel, da Skifter til-hændelsen kun kan ses så længe medarbejderen fortsat er ansat på afgivende afsnit |
+| Terminsdato | Alle terminsdatoer |
+| Går på orlov | Når der skiftes til statuskode 0 eller 1 efter at have været i 3 eller omvendt for til |
+| Tilbage fra orlov |	Når der skiftes til statuskode 0 eller 1 efter at have været i 3 eller omvendt for til |
 
 #### Jubilæum
 Alle jubilæumsdatoer i 5-årsintervaller samt étårsjubilæum beregnes og betragtes som en hændelse.
