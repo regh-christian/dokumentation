@@ -12,6 +12,64 @@ else AktuelHovedansættelse=0;
 I SD har anciennitetsdato ikke en entydig betydning. Den kan betyde startdatoen i første ansættelse i regionen, men den kan også være resultat af omregnet anciennitet. Et bedre udtryk for en persons egentlige anciennitet i regionen er _AnsLængdeCPR_.
 
 
+### Anonymitetsgrænse
+I alle beregninger, hvor der er risiko for at kunne identificere enkeltindivider i små populationer—og hvor dette ikke er tilladt—implementeres en anonymitetsgrænse. I praksis maskeres et resultat, hvis dette er fundet pba. et antal af individer lavere en anonymitetsgrænsen. 
+
+>> Vær opmærksom på, at anonymitetsgrænse kan variere med tema.
+
+
+### Ansættelse
+Et ansættelsesforhold med status ansat uden løn (0), ansat/genåbnet (1) eller midlertidigt ude af løn (3). Alle ansættelser er unikt kendetegnet ved en stillings-, tjeneste- og overenskomstkode, en lønklasse og afdeling. Ændring i én eller flere af disse forhold, medfører et nyt registreret ansættelsesforhold. Ansættelsens varighed opgøres fra 1. dag til den sidste dag begge inklusiv i pågældende ansættelse. 
+
+
+### Ansættelse, aktuel
+Med aktuel ansættelse henvises oftest til dét ansættelsesforhold, hvis start- og slutdato inkluderer dags dato og har status ansat/genåbnet (1), ansat uden løn (0) eller midlertidigt ude af løn (3).
+Vi vælger denne population med [Ansat]=J og [AktuelRække]=J. 
+```SQL
+-- Aktuelrække, 07_FL_110_SD_DimAnsaettelse.sas
+,(CASE
+    WHEN today() BETWEEN START and SLUT THEN 1 ELSE 0 
+  END) as AktuelRække length = 3,
+```
+
+```SQL
+-- Ansat, 07_FL_110_SD_DimAnsaettelse.sas
+,(CASE  
+    WHEN STAT IN ('0', '1', '3') THEN 1 ELSE 0 
+  END) as Ansat length = 3,
+```
+_Ikke at forveksle med [aktuel hovedansættelse](#aktuelhovedansættlse).
+
+
+### Ansættelseslængde
+I opgørelser om personalesammensætning henviser ansættelseslængde til perioden fra ansættelsdato i SD til dags dato.
+```DAX
+[Ansættelseslængde]
+//Measure beregner ansættelseslængder
+VAR __AnsaettelsesDato =
+    MAX ( 'v_DimAnsættelse'[Ansættelsesdato] )
+VAR Result =
+    IF (
+        NOT ( ISBLANK ( __AnsaettelsesDato ) ),
+        INT (
+            DIVIDE (
+                DATEDIFF (
+                    IF ( __AnsaettelsesDato > TODAY (), TODAY (), __AnsaettelsesDato ),
+                    TODAY (),
+                    DAY
+                ),
+                365.25,
+                0
+            )
+        )
+    )
+RETURN
+    Result
+```
+
+
+
+
 ### Antal deltidsansatte
 ```DAX
 CALCULATE (
@@ -48,35 +106,6 @@ CALCULATE (
     'v_DimAnsættelse'[Månedslønnet] = "N"
 )
 ```
-
-
-### Anonymitetsgrænse
-I alle beregninger, hvor der er risiko for at kunne identificere enkeltindivider i små populationer—og hvor dette ikke er tilladt—implementeres en anonymitetsgrænse. I praksis maskeres et resultat, hvis dette er fundet pba. et antal af individer lavere en anonymitetsgrænsen. 
-
->> Vær opmærksom på, at anonymitetsgrænse kan variere med tema.
-
-
-### Ansættelse
-Et ansættelsesforhold med status ansat uden løn (0), ansat/genåbnet (1) eller midlertidigt ude af løn (3). Alle ansættelser er unikt kendetegnet ved en stillings-, tjeneste- og overenskomstkode, en lønklasse og afdeling. Ændring i én eller flere af disse forhold, medfører et nyt registreret ansættelsesforhold. Ansættelsens varighed opgøres fra 1. dag til den sidste dag begge inklusiv i pågældende ansættelse. 
-
-
-### Ansættelse, aktuel
-Med aktuel ansættelse henvises oftest til dét ansættelsesforhold, hvis start- og slutdato inkluderer dags dato og har status ansat/genåbnet (1), ansat uden løn (0) eller midlertidigt ude af løn (3).
-Vi vælger denne population med [Ansat]=J og [AktuelRække]=J. 
-```SQL
--- Aktuelrække, 07_FL_110_SD_DimAnsaettelse.sas
-,(CASE
-    WHEN today() BETWEEN START and SLUT THEN 1 ELSE 0 
-  END) as AktuelRække length = 3,
-```
-
-```SQL
--- Ansat, 07_FL_110_SD_DimAnsaettelse.sas
-,(CASE  
-    WHEN STAT IN ('0', '1', '3') THEN 1 ELSE 0 
-  END) as Ansat length = 3,
-```
-_Ikke at forveksle med [aktuel hovedansættelse](#aktuelhovedansættlse).
 
 
 ### Beskæftigelsessum
@@ -176,4 +205,6 @@ Kendetegnet ved et skift i ansættelsesstatus fra ukendt, emigreret/død (7), fr
 
 ### Årsværk
 I beregninger anvendes
-$$ 1924 \frac{timer}{år} = 52 \frac{uger}{år} \cdot 37 \frac{timer}{uge} = 260 \frac{dag}{år} \cdot 7,4 \frac{timer}{dag} $$
+$$ 
+1924 \frac{timer}{år} = 52 \frac{uger}{år} \cdot 37 \frac{timer}{uge} = 260 \frac{dag}{år} \cdot 7,4 \frac{timer}{dag} 
+$$
