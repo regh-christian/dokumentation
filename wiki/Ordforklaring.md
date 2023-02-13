@@ -12,6 +12,44 @@ else AktuelHovedansættelse=0;
 I SD har anciennitetsdato ikke en entydig betydning. Den kan betyde startdatoen i første ansættelse i regionen, men den kan også være resultat af omregnet anciennitet. Et bedre udtryk for en persons egentlige anciennitet i regionen er _AnsLængdeCPR_.
 
 
+### Antal deltidsansatte
+```DAX
+CALCULATE (
+    [Antal medarbejdere],
+    'v_DimAnsættelse'[Månedslønnet] = "J",
+    'v_DimAnsættelse'[Fuldtid] = "N"
+)
+```
+
+
+### Antal fuldtidsansatte
+```DAX
+CALCULATE (
+    [Antal medarbejdere],
+    'v_DimAnsættelse'[Månedslønnet] = "J",
+    'v_DimAnsættelse'[Fuldtid] = "J"
+)
+```
+
+
+### Antal månedslønnede
+```DAX
+CALCULATE (
+    [Antal medarbejdere],
+    'v_DimAnsættelse'[Månedslønnet] = "J"
+)
+```
+
+
+### Antal timelønnede
+```DAX
+CALCULATE (
+    [Antal medarbejdere],
+    'v_DimAnsættelse'[Månedslønnet] = "N"
+)
+```
+
+
 ### Anonymitetsgrænse
 I alle beregninger, hvor der er risiko for at kunne identificere enkeltindivider i små populationer—og hvor dette ikke er tilladt—implementeres en anonymitetsgrænse. I praksis maskeres et resultat, hvis dette er fundet pba. et antal af individer lavere en anonymitetsgrænsen. 
 
