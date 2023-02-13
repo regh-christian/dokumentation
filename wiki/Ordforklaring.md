@@ -97,7 +97,6 @@ Pr. 2023-01-06 defineret som  en af følgende:
 | Går på orlov | Når der skiftes til statuskode 0 eller 1 efter at have været i 3 eller omvendt for til |
 | Tilbage fra orlov | Når der skiftes til statuskode 0 eller 1 efter at have været i 3 eller omvendt for til |
 
-
 #### Jubilæum
 Alle jubilæumsdatoer i 5-årsintervaller samt étårsjubilæum beregnes og betragtes som en hændelse.
 
