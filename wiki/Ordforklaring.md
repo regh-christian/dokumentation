@@ -44,7 +44,7 @@ _Ikke at forveksle med [aktuel hovedansættelse](#aktuelhovedansættlse).
 ### Ansættelseslængde
 I opgørelser om personalesammensætning henviser ansættelseslængde til perioden fra ansættelsdato i SD til dags dato.
 ```DAX
-[Ansættelseslængde]
+[Ansættelseslængde]:=
 //Measure beregner ansættelseslængder
 VAR __AnsaettelsesDato =
     MAX ( 'v_DimAnsættelse'[Ansættelsesdato] )
@@ -134,10 +134,6 @@ En fraværsdag er ikke i sig selv et udtryk for antal timers fravær, men er rel
 Se også fuldtidsfraværsdag
 
 
-### Fuldtidsfraværsdag
-En fuldtidsfraværsdag er defineret ved 7,4 timers fravær svt. ét dagsværk. Enhed kan sammenlignes på tværs i organisationen uagtet forskelle i enkeltindividers beskæftigelsesdecimal.
-
-
 ### Fuldtidsansat
 Ansættelser kendetegnet ved
 ```SQL
@@ -146,6 +142,11 @@ Ansættelser kendetegnet ved
     WHEN BESKDEC >= 1 THEN 1 ELSE 0
   END) as Fuldtid length = 3,
 ```
+
+
+### Fuldtidsfraværsdag
+En fuldtidsfraværsdag er defineret ved 7,4 timers fravær svt. ét dagsværk. Enhed kan sammenlignes på tværs i organisationen uagtet forskelle i enkeltindividers beskæftigelsesdecimal.
+
 
 ### Hændelse
 Pr. 2023-01-06 defineret som  en af følgende:
