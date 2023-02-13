@@ -205,6 +205,5 @@ Kendetegnet ved et skift i ansættelsesstatus fra ukendt, emigreret/død (7), fr
 
 ### Årsværk
 I beregninger anvendes
-$$ 
-1924 \frac{timer}{år} = 52 \frac{uger}{år} \cdot 37 \frac{timer}{uge} = 260 \frac{dag}{år} \cdot 7,4 \frac{timer}{dag} 
-$$
+
+$$ 1924 \frac{timer}{år} = 52 \frac{uger}{år} \cdot 37 \frac{timer}{uge} = 260 \frac{dag}{år} \cdot 7,4 \frac{timer}{dag} $$
