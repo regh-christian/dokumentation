@@ -1,7 +1,9 @@
-Grundddata
-Anciennitet
+# Grundddata
+
+#### Anciennitet
 I SD har anciennitetsdato ikke en entydig betydning. Den kan betyde startdatoen i første ansættelse i regionen, men den kan også være resultat af omregnet anciennitet. Et bedre udtryk for en persons egentlige anciennitet i regionen er AnsLængdeCPR.
-Ansættelse
+
+#### Ansættelse
 Et ansættelsesforhold med status ansat uden løn (0), ansat/genåbnet (1) eller midlertidigt ude af løn (3). Alle ansættelser er unikt kendetegnet ved en stillings-, tjeneste- og overenskomstkode, en lønklasse og afdeling. Ændring i én eller flere af disse forhold, medfører et nyt registreret ansættelsesforhold. Ansættelsens varighed opgøres fra 1. dag til den sidste dag begge inklusiv i pågældende ansættelse. 
 Ansættelse, aktuel
 Med aktuel ansættelse henvises oftest til dét ansættelsesforhold, hvis start- og slutdato inkluderer dags dato og har status ansat/genåbnet (1), ansat uden løn (0) eller midlertidigt ude af løn (3).
@@ -101,6 +103,9 @@ Gennemsnitlig beskæftigelsessum på udvalgte nedslagsdatoer—d. 1. i en måned
 Muligheden for at ansatte til- og aftræder eller skifter fra fuld- til deltid midt i en måned introducerer kompromisser, hvor vi må vælge imellem tunge og komplekse eller mere grovmaskede beregninger. Ét eksempel herpå er i beregning af det rullende gennemsnit af fuldtidsfraværsdage, hvor vi fx månedsvist d. 1. aggregerer indeværende månedens fravær relativt til beskæftigelsessum. Her antages, at beskæftigelsesdecimaler d. 1. er repræsentativ for hele perioden siden forrige nedslagsdato. 
 Anonymitetsgrænse
 I alle beregninger, hvor der er risiko for at kunne identificere enkeltindivider i små populationer—og hvor dette ikke er tilladt—implementeres en anonymitetsgrænse. I praksis maskeres et resultat, hvis dette er fundet pba. et antal af individer lavere en anonymitetsgrænsen. 
+
 >> Vær opmærksom på, at anonymitetsgrænse kan variere med tema.
+
+
 Måltal
 I kontekst af fravær er Region H’s målsætning om fravær pr. 2023-01-20 11,7 dage/år.
