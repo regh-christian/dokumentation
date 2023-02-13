@@ -185,8 +185,7 @@ Kendetegnet ved et skift i ansættelsesstatus fra midlertidigt ude af løn (3) t
  
 
 ### Standardpopulation
-En bred definition afhængig af kontekst. 
-I bredest forstand forstås ved v_DimAnsættelse[Standardpopulation]=J, alle månedslønnede og ikke-eksternt finansierede ansættelser.
+I bredeste forstand forstås ved v_DimAnsættelse[Standardpopulation]=J, alle [månedslønnede](#månedslønnet) og ikke-eksternt finansierede ansættelser.
 ```SQL
 -- Standardpopulation, 07_FL_110_SD_DimAnsaettelse.sas
 ,(CASE  
