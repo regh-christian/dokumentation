@@ -92,7 +92,7 @@ Fravær er defineret som registreret arbejdstid med én af lønarterne i v_DimL�
 ### Fraværsdag
 En fraværsdag er defineret ved
 $$ antal fraværstimer = antal planlagte timer $$
-Det er muligt at have delvise fraværsdage, hvor $ \frac{ \text{antal fraværstimer} }{ \text{antal planlagte timer}} \neq 0 $
+Det er muligt at have delvise fraværsdage, hvor $ \frac{antal fraværstimer}{antal planlagte timer} \neq 0 $
 En fraværsdag er ikke i sig selv et udtryk for antal timers fravær, men er relativ ift. personens beskæftigelsesdecimal.
 Se også fuldtidsfraværsdag
 
