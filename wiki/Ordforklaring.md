@@ -67,6 +67,7 @@ RETURN
     Result
 ```
 
+-----------------
 
 ### Beskæftigelsessum
 Sum af ansattes beskæftigelsesdecimaler. Anvendes flere steder direkte oversat til årsværk. Vi bruger denne i beregning af sygefravær til at eliminere evt intervariabilitet mellem fuld- og deltidsansatte
