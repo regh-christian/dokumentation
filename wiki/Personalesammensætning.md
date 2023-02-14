@@ -131,14 +131,3 @@ Ved mouse-over på Aldersfordeling vises en oversigt over de enkelte medarbejder
      Tabellen Hændelser 12 mdr. frem er identisk med førnævnte, men med filteret, 0≤ v_DimTidDato[OffsetDato] ≤365.
      Tabellen Informationstabel viser en generel oversigt over udvalgte medarbejderdata i forbindelse med den aktuelle ansættelse, herunder afdeling, afsnit, tjenestenummer, stilling, alder, ansættelseslængde, anciennitet m.m. Ancienniteten af baseret på de ansattes nuværende anciennitetsdato, som både kan ligge forud for ansættelse i Region H ifm. tilskrivning af relevant anciennitet, eller som kan være ændret ifm. oprykning eller overflytning til anden overenskomst. Visse ansættelser med fastlåst anciennitetsforløb kan være uden anciennitetsdato. Measuret [Anciennitet] beregner, i antal hele år, differencen mellem v_DimAnsættelse[Anciennitetsdato] og dags dato. For fremtidige anciennitetsdatoer anvendes dags dato.
 [Ansat til] angiver en eventuel slutdato på den aktuelle ansættelse. [Alder], [Ansættelseslængde] og [Årsværk] beregner, i kontekst af unikke personer (her i kontekst af kombinationen v_DimPerson[Navn] og v_DimAnsættelse[Tjnr]) pågældende persons alder og ansættelseslænge på dagen i hele antal år samt beskæftigelsesdecimalen/årsværk på pågældende ansættelse.
-
-
-
-> **ØVELSE — BRUG AF ADGANGE**
-> 
-> Hospital XXX ønsker optælling af alle pr. dd. månedslønnede hhv. fuld- og deltidsansatte sygeplejersker 
-> udspecificeret for alle sygeplejegrupper under fællesbetegnelsen STILKO2TXT = ’Sygepl. Pers’
-> Hvor mange af disse er autoriserede med speciale indenfor anæstesi?
-
-
-
