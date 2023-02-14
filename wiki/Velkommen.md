@@ -23,6 +23,7 @@ Flere temaer tilføjes løbende i takt med efterspørgsel og tilgængelige datak
 På produktions- og udviklingsserverne findes data under skemaet, **chru_cube**. I Tabular Editor findes kuben under navnet **CHRU_HRKube**.
 
 <details><summary markdown="span">Kuben pr. 2023-01-30</summary>
+ Dette er er overbliksbillede på dagen over tabeller inkludert i kuben. Det er ikke fyldestgørende, men giver en ide om, hvordan tabeller inddrages temavis i takt med, at vi løbende inddrager flere datakilder.
  <center>
   <img src="Images/erd/erd_pbi_chru_hrkube_labels.png" height="480" width="800" onmouseover="CHRU_HRKube, 2023-01-30" style="vertical-align:middle"/>
  </center>
