@@ -58,12 +58,12 @@ Endeligt filtreres på hændelser i intervallet $$ \left[ -7\text{dage} ; 13\tex
 - Først sammensættes en temporær tabel, PersonBase, med rækker af fødsels- og jubilæumsdatoer _alle_ år i en persons ansættelsesperiode. 
 - Dernæst en temporær tabel, PersonLags, med en række pr. ansættelse sammenfattende aktuelle samt evt. seneste og næstkommende ansættelsesforhold (OrganisationID og statuskode). 
 - I en ny temporær tabel, MasterTable, listes for hvert tjenestenummer ’HændelsesID’ og tilsvarende ’HændelsesDato’. ’HændelsesID’ er her hard-codet i overensstemmelse med v_DimHændelser (1 for fødselsdag, 2 for jubilæum, 3 for tiltrædelse osv.). For ’HændelsesID’ svt. ’Fødselsdag’ og ’Jubilæumsdag’ anvendes allerede beregnede ’HændelsesDato’(er) fra PersonBase. Ved ’HændelsesID’er svt. til til- og fratrædelser samt flyt til- og fra afdeling anvendes nu PersonLags; 
- - På ’HændelsesID’ svt. ’Tiltræder’ defineres ’HændelsesDato’ som værende en ansættelses startdato på ansættelser, hvor ’Ansat’=J og dette er forskelligt fra en evt. umiddelbart foregående ansættelse på samme tjenestenummer; 
- - omvendt defineres ved ’HændelsesID’ svt. ’Fratræder’, at ’HændelsesDato’ er slutdatoen på en ansættelse, hvor ’Ansat’=N og dette er forskelligt fra en umiddelbart foregående ansættelse på samme tjenestenummer. 
- - Til ’HændelsesID’ svt. ’Skifter fra anden afdeling’ og ’Skifter til anden afdeling’ anvendes hhv. start- og slutdatoen på den ansættelse hvor ’OrganisationsID’ er forskelligt fra den umiddelbart forrige respektivt efterfølgende ansættelse. 
- - På ’HændelsesID’ svt. ’Går på orlov’ anvendes som ’HændelsesDato’ startdatoen på den ansættelse, hvor statuskode skifter til 3 og denne er forskellig fra foregående; 
- - For ’HændelsesID’ svt. ’Tilbage fra orlov’ anvendes omvendt ’HændelsesDato’ på ansættelsen hvor statuskode skifter fra 3 til 0 eller 1. 
- - På ’HændelsesID’ svt. termin anvendes som ’HændelsesDato’ ’Terminsdato’ fra tabellen [DM-FL-HR].[FactTerminsdato].
+     - På ’HændelsesID’ svt. ’Tiltræder’ defineres ’HændelsesDato’ som værende en ansættelses startdato på ansættelser, hvor ’Ansat’=J og dette er forskelligt fra en evt. umiddelbart foregående ansættelse på samme tjenestenummer; 
+     - omvendt defineres ved ’HændelsesID’ svt. ’Fratræder’, at ’HændelsesDato’ er slutdatoen på en ansættelse, hvor ’Ansat’=N og dette er forskelligt fra en umiddelbart foregående ansættelse på samme tjenestenummer. 
+     - Til ’HændelsesID’ svt. ’Skifter fra anden afdeling’ og ’Skifter til anden afdeling’ anvendes hhv. start- og slutdatoen på den ansættelse hvor ’OrganisationsID’ er forskelligt fra den umiddelbart forrige respektivt efterfølgende ansættelse. 
+     - På ’HændelsesID’ svt. ’Går på orlov’ anvendes som ’HændelsesDato’ startdatoen på den ansættelse, hvor statuskode skifter til 3 og denne er forskellig fra foregående; 
+     - For ’HændelsesID’ svt. ’Tilbage fra orlov’ anvendes omvendt ’HændelsesDato’ på ansættelsen hvor statuskode skifter fra 3 til 0 eller 1. 
+     - På ’HændelsesID’ svt. termin anvendes som ’HændelsesDato’ ’Terminsdato’ fra tabellen [DM-FL-HR].[FactTerminsdato].
 - Ovenstående beregninger samles i sidste temporære tabel, FinalTable, hvor tidssvarende ansættelses- og OrganisationsID tilføjes, relativ alder og jubilæumslængde beregnes og alt filtreres i tid, så kun hændelser i intervallet . medtages. Endeligt tilføjes tidssvarende Stillings- og PersonID og rækker indekseres
 
 
