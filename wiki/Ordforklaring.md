@@ -15,11 +15,11 @@ I SD har anciennitetsdato ikke en entydig betydning. Den kan betyde startdatoen 
 ### Anonymitetsgrænse
 I alle beregninger, hvor der er risiko for at kunne identificere enkeltindivider i små populationer—og hvor dette ikke er tilladt—implementeres en anonymitetsgrænse. I praksis maskeres et resultat, hvis dette er fundet pba. et antal af individer lavere en anonymitetsgrænsen. 
 
->> Vær opmærksom på, at anonymitetsgrænse kan variere med tema.
+> Vær opmærksom på, at anonymitetsgrænsen kan variere med tema.
 
 
 ### Ansættelse
-Et ansættelsesforhold med status ansat uden løn (0), ansat/genåbnet (1) eller midlertidigt ude af løn (3). Alle ansættelser er unikt kendetegnet ved en stillings-, tjeneste- og overenskomstkode, en lønklasse og afdeling. Ændring i én eller flere af disse forhold, medfører et nyt registreret ansættelsesforhold. Ansættelsens varighed opgøres fra 1. dag til den sidste dag begge inklusiv i pågældende ansættelse. 
+Et ansættelsesforhold med status ansat uden løn (0), ansat/genåbnet (1) eller midlertidigt ude af løn (3). Alle ansættelser er unikt kendetegnet ved en stillings-, tjeneste- og overenskomstkode, en lønklasse og afdeling. Ændring i én eller flere af disse forhold, medfører et nyt registreret ansættelsesforhold. Ansættelsens varighed opgøres fra 1. dag til den sidste dag i pågældende ansættelse begge inklusiv. 
 
 
 ### Ansættelse, aktuel
@@ -38,7 +38,7 @@ Vi vælger denne population med [Ansat]=J og [AktuelRække]=J.
     WHEN STAT IN ('0', '1', '3') THEN 1 ELSE 0 
   END) as Ansat length = 3,
 ```
-_Ikke at forveksle med [aktuel hovedansættelse](#aktuelhovedansættlse).
+_Ikke at forveksle med [aktuel hovedansættelse](#aktuelhovedansættlse)_.
 
 
 ### Ansættelseslængde
@@ -65,18 +65,6 @@ VAR Result =
     )
 RETURN
     Result
-```
-
-
-
-
-### Antal deltidsansatte
-```DAX
-CALCULATE (
-    [Antal medarbejdere],
-    'v_DimAnsættelse'[Månedslønnet] = "J",
-    'v_DimAnsættelse'[Fuldtid] = "N"
-)
 ```
 
 
@@ -115,6 +103,18 @@ Sum af ansattes beskæftigelsesdecimaler. Anvendes flere steder direkte oversat 
 ### Beskæftigelsessum, gennemsnitlig
 Gennemsnitlig beskæftigelsessum på udvalgte nedslagsdatoer—d. 1. i en måned. 
 Muligheden for at ansatte til- og aftræder eller skifter fra fuld- til deltid midt i en måned introducerer kompromisser, hvor vi må vælge imellem tunge og komplekse eller mere grovmaskede beregninger. Ét eksempel herpå er i beregning af det rullende gennemsnit af fuldtidsfraværsdage, hvor vi fx månedsvist d. 1. aggregerer indeværende månedens fravær relativt til beskæftigelsessum. Her antages, at beskæftigelsesdecimaler d. 1. er repræsentativ for hele perioden siden forrige nedslagsdato. 
+
+
+### Deltidsansat
+Alle i v_DimAnsættelse, som er månedslønnede og ikke er fuldtidsansatte.
+```DAX
+[Antal deltidsansatte] :=
+CALCULATE (
+    [Antal medarbejdere],
+    'v_DimAnsættelse'[Månedslønnet] = "J",
+    'v_DimAnsættelse'[Fuldtid] = "N"
+)
+```
 
 
 ### Fratrædelse
