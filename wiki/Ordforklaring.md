@@ -207,7 +207,7 @@ Ferieåret opdeles i ordinær og 6. ferieuge med hver en **optjenings**- og en *
 
 
 ### Restferie
-$$ \text(feriesaldo+tilskrivning)-(anvendt+planlagt)} $$
+$$ \text{feriesaldo+tilskrivning)-(anvendt+planlagt)} $$
 
 
 ### Ferietimer
