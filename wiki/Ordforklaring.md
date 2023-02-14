@@ -206,7 +206,7 @@ Feriekategori dækker begreberne feriesaldo, anvendt ferie, planlagt ferie og fo
 Ferieåret opdeles i ordinær og 6. ferieuge med hver en **optjenings**- og en **afholdelsesperiode**.
 
 | **FerieType** | **Optjeningsperiode**     | **Afviklingsperiode**     |
-|       -:      |            :-:            |            :-:            |
+|       -:      |             -             |             -             |
 | Ordinær       | 01-09-yyyy — 31-08-yyyy+1 | 01-09-yyyy — 31-12-yyyy+1 |
 | 6. ferieuge   | 01-01-yyyy — 31-12-yyyy   | 01-05-yyyy — 30-04-yyyy+1 |
 
