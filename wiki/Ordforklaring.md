@@ -187,6 +187,12 @@ $$ 1924 \frac{timer}{år} = 52 \frac{uger}{år} \cdot 37 \frac{timer}{uge} = 260
 ### Ferietype
 
 
+### Feriekategori
+
+
+### Ferieelement
+
+
 ### Ferieår
 Ferieåret opdeles i ordinær og 6. ferieuge med hver en **optjenings**- og en **afholdelsesperiode**.
 
@@ -207,13 +213,13 @@ Registreret ved lønart 730 (ferietimer) og 752 (Ferietimer '6. uge')
 
 
 ### Ferie
+Ferie er, som det præsenteres i dashboard, bredt defineret som den (rest)ferie, medarbejder har ret til at afholde. Indeholdt i beregningen er positive bidrag fra optjent feriesaldo og forventet tilskrivning samt negative bidrag fra anvendt og planlagt ferie.
 
 
+### Ferietilskrivning
+Forventet tilskrivning er det antalt ferietimer, som en person _forventes_ at have til afhold i hele afviklingsåret baseret på aktuel beskæftigelsesdecimal.
 
-### Feriekategori
 
-
-### Ferieelement
 
 
 
