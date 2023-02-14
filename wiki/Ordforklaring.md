@@ -68,34 +68,6 @@ RETURN
 ```
 
 
-### Antal fuldtidsansatte
-```DAX
-CALCULATE (
-    [Antal medarbejdere],
-    'v_DimAnsættelse'[Månedslønnet] = "J",
-    'v_DimAnsættelse'[Fuldtid] = "J"
-)
-```
-
-
-### Antal månedslønnede
-```DAX
-CALCULATE (
-    [Antal medarbejdere],
-    'v_DimAnsættelse'[Månedslønnet] = "J"
-)
-```
-
-
-### Antal timelønnede
-```DAX
-CALCULATE (
-    [Antal medarbejdere],
-    'v_DimAnsættelse'[Månedslønnet] = "N"
-)
-```
-
-
 ### Beskæftigelsessum
 Sum af ansattes beskæftigelsesdecimaler. Anvendes flere steder direkte oversat i fx årsværk. Vi bruger denne i beregning af sygefravær til at eliminere evt intervariabilitet mellem fuld- og deltidsansatte
 
@@ -201,6 +173,10 @@ I praksis defineres populationer med filtre på faner i kombination med filter i
 
 ### Tiltrædelse
 Kendetegnet ved et skift i ansættelsesstatus fra ukendt, emigreret/død (7), fratrådt (8) eller pensioneret (9) til enten ansat uden løn (0), ansat/genåbnet (1) eller midlertidigt ude af løn (3). Tiltrædelsesdatoen er første dag i det nye ansættelsesforhold.
+
+
+### Timelønnede
+Formelt defineret: "Hvis ikke månedslønnet, så timelønnet". Se [månedslønnet](#månedslønnet).
 
 
 ### Årsværk
