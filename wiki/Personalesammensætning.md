@@ -54,7 +54,8 @@ Tabellen er niveaudelt i L1 og L2, hvor L2 er en uddybende tekst knyttet til den
 
 View er baseret på v_DimAnsættelser og beriges af øvrige tabeller. ID er primærnøgle. Historiske og fremtidige hændelser—nærmere defineret i v_DimHændelser—beregnes 13 måneder frem i tid for hvert år en aktuel medarbejder er ansat. Er hændelsen en fødsels- eller jubilæumsdag, er under ’AntalÅr’ anført hhv. personens alder det pågældende år, eller jubilæumslængde hvis det er et 1-, 5-, 10-, 15 (osv.) års jubilæum. 
 Endeligt filtreres på hændelser i intervallet $$ \left[ -7\text{dage} ; 13\text{måneder} \right] $$. 
-     Viewet er defineret i et længere script, der opsummeret kan beskrives i følgende step:
+
+View er defineret i et længere script, der opsummeret udfører følgende step:
 - Først sammensættes en temporær tabel, PersonBase, med rækker af fødsels- og jubilæumsdatoer _alle_ år i en persons ansættelsesperiode. 
 - Dernæst en temporær tabel, PersonLags, med en række pr. ansættelse sammenfattende aktuelle samt evt. seneste og næstkommende ansættelsesforhold (OrganisationID og statuskode). 
 - I en ny temporær tabel, MasterTable, listes for hvert tjenestenummer ’HændelsesID’ og tilsvarende ’HændelsesDato’. ’HændelsesID’ er her hard-codet i overensstemmelse med v_DimHændelser (1 for fødselsdag, 2 for jubilæum, 3 for tiltrædelse osv.). For ’HændelsesID’ svt. ’Fødselsdag’ og ’Jubilæumsdag’ anvendes allerede beregnede ’HændelsesDato’(er) fra PersonBase. Ved ’HændelsesID’er svt. til til- og fratrædelser samt flyt til- og fra afdeling anvendes nu PersonLags; 
