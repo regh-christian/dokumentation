@@ -65,13 +65,39 @@ View er defineret i et længere script, der opsummeret udfører følgende step:
      - På ’HændelsesID’ svt. ’Går på orlov’ anvendes som ’HændelsesDato’ startdatoen på den ansættelse, hvor statuskode skifter til 3 og denne er forskellig fra foregående; 
      - For ’HændelsesID’ svt. ’Tilbage fra orlov’ anvendes omvendt ’HændelsesDato’ på ansættelsen hvor statuskode skifter fra 3 til 0 eller 1. 
      - På ’HændelsesID’ svt. termin anvendes som ’HændelsesDato’ ’Terminsdato’ fra tabellen [DM-FL-HR].[FactTerminsdato].
-- Ovenstående beregninger samles i sidste temporære tabel, FinalTable, hvor tidssvarende ansættelses- og OrganisationsID tilføjes, relativ alder og jubilæumslængde beregnes og alt filtreres i tid, så kun hændelser i intervallet . medtages. Endeligt tilføjes tidssvarende Stillings- og PersonID og rækker indekseres
+- Ovenstående beregninger samles i sidste temporære tabel, FinalTable, hvor tidssvarende ansættelses- og OrganisationsID tilføjes, relativ alder og jubilæumslængde beregnes og alt filtreres i tid, så kun hændelser i intervallet $$ \left[ -7\text{dage} ; 13\text{måneder} \right] $$ medtages. 
+Endeligt tilføjes tidssvarende Stillings- og PersonID og rækker indekseres
 
 
 
 ### v_TallyAlder
 
+| **Tabel Baseret på** | 
+| - |
+| [chru_cube].[v_TallyAlder] |
+
+Talrækken 0-124 genereres og døbes ’Alder’. Næste to kolonner beregner placering af denne i 5- og 10 års intervaller døbt ’AldersInterval_5år’ og ’AldersInterval_10år’. Filtreres på alder fra 0-99 år.
+
+
+
 ### v_TallyAnsættelseslængde
+
+| **Tabel Baseret på** | 
+| - |
+| [chru_cube].[v_TallyAnsættelseslængde] |
+
+Talrækken 0-124 genereres og døbes Ansættelseslængde’. Næste to kolonner beregner placering af denne i 5- og 10 års intervaller døbt ’AnsættelseslængdeInterval_5år’ og ’ AnsættelseslængdeInterval_10år’. Filtreres på ’ Ansættelseslængde’ fra 0-99 år. Til brug på fx figurakser, hvor kun et begrænset antal intervaller ønskes vist, beregnes kolonnen ’AnsættelseslængdeIntervalVisualisering’. 
+Endeligt tilføjes ’AnsættelseslængdeIntervalVisualiseringSortering’ mhp. at kunne sortere forrige kolonne på dens ”numeriske” værdi i Power BI-visninger.
+
+
+
+### v_TallyAnciennitet
+
+| **Tabel Baseret på** | 
+| - |
+| [chru_cube].[v_TallyAnciennitet] |
+
+Identisk i opbygning og beregninger som v_TallyAnsættelseslængde. 
 
 
 
