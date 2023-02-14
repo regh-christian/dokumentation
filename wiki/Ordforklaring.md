@@ -212,40 +212,8 @@ Ferieåret opdeles i ordinær og 6. ferieuge med hver en **optjenings**- og en *
 
 ### Restferie
 
-<!-- $$ \text{Restferie til afhold}=(\text{feriesaldo}+forv.tilskrivning)-(anvendt+planlagt)} $$ -->
-
-$$ \text{Restferie til afhold} = \sum_{\text{optj.start}}^{\text{i dag}} (\text{feriesaldo}) + \sum_{\text{i morgen}}^{\text{optj.slut}} (\text{forv.tilskrivning}) - \left( \sum_{\text{afv.start}}^{\text{afv.slut}} (\text{anvendte timer}) + \sum_{\text{i morgen}}^{\text{afv.slut}} (\text{planlagte timer}) \right) $$
-
-$$ 
-\text{Restferie til afhold} = \sum_{\text{optj.start}}^{\text{i dag}} (\text{feriesaldo}) + \sum_{\text{i morgen}}^{\text{optj.slut}} (\text{forv.tilskrivning}) - \left( \sum_{\text{afv.start}}^{\text{afv.slut}} (\text{anvendte timer}) + \sum_{\text{i morgen}}^{\text{afv.slut}} (\text{planlagte timer}) \right) 
-$$
-
 $$ \text{Restferie til afhold} = \sum_{\text{optj.start}}^{\text{i dag}} (\text{feriesaldo}) + \sum_{\text{i morgen}}^{\text{optj.slut}} (\text{forv.tilskrivning}) 
-- \left( \sum_{\text{afv.start}}^{\text{afv.slut}} (\text{anvendte timer}) + \sum_{\text{i morgen}}^{\text{afv.slut}} (\text{planlagte timer}) \right) $$
-
-$$ \text{Restferie til afhold} = 
-\sum_{\text{optj.start}}^{\text{i dag}} (\text{feriesaldo}) 
-+ \sum_{\text{i morgen}}^{\text{optj.slut}} (\text{forv.tilskrivning}) 
-- \left( \sum_{\text{afv.start}}^{\text{afv.slut}} (\text{anvendte timer}) 
-- + \sum_{\text{i morgen}}^{\text{afv.slut}} (\text{planlagte timer}) \right) $$
-
-$$
-\text{Restferie til afhold} = 
-\sum_{\text{optj.start}}^{\text{i dag}} (\text{feriesaldo}) 
-+ \sum_{\text{i morgen}}^{\text{optj.slut}} (\text{forv.tilskrivning}) 
-- \left( \sum_{\text{afv.start}}^{\text{i dag}} (\text{anvendte timer}) 
-- + \sum_{\text{i morgen}}^{\text{afv.slut}} (\text{planlagte timer}) \right)
-$$
-
-Hej
-$$
-\text{Restferie til afhold} = 
-\sum_{\text{optj.start}}^{\text{i dag}} (\text{feriesaldo}) 
-+ \sum_{\text{i morgen}}^{\text{optj.slut}} (\text{forv.tilskrivning}) 
-- \left( \sum_{\text{afv.start}}^{\text{i dag}} (\text{anvendte timer}) 
-- + \sum_{\text{i morgen}}^{\text{afv.slut}} (\text{planlagte timer}) \right)
-$$
-Hej
+- \left( \sum_{\text{afv.start}}^{\text{i dag}} (\text{anvendte timer}) + \sum_{\text{i morgen}}^{\text{afv.slut}} (\text{planlagte timer}) \right) $$
 
 
 ### Ferietimer
