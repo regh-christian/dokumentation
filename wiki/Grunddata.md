@@ -102,7 +102,7 @@ EksterntFinansieret: J hvis afdelingen på ansættelsesstarttidspunktet var ekst
   END) as Standardpopulation length = 3,
 ```
 
->>FIG: Peters matrix<<
+>>FIG: **_Peters matrix_**
    
 **NuværendeOrganisationID**: Lønafsnit, hvor ansættelsesforhold er gældende dags dato. Har en person ansættelsesforhold med fremtidig startdato eller tidligere ansættelser med andet tjenestenummer, antager ’NuværendeOrganisationID’ blot værdien af ’OrganisationID’. 
 
