@@ -98,7 +98,7 @@ En fraværsdag er defineret ved $\text{antal fraværstimer} = \text{antal planla
 
 $$ \frac{\text{antal fraværstimer}}{\text{antal planlagte timer}} = 1 $$
 
-En fraværsdag er altså ikke i sig selv et udtryk for antal timers fravær, men er relativ ift. personens beskæftigelsesdecimal.
+En fraværsdag er altså ikke i sig selv et udtryk for antal timers fravær, men er relativ den på dagen planlagte arbejdstid.
 Se også [fuldtidsfraværsdag](#fuldtidsfraværsdag)
 
 
