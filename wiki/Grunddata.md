@@ -210,9 +210,9 @@ lønarter er inkluderet svt *SD_DIM_LOENART[current_row]*=1. *DWReferenceKey* er
 
 ### v_Servicemeddelelser
 
-| **View** | **Baseret på** |
-|-|-|
-| [chru_cube].[v_Servicemeddelelser] | - |
+| **Tabel baseret på** |
+| - |
+| [chru_cube].[v_Servicemeddelelser] |
 
 View oprettet til at give brugere af dashboardet information om ændringer og nye features, samt dato for og status på disse. Kolonnen ’Dahboard’ indikerer med ’L’, ’S’ eller ’L,S’, om en meddelelse er tilegnet visning på hhv. leder- strategisk- eller begge dashboards.
 Tabellen vises datosorteret på velkomstsiden af dashboards uden kolonnen ’Dashboard’—denne skjules og anvendes til at filtrere på relevant for respektive dashboard.
@@ -228,4 +228,3 @@ Opdateres hvert 10-15min.
 | [chru_cube].[v_InfoLeveranceOpdateringsdato] | [DM_FL_HR].[DimLeveranceOpdateringsdato] |
 
 Leverance- og opdateringsdatoer på anvendte datakilder
-<br>
