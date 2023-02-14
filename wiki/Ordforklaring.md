@@ -74,7 +74,7 @@ Sum af ansattes beskæftigelsesdecimaler. Anvendes flere steder direkte oversat 
 
 ### Beskæftigelsessum, gennemsnitlig
 Gennemsnitlig beskæftigelsessum på udvalgte nedslagsdatoer—d. 1. i en måned. 
-Muligheden for at ansatte til- og aftræder eller skifter fra fuld- til deltid midt i en måned introducerer kompromisser, hvor vi må vælge imellem tunge og komplekse eller mere grovmaskede beregninger. Ét eksempel herpå er i beregning af det rullende gennemsnit af fuldtidsfraværsdage, hvor vi fx månedsvist d. 1. aggregerer indeværende månedens fravær relativt til beskæftigelsessum. Her antages, at beskæftigelsesdecimaler d. 1. er repræsentativ for hele perioden siden forrige nedslagsdato. 
+Muligheden for at ansatte til- og fratræder eller skifter fra fuld- til deltid midt i en måned introducerer dilemmaer, hvor vi må vælge i et kompromis imellem tunge og komplekse eller mere grovmaskede beregninger. Ét eksempel herpå er i beregning af det rullende gennemsnit af fuldtidsfraværsdage, hvor vi fx månedsvist d. 1. aggregerer indeværende månedens fravær relativt til beskæftigelsessum. Her antages, at beskæftigelsesdecimaler d. 1. er repræsentativ for hele perioden siden forrige nedslagsdato. 
 
 
 ### Deltidsansat
