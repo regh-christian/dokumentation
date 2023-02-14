@@ -26,3 +26,11 @@ Alle øvelser samles her. Fordeles efterfølgende rundt på siden, hvor de passe
 >Hvilke oplysninger er registreret om dig i v_DimAnsættelse? På hvilket afdelings- og centerniveau er din ansættelse tilknyttet? 
 >Hvad er din fag- og hovedstillingsgruppe?
 >Hvor mange ansættelser har du haft? Hvis mere end én stemmer din anciennitet da overens med din ansættelseslænge? Hvis ikke, hvorfor?
+
+-- ---------------
+
+> **ØVELSE — BRUG AF ADGANGE**
+> 
+> Hospital XXX ønsker optælling af alle pr. dd. månedslønnede hhv. fuld- og deltidsansatte sygeplejersker 
+> udspecificeret for alle sygeplejegrupper under fællesbetegnelsen STILKO2TXT = ’Sygepl. Pers’
+> Hvor mange af disse er autoriserede med speciale indenfor anæstesi?
