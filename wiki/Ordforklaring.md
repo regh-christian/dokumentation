@@ -229,3 +229,4 @@ Ferie er, som det præsenteres i dashboard, bredt defineret som den (rest)ferie,
 
 ### Ferietilskrivning
 Forventet tilskrivning er det antalt ferietimer, som en person _forventes_ at have til afhold i hele afviklingsåret baseret på aktuel beskæftigelsesdecimal.
+ 
