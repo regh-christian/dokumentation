@@ -83,7 +83,7 @@ Hav altid seneste version af Power BI Desktop installeret for at sikre nyeste og
 {::options parse_block_html="true" /}
 <details><summary markdown="span">Guide til bestilling af dataadgange</summary>
 <center>
-<iframe src="https://regionh-my.sharepoint.com/personal/stefan_sajin-henningsen_regionh_dk/_layouts/15/Doc.aspx?sourcedoc={c652f92d-8025-4f11-9b4c-3e0f0e0dadba}&amp;action=embedview&amp;wdEmbedCode=0&amp;wdPrint=0&wdToolbar=FALSE" width="100%" height="720" frameborder="0" seamless="yes"></iframe>
+<iframe src="https://regionh-my.sharepoint.com/personal/stefan_sajin-henningsen_regionh_dk/_layouts/15/Doc.aspx?sourcedoc={c652f92d-8025-4f11-9b4c-3e0f0e0dadba}&amp;action=embedview&amp;wdEmbedCode=0&amp;wdPrint=0&wdToolbar=FALSE" height="745" width="100%" frameborder="0" seamless="yes"></iframe>
 </center>
 </details>
 {::options parse_block_html="false" /}
