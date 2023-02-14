@@ -38,7 +38,7 @@ Vi vælger denne population med [Ansat]=J og [AktuelRække]=J.
     WHEN STAT IN ('0', '1', '3') THEN 1 ELSE 0 
   END) as Ansat length = 3,
 ```
-_Ikke at forveksle med_ [aktuel hovedansættelse](#aktuelhovedansættlse).
+_Ikke at forveksle med_ [aktuel hovedansættelse](#aktuelhovedansættelse).
 
 
 ### Ansættelseslængde
@@ -78,7 +78,7 @@ Muligheden for at ansatte til- og fratræder eller skifter fra fuld- til deltid 
 
 
 ### Deltidsansat
-Alle personer i v_DimAnsættelse, som er månedslønnede og _ikke_ er fuldtidsansatte. Se [fuldtidsansat](#fuldtidsanast).
+Alle personer i v_DimAnsættelse, som er månedslønnede og _ikke_ er fuldtidsansatte. Se [fuldtidsansat](#fuldtidsansat).
 
 
 ### Fratrædelse
