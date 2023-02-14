@@ -109,10 +109,11 @@ Identisk i opbygning og beregninger som v_TallyAnsættelseslængde.
 <center><img src="Images/dashboard_personalesammensætning_info.png" height="95%" width="95%" alt="Lederdashboard, info om personalesammensætning" class="center"/></center>
 
 
+
 ### Lederdashboard
 I dashboardet udstilles data på enkeltmedarbejderniveau tiltænkt ledere. 
 Bruger (ledere) får her overblik over udvalgte parametre om de medarbejdere, denne i forvejen har adgang til via PersonaleWeb. Se >>Brugerstyring<<. Som udgangspunkt vises alle lederens medarbejdere med en aktuel ansættelse pågældende dag. Har bruger adgang til medarbejdere på tværs af organisationsstruktur, kan der filtreres herpå, ligesom der kan filtreres på tværs af stillingshieraki—med undtagelse af laveste niveau, stillingskode/stillingskodetekst.
-     Foruden brug af grunddata er oprettet views til brug for beregninger i dette tema. Se >>TABELLER<<. 
+Foruden brug af grunddata er oprettet views til brug for beregninger i dette tema. Se >>TABELLER<<. 
 
 
 
