@@ -94,7 +94,7 @@ I opgørelser af fravær skelner vi imellem tre kategorier: Sygefravær, barn sy
 
 
 ### Fraværsdag
-En fraværsdag er defineret ved $$ \text{antal fraværstimer} = \text{antal planlagte timer} $$ eller
+En fraværsdag er defineret ved
 
 $$ \frac{\text{antal fraværstimer}}{\text{antal planlagte timer}} = 1 $$
 
