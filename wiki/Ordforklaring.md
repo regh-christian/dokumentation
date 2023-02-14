@@ -189,15 +189,17 @@ $$ 1924 \frac{timer}{år} = 52 \frac{uger}{år} \cdot 37 \frac{timer}{uge} = 260
 
 -- -----------------
 
+### Ferieelement
+
+### Feriesaldo
+
+
 ### Ferietype
 Med ferie\_type_ menes ordinær (1. - 5.) ferieuge eller 6. ferieuge.
 
 
 ### Feriekategori
 Feriekategori dækker begreberne feriesaldo, anvendt ferie, planlagt ferie og forventet tilskrivning.
-
-
-### Ferieelement
 
 
 ### Ferieår
@@ -208,14 +210,34 @@ Ferieåret opdeles i ordinær og 6. ferieuge med hver en **optjenings**- og en *
 | 6. ferieuge   | yyyy-01-01 - yyyy-12-31   | yyyy-05-01 - yyyy+1-04-30 |
 
 
-### Feriesaldo
-
-
 ### Restferie
 
 <!-- $$ \text{Restferie til afhold}=(\text{feriesaldo}+forv.tilskrivning)-(anvendt+planlagt)} $$ -->
 
 $$ \text{Restferie til afhold} = \sum_{\text{optj.start}}^{\text{i dag}} (\text{feriesaldo}) + \sum_{\text{i morgen}}^{\text{optj.slut}} (\text{forv.tilskrivning}) - \left( \sum_{\text{afv.start}}^{\text{afv.slut}} (\text{anvendte timer}) + \sum_{\text{i morgen}}^{\text{afv.slut}} (\text{planlagte timer}) \right) $$
+
+$$ 
+\text{Restferie til afhold} = \sum_{\text{optj.start}}^{\text{i dag}} (\text{feriesaldo}) + \sum_{\text{i morgen}}^{\text{optj.slut}} (\text{forv.tilskrivning}) - \left( \sum_{\text{afv.start}}^{\text{afv.slut}} (\text{anvendte timer}) + \sum_{\text{i morgen}}^{\text{afv.slut}} (\text{planlagte timer}) \right) 
+$$
+
+$$ \text{Restferie til afhold} = \sum_{\text{optj.start}}^{\text{i dag}} (\text{feriesaldo}) + \sum_{\text{i morgen}}^{\text{optj.slut}} (\text{forv.tilskrivning}) 
+- \left( \sum_{\text{afv.start}}^{\text{afv.slut}} (\text{anvendte timer}) + \sum_{\text{i morgen}}^{\text{afv.slut}} (\text{planlagte timer}) \right) $$
+
+$$ \text{Restferie til afhold} = 
+\sum_{\text{optj.start}}^{\text{i dag}} (\text{feriesaldo}) 
++ \sum_{\text{i morgen}}^{\text{optj.slut}} (\text{forv.tilskrivning}) 
+- \left( \sum_{\text{afv.start}}^{\text{afv.slut}} (\text{anvendte timer}) 
+- + \sum_{\text{i morgen}}^{\text{afv.slut}} (\text{planlagte timer}) \right) $$
+
+$$
+\text{Restferie til afhold} = 
+\sum_{\text{optj.start}}^{\text{i dag}} (\text{feriesaldo}) 
++ \sum_{\text{i morgen}}^{\text{optj.slut}} (\text{forv.tilskrivning}) 
+- \left( \sum_{\text{afv.start}}^{\text{afv.slut}} (\text{anvendte timer}) 
+- + \sum_{\text{i morgen}}^{\text{afv.slut}} (\text{planlagte timer}) \right)
+- $$
+
+
 
 
 
