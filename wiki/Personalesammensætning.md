@@ -75,7 +75,7 @@ Endeligt tilføjes tidssvarende Stillings- og PersonID og rækker indekseres
 
 ### v_TallyAlder
 
-| **Tabel Baseret på** | 
+| **Tabel baseret på** | 
 | - |
 | [chru_cube].[v_TallyAlder] |
 
@@ -85,7 +85,7 @@ Talrækken 0-124 genereres og døbes ’Alder’. Næste to kolonner beregner pl
 
 ### v_TallyAnsættelseslængde
 
-| **Tabel Baseret på** | 
+| **Tabel baseret på** | 
 | - |
 | [chru_cube].[v_TallyAnsættelseslængde] |
 
@@ -96,7 +96,7 @@ Endeligt tilføjes ’AnsættelseslængdeIntervalVisualiseringSortering’ mhp. 
 
 ### v_TallyAnciennitet
 
-| **Tabel Baseret på** | 
+| **Tabel baseret på** | 
 | - |
 | [chru_cube].[v_TallyAnciennitet] |
 
