@@ -113,7 +113,7 @@ Ansættelser kendetegnet ved
 
 
 ### Fuldtidsfraværsdag
-En fuldtidsfraværsdag er defineret ved 7,4 timers fravær svt. ét dagsværk. Enhed kan sammenlignes på tværs i organisationen uagtet forskelle i enkeltindividers beskæftigelsesdecimal.
+En fuldtidsfraværsdag er defineret ved 7,4 timers fravær svt. ét dagsværk. Vi bruger denne enhed til sammenligning på tværs i organisationen uagtet forskelle i enkeltindividers beskæftigelsesdecimal.
 
 
 ### Hændelse
