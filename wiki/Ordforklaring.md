@@ -87,20 +87,19 @@ Kendetegnet ved et skift i ansættelsesstatus til enten emigreret/død (7), frat
 
 ### Fravær
 Fravær er defineret som registreret arbejdstid med én af lønarterne i v_DimLønartFravær[L2Code], således at 
-$ \frac{antal fraværstimer}{antal planlagte timer} \neq 0 $
-$ \frac{antal fraværstimer}{antal planlagte timer} \not = 0 $
+$$ \frac{antal fraværstimer}{antal planlagte timer} \neq 0 $$
+$$ \frac{antal fraværstimer}{antal planlagte timer} \not = 0 $$
 
 I opgørelser af fravær skelner vi imellem tre kategorier: Sygefravær, barn syg og andet.
 
 
 ### Fraværsdag
-En fraværsdag er defineret ved
+En fraværsdag er defineret ved $ antal fraværstimer = antal planlagte timer  \Leftrightarrow \frac{antal fraværstimer}{antal planlagte timer} = 1 $
 
-$$ antal fraværstimer = antal planlagte timer  \Leftrightarrow \frac{antal fraværstimer}{antal planlagte timer} = 1$$
+$$ antal fraværstimer = antal planlagte timer  \Leftrightarrow \frac{antal fraværstimer}{antal planlagte timer} = 1 $$
 
-Det er muligt at have delvise fraværsdage, hvor 
 En fraværsdag er ikke i sig selv et udtryk for antal timers fravær, men er relativ ift. personens beskæftigelsesdecimal.
-Se også fuldtidsfraværsdag
+Se også [fuldtidsfraværsdag](#fuldtidsfraværsdag)
 
 
 ### Fuldtidsansat
