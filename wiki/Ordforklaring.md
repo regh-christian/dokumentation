@@ -7,20 +7,24 @@ if first.cpr AND AktuelRække = 1 AND Ansat = 1 then AktuelHovedansættelse=1;
 else AktuelHovedansættelse=0;
 ```
 
+----------
 
 ### Anciennitet
 I SD har anciennitetsdato ikke en entydig betydning. Den kan betyde startdatoen i første ansættelse i regionen, men den kan også være resultat af omregnet anciennitet. Et bedre udtryk for en persons egentlige anciennitet i regionen er _AnsLængdeCPR_.
 
+----------
 
 ### Anonymitetsgrænse
 I alle beregninger, hvor der er risiko for at kunne identificere enkeltindivider i små populationer—og hvor dette ikke er tilladt—implementeres en anonymitetsgrænse. I praksis maskeres et resultat, hvis dette er fundet pba. et antal af individer lavere en anonymitetsgrænsen. 
 
 > Vær opmærksom på, at anonymitetsgrænsen kan variere med tema.
 
+----------
 
 ### Ansættelse
 Et ansættelsesforhold med status ansat uden løn (0), ansat/genåbnet (1) eller midlertidigt ude af løn (3). Alle ansættelser er unikt kendetegnet ved en stillings-, tjeneste- og overenskomstkode, en lønklasse og afdeling. Ændring i én eller flere af disse forhold, medfører et nyt registreret ansættelsesforhold. Ansættelsens varighed opgøres fra 1. dag til den sidste dag i pågældende ansættelse begge dage inklusiv. 
 
+----------
 
 ### Ansættelse, aktuel
 Med aktuel ansættelse henvises oftest til dét ansættelsesforhold, hvis start- og slutdato inkluderer dags dato og har status ansat/genåbnet (1), ansat uden løn (0) eller midlertidigt ude af løn (3).
@@ -40,6 +44,7 @@ Vi vælger denne population med [Ansat]=J og [AktuelRække]=J.
 ```
 _Ikke at forveksle med_ [aktuel hovedansættelse](#aktuel_hovedansættelse).
 
+----------
 
 ### Ansættelseslængde
 I opgørelser om personalesammensætning henviser ansættelseslængde til perioden fra _ansættelsensdato_ i SD til dags dato.
@@ -67,24 +72,28 @@ RETURN
     Result
 ```
 
------------------
+----------
 
 ### Beskæftigelsessum
 Sum af ansattes beskæftigelsesdecimaler. Anvendes flere steder direkte oversat til årsværk. Vi bruger denne i beregning af sygefravær til at eliminere evt intervariabilitet mellem fuld- og deltidsansatte
 
+----------
 
 ### Beskæftigelsessum, gennemsnitlig
 Gennemsnitlig beskæftigelsessum på udvalgte nedslagsdatoer—d. 1. i en måned. 
 Muligheden for at ansatte til- og fratræder eller skifter fra fuld- til deltid midt i en måned introducerer dilemmaer, hvor vi må vælge i et kompromis imellem tunge og komplekse eller mere grovmaskede beregninger. Ét eksempel herpå er i beregning af det rullende gennemsnit af fuldtidsfraværsdage, hvor vi fx månedsvist d. 1. aggregerer indeværende månedens fravær relativt til beskæftigelsessum. Her antages, at beskæftigelsesdecimaler d. 1. er repræsentativ for hele perioden siden forrige nedslagsdato. 
 
+----------
 
 ### Deltidsansat
 Alle personer i v_DimAnsættelse, som er månedslønnede og _ikke_ er fuldtidsansatte. Se [fuldtidsansat](#fuldtidsansat).
 
+----------
 
 ### Fratrædelse
 Kendetegnet ved et skift i ansættelsesstatus til enten emigreret/død (7), fratrådt (8) eller pensioneret (9) fra at have været enten ansat uden løn (0), ansat/genåbnet (1) eller midlertidigt ude af løn (3). Fratrædelsesdatoen er sidste dag i en ansættelsesperiode.
 
+----------
 
 ### Fravær
 Fravær er defineret som registreret arbejdstid med én af lønarterne i v_DimLønartFravær[L2Code], således at 
@@ -93,6 +102,7 @@ $$ \frac{\text{antal fraværstimer}}{\text{antal planlagte timer}} \in \mathbb{R
 
 I opgørelser af fravær skelner vi imellem tre kategorier: Sygefravær, barn syg og andet.
 
+----------
 
 ### Fraværsdag
 En fraværsdag er defineret ved
@@ -102,6 +112,7 @@ $$ \frac{\text{antal fraværstimer}}{\text{antal planlagte timer}} = 1 $$
 En fraværsdag er altså ikke i sig selv et udtryk for antal timers fravær, men er relativ den på dagen planlagte arbejdstid.
 Se også [fuldtidsfraværsdag](#fuldtidsfraværsdag)
 
+----------
 
 ### Fuldtidsansat
 Ansættelser kendetegnet ved
@@ -112,10 +123,12 @@ Ansættelser kendetegnet ved
   END) as Fuldtid length = 3,
 ```
 
+----------
 
 ### Fuldtidsfraværsdag
 En fuldtidsfraværsdag er defineret ved sammenhængende 7,4 timers fravær svt. ét dagsværk. Vi bruger denne enhed til sammenligning på tværs i organisationen uagtet forskelle i enkeltindividers beskæftigelsesdecimal. 
 
+----------
 
 ### Hændelse
 Pr. 2023-01-06 defineret som  en af følgende:
@@ -130,14 +143,17 @@ Pr. 2023-01-06 defineret som  en af følgende:
 | Går på orlov | Når der skiftes til statuskode 0 eller 1 efter at have været i 3 eller omvendt for til |
 | Tilbage fra orlov | Når der skiftes til statuskode 0 eller 1 efter at have været i 3 eller omvendt for til |
 
+----------
 
 ### Jubilæum
 Alle jubilæumsdatoer i 5-årsintervaller samt étårsjubilæum beregnes og betragtes som en hændelse.
 
+----------
 
 ### Måltal
 Region H’s målsætning for fravær pr. 2023-01-20 er 11,7 dage/år.
 
+----------
 
 ### Månedslønnet
 Ansættelser kendetegnet ved 
@@ -148,10 +164,12 @@ Ansættelser kendetegnet ved
   END) as Månedslønnet length = 3,
 ```
 
+----------
 
 ### Orlov
 Kendetegnet ved et skift i ansættelsesstatus fra midlertidigt ude af løn (3) til enten ansat/genåbnet (1) eller ansat uden løn (0). Eller omvendt.
  
+----------
 
 ### Standardpopulation
 I bredeste forstand forstås ved v_DimAnsættelse[Standardpopulation]=J, alle [månedslønnede](#månedslønnet) og ikke-eksternt finansierede ansættelser.
@@ -167,20 +185,24 @@ I bredeste forstand forstås ved v_DimAnsættelse[Standardpopulation]=J, alle [m
 ```
 I praksis defineres populationer med filtre på faner i kombination med filter i beregninger og figurer. Kriterier for at indgå i populationen varierer med temaet; den tidslige dimension af en given analyse; samt hvem analysen er rettet imod.
 
+----------
 
 ### Tiltrædelse
 Kendetegnet ved et skift i ansættelsesstatus fra ukendt, emigreret/død (7), fratrådt (8) eller pensioneret (9) til enten ansat uden løn (0), ansat/genåbnet (1) eller midlertidigt ude af løn (3). Tiltrædelsesdatoen er første dag i det nye ansættelsesforhold.
 
+----------
 
 ### Timelønnet
 Formelt defineret: "Hvis ikke månedslønnet, så timelønnet". Se [månedslønnet](#månedslønnet).
 
+----------
 
 ### Årsværk
 I beregninger anvendes
 
 $$ 1924 \frac{timer}{år} = 52 \frac{uger}{år} \cdot 37 \frac{timer}{uge} = 260 \frac{dag}{år} \cdot 7,4 \frac{timer}{dag} $$
 
+----------
 
 
 
