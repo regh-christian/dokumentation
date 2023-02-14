@@ -195,7 +195,7 @@ $$ 1924 \frac{timer}{år} = 52 \frac{uger}{år} \cdot 37 \frac{timer}{uge} = 260
 
 
 ### Ferietype
-Med ferie\_type_ menes ordinær (1. - 5.) ferieuge eller 6. ferieuge.
+Med ferie _type_ menes ordinær (1. - 5.) ferieuge eller 6. ferieuge.
 
 
 ### Feriekategori
