@@ -69,7 +69,7 @@ RETURN
 
 
 ### Beskæftigelsessum
-Sum af ansattes beskæftigelsesdecimaler. Anvendes flere steder direkte oversat i fx årsværk. Vi bruger denne i beregning af sygefravær til at eliminere evt intervariabilitet mellem fuld- og deltidsansatte
+Sum af ansattes beskæftigelsesdecimaler. Anvendes flere steder direkte oversat til årsværk. Vi bruger denne i beregning af sygefravær til at eliminere evt intervariabilitet mellem fuld- og deltidsansatte
 
 
 ### Beskæftigelsessum, gennemsnitlig
@@ -78,15 +78,7 @@ Muligheden for at ansatte til- og fratræder eller skifter fra fuld- til deltid 
 
 
 ### Deltidsansat
-Alle i v_DimAnsættelse, som er månedslønnede og ikke er fuldtidsansatte.
-```DAX
-[Antal deltidsansatte] :=
-CALCULATE (
-    [Antal medarbejdere],
-    'v_DimAnsættelse'[Månedslønnet] = "J",
-    'v_DimAnsættelse'[Fuldtid] = "N"
-)
-```
+Alle personer i v_DimAnsættelse, som er månedslønnede og _ikke_ er fuldtidsansatte. Se [fuldtidsansat](#fuldtidsanast).
 
 
 ### Fratrædelse
