@@ -19,7 +19,7 @@ I alle beregninger, hvor der er risiko for at kunne identificere enkeltindivider
 
 
 ### Ansættelse
-Et ansættelsesforhold med status ansat uden løn (0), ansat/genåbnet (1) eller midlertidigt ude af løn (3). Alle ansættelser er unikt kendetegnet ved en stillings-, tjeneste- og overenskomstkode, en lønklasse og afdeling. Ændring i én eller flere af disse forhold, medfører et nyt registreret ansættelsesforhold. Ansættelsens varighed opgøres fra 1. dag til den sidste dag i pågældende ansættelse begge inklusiv. 
+Et ansættelsesforhold med status ansat uden løn (0), ansat/genåbnet (1) eller midlertidigt ude af løn (3). Alle ansættelser er unikt kendetegnet ved en stillings-, tjeneste- og overenskomstkode, en lønklasse og afdeling. Ændring i én eller flere af disse forhold, medfører et nyt registreret ansættelsesforhold. Ansættelsens varighed opgøres fra 1. dag til den sidste dag i pågældende ansættelse begge dage inklusiv. 
 
 
 ### Ansættelse, aktuel
