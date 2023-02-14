@@ -113,7 +113,7 @@ Ansættelser kendetegnet ved
 
 
 ### Fuldtidsfraværsdag
-En fuldtidsfraværsdag er defineret ved 7,4 timers fravær svt. ét dagsværk. Vi bruger denne enhed til sammenligning på tværs i organisationen uagtet forskelle i enkeltindividers beskæftigelsesdecimal.
+En fuldtidsfraværsdag er defineret ved sammenhængende 7,4 timers fravær svt. ét dagsværk. Vi bruger denne enhed til sammenligning på tværs i organisationen uagtet forskelle i enkeltindividers beskæftigelsesdecimal. 
 
 
 ### Hændelse
@@ -171,7 +171,7 @@ I praksis defineres populationer med filtre på faner i kombination med filter i
 Kendetegnet ved et skift i ansættelsesstatus fra ukendt, emigreret/død (7), fratrådt (8) eller pensioneret (9) til enten ansat uden løn (0), ansat/genåbnet (1) eller midlertidigt ude af løn (3). Tiltrædelsesdatoen er første dag i det nye ansættelsesforhold.
 
 
-### Timelønnede
+### Timelønnet
 Formelt defineret: "Hvis ikke månedslønnet, så timelønnet". Se [månedslønnet](#månedslønnet).
 
 
