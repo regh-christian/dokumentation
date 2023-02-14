@@ -215,7 +215,7 @@ Ferieåret opdeles i ordinær og 6. ferieuge med hver en **optjenings**- og en *
 
 <!-- $$ \text{Restferie til afhold}=(\text{feriesaldo}+forv.tilskrivning)-(anvendt+planlagt)} $$ -->
 
-$$ \text{Restferie til afhold} = ( \sum_{optj.start}^{i dag} \text{feriesaldo} + \sum_{i morgen}^{optj.slut} \text{forv.tilskrivning}) - ( \sum_{afv.start}^{afv.slut} \text{anvendt} + \sum_{i morgen}^{afv.slut} \text{planlagt} ) $$
+$$ \text{Restferie til afhold} = ( \sum_{\text{optj.start}}^{\text{i dag}} \text{feriesaldo} + \sum_{\text{i morgen}}^{\text{optj.slut}} \text{forv.tilskrivning}) - ( \sum_{\text{afv.start}}^{\text{afv.slut}} \text{anvendt} + \sum_{\text{i morgen}}^{\text{afv.slut}} \text{planlagt} ) $$
 
 
 
