@@ -179,3 +179,49 @@ Formelt defineret: "Hvis ikke månedslønnet, så timelønnet". Se [månedslønn
 I beregninger anvendes
 
 $$ 1924 \frac{timer}{år} = 52 \frac{uger}{år} \cdot 37 \frac{timer}{uge} = 260 \frac{dag}{år} \cdot 7,4 \frac{timer}{dag} $$
+
+
+
+-- -----------------
+
+Ferietype
+
+
+Ferieår
+
+
+Optjeningsperiode
+
+
+Afviklingsperiode
+
+
+Feriesaldo
+
+
+Restferie
+(feriesaldo+tilskrivning)-(anvendt+planlagt)
+
+
+Ferietimer
+Registreret ved lønart 730 (ferietimer) og 752 (Ferietimer '6. uge')
+
+
+### Ferie
+Ferie opdeles i ordinær og 6. ferieuge med forskellig optjenings- og afholdelsesperiode.
+
+| FerieType     | Optjeningsperiode             | Afviklingsperiode             |
+| Ordinær       | yyyy-01-09 - yyyy+1-08-31     | yyyy-09-01 - yyyy+1-12-31     |
+| 6. ferieuge   | yyyy-01-01 - yyyy-12-31       | yyyy-05-01 - yyyy+1-04-30     |
+
+
+
+Feriekategori
+
+
+Ferieelement
+
+
+
+
+
