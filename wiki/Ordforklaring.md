@@ -235,7 +235,7 @@ $$
 + \sum_{\text{i morgen}}^{\text{optj.slut}} (\text{forv.tilskrivning}) 
 - \left( \sum_{\text{afv.start}}^{\text{afv.slut}} (\text{anvendte timer}) 
 - + \sum_{\text{i morgen}}^{\text{afv.slut}} (\text{planlagte timer}) \right)
-- $$
+$$
 
 
 
