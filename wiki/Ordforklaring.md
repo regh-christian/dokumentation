@@ -190,7 +190,7 @@ $$ 1924 \frac{timer}{år} = 52 \frac{uger}{år} \cdot 37 \frac{timer}{uge} = 260
 -- -----------------
 
 ### Ferietype
-Med ferie_type_ menes ordinær (1. - 5.) ferieuge eller 6. ferieuge.
+Med ferie\_type_ menes ordinær (1. - 5.) ferieuge eller 6. ferieuge.
 
 
 ### Feriekategori
@@ -215,7 +215,7 @@ Ferieåret opdeles i ordinær og 6. ferieuge med hver en **optjenings**- og en *
 
 <!-- $$ \text{Restferie til afhold}=(\text{feriesaldo}+forv.tilskrivning)-(anvendt+planlagt)} $$ -->
 
-$$ \text{Restferie til afhold} = \sum_{\text{optj.start}}^{\text{i dag}} (\text{feriesaldo}) + \sum_{\text{i morgen}}^{\text{optj.slut}} (\text{forv.tilskrivning}) - ( \sum_{\text{afv.start}}^{\text{afv.slut}} (\text{anvendte timer}) + \sum_{\text{i morgen}}^{\text{afv.slut}} (\text{planlagte timer}) ) $$
+$$ \text{Restferie til afhold} = \sum_{\text{optj.start}}^{\text{i dag}} (\text{feriesaldo}) + \sum_{\text{i morgen}}^{\text{optj.slut}} (\text{forv.tilskrivning}) - \left( \sum_{\text{afv.start}}^{\text{afv.slut}} (\text{anvendte timer}) + \sum_{\text{i morgen}}^{\text{afv.slut}} (\text{planlagte timer}) \right) $$
 
 
 
