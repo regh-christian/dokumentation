@@ -184,42 +184,36 @@ $$ 1924 \frac{timer}{år} = 52 \frac{uger}{år} \cdot 37 \frac{timer}{uge} = 260
 
 -- -----------------
 
-Ferietype
+### Ferietype
 
 
-Ferieår
-
-
-Optjeningsperiode
-
-
-Afviklingsperiode
-
-
-Feriesaldo
-
-
-Restferie
-(feriesaldo+tilskrivning)-(anvendt+planlagt)
-
-
-Ferietimer
-Registreret ved lønart 730 (ferietimer) og 752 (Ferietimer '6. uge')
-
-
-### Ferie
-Ferie opdeles i ordinær og 6. ferieuge med forskellig optjenings- og afholdelsesperiode.
+### Ferieår
+Ferieåret opdeles i ordinær og 6. ferieuge med hver en **optjenings**- og en **afholdelsesperiode**.
 
 | **FerieType** | **Optjeningsperiode**     | **Afviklingsperiode**     |
 | Ordinær       | yyyy-01-09 - yyyy+1-08-31 | yyyy-09-01 - yyyy+1-12-31 |
 | 6. ferieuge   | yyyy-01-01 - yyyy-12-31   | yyyy-05-01 - yyyy+1-04-30 |
 
 
+### Feriesaldo
 
-Feriekategori
+
+### Restferie
+$$ \text(feriesaldo+tilskrivning)-(anvendt+planlagt)}
 
 
-Ferieelement
+### Ferietimer
+Registreret ved lønart 730 (ferietimer) og 752 (Ferietimer '6. uge')
+
+
+### Ferie
+
+
+
+### Feriekategori
+
+
+### Ferieelement
 
 
 
