@@ -23,7 +23,7 @@ Enkelte ny kolonner beregnes; Kolonnen _Arbejdsdag_ er tilføjet og udregner, om
 [Metode](https://www.computerworld.dk/uploads/eksperten-guider/107-Beregning-af-arbejdsdage-og-skaeve-helligdage.pdf). 
 Til beregning heraf anvendes tre stored procedures; funktionen _chru_cube.DanskeHelligdage_ matcher dato mod kendte og faste helligdage og returnerer binært udfald; _chru_cube.PaaskeDage_ implementerer Gauás algoritme til bestemmelse af påskedag det givne år, hvorefter også ikke-faste helligdage da bestemmes (antal dage efter påske); I den sidste bestemmes, om dato er i en weekend. I praksis kaldes første stored procedure med dato som argument. Hvis dato er en kendt helligdag, er output _Helligdag_. I modsat fald kaldes næste procedure til bestemmelse af påskedag, hvorefter dato igen matches mod de ikke-faste helligdage. Ved fortsat manglende match kaldes sidste procedure til beregning af, om datoen er en lørdag eller søndag.
 
-```sql
+```SQL
 CASE WHEN chru_cube.DanskeHelligdage(Dato) = 1 THEN 'Helligdag'
      WHEN chru_cube.DanskeHelligdage(Dato) = 0 AND chru_cube.Arbejdsdage(Dato) = 0 THEN 'Weekend'
      ELSE 'Arbejdsdag' 
@@ -46,8 +46,8 @@ CASE WHEN chru_cube.DanskeHelligdage(Dato) = 1 THEN 'Helligdag'
 View er baseret på SD-tabellen, SD_Person. ID er primærnøgle for det enkelte ansættelsesforhold. PersonID er nøgle henvisende til den enkelte person (CPR). En person kan have flere ansættelser på forskellige institutioner/afdelinger overlappende i tid—dog aldrig overlappende i tid på samme lønafsnit med samme tjenestenummer.
 På den måde anvendes tabellen både som fact og dimension afhængig af kontekst; om vi henviser til datostyrede variable knyttet til ansættelsen såsom stillingskode, overenskomst og beskæftigelsesdecimal eller foretager optællinger på personniveau. Vi anvender fx denne sondring mellem ansættelsesforhold og person til at sikre, at en leder kun kan se data relevant for det afsnit, hvor leder har beføjelser—via ’NuværendeOrganisationID’. Har en person fx flere samtidige ansættelser på forskellige institutioner, vil respektive ledere i udgangspunktet kun kunne se data for ansættelsesforholdet relevant for dem. Se desuden afsnit om <a href="https://github.com/DataOgDigitalisering/FortroligInformation/blob/main/Brugerstyring.md" target="_blank">Brugerstyring</a>.
 I dataindlæsningen hos CØK fjernes ansættelser med status ’S’ og institution ’2P’ (tjenestemandspensioner).
-```sql
--- FRA SØREN: ”07_FL_110_SD_DimAnsaettelse.sas
+```SQL
+-- 07_FL_110_SD_DimAnsaettelse.sas
 /*Fjerner personer, der skal slettes*/
   AND STAT ne 'S' 
 /*Fjerner tjenestemandspensioner*/ 
@@ -63,8 +63,8 @@ I dataindlæsningen hos CØK fjernes ansættelser med status ’S’ og institut
 
 **AktuelRække**: J hvis dags dato ligger indenfor ansættelsesforholdets start- og slutdato.
 
-```sql
--- FRA SØREN: ”07_FL_110_SD_DimAnsaettelse.sas
+```SQL
+-- 07_FL_110_SD_DimAnsaettelse.sas
 (CASE  
     WHEN STAT IN ('0', '1', '3') THEN 1 
     ELSE 0 
@@ -92,8 +92,8 @@ En person kan i sin ansættelseshistorik have flere ansættelser, hvor AktuelHov
 EksterntFinansieret: J hvis afdelingen på ansættelsesstarttidspunktet var eksternt finansieret.  
 
 **StandardPopulation**: Aktuelt ansatte, der er månedslønnede, fuldtidsansatte og ikke eksternt finansierede.
-```sql
--- FRA SØREN: ”07_FL_110_SD_DimAnsaettelse.sas
+```SQL
+-- 07_FL_110_SD_DimAnsaettelse.sas
 (CASE  
    WHEN Månedslønnet = 0 THEN 0 
    WHEN EksterntFinansieret = 1 THEN 0 
@@ -106,7 +106,7 @@ EksterntFinansieret: J hvis afdelingen på ansættelsesstarttidspunktet var ekst
    
 **NuværendeOrganisationID**: Lønafsnit, hvor ansættelsesforhold er gældende dags dato. Har en person ansættelsesforhold med fremtidig startdato eller tidligere ansættelser med andet tjenestenummer, antager ’NuværendeOrganisationID’ blot værdien af ’OrganisationID’. 
 
-```sql
+```SQL
 ,CASE
    WHEN [Start] >= CONVERT(date, GETDATE()) THEN OrganisationsID
    ELSE
@@ -120,7 +120,7 @@ EksterntFinansieret: J hvis afdelingen på ansættelsesstarttidspunktet var ekst
 ```
 
 **Hændelse**: Angiver om et månedslønnet ansættelsesforhold er en til- eller fratrædelse. Har ansættelsesforholdet værdien Ansat=J og denne er forskellig fra et evt. tidligere ansættelsesforhold med samme tjenestenummer, er dette en tiltrædelse. I modsat fald en fratrædelse.
-```sql
+```SQL
 ,CASE 
    WHEN Ansat != COALESCE(LAG(Ansat) OVER(PARTITION BY Tjnr ORDER BY [Start] ASC), 99) 
      AND Månedslønnet = 1
