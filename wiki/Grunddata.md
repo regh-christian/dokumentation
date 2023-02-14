@@ -179,7 +179,7 @@ Current_row=1 indikerer, at rækken er gældende i nuværende stillingskodehiera
 | [chru_cube].[v_DimOrganisation] | [DM_FL_HR].[DimOrganisation] |
 | | [chru_cube].[v_DimAnsættelse] | 
 
-Organisationshieraki i 6 niveauer (L1-L6) med ID som primærnøgle. Afhængig af kontekst og organisation lokalt omtales disse værdier også:
+Organisationshieraki i 6 niveauer (L1-L6) med ID som primærnøgle. Afhængig af kontekst bruges forskellige termer om organisation:
 
 | LEVEL | SD   | I TALE   | BETYDNING                                                   |
 |-------|------|----------|-------------------------------------------------------------|
