@@ -182,6 +182,11 @@ $$ 1924 \frac{timer}{år} = 52 \frac{uger}{år} \cdot 37 \frac{timer}{uge} = 260
 
 
 
+
+
+
+
+
 -- -----------------
 
 ### Ferietype
@@ -207,7 +212,11 @@ Ferieåret opdeles i ordinær og 6. ferieuge med hver en **optjenings**- og en *
 
 
 ### Restferie
-$$ \text{feriesaldo+tilskrivning)-(anvendt+planlagt)} $$
+
+$$ \text{Restferie til afhold}=(\text{feriesaldo}+forv.tilskrivning)-(anvendt+planlagt)} $$
+
+$$ \text{Restferie til afhold} = ( \sum_{optj.start}^{i dag} \text{feriesaldo} + \sum_{i morgen}^{optj.slut} \text{forv.tilskrivning}) - ( \sum_{afv.start}^{afv.slut} \text{anvendt} + \sum_{i morgen}_{afv.slut} \text{planlagt}) $$
+
 
 
 ### Ferietimer
@@ -220,10 +229,3 @@ Ferie er, som det præsenteres i dashboard, bredt defineret som den (rest)ferie,
 
 ### Ferietilskrivning
 Forventet tilskrivning er det antalt ferietimer, som en person _forventes_ at have til afhold i hele afviklingsåret baseret på aktuel beskæftigelsesdecimal.
-
-
-
-
-
-
-
