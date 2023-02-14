@@ -34,8 +34,8 @@
 | [chru_cube].[v_DimHændelser] | [DM_FL_HR].[DimHændelser] |
 
 Udvalgte hændelser vedrørende en ansættelse. ID er primærnøgle.
-Ved en hændelse forstås en af følgende mærkedage: dato for fødsels- og jubilæumsdag, til- og fratrædelser, flytter afdeling, termin samt orlov. 
-Tabellen er niveaudelt i L1 og L2, hvor L2 er en uddybende tekst knyttet til den overordnede hændelse, L1; fx om ’Flytter afdeling’ er et skift fra- eller til en afdeling. I kolonnen ’Note’ forklares, hvordan en hændelse er defineret—om den fx er direkte udledt vha. en dato, eller om der kigges på flere på hinanden følgende ansættelser og skift i statuskoder herimellem for at udlede, om en person går på eller kommer retur fra orlov.
+Ved en hændelse forstås en af følgende mærkedage: dato for fødsels- og jubilæumsdag, til- og fratrædelser, flytter mellem afdelinger, termin samt orlov. 
+Tabellen er niveaudelt i L1 og L2, hvor L2 er en uddybende tekst knyttet til den overordnede hændelse, L1; fx om ’Flytter afdeling’ er et skift _fra_- eller _til_ en afdeling. I kolonnen ’Note’ forklares, hvordan en hændelse er defineret—om den fx er direkte udledt vha. en dato, eller om der kigges på flere på hinanden følgende ansættelser og skift i statuskoder herimellem for at udlede, om en person går på eller kommer retur fra orlov.
 
 
 
@@ -49,11 +49,11 @@ Tabellen er niveaudelt i L1 og L2, hvor L2 er en uddybende tekst knyttet til den
 | | [DM_FL_HR].[FactTerminsdato] |
 
 - Kan med fordel dokumenteres grundigere i script
-- Vær opmærksom på, at HændelsesID er er hard-codet i overensstemmelse med ID ’er i v_DimHændelser. Dvs. foretages modificeringer i **v_DimHændelser**, skal det tilsvarende modificeres i dette view.
+- Vær opmærksom på, at HændelsesID er hard-codet i overensstemmelse med definitioner i v_DimHændelser. Dvs. foretages modificeringer i **v_DimHændelser**, skal det tilsvarende modificeres i dette view.
 - Bemærk, at tabellen er koblet på v_SecurityOrganisationBridge via HændelseOrganisationID.
 
 Viewet er baseret på v_DimAnsættelser. ID er primærnøgle. Historiske og fremtidige hændelser—nærmere defineret i v_DimHændelser—vises for hvert år en aktuel medarbejder er ansat. Er hændelsen en fødsels- eller jubilæumsdag, er under ’AntalÅr’ anført hhv. personens alder det pågældende år, eller jubilæumslængde hvis det er et 1-, 5-, 10-, 15 (osv.) års jubilæum. 
-Endeligt filtreres på hændelser i intervallet . 
+Endeligt filtreres på hændelser i intervallet $$\interval[closed]{-7\text{dage}}{13\text{måneder} $$. 
      Viewet er defineret i et længere script, der opsummeret først sammensætter en temporær tabel, PersonBase, med rækker af fødsels- og jubilæumsdatoer alle år i en persons ansættelsesperiode. Dernæst en temporær tabel, PersonLags, med en række pr. ansættelse sammenfattende aktuelle samt evt. seneste og næstkommende ansættelsesforhold (OrganisationID og statuskode). 
 I en ny temporær tabel, MasterTable, listes for hvert tjenestenummer ’HændelsesID’ og tilsvarende ’HændelsesDato’. ’HændelsesID’ er her hard-codet i overensstemmelse med v_DimHændelser (1 for fødselsdag, 2 for jubilæum osv.). 
 For ’HændelsesID’ svt. ’Fødselsdag’ og ’Jubilæumsdag’ indsættes allerede beregnede ’HændelsesDato’(er) fra PersonBase. Ved ’HændelsesID’er svt. til til- og fratrædelser samt flyt til- og fra afdeling anvendes nu PersonLags; På ’HændelsesID’ svt. ’Tiltræder’ defineres ’HændelsesDato’ som værende en ansættelses startdato på ansættelser, hvor ’Ansat’=J og dette er forskelligt fra en evt. umiddelbart foregående ansættelse på samme tjenestenummer; omvendt defineres ved ’HændelsesID’ svt. ’Fratræder’, at ’HændelsesDato’ er slutdatoen på en ansættelse, hvor ’Ansat’=N og dette er forskelligt fra en umiddelbart foregående ansættelse på samme tjenestenummer. Til ’HændelsesID’ svt. ’Skifter fra anden afdeling’ og ’Skifter til anden afdeling’ anvendes hhv. start- og slutdatoen på den ansættelse hvor ’OrganisationsID’ er forskelligt fra det umiddelbart forrige respektivt efterfølgende. På ’HændelsesID’ svt. ’Går på orlov’ anvendes som ’HændelsesDato’ startdatoen på den ansættelse, hvor statuskode skifter til 3 og denne er forskellig fra foregående; For ’HændelsesID’ svt. ’Tilbage fra orlov’ anvendes omvendt ’HændelsesDato’ på ansættelsen hvor statuskode skifter fra 3 til 0 eller 1. På ’HændelsesID’ svt. termin anvendes som ’HændelsesDato’ ’Terminsdato’ fra tabellen [DM-FL-HR].[FactTerminsdato].
