@@ -38,11 +38,11 @@ Vi vælger denne population med [Ansat]=J og [AktuelRække]=J.
     WHEN STAT IN ('0', '1', '3') THEN 1 ELSE 0 
   END) as Ansat length = 3,
 ```
-_Ikke at forveksle med [aktuel hovedansættelse](#aktuelhovedansættlse)_.
+_Ikke at forveksle med_ [aktuel hovedansættelse](#aktuelhovedansættlse).
 
 
 ### Ansættelseslængde
-I opgørelser om personalesammensætning henviser ansættelseslængde til perioden fra ansættelsdato i SD til dags dato.
+I opgørelser om personalesammensætning henviser ansættelseslængde til perioden fra _ansættelsensdato_ i SD til dags dato.
 ```DAX
 [Ansættelseslængde]:=
 //Measure beregner ansættelseslængder
