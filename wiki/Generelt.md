@@ -22,11 +22,13 @@ Om konventioner for navngivning af tabeller og measures.
     - Description
     - Key
 
+
 ### Calculated columns
   - Undgå så vidt muligt datatransformation i Tabular Editor. Det giver bedre overblik at have samlet i SQL.
     - (Flyt evt nedenstående til views og brug en mere robust metode til anonymisering:)
       - v_DimAnsættelse[TjnrAnonymiseret]
       - v_DimPerson[NavnAnonymiseret]   
+
 
 ### Stored procedures
   - Navngives kort og præcist beskrivende fx 'DanskeHelligdage'
