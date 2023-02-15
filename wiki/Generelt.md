@@ -81,15 +81,15 @@ Om konventioner for navngivning af tabeller og measures.
 **Aftaler for ændringer i CHRU_HRKube:**
 - Roller. Hvem gør/har ansvar for hvad?
   - SQL, Dax, Git, dok
-- Hvordan sikrer/ved vi, at dok er opdateret?  
   - Intervaller
+ 
 
 **Kontrol-scripts:**
 - Til hvad? Afdæk behov
+
 
 **Oprydning:**
 - Hvordan implementerer vi vedtaget nomenklatur?
 - Prioriter. Hvad kan vi leve med?
   - performance vs æstetik
   - slette ubrugte tabeller/kolonner vs ændre æ ø å 
-
