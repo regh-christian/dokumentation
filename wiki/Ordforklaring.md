@@ -1,5 +1,5 @@
 ### Aktuel hovedansættelse
-Den ansættelse som opfylder og sorterer højest på kriterierne, gældende dags dato; status 0, 1 eller 3; Månedslønnet; Fuldtid; Startdato. Dvs. et timelønnet ansættelsesforhold kan være en aktuel hovedansættelse, men kun hvis det ikke overlapper et månedslønnet. På samme måde kan en deltidsstilling være en aktuel hovedansættelse, men kun hvis dette ikke overlapper en anden fuldtidsansættelse.
+Den ansættelse som opfylder og sorterer højest på kriterierne (i nævnte rækkefølge): Er gældende dags dato; status 0, 1 eller 3; Månedslønnet; Fuldtid; Startdato. Dvs. en person kan have et timelønnet ansættelsesforhold som aktuel hovedansættelse, men kun hvis det ikke overlapper i tid med et månedslønnet. På samme måde kan en deltidsstilling være en aktuel hovedansættelse, men kun hvis dette ikke overlapper en fuldtidsansættelse.
 ```SQL
 -- AktuelHovedansættelse, 07_FL_110_SD_DimAnsaettelse.sas
 by cpr descending AktuelRække descending Ansat descending Månedslønnet descending Fuldtid descending start tjnr;
@@ -10,7 +10,7 @@ else AktuelHovedansættelse=0;
 ----------
 
 ### Anciennitet
-I SD har anciennitetsdato ikke en entydig betydning. Den kan betyde startdatoen i første ansættelse i regionen, men den kan også være resultat af omregnet anciennitet. Et bedre udtryk for en persons egentlige anciennitet i regionen er _AnsLængdeCPR_.
+I SD har anciennitetsdato ikke en entydig betydning. Den kan betyde startdatoen i første ansættelse i regionen (ligesom _ansættelsesdato_), men den kan også være resultat af fx omregnet anciennitet fra deltidsbeskæftigelse. Et bedre udtryk for en persons egentlige anciennitet i regionen er _AnsLængdeCPR_. 
 
 ----------
 
