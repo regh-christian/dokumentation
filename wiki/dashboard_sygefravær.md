@@ -112,12 +112,22 @@ RETURN GnsnitFuldtidsdage
 ...
 ```
 
-(4) Kurven ’Aktuel visning’ viser dermed—beregnet i en månedskontekst—for hver måned det løbende gennemsnit af antal fuldtidsfraværsdage pr. årsværk opgjort over seneste 12 måneder.
+(4) Denne er vist pr. måned med Kurven ’**Aktuel visning**’. _På figuren_ filtreres v_DimTidDato[OffsetMaaned]=[-12;-1].
 
-> v_FactFravær[Fuldtidsdage] er antallet af fraværstimer på en dag relativt til en 7,4 timers arbejdsdag. Dette, i kombination med en gennemsnitssum af beskæftigelsesdecimaler, bruges til at normalisere beregning af fravær i enheden ”antal fuldtidsfraværsdage pr. årsværk”. Dermed muliggøres sammenligning af fravær på tværs af afdelinger, uanset at disse har forskellig sammensætning af fuld- og deltidsansatte samt varierende komposition i vagtlag.
+() 
 
-Med figurspecifikt filter på v_DimTidDato[OffsetMaaned]=[-12;-1] udregnes kun på fravær i dette tidsinterval . 
-     Til visning af ’Alle medarbejdere jf. rolle’ indgår foregående beregning i measure [Fravær – benchmark regionen 12 mdr.], hvor filterkonteksten v_DimOrganisation ophæves. Inkluderet i denne beregning er da alle personer i v_DimAnsættelse—på tværs af organisation—som bruger har adgang til. Anonymitetsgrænsen er implementeret.
+```DAX
+[Fravær - benchmark regionen 12 mdr] =
+-- Measuret anvendes til benchmarkberegning af sygefraværet i hele regionen, idet organisatorisk filtrering undtages.
+CALCULATE (
+    [Fravær - vægtede fuldtidsfraværsdage gnsnit 12 mdr],
+    ALL ( v_DimOrganisation )
+)
+```
+
+> v_FactFravær[Fuldtidsdage] er antallet af fraværstimer på en dag relativt til en 7,4 timers arbejdsdag. Dette, i kombination med en gennemsnitssum af beskæftigelsesdecimaler, bruges til at normalisere beregning af fravær til ”antal fuldtidsfraværsdage pr. årsværk”. Enheden muliggør sammenligning af fravær på tværs af afdelinger, uanset at disse har forskellig sammensætning af fuld- og deltidsansatte samt varierende komposition i vagtlag.
+
+Til visning af ’Alle medarbejdere jf. rolle’ indgår foregående beregning i measure [Fravær – benchmark regionen 12 mdr.], hvor filterkonteksten v_DimOrganisation ophæves. Inkluderet i denne beregning er da alle personer i v_DimAnsættelse—på tværs af organisation—som bruger har adgang til. Anonymitetsgrænsen er implementeret.
      Regionens måltal på 11,7%  fravær er defineret som en ’Y-axis Constant Line’.
 Via bogmærket, Sygefravær pr. måned, kan bruger se næsten samme beregning i Sygefravær de seneste 12 mdr. fordelt på måneder. I denne figur vises [Fravær – vægtede fuldtidsfraværsdage] opgjort pr. måned—fra sidste dag i sidst måned—og ikke et løbende gennemsnit, hvormed sæsonudsving bliver tydeligere. Metodik i measure er identisk med [Fravær – vægtede fuldtidsfraværsdage gnsnit 12 mdr Ikke anonymiseret] med undtagelse af specificering af opgørelsesperiode på én måned i stedet for 12 samt implementering af anonymitetsgrænsen, da der også tælles på historisk ansatte, som ikke skal kunne identificeres. 
 
