@@ -3,12 +3,12 @@
 ## Personalesammensætning
 
 <center><img src="Images/dashboard_personalesammensætning_info.png" height="95%" width="95%" alt="Lederdashboard, info om personalesammensætning" class="center"/></center>
-
+<br>
 
 I dashboardet udstilles data på enkeltmedarbejderniveau tiltænkt ledere. 
 Bruger får her overblik over udvalgte parametre om de medarbejdere, denne i forvejen har adgang til via PersonaleWeb. Se [brugerstyring](./Brugerstyring).
 
-Der filtreres globalt _på fanen_ ud fra kriterierne ```v_DimAnsættelse[AnsatDagsDato]=J``` og v_DimAnsættelse[AktuelRække]=J
+Der filtreres globalt _på fanen_ ud fra kriterierne v_DimAnsættelse[AnsatDagsDato]=J og v_DimAnsættelse[AktuelRække]=J
 Som udgangspunkt vises alle lederens medarbejdere med en aktuel ansættelse pågældende dag (v_DimAnsættelse[AktuelRække]=J). Har medarbejdere mere end én aktuel ansættelse
 Har bruger adgang til medarbejdere på tværs af organisationsstruktur, kan der filtreres herpå, ligesom der kan filtreres på tværs af stillingshieraki—med undtagelse af laveste niveau, stillingskode/stillingskodetekst.
 Foruden brug af grunddata er oprettet views til brug for beregninger i dette tema. Se >>TABELLER<<. 
