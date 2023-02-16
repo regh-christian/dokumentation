@@ -14,7 +14,7 @@ Foruden brug af grunddata er oprettet views til brug for beregninger specifikt f
 
 
 
-### **Beregninger**
+#### **Beregninger**
 Fravær er bredt defineret ved lønarterne i v_DimLønartFravær[L1Code]. 
 Hvor andet ikke er nævnt, medregnes månedslønnede (v_DimAnsættelse[Månedslønnet]=’J’) ansatte (v_DimAnsættelse[Ansat]=’J’ svt. statuskode {0,1,3} ).
 Filteret, v_DimLønartFravær[L1Name]=”Sygefravær”, på fanen Sygefravær sikrer, at kun denne fraværskategori medtages i beregninger her. Via bookmarks føres bruger til faner uden dette filter, hvor også øvrige kategorier vises. 
