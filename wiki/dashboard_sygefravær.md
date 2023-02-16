@@ -40,8 +40,44 @@ i filterkontekst af tid (v_DimTidDato[KortMaanedNavn] og person (v_DimPerson[ID]
       )
 END AS NuværendeOrganisationID 
 ```
+```
+,CASE
+   WHEN [Start] >= CONVERT(date, GETDATE()) THEN OrganisationsID
+   ELSE
+      (SELECT OrganisationsID 
+       FROM DM_FL_HR.DimAnsættelse sub 
+       WHERE 1 = 1
+       AND sub.Tjnr = src.Tjnr 
+       AND CONVERT(date, GETDATE()) BETWEEN sub.[Start] AND sub.Slut
+      )
+END AS NuværendeOrganisationID 
+```
 Dette, i kombination med filtret specifikt på denne figur, [Ansat på afdeling, nuværende afd]=1, gør, at bruger også ser data fra evt. tidligere ansættelser—på samme tjenestenummer! 
 Desuden filtreres på v_DimAnsættelse[AnsatDagsDato]=’J’, hvorfor kun personer med an aktiv ansættelse dd. vises—også historisk. 
+
+
+```DAX
+[Ansat på afdeling, nuværende afd] =
+--Er afhængig af den tilsvarende relation under "Relationships".
+CALCULATE (
+    [Ansat på afdeling],
+    USERELATIONSHIP ( 'v_DimAnsættelse'[NuværendeOrganisationID],
+    v_DimOrganisation[ID]
+    )
+)
+```
+```
+[Ansat på afdeling, nuværende afd] =
+--Er afhængig af den tilsvarende relation under "Relationships".
+CALCULATE (
+    [Ansat på afdeling],
+    USERELATIONSHIP ( 'v_DimAnsættelse'[NuværendeOrganisationID],
+    v_DimOrganisation[ID]
+    )
+)
+```
+
+
 
 >> Inaktiv relation mellem v_DimAnsættelse[NuværendeOrganisationID] og v_DimOrganisation[ID] anvendes her til at beregne fravær på individniveau (tjenestenummer). v_DimAnsættelse[NuværendeOrganisationID] viser, på alle tidligere ansættelser med samme tjenestenummer, hvor personen aktuelt er ansat dags dato. Har en medarbejder flere ansættelser på tværs af organisation, og har bruger også adgang til data herfra, vises medarbejderens totale fravær.
 
