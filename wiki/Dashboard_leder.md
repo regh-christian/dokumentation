@@ -71,8 +71,8 @@ Foruden brug af grunddata er oprettet views og tabeller til brug i beregninger u
 
 
 #### Beregninger
-Fravær opgøres overordnet på én af to måder; på individniveau eller aggregeret på organisation.
-Measure, [Fravær – antal arbejdsdage], summerer v_FactFravær[Arbejdsdage]. Med 'Arbejdsdag' menes hér en hel fraværsdag er hér fraværstimer relativt til planlagt tid.
+Fravær opgøres overordnet på én af to måder. 
+Measure, [Fravær – antal arbejdsdage], summerer v_FactFravær[Arbejdsdage]. Med 'Arbejdsdag' menes hér en hel fraværsdag opgjort relativt til planlagt tid, $$ \frac{\text{fraværstimer}}{\text{planlagt arbejdstid}} $$.
 I modsætning hertil vises fravær også som løbende gennemsnit—over korte eller længere perioder—af antal fuldtidsfraværsdage relativt til den, på opgørelsestidspunktet, gennemsnitlige beskæftigelsesdecimal. En fuldtidsfraværsdag er andelen af fraværstimer på en dag af en standard 7,4 timers arbejdsdag. Beskæftigelsesdecimal oversættes direkte til årsværk. Denne, ”fuldtidsfraværsdage pr. årsværk”, er da en normaliseret og vægtet enhed, som derved er sammenlignelig på tværs af afdelinger, uanset at disse har forskellig sammensætning af fuld- og deltidsansatte samt varierende komposition i vagtlag.
 
 
