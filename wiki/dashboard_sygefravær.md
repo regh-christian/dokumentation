@@ -78,8 +78,7 @@ RETURN
 <tr>
 <td> 
   
-```DAX
-[Ansat på afdeling, nuværende afd] =
+```
 --Er afhængig af den tilsvarende relation under "Relationships".
 CALCULATE (
     [Ansat på afdeling],
@@ -90,8 +89,7 @@ CALCULATE (
 </td>
 <td>
 
-```DAX
-[Ansat på afdeling] =
+```
 VAR RelevantPersonID =
     MAX ( 'v_DimAnsættelse'[PersonID] )
 VAR RelevantePersoner =
