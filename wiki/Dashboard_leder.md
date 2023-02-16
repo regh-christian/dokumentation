@@ -72,6 +72,8 @@ Med [Fravær – antal i fraværsintervaller Ikke anonymiseret] beregnes fravær
 | [**Daxpatterns.com \ Dynamic segmentation**](https://www.daxpatterns.com/dynamic-segmentation/) | <img src="Images/icons_ref/icon_daxpatterns.png" height="45" width="45"> |
      
 </div>
+
+| [**Daxpatterns.com \ Dynamic segmentation**](https://www.daxpatterns.com/dynamic-segmentation/) | <img src="Images/icons_ref/icon_daxpatterns.png" height="45" width="45"> |
      
      
 Filtrene, [Ansat på afdeling, nuværende afd]=1 og v_DimAnsættelse[AnsatDagsDato]=’J’, anvendes igen til beregning på personniveau på tværs af organisation, men kun hvis disse er ansat dags dato. 
