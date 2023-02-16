@@ -2,29 +2,20 @@
 
 ## Personalesammensætning
 
+I dashboardet udstilles data på enkeltmedarbejderniveau tiltænkt ledere. 
+Bruger får her overblik over udvalgte parametre om de medarbejdere, denne i forvejen har adgang til via PersonaleWeb. Se [***brugerstyring***](./Brugerstyring).
+
+Der filtreres globalt _på fanen_ ud fra kriterierne v_DimAnsættelse[AnsatDagsDato]=J og v_DimAnsættelse[AktuelRække]=J .
+Som udgangspunkt vises altså alle lederens medarbejdere med en aktuel ansættelse pågældende dag inklusiv evt. tidligere (eller kommende) ansættelser på samme tjenestenummer.
+Har bruger adgang til medarbejdere på tværs af organisationsstruktur, kan der filtreres herpå, ligesom der kan filtreres på tværs af stillingshieraki—med undtagelse af laveste stillingsniveau.
+Foruden brug af grunddata er oprettet views til brug for beregninger i dette tema. Se [Tabeller](./Personalesammensætning#resume-af-tabeller). 
+
 <!-- Embed dashboards  -->
 <!-- <details><summary markdown="span">HR Lederdashboard</summary>
 <center> -->
 <iframe src="https://flis.regionh.top.local:444/PBIReports/powerbi/L%C3%B8n%20og%20HR/HR%20Lederdashboard/Personalesammens%C3%A6tning?RC:Toolbar=false" style="border:1px #000000 solid;" frameborder="1" height="435" width="100%"></iframe>
 <!-- </center>
 </details> -->
-
-<!--
-<details><summary markdown="span">Strategisk dashboard</summary>
-<center>
-<iframe src="https://flis.regionh.top.local:444/PBIReports/powerbi/L%C3%B8n%20og%20HR/HR%20Strategisk%20Dashboard/HR%20Strategisk%20Dashboard?RC:Toolbar=False" style="border:1px #000000 solid;" frameborder="1" height="565" width="100%"></iframe>
-</center>
-</details>
--->
-
-I dashboardet udstilles data på enkeltmedarbejderniveau tiltænkt ledere. 
-Bruger får her overblik over udvalgte parametre om de medarbejdere, denne i forvejen har adgang til via PersonaleWeb. Se [brugerstyring](./Brugerstyring).
-
-Der filtreres globalt _på fanen_ ud fra kriterierne v_DimAnsættelse[AnsatDagsDato]=J og v_DimAnsættelse[AktuelRække]=J
-Som udgangspunkt vises altså alle lederens medarbejdere med en aktuel ansættelse pågældende dag inklusiv evt. tidligere (eller kommende) ansættelser på samme tjenestenummer.
-Har bruger adgang til medarbejdere på tværs af organisationsstruktur, kan der filtreres herpå, ligesom der kan filtreres på tværs af stillingshieraki—med undtagelse af laveste stillingsniveau.
-Foruden brug af grunddata er oprettet views til brug for beregninger i dette tema. Se [Tabeller](./Personalesammensætning#resume-af-tabeller). 
-
 
 
 #### Beregninger
@@ -66,6 +57,14 @@ I **Informationstabel** vises udvalgte medarbejderdata herunder ansættelsessted
 
 
 ## Sygefravær
+
+I dashboardet udstilles data på enkeltmedarbejderniveau tiltænkt ledere. 
+Bruger får her overblik over udvalgte parametre om de medarbejdere, denne i forvejen har adgang til via PersonaleWeb. Se [brugerstyring](./Brugerstyring).
+
+Der filtreres globalt _på fanen_ ud fra kriterierne v_DimAnsættelse[AnsatDagsDato]=J og v_DimAnsættelse[AktuelRække]=J .
+Som udgangspunkt vises altså alle lederens medarbejdere med en aktuel ansættelse pågældende dag inklusiv evt. tidligere (eller kommende) ansættelser på samme tjenestenummer.
+Har bruger adgang til medarbejdere på tværs af organisationsstruktur, kan der filtreres herpå, ligesom der kan filtreres på tværs af stillingshieraki—med undtagelse af laveste stillingsniveau.
+Foruden brug af grunddata er oprettet views til brug for beregninger i dette tema. Se [Tabeller](./Personalesammensætning#resume-af-tabeller). 
 
 <iframe src="https://flis.regionh.top.local:444/PBIReports/powerbi/L%C3%B8n%20og%20HR/HR%20Lederdashboard/Sygefrav%C3%A6r?RC:Toolbar=False" style="border:1px #000000 solid;" frameborder="1" height="435" width="100%"></iframe>
 
