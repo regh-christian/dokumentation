@@ -114,8 +114,7 @@ RETURN GnsnitFuldtidsdage
 
 (4) Denne er vist pr. måned med Kurven ’**Aktuel visning**’. _På figuren_ filtreres v_DimTidDato[OffsetMaaned]=[-12;-1].
 
-() 
-
+(5) I samme figur er desuden, foruden regionens måltal for samme værdi, også benchmarking mod regionsgennemsnit af fuldtidsfraværsdage. 
 ```DAX
 [Fravær - benchmark regionen 12 mdr] =
 -- Measuret anvendes til benchmarkberegning af sygefraværet i hele regionen, idet organisatorisk filtrering undtages.
