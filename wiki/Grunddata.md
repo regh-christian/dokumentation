@@ -20,7 +20,7 @@ Med grunddata menes de tabeller, som foruden stamdata (v_DimPerson, v_DimAnsætt
 
 Baseret på tidstabellen, [DM_FL_HR].[DimDato] med en række mindre modifikationer og enkelte tilføjelser. Formater såsom Y2016-M06 erstattes af 2016-06 og enkelte nye variable indføres pba. eksisterende. Fx er _DagKortmaanedAar_ (10. jan. 2016) sammensat af _DagMåned_, _MånedNavn_ og _År_. 
 Enkelte ny kolonner beregnes; Kolonnen _Arbejdsdag_ er tilføjet og udregner, om dato er en arbejds-, helligdag eller i en weekend. 
-[Metode](https://www.computerworld.dk/uploads/eksperten-guider/107-Beregning-af-arbejdsdage-og-skaeve-helligdage.pdf). 
+[(Metode)](https://www.computerworld.dk/uploads/eksperten-guider/107-Beregning-af-arbejdsdage-og-skaeve-helligdage.pdf). 
 Til beregning heraf anvendes tre stored procedures; funktionen _chru_cube.DanskeHelligdage_ matcher dato mod kendte og faste helligdage og returnerer binært udfald; _chru_cube.PaaskeDage_ implementerer Gauás algoritme til bestemmelse af påskedag det givne år, hvorefter også ikke-faste helligdage da bestemmes (antal dage efter påske); I den sidste bestemmes, om dato er i en weekend. I praksis kaldes første stored procedure med dato som argument. Hvis dato er en kendt helligdag, er output _Helligdag_. I modsat fald kaldes næste procedure til bestemmelse af påskedag, hvorefter dato igen matches mod de ikke-faste helligdage. Ved fortsat manglende match kaldes sidste procedure til beregning af, om datoen er en lørdag eller søndag.
 
 ```SQL
