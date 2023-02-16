@@ -14,9 +14,9 @@ Med grunddata menes de tabeller, som foruden stamdata (v_DimPerson, v_DimAnsætt
 
 ### v_DimTidDato
 
-| **View** | **Baseret på** | 
-| - | - |
-| [chru_cube].[v_DimTidDato] | [DM_FL_HR].[DimDato] |
+| **View** | **Opdateres** | **Baseret på** | 
+| - | - | - |
+| [chru_cube].[v_DimTidDato] | Dagligt | [DM_FL_HR].[DimDato] |
 
 Baseret på tidstabellen, [DM_FL_HR].[DimDato] med en række mindre modifikationer og enkelte tilføjelser. Formater såsom Y2016-M06 erstattes af 2016-06 og enkelte nye variable indføres pba. eksisterende. Fx er _DagKortmaanedAar_ (10. jan. 2016) sammensat af _DagMåned_, _MånedNavn_ og _År_. 
 Enkelte ny kolonner beregnes; Kolonnen _Arbejdsdag_ er tilføjet og udregner, om dato er en arbejds-, helligdag eller i en weekend. 
@@ -36,12 +36,11 @@ CASE WHEN chru_cube.DanskeHelligdage(Dato) = 1 THEN 'Helligdag'
 
 ### v_DimAnsættelse
 
-| **View** | **Baseret på** | 
-| - | - |
-| [chru_cube].[v_DimAnsættelse] | [DM_FL_HR].[DimAnsættelse] &larr; CØK: 07_FL_110_SD_DimAnsaettelse.sas &larr; <a href="https://www.silkeborgdata.dk/sites/default/files/files/start.sd.dk/produkter/Datawarehouse/Dataleverancer/Snitflade%20PERSON.pdf" target="_blank">SD.SD_PERSON</a> |
-| | [DM_FL_HR].[DimOrganisation] |
-| | [chru_cube].[v_DimTidDatoAnsættelseslængder] |
-
+| **View** | **Opdaters** | **Baseret på** | 
+| - | - | - |
+| [chru_cube].[v_DimAnsættelse] | Dagligt | [DM_FL_HR].[DimAnsættelse] &larr; CØK: 07_FL_110_SD_DimAnsaettelse.sas &larr; <a href="https://www.silkeborgdata.dk/sites/default/files/files/start.sd.dk/produkter/Datawarehouse/Dataleverancer/Snitflade%20PERSON.pdf" target="_blank">SD.SD_PERSON</a> |
+| | | [DM_FL_HR].[DimOrganisation] |
+| | | [chru_cube].[v_DimTidDatoAnsættelseslængder] |
 
 View er baseret på SD-tabellen, SD_Person. ID er primærnøgle for det enkelte ansættelsesforhold. PersonID er nøgle henvisende til den enkelte person (CPR). En person kan have flere ansættelser på forskellige institutioner/afdelinger overlappende i tid—dog aldrig overlappende i tid på samme lønafsnit med samme tjenestenummer.
 På den måde anvendes tabellen både som fact og dimension afhængig af kontekst; om vi henviser til datostyrede variable knyttet til ansættelsen såsom stillingskode, overenskomst og beskæftigelsesdecimal eller foretager optællinger på personniveau. Vi anvender fx denne sondring mellem ansættelsesforhold og person til at sikre, at en leder kun kan se data relevant for det afsnit, hvor leder har beføjelser—via ’NuværendeOrganisationID’. Har en person fx flere samtidige ansættelser på forskellige institutioner, vil respektive ledere i udgangspunktet kun kunne se data for ansættelsesforholdet relevant for dem. Se desuden afsnit om <a href="https://github.com/DataOgDigitalisering/FortroligInformation/blob/main/Brugerstyring.md" target="_blank">Brugerstyring</a>.
@@ -134,27 +133,26 @@ EksterntFinansieret: J hvis afdelingen på ansættelsesstarttidspunktet var ekst
 
 **TillInst**: Hvor ’HændelseImellem’ er ”Mellem institutioner”, er denne udfyldt med institutionen på personens nye/kommende ansættelsesforhold.
 
-***FLERE VARIABLE ER INDFØRT SIDEN SIDST!***
+***FLERE VARIABLE ER TILFØJET SIDEN !***
 <br>
 
 
 
 ### v_DimPerson
 
-| **View** | **Baseret på** |
-|-|-|
-| [chru_cube].[v_DimPerson] | [DM_FL_HR].[DimPerson] |
+| **View** | **Opdateres** | **Baseret på** |
+|-|-|-|
+| [chru_cube].[v_DimPerson] | Dagligt | [DM_FL_HR].[DimPerson] |
 
 Dimensionstabel med ID som primærnøgle. Derudover navn og fødselsdato.
-<br>
 
 
 
 ### v_DimStilling
 
-| **View** |**Baseret på** |
-|-|-|
-| [chru_cube].[v_DimStilling] | [DM_FL_HR].[DimStillingskode] |
+| **View** | **Opdateres** | **Baseret på** |
+|-|-|-|
+| [chru_cube].[v_DimStilling] | Dagligt | [DM_FL_HR].[DimStillingskode] |
 
 Stillingshieraki i 4 niveauer (L1-L4) med ID som primærnøgle. Hoved-, fag- og stillingsgruppe samt stilling. Afhængig af kontekst og datakilde omtales disse værdier også:
 
@@ -174,10 +172,10 @@ Current_row=1 indikerer, at rækken er gældende i nuværende stillingskodehiera
 
 ### v_DimOrganisation
 
-| **View** | **Baseret på** |
-|-|-|
-| [chru_cube].[v_DimOrganisation] | [DM_FL_HR].[DimOrganisation] |
-| | [chru_cube].[v_DimAnsættelse] | 
+| **View** | **Opdateres** | **Baseret på** |
+|-|-|-|
+| [chru_cube].[v_DimOrganisation] | Dagligt | [DM_FL_HR].[DimOrganisation] |
+| | | [chru_cube].[v_DimAnsættelse] | 
 
 Organisationshieraki i 6 niveauer (L1-L6) med ID som primærnøgle. Afhængig af kontekst bruges forskellige termer om organisation:
 
@@ -198,9 +196,9 @@ Current_row=1 sikrer opdateret organisationshieraki men ignorerer evt. historisk
 
 ### v_DimLønart
 
-| **View** | **Baseret på** |
-|-|-|
-| [chru_cube].[v_DimLønart] | [DM_FL_HR].[DimLønart] |
+| **View** | **Opdateres** | **Baseret på** |
+|-|-|-|
+| [chru_cube].[v_DimLønart] | Dagligt | [DM_FL_HR].[DimLønart] |
 
 Dimensionstabel i ét niveau med ID som primærnøgle. Baseret på SD's tabel, SD_DIM_LOENART. L1Code og L1Name korresponderer hhv. *LOENART* og *LOENARTTXT*. Kun aktuelle
 lønarter er inkluderet svt *SD_DIM_LOENART[current_row]*=1. *DWReferenceKey* er lønarten, som anført i [SD Datawarehouse](https://www.silkeborgdata.dk/start/loenarter).
@@ -210,9 +208,9 @@ lønarter er inkluderet svt *SD_DIM_LOENART[current_row]*=1. *DWReferenceKey* er
 
 ### v_Servicemeddelelser
 
-| **Tabel baseret på** |
-| - |
-| [chru_cube].[v_Servicemeddelelser] |
+| **Tabel baseret på** | **Opdateres** |
+| - | - |
+| [chru_cube].[v_Servicemeddelelser] | Efter behov |
 
 View oprettet til at give brugere af dashboardet information om ændringer og nye features, samt dato for og status på disse. Kolonnen ’Dahboard’ indikerer med ’L’, ’S’ eller ’L,S’, om en meddelelse er tilegnet visning på hhv. leder- strategisk- eller begge dashboards.
 Tabellen vises datosorteret på velkomstsiden af dashboards uden kolonnen ’Dashboard’—denne skjules og anvendes til at filtrere på relevant for respektive dashboard.
@@ -223,8 +221,8 @@ Opdateres hvert 10-15min.
 
 ### v_InfoLeveranceOpdateringsdato
 
-| **View** | **Baseret på** |
-|-|-|
-| [chru_cube].[v_InfoLeveranceOpdateringsdato] | [DM_FL_HR].[DimLeveranceOpdateringsdato] |
+| **View** | **Opdateres** | **Baseret på** |
+|-|-|-|
+| [chru_cube].[v_InfoLeveranceOpdateringsdato] | Dagligt | [DM_FL_HR].[DimLeveranceOpdateringsdato] |
 
 Leverance- og opdateringsdatoer på anvendte datakilder
