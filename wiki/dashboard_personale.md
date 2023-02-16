@@ -1,4 +1,4 @@
-Personalesammensætning
+# Personalesammensætning
 
 ## Lederdashboard
 
@@ -54,10 +54,11 @@ I **Informationstabel** vises udvalgte medarbejderdata herunder ansættelsessted
 [Ansat til] angiver en eventuel slutdato på medarbejders senest tildelte tjenestenummer, hvis en sådan findes. [Alder], [Ansættelseslængde] og [Årsværk] beregner, i kontekst af unikke personer (her i kontekst af kombinationen v_DimPerson[Navn] og v_DimAnsættelse[Tjnr]) pågældende persons alder og ansættelseslænge på dagen i hele antal år samt beskæftigelsesdecimal (årsværk) på pågældende ansættelse.
 
 
-
+----------
 
 ## Strategisk Dashboard
 
 <iframe src="https://flis.regionh.top.local:444/PBIReports/powerbi/L%C3%B8n%20og%20HR/HR%20Strategisk%20Dashboard/HR%20Strategisk%20Dashboard?RC:Toolbar=False" style="border:1px #000000 solid;" frameborder="1" height="435" width="100%"></iframe>
 
 
+#### Beregninger
