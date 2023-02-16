@@ -67,11 +67,11 @@ Desuden filtreres på v_DimAnsættelse[AnsatDagsDato]=’J’, hvorfor kun perso
 **FIGUR: Sygefravær de seneste 12 mdr. fordelt på intervaller**
 Med [Fravær – antal i fraværsintervaller Ikke anonymiseret] beregnes fraværsdage (fraværstimer relativt til planlagt tid). Measure er designet til at beregne—i kontekst af v_TallyFraværsintervaller[Interval]—antallet af personer i perioden—på tværs af organisation—med antal fraværsdage indenfor definerede intervaller. (Intervaller inkluderer øvre grænseværdier.)
 
-<center>
+<div align="center">
      
 | [**Daxpatterns.com \ Dynamic segmentation**](https://www.daxpatterns.com/dynamic-segmentation/) | <img src="Images/icons_ref/icon_daxpatterns.png" height="45" width="45"> |
      
-</center>
+</div>
      
      
 Filtrene, [Ansat på afdeling, nuværende afd]=1 og v_DimAnsættelse[AnsatDagsDato]=’J’, anvendes igen til beregning på personniveau på tværs af organisation, men kun hvis disse er ansat dags dato. 
