@@ -1,5 +1,14 @@
 # Lederdashboard
 
+<a href="./Brugerstyring">Brugerstyring</a> 
+<a href="./Brugerstyring" target="_blank">Brugerstyring</a> 
+[Brugerstyring](./Brugerstyring)
+[Brugerstyring](/Brugerstyring.md)
+[Brugerstyring](./Brugerstyring.md)
+[Brugerstyring](/./Brugerstyring.md)
+
+
+
 ## Personalesammensætning
 
 <center><img src="Images/dashboard_personalesammensætning_info.png" height="95%" width="95%" alt="Lederdashboard, info om personalesammensætning" class="center"/></center>
