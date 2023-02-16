@@ -73,11 +73,11 @@ RETURN
 
 <table>
 <tr>
-<!-- <th>Json 1</th>
-<th>Markdown</th> -->
-<!-- </tr>
+<th>[Ansat på afdeling, nuværende afd] =</th>
+<th[Ansat på afdeling] =</th> 
+</tr>
 <tr>
-<td> -->
+<td> 
   
 ```DAX
 [Ansat på afdeling, nuværende afd] =
