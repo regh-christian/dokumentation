@@ -13,9 +13,23 @@ Foruden brug af grunddata er oprettet views til brug for beregninger i dette tem
 
 ### Beregninger
 
-Measuret, [Antal medarbejdere], summerer antallet af rækker i v_DimAnsættelse. Denne sum anvendes i flere andre measures i tilpassede filterkontekster. Antallet af henholdsvis månedslønnede, fuldtidsansatte, deltidsansatte og timelønnede fremgår af visninger (cards) til venstre, og er alle baseret på [Antal medarbejdere] evalueret i forskellige filterkontekster bestemt ved de dikotomiserede J/N-kolonner i v_DimAnsættelser.
-Antal [Årsværk], vist sammen med de fire føromtalte, beregner summen af beskæftigelsesdecimaler, v_DimAnsættelse[Beskdec], som i definitionen er andelen af en 37 timers arbejdsuge en person er ansat til, og her i praksis oversættes til årsværk.
-Specifikt på visningen af årsværk filtreres v_DimAnsættelse[Månedslønnede]=’J’.
+Measuret, [Antal medarbejdere], summerer groft antallet af rækker i v_DimAnsættelse, og anvendes i en række andre measures, uden skelnen imellem populationer (månedslønnede, fuldtidsansatte eller andet). 
+```DAX
+IF (
+    ISBLANK ( COUNTROWS ( 'v_DimAnsættelse' ) ),
+    0,
+    COUNTROWS ( 'v_DimAnsættelse' )
+)
+```
+Antallet af henholdsvis månedslønnede, fuldtidsansatte, deltidsansatte og timelønnede fremgår af visninger (_cards_) til venstre, og er alle baseret på [Antal medarbejdere] evalueret i forskellige filterkontekster ved brug af én eller flere af de dikotomiserede J/N-kolonner i v_DimAnsættelser. Et eksempel herpå er [Antal fuldtidsansatte]
+```DAX
+CALCULATE (
+    [Antal medarbejdere],
+    'v_DimAnsættelse'[Månedslønnet] = "J",
+    'v_DimAnsættelse'[Fuldtid] = "J"
+)
+```
+Antal [Årsværk], vist sammen med de fire føromtalte, beregner summen af beskæftigelsesdecimaler, v_DimAnsættelse[Beskdec], som i definitionen er andelen af en 37 timers arbejdsuge, en person er ansat til og her i praksis oversættes til årsværk. Specifikt på visningen af årsværk filtreres v_DimAnsættelse[Månedslønnede]=’J’ direkte i selve figuren.
      [Ansættelseslængde] er et andet measure, der anvendes af flere andre. Det beregner antallet år fra en persons ansættelsesdato i kommunen (hvis en sådan findes) til i dag. 
 I figuren Ansættelseslængde anvendes dette measure til at beregne medarbejdernes ansættelseslængde i nuværende stilling, [AnsatteAnsættelseslængdeInterval]. Dette measure beregner [Ansættelseslængde] evalueret i en filterkontekst af tjenestenummer (og AnsættelsesID for at sikre optælling på unikke individer) og returnerer [Antal medarbejdere] med en given ansættelseslængde. Brugt i en visning sammen med v_TallyAnsættelseslængde opgøres antallet af medarbejdere med an ansættelseslængde i hvert af disse intervaller. 
 Ved mouse-over på Ansættelseslængde vises en oversigt over de enkelte medarbejdere inden for hvert ansættelseslængdeinterval. Dette ved at bruge measuret [Ansættelseslængde] i en tabel med navn og PersonID, hvor filterkontekst da er det unikke PersonID.
