@@ -79,36 +79,33 @@ RETURN
 <tr>
 <td>
   
-```json
-{
-  "id": 1,
-  "username": "joe",
-  "email": "joe@example.com",
-  "order_id": "3544fc0"
-}
+```DAX
+[Ansat på afdeling, nuværende afd] =
+--Er afhængig af den tilsvarende relation under "Relationships".
+CALCULATE (
+    [Ansat på afdeling],
+    USERELATIONSHIP ( 'v_DimAnsættelse'[NuværendeOrganisationID], v_DimOrganisation[ID] )
+)
 ```
   
 </td>
 <td>
 
-```json
-{
-  "id": 5,
-  "username": "mary",
-  "email": "mary@example.com",
-  "order_id": "f7177da"
-}
+```DAX
+[Ansat på afdeling] =
+VAR RelevantPersonID =
+    MAX ( 'v_DimAnsættelse'[PersonID] )
+VAR RelevantePersoner =
+    FILTER ( v_DimPerson, [ID] = RelevantPersonID )
+VAR AnsatPaaAfdeling =
+    IF ( COUNTROWS ( RelevantePersoner ) + 0 > 0, 1, 0 )
+RETURN
+    AnsatPaaAfdeling
 ```
 
 </td>
 </tr>
 </table>
-
-
-
-
-
-
 
 
 >> Inaktiv relation mellem v_DimAnsættelse[NuværendeOrganisationID] og v_DimOrganisation[ID] anvendes her til at beregne fravær på individniveau (tjenestenummer). v_DimAnsættelse[NuværendeOrganisationID] viser, på alle tidligere ansættelser med samme tjenestenummer, hvor personen aktuelt er ansat dags dato. Har en medarbejder flere ansættelser på tværs af organisation, og har bruger også adgang til data herfra, vises medarbejderens totale fravær.
