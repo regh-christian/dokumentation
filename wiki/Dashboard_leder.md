@@ -69,7 +69,7 @@ Med [Fravær – antal i fraværsintervaller Ikke anonymiseret] beregnes fravær
 
 <center>
      
-> | [**Daxpatterns.com \ Dynamic segmentation**](https://www.daxpatterns.com/dynamic-segmentation/) | <img src="Images/icons_ref/icon_daxpatterns.png" height="45" width="45"> |
+| [**Daxpatterns.com \ Dynamic segmentation**](https://www.daxpatterns.com/dynamic-segmentation/) | <img src="Images/icons_ref/icon_daxpatterns.png" height="45" width="45"> |
      
 </center>
      
