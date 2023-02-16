@@ -63,7 +63,7 @@ Via bogmærket, **Fravær pr. type**, ses samme beregning (akkumulkeret) i figur
 Igen filtreres på figuren med kriterierne, [Ansat på afdelingen, nuværende afdeling]=1 og v_DimAnsættelse[AnsatDagsDato]=J, hvorfor alle ansættelser med samme tjenestenummer på aktuelt ansatte medregnes.
 <br>
 
-**Sygefravær de seneste 12 mdr. fordelt på intervaller** er sidste beregning af relative fraværsdage $$ \frac{\text{fraværstimer}}{\text{planlagt arbejdstid}} $$ på _individniveau_. [Fravær – antal i fraværsintervaller Ikke anonymiseret] beregner [Fravær – antal arbejdsdage på tværs af org] i kontekst af tally-tabellen v_TallyFraværsintervaller[Interval]. (Intervaller inkluderer øvre grænseværdier.)
+**Sygefravær de seneste 12 mdr. fordelt på intervaller** er sidste beregning af relative fraværsdage $$ \frac{\text{fraværstimer}}{\text{planlagt arbejdstid}} $$ på _individniveau_. [Fravær – antal i fraværsintervaller Ikke anonymiseret] beregner [Fravær – antal arbejdsdage på tværs af org] i kontekst af tally-tabellen, v_TallyFraværsintervaller[Interval]. (Intervaller inkluderer øvre grænseværdier.)
 
 > | [**Daxpatterns.com \ Dynamic segmentation**](https://www.daxpatterns.com/dynamic-segmentation/) | <img src="Images/icons_ref/icon_daxpatterns.png" height="45" width="45"> | 
      
