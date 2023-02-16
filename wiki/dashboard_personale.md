@@ -1,4 +1,6 @@
-# Lederdashboard
+Personalesammensætning
+
+## Lederdashboard
 
 I dashboardet udstilles data på enkeltmedarbejderniveau tiltænkt ledere. 
 Bruger får her overblik over udvalgte parametre om de medarbejdere, denne i forvejen har adgang til via PersonaleWeb. Se [***brugerstyring***](./Brugerstyring).
@@ -54,7 +56,7 @@ I **Informationstabel** vises udvalgte medarbejderdata herunder ansættelsessted
 
 
 
-# Strategisk Dashboard
+## Strategisk Dashboard
 
 <iframe src="https://flis.regionh.top.local:444/PBIReports/powerbi/L%C3%B8n%20og%20HR/HR%20Strategisk%20Dashboard/HR%20Strategisk%20Dashboard?RC:Toolbar=False" style="border:1px #000000 solid;" frameborder="1" height="435" width="100%"></iframe>
 
