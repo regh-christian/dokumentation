@@ -3,11 +3,11 @@
 ## Personalesammensætning
 
 <!-- Embed dashboards  -->
-<details><summary markdown="span">HR Lederdashboard</summary>
-<center>
+<!-- <details><summary markdown="span">HR Lederdashboard</summary>
+<center> -->
 <iframe src="https://flis.regionh.top.local:444/PBIReports/powerbi/L%C3%B8n%20og%20HR/HR%20Lederdashboard/Personalesammens%C3%A6tning?RC:Toolbar=false" style="border:1px #000000 solid;" frameborder="1" height="435" width="100%"></iframe>
-</center>
-</details>
+<!-- </center>
+</details> -->
 
 <!--
 <details><summary markdown="span">Strategisk dashboard</summary>
