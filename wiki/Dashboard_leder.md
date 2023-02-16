@@ -27,7 +27,7 @@ Foruden brug af grunddata er oprettet views til brug for beregninger i dette tem
 
 
 
-### Beregninger
+#### Beregninger
 
 Measuret, [Antal medarbejdere], summerer groft antallet af rækker i v_DimAnsættelse. Det anvendes i en række andre measures uden skelnen imellem populationer (månedslønnede, fuldtidsansatte eller andet). 
 ```DAX
@@ -69,7 +69,8 @@ I **Informationstabel** vises udvalgte medarbejderdata herunder ansættelsessted
 
 <iframe src="https://flis.regionh.top.local:444/PBIReports/powerbi/L%C3%B8n%20og%20HR/HR%20Lederdashboard/Sygefrav%C3%A6r?RC:Toolbar=False" style="border:1px #000000 solid;" frameborder="1" height="435" width="100%"></iframe>
 
-### Beregninger
+
+#### Beregninger
 Fravær er bredt defineret ved lønarterne i v_DimLønartFravær[L1Code]. 
 Hvor andet ikke er nævnt, medregnes månedslønnede (v_DimAnsættelse[Månedslønnet]=’J’) ansatte (v_DimAnsættelse[Ansat]=’J’ svt. statuskode {0,1,3} ).
 Filteret, v_DimLønartFravær[L1Name]=”Sygefravær”, på fanen Sygefravær sikrer, at kun denne fraværskategori medtages i beregninger her. Via bogmærker føres bruger til faner uden dette filter, hvor også øvrige kategorier vises. 
