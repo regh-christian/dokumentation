@@ -46,7 +46,7 @@ CALCULATE (
     )
 )
 ```
-og
+hvor
 ```DAX
 [Ansat på afdeling] =
 VAR RelevantPersonID =
