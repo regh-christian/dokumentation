@@ -17,11 +17,12 @@ Foruden brug af grunddata er oprettet views og tabeller til brug i beregninger u
 #### Beregninger
 Fravær opgøres overordnet på én af to måder. 
 Measure, [Fravær – antal arbejdsdage], summerer v_FactFravær[Arbejdsdage]. Med 'Arbejdsdag' menes hér en hel fraværsdag opgjort relativt til planlagt tid, $$ \frac{\text{fraværstimer}}{\text{planlagt arbejdstid}} $$.
-I modsætning hertil vises fravær også som løbende gennemsnit—over korte eller længere perioder—af antal fuldtidsfraværsdage relativt til den, på opgørelsestidspunktet, gennemsnitlige beskæftigelsesdecimal. En fuldtidsfraværsdag er andelen af fraværstimer på en dag af en standard 7,4 timers arbejdsdag. Beskæftigelsesdecimal oversættes direkte til årsværk. Denne, ”fuldtidsfraværsdage pr. årsværk”, er da en normaliseret og vægtet enhed, som derved er sammenlignelig på tværs af afdelinger, uanset at disse har forskellig sammensætning af fuld- og deltidsansatte samt varierende komposition i vagtlag.
+I modsætning hertil vises fravær også som løbende gennemsnit—over korte eller længere perioder—af antal fuldtidsfraværsdage relativt til den, på opgørelsestidspunktet, gennemsnitlige beskæftigelsesdecimal. 
+
+>> En fuldtidsfraværsdag er andelen af fraværstimer på en dag af en standard 7,4 timers arbejdsdag. Beskæftigelsesdecimal oversættes direkte til årsværk. ”Fuldtidsfraværsdage pr. årsværk” er da en normaliseret og vægtet enhed sammenlignelig på tværs af afdelinger, uanset at disse har forskellig sammensætning af fuld- og deltidsansatte samt varierende komposition i vagtlag.
 
 
-**FIGUR: Antal sygefraværsdage de seneste 12 mdr.**
-I tabellen vises [Fravær – antal arbejdsdage på tværs af org] i filterkontekst af tid (v_DimTidDato[KortMaanedNavn] og person (v_DimPerson[ID]). Measure tilsidesætter den eksisterende relation, v_DimAnsættelse[OrganisationID]v_DimOrganisation[ID], og beregner [Fravær – antal arbejdsdage] (fraværstimer relativt til planlagt tid) i relationen, v_DimAnsættelse[NuværendeOrganisationID]v_DimOrganisation[ID]. 
+I **Antal sygefraværsdage de seneste 12 mdr.** vises [Fravær – antal arbejdsdage på tværs af org] i filterkontekst af tid (v_DimTidDato[KortMaanedNavn] og person (v_DimPerson[ID]). Measure tilsidesætter den eksisterende relation, v_DimAnsættelse[OrganisationID]v_DimOrganisation[ID], og beregner [Fravær – antal arbejdsdage] (fraværstimer relativt til planlagt tid) i relationen, v_DimAnsættelse[NuværendeOrganisationID]v_DimOrganisation[ID]. 
 ```SQL
 ,CASE
    WHEN [Start] >= CONVERT(date, GETDATE()) THEN OrganisationsID
