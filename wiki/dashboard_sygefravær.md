@@ -39,50 +39,13 @@ Dette, i kombination med filtret specifikt på denne figur, [Ansat på afdeling,
 ```DAX
 [Ansat på afdeling, nuværende afd] =
 --Er afhængig af den tilsvarende relation under "Relationships".
-CALCULATE (
-    [Ansat på afdeling],
-    USERELATIONSHIP ( 'v_DimAnsættelse'[NuværendeOrganisationID],
-    v_DimOrganisation[ID]
-    )
+CALCULATE ( [Ansat på afdeling], 
+    USERELATIONSHIP ( 'v_DimAnsættelse'[NuværendeOrganisationID], v_DimOrganisation[ID] )
 )
 ```
 hvor
 ```DAX
 [Ansat på afdeling] =
-VAR RelevantPersonID =
-    MAX ( 'v_DimAnsættelse'[PersonID] )
-VAR RelevantePersoner =
-    FILTER (
-        v_DimPerson,
-        [ID] = RelevantPersonID
-    )
-VAR AnsatPaaAfdeling =
-    IF ( COUNTROWS ( RelevantePersoner ) + 0 > 0, 1, 0 )
-RETURN
-    AnsatPaaAfdeling
-```
-Endeligt filtreres på v_DimAnsættelse[AnsatDagsDato]=’J’, hvorfor kun personer med an aktiv ansættelse dd. vises—men altså også historiske asnsættelser, hvis tjenstenummer er bevaret. 
-
-<table>
-<tr>
-<th>[Ansat på afdeling, nuværende afd] =</th>
-<th>[Ansat på afdeling] =</th> 
-</tr>
-<tr>
-<td> 
-  
-```
---Er afhængig af den tilsvarende relation under "Relationships".
-CALCULATE (
-    [Ansat på afdeling],
-    USERELATIONSHIP ( 'v_DimAnsættelse'[NuværendeOrganisationID], v_DimOrganisation[ID] )
-)
-```
-  
-</td>
-<td>
-
-```
 VAR RelevantPersonID =
     MAX ( 'v_DimAnsættelse'[PersonID] )
 VAR RelevantePersoner =
@@ -92,49 +55,11 @@ VAR AnsatPaaAfdeling =
 RETURN
     AnsatPaaAfdeling
 ```
-
-</td>
-</tr>
-</table>
-
-
-<table>
-<tr>
-<th>Json 1</th>
-<th>Markdown</th>
-</tr>
-<tr>
-<td>
-  
-```json
-{
-  "id": 1,
-  "username": "joe",
-  "email": "joe@example.com",
-  "order_id": "3544fc0"
-}
-```
-  
-</td>
-<td>
-
-```json
-{
-  "id": 5,
-  "username": "mary",
-  "email": "mary@example.com",
-  "order_id": "f7177da"
-}
-```
-
-</td>
-</tr>
-</table>
-
+Endeligt filtreres på v_DimAnsættelse[AnsatDagsDato]=’J’, hvorfor kun personer med an aktiv ansættelse dd. vises—men altså også historiske asnsættelser, hvis tjenstenummer er bevaret. 
 
 > Inaktiv relation mellem v_DimAnsættelse[NuværendeOrganisationID] og v_DimOrganisation[ID] anvendes her til at beregne fravær på individniveau (tjenestenummer). v_DimAnsættelse[NuværendeOrganisationID] viser, på alle tidligere ansættelser med samme tjenestenummer, hvor personen aktuelt er ansat dags dato. Har en medarbejder flere ansættelser på tværs af organisation, og har bruger også adgang til data herfra, vises medarbejderens totale fravær.
 
-Via bogmærket, Fravær pr. type, ses samme beregning i figuren  Antal fraværsdage de seneste 12 mdr. fordelt på fravær, hvor filterkontekst på tid og fraværstype (v_DimLønartFravær[L1Name]) er ophævet. Dermed ses akkumuleret antal fraværsdage i perioden, men nu fordelt på underkategori af fraværstyper, v_DimLønartFravær[L1Name]. Bruger kan til- og fravælge underkategorier via filter med standardindstillingen {”Sygefravær”, ”$56 fravær”, ”Arbejdsskade”, ”Graviditetsgener” }. 
+Via bogmærket, **Fravær pr. type**, ses samme beregning (akkumulkeret, fordelt på underkategorier) i figuren **Antal fraværsdage de seneste 12 mdr. fordelt på type**, hvor filterkontekst på fraværstype (v_DimLønartFravær[L1Name]) er ophævet. Bruger kan til- og fravælge underkategorier via filter med standardindstillingen {”Sygefravær”, ”$56 fravær”, ”Arbejdsskade”, ”Graviditetsgener” }. 
 Desuden filtreres på v_DimAnsættelse[AnsatDagsDato]=’J’, hvorfor kun personer med an aktiv ansættelse dd. vises. Desuden ’Ansat på afdelingen, nuværende afdeling’=1.
 <br>
 
