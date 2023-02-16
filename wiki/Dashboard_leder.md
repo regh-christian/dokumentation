@@ -29,7 +29,7 @@ Foruden brug af grunddata er oprettet views til brug for beregninger i dette tem
 
 ### Beregninger
 
-Measuret, [Antal medarbejdere], summerer groft antallet af rækker i v_DimAnsættelse. Det anvendes i en række andre measures, uden skelnen imellem populationer (månedslønnede, fuldtidsansatte eller andet). 
+Measuret, [Antal medarbejdere], summerer groft antallet af rækker i v_DimAnsættelse. Det anvendes i en række andre measures uden skelnen imellem populationer (månedslønnede, fuldtidsansatte eller andet). 
 ```DAX
 [Antal medarbejdere] =
 IF (
@@ -50,9 +50,11 @@ CALCULATE (
 
    Antal [Årsværk], vist sammen med de fire føromtalte, beregner summen af beskæftigelsesdecimaler, v_DimAnsættelse[Beskdec], som i definitionen er andelen af en 37 timers arbejdsuge, en person er ansat til og her i praksis oversættes til årsværk. Specifikt på visningen af årsværk filtreres v_DimAnsættelse[Månedslønnede]=’J’ i selve figuren.
     
-Til beregning af [Ansættelseslængde] (antal år) anvendes differencen mellem dags dato og v_DimAnsættelse[Ansættelsesdato]. I figuren Ansættelseslængde anvendes dette measure til at beregne medarbejders ansættelseslængde i nuværende stilling, [AnsatteAnsættelseslængdeInterval]. Dette measure beregner [Ansættelseslængde] evalueret i en filterkontekst af tjenestenummer (og AnsættelsesID for at sikre optælling på unikke individer) og returnerer [Antal medarbejdere] med en given ansættelseslængde. Brugt i en visning sammen med v_TallyAnsættelseslængde opgøres antallet af medarbejdere med an ansættelseslængde i hvert af disse intervaller. 
-Ved mouse-over på Ansættelseslængde vises en oversigt over de enkelte medarbejdere inden for hvert ansættelseslængdeinterval. Dette ved at bruge measuret [Ansættelseslængde] i en tabel med navn og PersonID, hvor filterkontekst da er det unikke PersonID.
-     Figuren Aldersfordeling viser antallet af medarbejdere, [AnsatteAldersinterval], fordelt på aldersintervaller. Metodisk er beregning og opbygning af measure identisk med førnævnte, [AnsatteAnsættelseslængdeInterval]. I measuret, [AnsatteAldersinterval], indgår measuret [Alder] dog i stedet for [Ansættelseslængde] ligesom der nu optælles [Antal medarbejdere] pr. ’Aldersinterval’ i stedet for pr. ’Ansættelseslængde’. Measuret, [Alder], beregner blot en persons alder som differencen mellem dags dato og dennes fødselsdag angivet i v_DimPerson. 
+Til beregning af [Ansættelseslængde] (antal år) anvendes differencen mellem dags dato og v_DimAnsættelse[Ansættelsesdato]. 
+I figuren **Ansættelseslængde** anvendes dette measure af [AnsatteAnsættelseslængdeInterval] til at beregne medarbejders ansættelseslængde i nuværende stilling (+evt tidligere ansættelser på samme tjenestenummer). Dette measure er designet til, i kontekst af v_TallyAnsættelseslænge, at beregne [Ansættelseslængde] evalueret i en filterkontekst af tjenestenummer (og AnsættelsesID for at sikre optælling på unikke individer) og returnerer antallet af medarbejdere i intervallerne specificeret i tally-tabellen.
+Ved mouse-over vises den enkelte medarbejders ansættelseslængde udregnet med [Ansættelseslængde].
+
+Figuren Aldersfordeling viser antallet af medarbejdere, [AnsatteAldersinterval], fordelt på aldersintervaller. Metodisk er beregning og opbygning af measure identisk med førnævnte, [AnsatteAnsættelseslængdeInterval]. I measuret, [AnsatteAldersinterval], indgår measuret [Alder] dog i stedet for [Ansættelseslængde] ligesom der nu optælles [Antal medarbejdere] pr. ’Aldersinterval’ i stedet for pr. ’Ansættelseslængde’. Measuret, [Alder], beregner blot en persons alder som differencen mellem dags dato og dennes fødselsdag angivet i v_DimPerson. 
 Specifikt på denne figur er nedre og øvre aldersintervaller filtreret fra via v_TallyAlder[AldersInterval_5år], så kun intervaller mellem 15 og 79 år vises.
 Ved mouse-over på Aldersfordeling vises en oversigt over de enkelte medarbejdere inden for hvert aldersinterval. Dette ved at bruge measuret [Alder] i en tabel med navn og PersonID, hvor filterkontekst da er det unikke PersonID.
      Tabellen Hændelser 14 dg. frem viser en kronologisk oversigt over udvalgte personrelaterede hændelser i de kommende 14 dage, fx fødselsdage, jubilæer, orlov, tiltrædelse, fratrædelse m.m. ____ 
