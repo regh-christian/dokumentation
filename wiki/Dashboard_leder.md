@@ -6,7 +6,7 @@
 
 
 I dashboardet udstilles data på enkeltmedarbejderniveau tiltænkt ledere. 
-Bruger (ledere) får her overblik over udvalgte parametre om de medarbejdere, denne i forvejen har adgang til via PersonaleWeb. Se [brugerstyring](/brugerstyring). Som udgangspunkt vises alle lederens medarbejdere med en aktuel ansættelse pågældende dag. Har bruger adgang til medarbejdere på tværs af organisationsstruktur, kan der filtreres herpå, ligesom der kan filtreres på tværs af stillingshieraki—med undtagelse af laveste niveau, stillingskode/stillingskodetekst.
+Bruger (ledere) får her overblik over udvalgte parametre om de medarbejdere, denne i forvejen har adgang til via PersonaleWeb. Se [brugerstyring](/./brugerstyring). Som udgangspunkt vises alle lederens medarbejdere med en aktuel ansættelse pågældende dag. Har bruger adgang til medarbejdere på tværs af organisationsstruktur, kan der filtreres herpå, ligesom der kan filtreres på tværs af stillingshieraki—med undtagelse af laveste niveau, stillingskode/stillingskodetekst.
 Foruden brug af grunddata er oprettet views til brug for beregninger i dette tema. Se >>TABELLER<<. 
 
 
