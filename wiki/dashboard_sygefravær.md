@@ -72,8 +72,6 @@ Igen filtreres _på figuren_ med kriterierne, [Ansat på afdelingen, nuværende 
 
 > Tally-tabeller er i vores fulde kontrol, hvorfor vi let kan konfigurere i intervalgrænser og -antal.
 
-----------
-
 > | [**Sqlbi.com \ Rolling 12 Months Average in DAX**](https://www.sqlbi.com/articles/rolling-12-months-average-in-dax/) | <img src="Images/icons_ref/icon_sqlbi.png" height="45" width="45"> |
 
 TIl beregning af **'Gns. løbende sygefravær opgjort over seneste 12 mdr.'** anvendes to measures, *[Fravær – vægtede fuldtidsfraværsdage gnsnit 12 mdr Ikke anonymiseret]* og *[Fravær – Benchmark regionen 12 mdr.]*. Førstnævnte udregner 
@@ -130,16 +128,16 @@ Til visning af ’Alle medarbejdere jf. rolle’ indgår foregående beregning i
      Regionens måltal på 11,7%  fravær er defineret som en ’Y-axis Constant Line’.
 Via bogmærket, Sygefravær pr. måned, kan bruger se næsten samme beregning i Sygefravær de seneste 12 mdr. fordelt på måneder. I denne figur vises [Fravær – vægtede fuldtidsfraværsdage] opgjort pr. måned—fra sidste dag i sidst måned—og ikke et løbende gennemsnit, hvormed sæsonudsving bliver tydeligere. Metodik i measure er identisk med [Fravær – vægtede fuldtidsfraværsdage gnsnit 12 mdr Ikke anonymiseret] med undtagelse af specificering af opgørelsesperiode på én måned i stedet for 12 samt implementering af anonymitetsgrænsen, da der også tælles på historisk ansatte, som ikke skal kunne identificeres. 
 
-**FIGUR: Gns. sygefravær de seneste 12 mdr. fordelt på afdelinger**
-Også her anvendes det vægtede gennemsnit. Andel af normaliseret fravær (ift. 7,4timer/dag) relativt til gennemsnitlig sum af beskæftigelsesdecimal (opgjort pr. d. 1. hver måned i seneste 12 måneder). 
-Beregnes ved først summering af og dernæst ratioen mellem hhv. [MaskeretFravSum12Mdr] og [MaskeretBeskDec12Mdr] i v_FactAggFravær. 
-     Har bruger adgang til medarbejdere på tværs af organisation, vises en bar pr. afdeling (v_DimOrganisation[L4Name]).
-     Med figurspecifikt filter på v_DimTidDato[OffsetMaaned]=-1 regnes 12 måneder bagud startende fra sidste hele måned.
-     Via fanen, Sygefravær pr. afsnit, kan samme figur ses opgjort på laveste enhedsniveau. 
+I **Gns. sygefravær de seneste 12 mdr. fordelt på afdelinger** bennchmarkes fuldtidsfraværsdage mod regionens måltal og internt på tværs af afdelinger(er) (hvis bruger har adgang til flere). 
+ ```DAX
+[Fravær - Benchmark] = 
+VAR BeskSum = SUM ( 'v_FactAggFravær'[MaskeretBeskSum12Mdr] )
+VAR FravSum = SUM ( 'v_FactAggFravær'[MaskeretFravSum12Mdr] )
+RETURN DIVIDE ( FravSum, BeskSum, 0 )
+ ```
      
      
-     
-- -- -- - 
+----------
  
 ## Strategisk dashboard
 
