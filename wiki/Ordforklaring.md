@@ -226,7 +226,7 @@ Feriekategori dækker begreberne feriesaldo, anvendt ferie, planlagt ferie og fo
 
 
 ### Ferieår
-Ferieåret opdeles i ordinær og 6. ferieuge med hver en **optjenings**- og en **afholdelsesperiode**.
+Ferieåret opdeles i ordinær og 6. ferieuge med hver en **optjenings**- og en **afviklingsperiode**.
 
 | **FerieType** | **Optjeningsperiode**     | **Afviklingsperiode**     |
 |       -:      |             -             |             -             |
@@ -239,7 +239,7 @@ Til beregning af restferie—antal timers ferie til afholdelse, _der endnu ikke 
 
 $$
 \text{Restferie til afhold} = \sum_{\text{optj.start}}^{\text{i dag}} (\text{feriesaldo}) + \sum_{\text{i morgen}}^{\text{optj.slut}} (\text{forv.tilskrivning})
- - \left( \sum_{\text{afh.start}}^{\text{i dag}} (\text{anvendte timer}) + \sum_{\text{i morgen}}^{\text{afh.slut}} (\text{planlagte timer}) \right)
+ - \left( \sum_{\text{afv.start}}^{\text{i dag}} (\text{anvendte timer}) + \sum_{\text{i morgen}}^{\text{afv.slut}} (\text{planlagte timer}) \right)
 $$
 
 
