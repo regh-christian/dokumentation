@@ -5,7 +5,7 @@
 <!-- Embed dashboards  -->
 <details><summary markdown="span">HR Lederdashboard</summary>
 <center>
-<iframe src="https://flis.regionh.top.local:444/PBIReports/powerbi/L%C3%B8n%20og%20HR/HR%20Lederdashboard/Personalesammens%C3%A6tning?RC:Toolbar=false" style="border:1px #000000 solid;" frameborder="1" height="450" width="100%"></iframe>
+<iframe src="https://flis.regionh.top.local:444/PBIReports/powerbi/L%C3%B8n%20og%20HR/HR%20Lederdashboard/Personalesammens%C3%A6tning?RC:Toolbar=false" style="border:1px #000000 solid;" frameborder="1" height="720" width="1865"></iframe>
 </center>
 </details>
 
