@@ -67,6 +67,8 @@ Tabellen Informationstabel viser en generel oversigt over udvalgte medarbejderda
 
 ## Sygefravær
 
+<iframe src="https://flis.regionh.top.local:444/PBIReports/powerbi/L%C3%B8n%20og%20HR/HR%20Lederdashboard/Sygefrav%C3%A6r?RC:Toolbar=False" style="border:1px #000000 solid;" frameborder="1" height="435" width="100%"></iframe>
+
 ### Beregninger
 Fravær er bredt defineret ved lønarterne i v_DimLønartFravær[L1Code]. 
 Hvor andet ikke er nævnt, medregnes månedslønnede (v_DimAnsættelse[Månedslønnet]=’J’) ansatte (v_DimAnsættelse[Ansat]=’J’ svt. statuskode {0,1,3} ).
