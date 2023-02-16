@@ -1,10 +1,11 @@
 # Lederdashboard
 
+## Personalesammensætning
 
 <!-- Embed dashboards  -->
 <details><summary markdown="span">HR Lederdashboard</summary>
 <center>
-<iframe src="https://flis.regionh.top.local:444/PBIReports/powerbi/L%C3%B8n%20og%20HR/HR%20Lederdashboard/Personalesammens%C3%A6tning?RC:Toolbar=false&wdFilterPaneEnabled=TRUE&wdnavContentPaneEnabled=FALSE" style="border:1px #000000 solid;" frameborder="1" height="565" width="100%"></iframe>
+<iframe src="https://flis.regionh.top.local:444/PBIReports/powerbi/L%C3%B8n%20og%20HR/HR%20Lederdashboard/Personalesammens%C3%A6tning?RC:Toolbar=false?FilterPaneEnabled=TRUE?navContentPaneEnabled=FALSE" style="border:1px #000000 solid;" frameborder="1" height="565" width="100%"></iframe>
 </center>
 </details>
 
@@ -15,11 +16,6 @@
 </center>
 </details>
 -->
-
-## Personalesammensætning
-
-<center><img src="Images/dashboard_personalesammensætning_info.png" height="95%" width="95%" alt="Lederdashboard, info om personalesammensætning" class="center"/></center>
-<br>
 
 I dashboardet udstilles data på enkeltmedarbejderniveau tiltænkt ledere. 
 Bruger får her overblik over udvalgte parametre om de medarbejdere, denne i forvejen har adgang til via PersonaleWeb. Se [brugerstyring](./Brugerstyring).
