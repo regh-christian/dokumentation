@@ -22,11 +22,7 @@ I modsætning hertil vises fravær også som løbende gennemsnit—over korte el
 
 > En fuldtidsfraværsdag er andelen af fraværstimer på en dag af en standard 7,4 timers arbejdsdag. Beskæftigelsesdecimal oversættes direkte til årsværk. ”Fuldtidsfraværsdage pr. årsværk” er da en normaliseret og vægtet enhed sammenlignelig på tværs af afdelinger, uanset at disse har forskellig sammensætning af fuld- og deltidsansatte samt varierende komposition i vagtlag.
 
-I figur **Antal sygefraværsdage de seneste 12 mdr.** udregnes på individniveau, [Fravær – antal arbejdsdage på tværs af org]. I beregningen ophæves relationen v_DimAnsættelse[OrganisationsID]➔_DimOrganisation[ID] til fordel for v_DimAnsættelse[**Nuværende**OrganisationsID]➔_DimOrganisation[ID]. 
-
-
-
-i filterkontekst af tid (v_DimTidDato[KortMaanedNavn] og person (v_DimPerson[ID]). Measure tilsidesætter den eksisterende relation, v_DimAnsættelse[OrganisationID]v_DimOrganisation[ID], og beregner [Fravær – antal arbejdsdage] (fraværstimer relativt til planlagt tid) i relationen, v_DimAnsættelse[NuværendeOrganisationID]v_DimOrganisation[ID]. 
+I figur **Antal sygefraværsdage de seneste 12 mdr.** udregnes på individniveau, [Fravær – antal arbejdsdage på tværs af org]. I beregningen ophæves relationen v_DimAnsættelse[OrganisationsID]➔_DimOrganisation[ID] til fordel for v_DimAnsættelse[**Nuværende**OrganisationsID]➔_DimOrganisation[ID] og beregner [Fravær – antal arbejdsdage].
 ```SQL
 ,CASE
    WHEN [Start] >= CONVERT(date, GETDATE()) THEN OrganisationsID
@@ -40,9 +36,6 @@ i filterkontekst af tid (v_DimTidDato[KortMaanedNavn] og person (v_DimPerson[ID]
 END AS NuværendeOrganisationID 
 ```
 Dette, i kombination med filtret specifikt på denne figur, [Ansat på afdeling, nuværende afd]=1, gør, at bruger også ser data fra evt. tidligere ansættelser—på samme tjenestenummer! 
-Desuden filtreres på v_DimAnsættelse[AnsatDagsDato]=’J’, hvorfor kun personer med an aktiv ansættelse dd. vises—også historisk. 
-
-
 ```DAX
 [Ansat på afdeling, nuværende afd] =
 --Er afhængig af den tilsvarende relation under "Relationships".
@@ -68,7 +61,7 @@ VAR AnsatPaaAfdeling =
 RETURN
     AnsatPaaAfdeling
 ```
-
+Endeligt filtreres på v_DimAnsættelse[AnsatDagsDato]=’J’, hvorfor kun personer med an aktiv ansættelse dd. vises—men altså også historiske asnsættelser, hvis tjenstenummer er bevaret. 
 
 <table>
 <tr>
