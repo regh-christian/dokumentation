@@ -21,8 +21,8 @@ I dashboardet udstilles data på enkeltmedarbejderniveau tiltænkt ledere.
 Bruger får her overblik over udvalgte parametre om de medarbejdere, denne i forvejen har adgang til via PersonaleWeb. Se [brugerstyring](./Brugerstyring).
 
 Der filtreres globalt _på fanen_ ud fra kriterierne v_DimAnsættelse[AnsatDagsDato]=J og v_DimAnsættelse[AktuelRække]=J
-Som udgangspunkt vises alle lederens medarbejdere med en aktuel ansættelse pågældende dag (v_DimAnsættelse[AktuelRække]=J). Har medarbejdere mere end én aktuel ansættelse
-Har bruger adgang til medarbejdere på tværs af organisationsstruktur, kan der filtreres herpå, ligesom der kan filtreres på tværs af stillingshieraki—med undtagelse af laveste niveau, stillingskode/stillingskodetekst.
+Som udgangspunkt vises altså alle lederens medarbejdere med en aktuel ansættelse pågældende dag inklusiv evt. tidligere (eller kommende) ansættelser på samme tjenestenummer.
+Har bruger adgang til medarbejdere på tværs af organisationsstruktur, kan der filtreres herpå, ligesom der kan filtreres på tværs af stillingshieraki—med undtagelse af laveste stillingsniveau.
 Foruden brug af grunddata er oprettet views til brug for beregninger i dette tema. Se [Tabeller](./Grunddata#tabeller). 
 
 
