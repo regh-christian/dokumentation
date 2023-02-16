@@ -14,9 +14,9 @@
 
 ### v_DimLønartFravær
 
-| **View** | **Baseret på** | 
-| - | - |
-| [chru_cube].[v_DimLønartFravær] | [DM_FL_HR].[DimLønart] |
+| **View** | **Opdateres** | **Baseret på** | 
+| - | - | - |
+| [chru_cube].[v_DimLønartFravær] | Dagligt | [DM_FL_HR].[DimLønart] |
 
 Subset af v_DimLønart med samme primærnøgle, ID. Indeholder kun lønarter relateret til fravær.
 Tabellen er i to niveuer. ’L1Code’ og ’L1Name’ er hard-codet kategorisering af visse lønarter i 3 fraværstyper; ’Sygefravær’, ’Barn syg’ og ’Andet’.
@@ -41,9 +41,9 @@ end as l2Name
 
 ### v_FactFravær
 
-| **View** | **Baseret på** | 
-| - | - |
-| [chru_cube].[v_FActFravær] | [DM_FL_HR].[FactFravær] |
+| **View** | **Opdateres** | **Baseret på** | 
+| - | - | - |
+| [chru_cube].[v_FActFravær] | Månedligt | [DM_FL_HR].[FactFravær] |
 
 Ikke-indekseret tabel baseret på [DM_FL_HR].[FactFravær]. 
 Kolonnerne ’AnsættelsesID’, ’Fraværsdato’, ’LønartsID’, ’TimerFravær’ og ’TimerPlanlagt’ er tilsvarende kolonnerne i SD’s [SD].[SD_FRAVDAG],  ’AnsaettelsesID’, ’FRVDATO’, ’FRVAARSAG’, ’FRVTIM’ og ’PLANTIM’ .
@@ -54,10 +54,10 @@ Fraværsdage på dage uden planlagte timer medregnes ikke.
 
 ### v_FactAggFravær
 
-| **View** | **Baseret på** | 
-| - | - |
-| [chru_cube].[v_FactAggFravær] | [DM_FL_HR].[FactFraværAfsnit] |
-| | [chru_cube].[v_DimOrganisation] 
+| **View** | **Opdateres** | **Baseret på** | 
+| - | - | - |
+| [chru_cube].[v_FactAggFravær] | Månedligt | [DM_FL_HR].[FactFraværAfsnit] |
+| | | [chru_cube].[v_DimOrganisation] 
 
 Ikke-indekseret tabel baseret på [DM_FL_HR].[FactFraværAfsnit]. 
 Tabellen aggregerer fravær pr. måned pr. afdeling med opgørelses(’Dato’) hver  d. 1. i en måned. ’OrganisationsID’ er F-nøgle til v_DimOrganisation, og L6Name henviser til afsnit i samme.
@@ -69,9 +69,9 @@ Tabellen aggregerer fravær pr. måned pr. afdeling med opgørelses(’Dato’) 
 
 ### v_TallyFraværsintervaller
 
-| **View** |
-| - | 
-| [chru_cube].[v_TallyFraværsintervaller] |
+| **View** | **Opdateres** |
+| - | - |
+| [chru_cube].[v_TallyFraværsintervaller] | Efter behov |
 
 Tabel med dagsintervaller i intervaller af 5 dage. ’Intervaller’ er en tekststreng til beskrivelse af intervallet, fx ’5 til 10 dage’. ’ValueLow’ og ’ValueHigh’ er hhv. ned og øvre grænse (inkluderende—i measures defineres inklusionskriterier nærmere) af intervallet. ’Sortering’ er en numerisk værdi svt. rækkefølgen på intervallerne. Denne bruges til at nummerere tekstværdien i ’Interval’, så disse placeres i ønsket, sorteret rækkefølge på figurer og tabeller i Power BI.
 
@@ -79,9 +79,9 @@ Tabel med dagsintervaller i intervaller af 5 dage. ’Intervaller’ er en tekst
 
 ### v_TallyFraværMaaltal
 
-| **View** |
-| - |
-| [chru_cube].[v_TallyFraværMaaltal] |
+| **View** | **Opdateres** |
+| - | - |
+| [chru_cube].[v_TallyFraværMaaltal] | Efter behov |
 
 Tabel med regionens måltal for fravær. To rækker beskrivende hhv. under og over måltallet fx ’>11.7 dg./år’. Kolonnerne ’ValueLow’ og ’ValueHigh’ er ned og øvre grænse (inkluderende) af intervallet. ’Sortering’ er en numerisk værdi svt. rækkefølgen på intervallerne. Denne bruges til at nummerere tekstværdien i ’Interval’, så disse placeres i ønsket, sorteret rækkefølge på figurer og tabeller i Power BI.
 
@@ -89,8 +89,8 @@ Tabel med regionens måltal for fravær. To rækker beskrivende hhv. under og ov
 
 ### v_SlicerNedslagsdatoer
 
-| **View** | **Baseret på** | 
-| - | - |
-| [chru_cube].[v_SlicerNedslagsdatoer] | [DM_FL_HR].[DimDato] |
+| **View** | **Opdateres** | **Baseret på** | 
+| - | - | - |
+| [chru_cube].[v_SlicerNedslagsdatoer] | Efter behov | [DM_FL_HR].[DimDato] |
 
 ’Dato’ med udvalgte nedslagsdatoer i intervallet fra dags dato og tre år bagud. ’DagKortmaanedAar’ med dato i formatet ”dd. mmm. yyyy”. Kolonnen ’Filterdatoer’ er tekst til nærmere beskrivelse af datoen; kan fx være ”I dag”, ”Den 1. i denne måned” eller ”Den 1. i tidligere måneder”. Bruges bl.a. til at simplificere i measures, hvor fx ansættelsedecimal evalueres for hver d. 1. i måneden. 
