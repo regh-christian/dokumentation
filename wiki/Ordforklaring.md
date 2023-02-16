@@ -1,6 +1,6 @@
 ### Aktuel hovedansættelse
 Den ansættelse som opfylder og sorterer højest på kriterierne (i nævnte rækkefølge): Er gældende dags dato; status 0, 1 eller 3; Månedslønnet; Fuldtid; Startdato. Dvs. en person kan have et timelønnet ansættelsesforhold som aktuel hovedansættelse, men kun hvis det ikke overlapper i tid med et månedslønnet. På samme måde kan en deltidsstilling være en aktuel hovedansættelse, men kun hvis dette ikke overlapper en fuldtidsansættelse.
-```SQL
+```
 -- AktuelHovedansættelse, 07_FL_110_SD_DimAnsaettelse.sas
 by cpr descending AktuelRække descending Ansat descending Månedslønnet descending Fuldtid descending start tjnr;
 if first.cpr AND AktuelRække = 1 AND Ansat = 1 then AktuelHovedansættelse=1;
@@ -29,14 +29,14 @@ Et ansættelsesforhold med status ansat uden løn (0), ansat/genåbnet (1) eller
 ### Ansættelse, aktuel
 Med aktuel ansættelse henvises oftest til dét ansættelsesforhold, hvis start- og slutdato inkluderer dags dato og har status ansat/genåbnet (1), ansat uden løn (0) eller midlertidigt ude af løn (3).
 Vi vælger denne population med [Ansat]=J og [AktuelRække]=J. 
-```SQL
+```
 -- Aktuelrække, 07_FL_110_SD_DimAnsaettelse.sas
 ,(CASE
     WHEN today() BETWEEN START and SLUT THEN 1 ELSE 0 
   END) as AktuelRække length = 3,
 ```
 
-```SQL
+```
 -- Ansat, 07_FL_110_SD_DimAnsaettelse.sas
 ,(CASE  
     WHEN STAT IN ('0', '1', '3') THEN 1 ELSE 0 
@@ -116,7 +116,7 @@ Se også [fuldtidsfraværsdag](#fuldtidsfraværsdag)
 
 ### Fuldtidsansat
 Ansættelser kendetegnet ved
-```SQL
+```
 -- Fuldtid, 07_FL_110_SD_DimAnsaettelse.sas
 ,(CASE 
     WHEN BESKDEC >= 1 THEN 1 ELSE 0
@@ -157,7 +157,7 @@ Region H’s målsætning for fravær pr. 2023-01-20 er 11,7 dage/år.
 
 ### Månedslønnet
 Ansættelser kendetegnet ved 
-```SQL
+```
 -- Månedslønnet, 07_FL_110_SD_DimAnsaettelse.sas
 ,(CASE 
     WHEN DEL IN ('2', '6') OR BESKDEC = 0 THEN 0 ELSE 1
@@ -173,7 +173,7 @@ Kendetegnet ved et skift i ansættelsesstatus fra midlertidigt ude af løn (3) t
 
 ### Standardpopulation
 I bredeste forstand forstås ved v_DimAnsættelse[Standardpopulation]=J, alle [månedslønnede](#månedslønnet) og ikke-eksternt finansierede ansættelser.
-```SQL
+```
 -- Standardpopulation, 07_FL_110_SD_DimAnsaettelse.sas
 ,(CASE  
     WHEN Månedslønnet = 0 THEN 0 
