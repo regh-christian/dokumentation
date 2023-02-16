@@ -14,9 +14,9 @@
 
 ### v_DimHændelser
 
-| **View** | **Baseret på** | 
-| - | - |
-| [chru_cube].[v_DimHændelser] | [DM_FL_HR].[DimHændelser] |
+| **View** | **Opdateres** | **Baseret på** | 
+| - | - | - |
+| [chru_cube].[v_DimHændelser] | Dagligt | [DM_FL_HR].[DimHændelser] |
 
 Udvalgte hændelser vedrørende en ansættelse. ID er primærnøgle.
 Ved en hændelse forstås en af følgende mærkedage: dato for fødsels- og jubilæumsdag, til- og fratrædelser, flytter mellem afdelinger, termin samt orlov. 
@@ -26,12 +26,12 @@ Tabellen er niveaudelt i L1 og L2, hvor L2 er en uddybende tekst knyttet til den
 
 ### v_FactHændelser
 
-| **View** | **Baseret på** | 
-| - | - |
-| [chru_cube].[v_FactHændelser] | [chru_cube].[v_DimAnsættelse] |
-| | [chru_cube].[v_Dimperson] |
-| | [chru_cube].[v_DimTidDato] |
-| | [DM_FL_HR].[FactTerminsdato] |
+| **View** | **Opdateres** | **Baseret på** | 
+| - | - | - |
+| [chru_cube].[v_FactHændelser] | Dagligt | [chru_cube].[v_DimAnsættelse] |
+| | | [chru_cube].[v_Dimperson] |
+| | | [chru_cube].[v_DimTidDato] |
+| | | [DM_FL_HR].[FactTerminsdato] |
 
 - Kan med fordel dokumenteres grundigere i script
 - Vær opmærksom på, at HændelsesID hard-codes i overensstemmelse med definitioner i v_DimHændelser. Dvs. foretages modificeringer i v_DimHændelser, arves det ikke i fact-tabellen.
