@@ -54,13 +54,13 @@ Til beregning af [Ansættelseslængde] (antal år) anvendes differencen mellem d
 I figuren **Ansættelseslængde** anvendes dette measure af [AnsatteAnsættelseslængdeInterval] til at beregne medarbejders ansættelseslængde i nuværende stilling (+evt tidligere ansættelser på samme tjenestenummer). Dette measure er designet til, i kontekst af v_TallyAnsættelseslænge, at beregne [Ansættelseslængde] evalueret i en filterkontekst af tjenestenummer (og AnsættelsesID for at sikre optælling på unikke individer) og returnerer _antallet af medarbejdere i intervallerne_ specificeret i tally-tabellen.
 Ved mouse-over vises den enkelte medarbejders ansættelseslængde udregnet med [Ansættelseslængde].
 
-Figuren **Aldersfordeling** viser antallet af medarbejdere, [AnsatteAldersinterval], fordelt på aldersintervaller. Også dette measure er designet til visning i kontekst af en tally-tabel, v_TallyAlder. Metodisk er beregning og opbygning af measure identisk med førnævnte, [AnsatteAnsættelseslængdeInterval], hvor der hér regners på alder i stedet for ansættelseslængde. Measuret, [Alder], beregner blot en persons alder som differencen mellem dags dato og dennes fødselsdag angivet i v_DimPerson. Specifikt på denne figur er nedre og øvre aldersintervaller filtreret fra via v_TallyAlder[AldersInterval_5år], så kun personer i alderen 15-79 år vises.
+Figuren **Aldersfordeling** viser antallet af medarbejdere, [AnsatteAldersinterval], fordelt på aldersintervaller. Også dette measure er designet til visning i kontekst af en tally-tabel, v_TallyAlder. Metodisk er beregning og opbygning af measure identisk med førnævnte, [AnsatteAnsættelseslængdeInterval], hvor der hér regners på alder i stedet for ansættelseslængde. Measuret, [Alder], beregner blot en persons alder som differencen mellem dennes fødselsdag (v_DimPerson[Fødselsdato]) og dags dato. Specifikt på denne figur er nedre og øvre aldersintervaller filtreret fra via v_TallyAlder[AldersInterval_5år], så kun personer i alderen 15-79 år vises.
 Ved mouse-over på **Aldersfordeling** vises enkelte medarbejderes [Alder] inden for hvert interval
 
 Tabellen **Hændelser 14 dg.** frem viser en kronologisk oversigt over udvalgte personrelaterede hændelser i de kommende 14 dage; fx fødselsdage, jubilæer, orlov, tiltrædelse, fratrædelse m.m. (Tabellen, **Hændelser 12 mdr. frem** via bogmærket af samme navn, er identisk med førnævnte men med filteret, v_DimTidDato[OffsetDato]=[0;365].
 
-I **Informationstabel** vises udvalgte medarbejderdata herunder ansættelsessted (L6/L4, afsnit/afdeling), tjenestenummer, stilling, alder, ansættelseslængde, anciennitet m.m. [Anciennitet] er hér ikke nødvendigvis lig [Ansættelseslængde]! Den er baseret på ansattes nuværende v_DimAnsættelse[Anciennitetsdato], som både kan ligge forud for ansættelse i Region H ifm. tilskrivning af relevant anciennitet, eller som kan være ændret ifm. oprykning eller overflytning til anden overenskomst. Visse ansættelser med fastlåst anciennitetsforløb kan være uden anciennitetsdato. Measuret [Anciennitet] beregner, i antal hele år, differencen mellem v_DimAnsættelse[Anciennitetsdato] og dags dato. For fremtidige anciennitetsdatoer anvendes dags dato.
-[Ansat til] angiver en eventuel slutdato på den aktuelle ansættelse. [Alder], [Ansættelseslængde] og [Årsværk] beregner, i kontekst af unikke personer (her i kontekst af kombinationen v_DimPerson[Navn] og v_DimAnsættelse[Tjnr]) pågældende persons alder og ansættelseslænge på dagen i hele antal år samt beskæftigelsesdecimalen/årsværk på pågældende ansættelse.
+I **Informationstabel** vises udvalgte medarbejderdata herunder ansættelsessted (L6/L4, afsnit/afdeling), tjenestenummer, stilling, alder, ansættelseslængde, anciennitet m.m. [Anciennitet] er hér ikke nødvendigvis lig [Ansættelseslængde]! Baseret på ansattes nuværende v_DimAnsættelse[Anciennitetsdato], kan denne dato ligge forud for ansættelse i Region H (ifm. tilskrivning af relevant anciennitet), eller den kan være ændret fx ifm. overflytning til anden overenskomst eller konvertering af deltidsenciennitet. Visse ansættelser med fastlåst anciennitetsforløb kan være uden anciennitetsdato. Measuret [Anciennitet] beregner, i antal hele år, differencen mellem v_DimAnsættelse[Anciennitetsdato] og dags dato. For fremtidige anciennitetsdatoer anvendes dags dato.
+[Ansat til] angiver en eventuel slutdato på medarbejders senest tildelte tjenestenummer, hvis en sådan findes. [Alder], [Ansættelseslængde] og [Årsværk] beregner, i kontekst af unikke personer (her i kontekst af kombinationen v_DimPerson[Navn] og v_DimAnsættelse[Tjnr]) pågældende persons alder og ansættelseslænge på dagen i hele antal år samt beskæftigelsesdecimal (årsværk) på pågældende ansættelse.
 
 
 
@@ -135,32 +135,4 @@ Beregnes ved først summering af og dernæst ratioen mellem hhv. [MaskeretFravSu
 
 
 
-
-# Strategisk dashboard
-
-## Sygefravær
-
-I dashboard udstilles aggregeret data om fravær på organisations- og stillingsniveau. 
-Bruger får her overblik over organisationer, som denne i forvejen har adgang til via PersonaleWeb. Se >>Brugerstyring<<. I udgangspunktet beregnes på alle månedslønnede medarbejdere. 
-     Fælles for alle beregninger er implementering af anonymitetsgrænsen. På intet tidspunkt må bruger kunne se aggregeret data, hvor mindre end dette antal personer udgør grundlag. Afhængig af beregningsmetode sikres dette på forskellig vis; Hvor beregninger baseres på løbende nedslagsdatoer (fig. 2, 3, 4, 7. [Fravær – vægtede fuldtidsfraværsdage gnsnit 12 mdr]) kontrolleres, at antal inkluderede individer på nedslagsdatoer er tilstrækkeligt. Hvis ikke udelades resultat på nedslagsdato. Hvor kun aktuelt ansatte dags dato indgår i beregning sikres, at antal aktuelt ansatte dags dato er tilstrækkeligt. 
-
->> Anonymitetsgrænsen bruges i alle measures til beregning af sygefravær til at forhindre identifikation af enkeltindivider.
-
-Foruden brug af grunddata er oprettet views til brug for beregninger specifikt for dette tema. Se >>TABELLER<<.
-
-
-
-### **Beregninger**
-Fravær er bredt defineret ved lønarterne i v_DimLønartFravær[L1Code]. 
-Hvor andet ikke er nævnt, medregnes månedslønnede (v_DimAnsættelse[Månedslønnet]=’J’) ansatte (v_DimAnsættelse[Ansat]=’J’ svt. statuskode {0,1,3} ).
-Filteret, v_DimLønartFravær[L1Name]=”Sygefravær”, på fanen Sygefravær sikrer, at kun denne fraværskategori medtages i beregninger her. Via bookmarks føres bruger til faner uden dette filter, hvor også øvrige kategorier vises. 
-     I beregninger opgøres fravær overordnet på én af to måder;
-Measure, [Fravær – antal arbejdsdage], summerer v_FactFravær[Arbejdsdage] og indgår som byggesten i en række andre measures i dette tema. En arbejdsdag er hér fraværstimer relativt til planlagt tid.
-I modsætning hertil vises fravær også som løbende gennemsnit—over korte eller længere perioder—af antal fuldtidsfraværsdage relativt til den, på opgørelsestidspunktet, gennemsnitlige beskæftigelsesdecimal. En fuldtidsfraværsdag er andelen af fraværstimer på en dag af en standard 7,4 timers arbejdsdag. Beskæftigelsesdecimal oversættes direkte til årsværk. Denne, ”fuldtidsfraværsdage pr. årsværk”, er da en normaliseret og vægtet enhed, som er sammenlignelig på tværs af afdelinger, uanset at disse har forskellig sammensætning af fuld- og deltidsansatte samt varierende komposition i vagtlag.
-     Fanespecifikt filter, v_DimStilling[Hovedstillingsgruppe],  fravælger grupperne ’Ansat uden løn’, ’Budgetteknik’, ’Politikere/tjm’, ’Samling’ og ’Ukendt’. v_DimLønartFravær[L1Name]=”Sygefravær” fjerner øvrige fraværstyper.
-     Til figurerne 2, 3, 4 og 7 beregnes fravær, [Fravær – vægtede fuldtidsfraværsdage gnsnit 12 mdr], som løbende 12måneders gennemsnitssum af fuldtidsfraværsdage pr. årsværk—her er antal fraværstimer normaliseret til en fuldtidsdag på 7,4timer, ligesom antal medarbejdere opgøres som gennemsnitssum af beskæftigelsesdecimal. 
-I figur 2 ses seneste 3 års løbende 12 måneders gennemsnit opgjort sidste dage i respektive år via filter på v_SlicerNedslagsdatoer. Med input fra slicer kan bruger vælge nedslagsdato, og dermed ændre filterkontekst for measure, [Fravær – vægtede fuldtidsfraværsdage gnsnit 12 mdr Benchmark]. Valgt nedslagsdato er bestemmende for, fra hvilken dato dette measure regner 12 måner baglæns. Altså en dynamisk størrelse til benchmarking af aktuelt fravær med historisk.
-Figur 3 og 4 beregninger det vægtede gennemsnit 12 måneder bagud relativt til månederne, det er vist for, og figur 7 regner 12 måneder bagud fra dags dato. 
-I Figurerne 5 og 6 beregnes fravær som andelen af fraværstimer af planlagt tid, [Fravær – antal arbejdsdage på tværs af org]. I figur 5  bruges dette i [Fravær – antal i fraværsinterval] til beregning af antal personer i perioden—og på tværs af organisation—med antal fraværsdage indenfor definerede intervaller. (Intervaller inkluderer øvre grænseværdier). Measure er designet til at indgå i kontekst af v_TallyFraværsintervaller[Interval]. I figur 6 indgår det i [Fravær – antal under regionalt niveau] og i kontekst af v_TallyFraværMaaltal til bestemmelse af antal personer antal fraværsdage—på tværs af organisation—over og under regionens måltal.
-
-> | [**Daxpatterns.com \ Dynamic segmentation**](https://www.daxpatterns.com/dynamic-segmentation/ target="_blank") | <img src="Images/icons_ref/icon_daxpatterns.png" height="45" width="45"> |
+## Ferieafholdelse
