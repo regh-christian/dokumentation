@@ -17,7 +17,7 @@ Foruden brug af grunddata er oprettet views til brug for beregninger i dette tem
 
 ### Beregninger
 
-Measuret, [Antal medarbejdere], summerer groft antallet af rækker i v_DimAnsættelse, og anvendes i en række andre measures, uden skelnen imellem populationer (månedslønnede, fuldtidsansatte eller andet). 
+Measuret, [Antal medarbejdere], summerer groft antallet af rækker i v_DimAnsættelse. Det anvendes i en række andre measures, uden skelnen imellem populationer (månedslønnede, fuldtidsansatte eller andet). 
 ```DAX
 [Antal medarbejdere] =
 IF (
@@ -26,7 +26,7 @@ IF (
     COUNTROWS ( 'v_DimAnsættelse' )
 )
 ```
-Antallet af henholdsvis månedslønnede, fuldtidsansatte, deltidsansatte og timelønnede fremgår af visninger (_cards_) til venstre, og er alle baseret på [Antal medarbejdere] evalueret i forskellige filterkontekster ved brug af én eller flere af de dikotomiserede J/N-kolonner i v_DimAnsættelser. Et eksempel herpå er [Antal fuldtidsansatte]
+Antallet af måneds- og timelønnede, fuldt- og deltidsansatte, der fremgår af visninger (_cards_) til venstre i dashboardet, er alle baseret på [Antal medarbejdere] evalueret i forskellige filterkontekster ved brug af én eller flere af de dikotomiserede J/N-kolonner i v_DimAnsættelse. Et eksempel herpå er [Antal fuldtidsansatte]
 ```DAX
 [Antal fuldtidsansatte] =
 CALCULATE (
@@ -38,10 +38,7 @@ CALCULATE (
 
    Antal [Årsværk], vist sammen med de fire føromtalte, beregner summen af beskæftigelsesdecimaler, v_DimAnsættelse[Beskdec], som i definitionen er andelen af en 37 timers arbejdsuge, en person er ansat til og her i praksis oversættes til årsværk. Specifikt på visningen af årsværk filtreres v_DimAnsættelse[Månedslønnede]=’J’ i selve figuren.
     
-Til beregning af [Ansættelseslængde] (antal år) anvendes differencen mellem dags dato og v_DimAnsættelse[Ansættelsesdato]. Inkludere
-
-
-I figuren Ansættelseslængde anvendes dette measure til at beregne medarbejdernes ansættelseslængde i nuværende stilling, [AnsatteAnsættelseslængdeInterval]. Dette measure beregner [Ansættelseslængde] evalueret i en filterkontekst af tjenestenummer (og AnsættelsesID for at sikre optælling på unikke individer) og returnerer [Antal medarbejdere] med en given ansættelseslængde. Brugt i en visning sammen med v_TallyAnsættelseslængde opgøres antallet af medarbejdere med an ansættelseslængde i hvert af disse intervaller. 
+Til beregning af [Ansættelseslængde] (antal år) anvendes differencen mellem dags dato og v_DimAnsættelse[Ansættelsesdato]. I figuren Ansættelseslængde anvendes dette measure til at beregne medarbejders ansættelseslængde i nuværende stilling, [AnsatteAnsættelseslængdeInterval]. Dette measure beregner [Ansættelseslængde] evalueret i en filterkontekst af tjenestenummer (og AnsættelsesID for at sikre optælling på unikke individer) og returnerer [Antal medarbejdere] med en given ansættelseslængde. Brugt i en visning sammen med v_TallyAnsættelseslængde opgøres antallet af medarbejdere med an ansættelseslængde i hvert af disse intervaller. 
 Ved mouse-over på Ansættelseslængde vises en oversigt over de enkelte medarbejdere inden for hvert ansættelseslængdeinterval. Dette ved at bruge measuret [Ansættelseslængde] i en tabel med navn og PersonID, hvor filterkontekst da er det unikke PersonID.
      Figuren Aldersfordeling viser antallet af medarbejdere, [AnsatteAldersinterval], fordelt på aldersintervaller. Metodisk er beregning og opbygning af measure identisk med førnævnte, [AnsatteAnsættelseslængdeInterval]. I measuret, [AnsatteAldersinterval], indgår measuret [Alder] dog i stedet for [Ansættelseslængde] ligesom der nu optælles [Antal medarbejdere] pr. ’Aldersinterval’ i stedet for pr. ’Ansættelseslængde’. Measuret, [Alder], beregner blot en persons alder som differencen mellem dags dato og dennes fødselsdag angivet i v_DimPerson. 
 Specifikt på denne figur er nedre og øvre aldersintervaller filtreret fra via v_TallyAlder[AldersInterval_5år], så kun intervaller mellem 15 og 79 år vises.
@@ -67,7 +64,7 @@ I modsætning hertil vises fravær også som løbende gennemsnit—over korte el
 
 **FIGUR: Antal sygefraværsdage de seneste 12 mdr.**
 I tabellen vises [Fravær – antal arbejdsdage på tværs af org] i filterkontekst af tid (v_DimTidDato[KortMaanedNavn] og person (v_DimPerson[ID]). Measure tilsidesætter den eksisterende relation, v_DimAnsættelse[OrganisationID]v_DimOrganisation[ID], og beregner [Fravær – antal arbejdsdage] (fraværstimer relativt til planlagt tid) i relationen, v_DimAnsættelse[NuværendeOrganisationID]v_DimOrganisation[ID]. 
-```sql
+```SQL
 ,CASE
    WHEN [Start] >= CONVERT(date, GETDATE()) THEN OrganisationsID
    ELSE
