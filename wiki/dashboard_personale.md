@@ -54,3 +54,4 @@ I **Informationstabel** vises udvalgte medarbejderdata herunder ansættelsessted
 
 
 
+# Strategisk Dashboard
