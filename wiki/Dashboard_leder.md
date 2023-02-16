@@ -8,7 +8,7 @@ Bruger får her overblik over udvalgte parametre om de medarbejdere, denne i for
 Der filtreres globalt _på fanen_ ud fra kriterierne v_DimAnsættelse[AnsatDagsDato]=J og v_DimAnsættelse[AktuelRække]=J .
 Som udgangspunkt vises altså alle lederens medarbejdere med en aktuel ansættelse pågældende dag inklusiv evt. tidligere (eller kommende) ansættelser på samme tjenestenummer.
 Har bruger adgang til medarbejdere på tværs af organisationsstruktur, kan der filtreres herpå, ligesom der kan filtreres på tværs af stillingshieraki—med undtagelse af laveste stillingsniveau.
-Foruden brug af grunddata er oprettet views til brug for beregninger i dette tema. Se [Tabeller](./Personalesammensætning#resume-af-tabeller). 
+Foruden brug af grunddata er oprettet views til brug for beregninger i dette tema. Se [***Resume af tabeller***](./Personalesammensætning#resume-af-tabeller). 
 
 <!-- Embed dashboards  -->
 <!-- <details><summary markdown="span">HR Lederdashboard</summary>
@@ -65,7 +65,7 @@ Fravær er bredt defineret ved lønarterne i v_DimLønartFravær[L1Code].
 Der filtreres globalt _på fanen_ ud fra kriterierne v_DimAnsættelse[Ansat]=J, v_DimAnsættelse[Månedslønnet]=J og v_DimLønartFravær[L1Name]='Fravær'. Dog ikke sidstnævnte på fanen (bogmærke), **Fravær pr. type**, hvor samtlige fraværstyper opgøres.
 Som udgangspunkt vises altså alle lederens månedslønnede medarbejdere med en aktuel—eller historisk—ansættelse med statuskode 0, 1 eller 3, _hvis_ denne har registreret fravær, med en af førnævnte lønarter. 
 Har bruger adgang til medarbejdere på tværs af organisationsstruktur, kan der filtreres herpå, ligesom der kan filtreres på tværs af stillingshieraki—med undtagelse af laveste stillingsniveau.
-Foruden brug af grunddata er oprettet views til brug for beregninger i dette tema. Se [Tabeller](./Sygefravær#resume-af-tabeller). 
+Foruden brug af grunddata er oprettet views til brug for beregninger i dette tema. Se [***Resume af tabeller***](./Sygefravær#resume-af-tabeller). 
 
 <iframe src="https://flis.regionh.top.local:444/PBIReports/powerbi/L%C3%B8n%20og%20HR/HR%20Lederdashboard/Sygefrav%C3%A6r?RC:Toolbar=False" style="border:1px #000000 solid;" frameborder="1" height="435" width="100%"></iframe>
 
