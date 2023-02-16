@@ -1,5 +1,21 @@
 # Lederdashboard
 
+
+<!-- Embed dashboards  -->
+<details><summary markdown="span">HR Lederdashboard</summary>
+<center>
+<iframe src="https://flis.regionh.top.local:444/PBIReports/powerbi/L%C3%B8n%20og%20HR/HR%20Lederdashboard/Personalesammens%C3%A6tning?RC:Toolbar=false" style="border:1px #000000 solid;" frameborder="1" height="565" width="100%"></iframe>
+</center>
+</details>
+
+<!--
+<details><summary markdown="span">Strategisk dashboard</summary>
+<center>
+<iframe src="https://flis.regionh.top.local:444/PBIReports/powerbi/L%C3%B8n%20og%20HR/HR%20Strategisk%20Dashboard/HR%20Strategisk%20Dashboard?RC:Toolbar=False" style="border:1px #000000 solid;" frameborder="1" height="565" width="100%"></iframe>
+</center>
+</details>
+-->
+
 ## Personalesammensætning
 
 <center><img src="Images/dashboard_personalesammensætning_info.png" height="95%" width="95%" alt="Lederdashboard, info om personalesammensætning" class="center"/></center>
