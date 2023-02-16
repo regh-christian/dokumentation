@@ -76,14 +76,12 @@ Igen filtreres _på figuren_ med kriterierne, [Ansat på afdelingen, nuværende 
 
 > | [**Sqlbi.com \ Rolling 12 Months Average in DAX**](https://www.sqlbi.com/articles/rolling-12-months-average-in-dax/) | <img src="Images/icons_ref/icon_sqlbi.png" height="45" width="45"> |
 
-TIl beregning af **'Gns. løbende sygefravær opgjort over seneste 12 mdr.'** anvendes to measures, *[Fravær – vægtede fuldtidsfraværsdage gnsnit 12 mdr Ikke anonymiseret]* og *[Fravær – Benchmark regionen 12 mdr.]*.
-
-Førstnævnte udregner i kontekst af v_DimTidDato[MaanedAar] og valgt(e) organisationsniveau(er), 
+TIl beregning af **'Gns. løbende sygefravær opgjort over seneste 12 mdr.'** anvendes to measures, *[Fravær – vægtede fuldtidsfraværsdage gnsnit 12 mdr Ikke anonymiseret]* og *[Fravær – Benchmark regionen 12 mdr.]*. Førstnævnte udregner i kontekst af v_DimTidDato[MaanedAar] og valgt(e) organisationsniveau(er), 
 
 (1):
 for hver d. 1. i måneden i foregående 12 måneder den løbende gennemssnitssum af beskæftigelsesdecimaler på aktuelle ansættelser pågældende datoer—også selvom de ikke er ansatte længere—, 
 ```DAX
--- (...fra [Fravær – vægtede fuldtidsfraværsdage gnsnit 12 mdr Ikke anonymiseret])
+...fra [Fravær – vægtede fuldtidsfraværsdage gnsnit 12 mdr Ikke anonymiseret])
 VAR DenFoerste = FILTER ( Period, DAY ( [Dato] ) = 1 )
 VAR AntalDageIPerioden = COUNTROWS ( DenFoerste )
 VAR AntalFuldtidsdage =
@@ -96,8 +94,7 @@ VAR PeriodMedBeskdec =
             CALCULATE (
                 SUM ( 'v_DimAnsættelse'[Beskdec] ),
                 'v_DimAnsættelse'[Ansat] = "J",
-                'v_DimAnsættelse'[Start] <= AktuelDato,
-                'v_DimAnsættelse'[Slut] >= AktuelDato
+                'v_DimAnsættelse'[Start] <= AktuelDato, AktuelDato <= 'v_DimAnsættelse'[Slut] 
             )
         RETURN ROW ( "BeskSum", BeskSumPaaDagen )
     )
@@ -106,21 +103,13 @@ VAR BeskSumPerioden = SUMX ( PeriodMedBeskdec, [BeskSum] )
 ```
 (2) månedlig sum af fuldtidsfraværsdage indeværende måned, v_FactFravær[Fuldtidsdage]. Endeligt (3) andel af fuldtidsfraværsdage af den gennemsnitlige beskæftigelsessum. 
 ```DAX
--- (...fra [Fravær – vægtede fuldtidsfraværsdage gnsnit 12 mdr Ikke anonymiseret])
-VAR GennemsnitBesksum =
-    DIVIDE (
-        BeskSumPerioden,
-        AntalDageIPerioden,
-        0
-    )
+...fra [Fravær – vægtede fuldtidsfraværsdage gnsnit 12 mdr Ikke anonymiseret])
+VAR GennemsnitBesksum = 
+	DIVIDE( BeskSumPerioden, AntalDageIPerioden, 0)
 VAR GnsnitFuldtidsdage =
-    DIVIDE (
-        AntalFuldtidsdage,
-        GennemsnitBesksum,
-        0
-    )
-RETURN
-    GnsnitFuldtidsdage
+    	DIVIDE ( AntalFuldtidsdage, GennemsnitBesksum, 0 )
+RETURN GnsnitFuldtidsdage
+...
 ```
 
 (4) Kurven ’Aktuel visning’ viser dermed—beregnet i en månedskontekst—for hver måned det løbende gennemsnit af antal fuldtidsfraværsdage pr. årsværk opgjort over seneste 12 måneder.
