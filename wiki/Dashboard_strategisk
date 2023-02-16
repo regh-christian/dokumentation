@@ -10,7 +10,7 @@ Bruger får her overblik over organisationer, som denne i forvejen har adgang ti
 
 Foruden brug af grunddata er oprettet views til brug for beregninger specifikt for dette tema. Se >>TABELLER<<.
 
-
+ 
 
 ### **Beregninger**
 Fravær er bredt defineret ved lønarterne i v_DimLønartFravær[L1Code]. 
