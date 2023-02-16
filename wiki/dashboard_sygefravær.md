@@ -1,4 +1,6 @@
-# Lederdashboard
+# Sygefravær
+
+## Lederdashboard
 
 I dashboardet udstilles data på enkeltmedarbejderniveau tiltænkt ledere. 
 Bruger får her overblik over udvalgte parametre om de medarbejdere, denne i forvejen har adgang til via PersonaleWeb. Se [brugerstyring](./Brugerstyring).
@@ -77,7 +79,7 @@ Beregnes ved først summering af og dernæst ratioen mellem hhv. [MaskeretFravSu
      
 - -- -- - 
  
-# Strategisk dashboard
+## Strategisk dashboard
 
 
 
