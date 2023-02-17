@@ -169,7 +169,7 @@ I **figur 2** ses seneste 3 års løbende 12 måneders gennemsnit opgjort sidste
 > 
 > | [**Daxpatterns.com \ Dynamic segmentation**](https://www.daxpatterns.com/dynamic-segmentation/) | <img src="Images/icons_ref/icon_daxpatterns.png" height="45" width="45"> | 
 
-I Figurerne **5 og 6** beregnes igen fraværsdage (fraværstimer af planlagt tid), [Fravær – antal arbejdsdage på tværs af org]. I **figur 5** bruges dette i [Fravær – antal i fraværsinterval] til beregning af antal personer i perioden—og på tværs af organisation—med antal fraværsdage indenfor definerede intervaller. Measure er designet til at indgå i kontekst af tally-tabellen, v_TallyFraværsintervaller[Interval]. Intervaller inkluderer øvre grænseværdier. 
+I **figurerne 5 og 6** beregnes igen fraværsdage (fraværstimer af planlagt tid), [Fravær – antal arbejdsdage på tværs af org]. I **figur 5** bruges dette i [Fravær – antal i fraværsinterval] til beregning af antal personer i perioden—og på tværs af organisation—med antal fraværsdage indenfor definerede intervaller. Measure er designet til at indgå i kontekst af tally-tabellen, v_TallyFraværsintervaller[Interval]. Intervaller inkluderer øvre grænseværdier. 
 
 I **figur 6** relativt fravær i [Fravær – antal under regionalt niveau] og i kontekst af v_TallyFraværMaaltal til gruppering af antal personer over og under regionens måltal.
 
