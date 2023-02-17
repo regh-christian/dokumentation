@@ -159,19 +159,19 @@ Fanespecifikt filter, v_DimStilling[Hovedstillingsgruppe],  fravælger grupperne
 
 
 #### **Beregninger**
-Til figurerne 2, 3, 4 og 7 anvendes _[Fravær – vægtede fuldtidsfraværsdage gnsnit 12 mdr]_ 
+Figurerne 2, 3, 4 og 7 det vægtede fuldtidsgennemsnit, _[Fravær – vægtede fuldtidsfraværsdage gnsnit 12 mdr]_. 
 
-I **figur 2** ses seneste 3 års løbende 12 måneders gennemsnit opgjort sidste dage i respektive år via filter på v_SlicerNedslagsdatoer. Med input fra slicer kan bruger vælge nedslagsdato, og dermed ændre filterkontekst for measure, [Fravær – vægtede fuldtidsfraværsdage gnsnit 12 mdr Benchmark]. Valgt nedslagsdato er bestemmende for, fra hvilken dato dette measure regner 12 måner baglæns. Altså en dynamisk størrelse til benchmarking af aktuelt fravær med tidligere perioder.
+I **Udvikling i sygefravær (12 mdr.) fordelt på hovedstillingsgrupper** (Fig. 2) ses seneste 3 års løbende gennemsnit opgjort sidste dage i respektive år (via filter på v_SlicerNedslagsdatoer). Med input fra slicer kan bruger vælge nedslagsdato, og dermed ændre filterkontekst for measure, [Fravær – vægtede fuldtidsfraværsdage gnsnit 12 mdr Benchmark]. Valgt nedslagsdato er bestemmende for, fra hvilken dato dette measure regner 12 måner baglæns. Altså en dynamisk størrelse til benchmarking af aktuelt fravær med tidligere perioder.
 
-**Figur 3 og 4** viser det vægtede fuldtidsgennemsnit 12 måneder bagud relativt til månederne, det er vist for, og figur 7 regner 12 måneder bagud fra dags dato. 
+**Figur 3 og 4** viser **Udvikling i løbende fuldtidsgennemsnit** over hhv. løbende 12 måneder og grupperet på **udvalgte fagstillingsgrupper**.
 
 > Læs: [inspiration til measuret [Fravær – antal i fraværsinterval Ikke anonymiseret]](https://www.daxpatterns.com/dynamic-segmentation/)
 > 
 > | [**Daxpatterns.com \ Dynamic segmentation**](https://www.daxpatterns.com/dynamic-segmentation/) | <img src="Images/icons_ref/icon_daxpatterns.png" height="45" width="45"> | 
 
-I **figurerne 5 og 6** beregnes igen fraværsdage (fraværstimer af planlagt tid), [Fravær – antal arbejdsdage på tværs af org]. I **figur 5** bruges dette i [Fravær – antal i fraværsinterval] til beregning af antal personer i perioden—og på tværs af organisation—med antal fraværsdage indenfor definerede intervaller. Measure er designet til at indgå i kontekst af tally-tabellen, v_TallyFraværsintervaller[Interval]. Intervaller inkluderer øvre grænseværdier. 
+I **figurerne 5 og 6** beregnes igen relative fraværsdage (fraværstimer af planlagt tid), [Fravær – antal arbejdsdage på tværs af org]. I **figur 5** bruges dette i [Fravær – antal i fraværsinterval] til beregning af antal personer i perioden—og på tværs af organisation—med antal fraværsdage indenfor definerede intervaller. Measure er designet til at indgå i kontekst af tally-tabellen, v_TallyFraværsintervaller[Interval]. Intervaller inkluderer øvre grænseværdier. 
 
-I **figur 6** relativt fravær i [Fravær – antal under regionalt niveau] og i kontekst af v_TallyFraværMaaltal til gruppering af antal personer over og under regionens måltal.
+I **figur 6** relativt fravær i [Fravær – antal under regionalt niveau] og i kontekst af v_TallyFraværMaaltal til gruppering af antal personer over og under **regionens måltal**.
 
  
  
