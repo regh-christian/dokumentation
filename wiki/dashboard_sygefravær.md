@@ -27,7 +27,7 @@ Bruger får her overblik over udvalgte parametre om de medarbejdere, denne i for
 
 
 #### Beregninger
-I figur **Antal sygefraværsdage de seneste 12 mdr.** udregnes på individniveau, [Fravær – antal arbejdsdage på tværs af org]. I beregningen ophæves relationen v_DimAnsættelse[OrganisationsID]➔_DimOrganisation[ID] til fordel for v_DimAnsættelse[**Nuværende**OrganisationsID]➔_DimOrganisation[ID] og beregner [Fravær – antal arbejdsdage].
+I figur **Antal sygefraværsdage de seneste 12 mdr.** udregnes på individniveau, _[Fravær – antal arbejdsdage på tværs af org]_. Measure ophæver relationen v_DimAnsættelse[OrganisationsID]➔_DimOrganisation[ID] til fordel for relationen v_DimAnsættelse[**Nuværende**OrganisationsID]➔_DimOrganisation[ID] og beregner _[Fravær – antal arbejdsdage]_.
 ```SQL
 ,CASE
    WHEN [Start] >= CONVERT(date, GETDATE()) THEN OrganisationsID
@@ -40,7 +40,7 @@ I figur **Antal sygefraværsdage de seneste 12 mdr.** udregnes på individniveau
       )
 END AS NuværendeOrganisationID 
 ```
-Dette, i kombination med filtret specifikt på denne figur, [Ansat på afdeling, nuværende afd]=1, gør, at bruger også ser data fra evt. tidligere ansættelser—på samme tjenestenummer! 
+Dette, i kombination med filtret specifikt på denne figur, _[Ansat på afdeling, nuværende afd]_=1, gør, at bruger også ser data fra evt. tidligere ansættelser—på samme tjenestenummer! 
 ```DAX
 [Ansat på afdeling, nuværende afd] =
 --Er afhængig af den tilsvarende relation under "Relationships".
@@ -68,16 +68,16 @@ Via bogmærket, **Fravær pr. type**, ses samme beregning (akkumulkeret) i figur
 Igen filtreres på figuren med kriterierne, [Ansat på afdelingen, nuværende afdeling]=1 og v_DimAnsættelse[AnsatDagsDato]=J, hvorfor alle ansættelser med samme tjenestenummer på aktuelt ansatte medregnes.
 <br>
 
-> Læs: [inspiration til measuret [Fravær – antal i fraværsinterval Ikke anonymiseret]](https://www.daxpatterns.com/dynamic-segmentation/)
+> Læs: [inspiration til measuret _[Fravær – antal i fraværsinterval Ikke anonymiseret]_](https://www.daxpatterns.com/dynamic-segmentation/)
 > 
 > | [**Daxpatterns.com \ Dynamic segmentation**](https://www.daxpatterns.com/dynamic-segmentation/) | <img src="Images/icons_ref/icon_daxpatterns.png" height="45" width="45"> | 
 
-I **Sygefravær de seneste 12 mdr. fordelt på intervaller** beregnes igen relative fraværsdage $$ \frac{\text{fraværstimer}}{\text{planlagt arbejdstid}} $$ på individniveau. [Fravær – antal i fraværsintervaller Ikke anonymiseret] beregner [Fravær – antal arbejdsdage på tværs af org] i kontekst af tally-tabellen, v_TallyFraværsintervaller[Interval.]. Intervaller inkluderer øvre grænseværdier. 
-Igen filtreres _på figuren_ med kriterierne, [Ansat på afdelingen, nuværende afdeling]=1 og v_DimAnsættelse[AnsatDagsDato]=J, hvorfor alle ansættelser med samme tjenestenummer på aktuelt ansatte dags dato medregnes.
+I **Sygefravær de seneste 12 mdr. fordelt på intervaller** beregnes igen relative fraværsdage $$ \frac{\text{fraværstimer}}{\text{planlagt arbejdstid}} $$ på individniveau. _[Fravær – antal i fraværsintervaller Ikke anonymiseret]_ beregner _[Fravær – antal arbejdsdage på tværs af org]_ i kontekst af tally-tabellen, v_TallyFraværsintervaller[Interval.]. Intervaller inkluderer øvre grænseværdier. 
+Igen filtreres _på figuren_ med kriterierne, _[Ansat på afdelingen, nuværende afdeling]_=1 og v_DimAnsættelse[AnsatDagsDato]=J, hvorfor alle ansættelser med samme tjenestenummer på aktuelt ansatte dags dato medregnes.
 
 > Tally-tabeller er i vores fulde kontrol, hvorfor vi let kan konfigurere i intervalgrænser og -antal.
 
-> Læs: [inspiration til measuret [Fravær – vægtede fuldtidsfraværsdage gnsnit 12 mdr Ikke anonymiseret]](https://www.sqlbi.com/articles/rolling-12-months-average-in-dax/)
+> Læs: [inspiration til measuret _[Fravær – vægtede fuldtidsfraværsdage gnsnit 12 mdr Ikke anonymiseret]_](https://www.sqlbi.com/articles/rolling-12-months-average-in-dax/)
 > 
 > | [**Sqlbi.com \ Rolling 12 Months Average in DAX**](https://www.sqlbi.com/articles/rolling-12-months-average-in-dax/) | <img src="Images/icons_ref/icon_sqlbi.png" height="45" width="45"> |
 
@@ -148,7 +148,7 @@ RETURN DIVIDE ( FravSum, BeskSum, 0 )
 I dashboard udstilles aggregeret data om fravær på organisations- og stillingsniveau. 
 Bruger får her overblik over organisationer, som denne i forvejen har adgang til via PersonaleWeb. Se [***brugerstyring***](./Brugerstyring). 
      
-Fælles for alle beregninger er implementering af anonymitetsgrænsen. Hvor beregninger baseres på løbende nedslagsdatoer (fig. 2, 3, 4, 7. [Fravær – vægtede fuldtidsfraværsdage gnsnit 12 mdr]) kontrolleres, at antal inkluderede individer på nedslagsdatoer er tilstrækkeligt. Hvis ikke udelades resultat på nedslagsdato. Hvor kun aktuelt ansatte dags dato indgår i beregning sikres, at_antal aktuelt ansatte dags dato er tilstrækkeligt. 
+Fælles for alle beregninger er implementering af anonymitetsgrænsen. Hvor beregninger baseres på løbende nedslagsdatoer (fig. 2, 3, 4, 7. _[Fravær – vægtede fuldtidsfraværsdage gnsnit 12 mdr]_) kontrolleres, at antal inkluderede individer på nedslagsdatoer er tilstrækkeligt. Hvis ikke udelades resultat på nedslagsdato. Hvor kun aktuelt ansatte dags dato indgår i beregning sikres, at_antal aktuelt ansatte dags dato er tilstrækkeligt. 
 
 > Anonymitetsgrænsen indbygges i nogle measures for at forhindre identifikation af enkeltindivider.
 
@@ -165,13 +165,13 @@ I **Udvikling i sygefravær (12 mdr.) fordelt på hovedstillingsgrupper** (Fig. 
 
 **Figur 3 og 4** viser **Udvikling i løbende fuldtidsgennemsnit** over hhv. løbende 12 måneder og grupperet på **udvalgte fagstillingsgrupper**.
 
-> Læs: [inspiration til measuret [Fravær – antal i fraværsinterval Ikke anonymiseret]](https://www.daxpatterns.com/dynamic-segmentation/)
+> Læs: [inspiration til measuret _[Fravær – antal i fraværsinterval Ikke anonymiseret]_](https://www.daxpatterns.com/dynamic-segmentation/)
 > 
 > | [**Daxpatterns.com \ Dynamic segmentation**](https://www.daxpatterns.com/dynamic-segmentation/) | <img src="Images/icons_ref/icon_daxpatterns.png" height="45" width="45"> | 
 
-I **figurerne 5 og 6** beregnes igen relative fraværsdage (fraværstimer af planlagt tid), [Fravær – antal arbejdsdage på tværs af org]. I **figur 5** bruges dette i [Fravær – antal i fraværsinterval] til beregning af antal personer i perioden—og på tværs af organisation—med antal fraværsdage indenfor definerede intervaller. Measure er designet til at indgå i kontekst af tally-tabellen, v_TallyFraværsintervaller[Interval]. Intervaller inkluderer øvre grænseværdier. 
+I **figurerne 5 og 6** beregnes igen relative fraværsdage (fraværstimer af planlagt tid), _[Fravær – antal arbejdsdage på tværs af org]_. I **figur 5** bruges dette i _[Fravær – antal i fraværsinterval]_ til beregning af antal personer i perioden—og på tværs af organisation—med antal fraværsdage indenfor definerede intervaller. Measure er designet til at indgå i kontekst af tally-tabellen, v_TallyFraværsintervaller[Interval]. Intervaller inkluderer øvre grænseværdier. 
 
-I **figur 6** relativt fravær i [Fravær – antal under regionalt niveau] og i kontekst af v_TallyFraværMaaltal til gruppering af antal personer over og under **regionens måltal**.
+I **figur 6** relativt fravær i _[Fravær – antal under regionalt niveau]_ og i kontekst af v_TallyFraværMaaltal til gruppering af antal personer over og under **regionens måltal**.
 
  
  
