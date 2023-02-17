@@ -210,7 +210,9 @@ $$ 1924 \frac{timer}{år} = 52 \frac{uger}{år} \cdot 37 \frac{timer}{uge} = 260
 
 
 
--- -----------------
+----------
+----------
+----------
 
 ### Ferieelement
 
