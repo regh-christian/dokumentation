@@ -145,7 +145,7 @@ Fælles for alle beregninger er implementering af anonymitetsgrænsen. Hvor bere
 
 > Anonymitetsgrænsen indbygges i nogle measures for at forhindre identifikation af enkeltindivider.
 
-Foruden brug af grunddata er oprettet views til brug for beregninger specifikt for dette tema. Se [](./).
+Foruden brug af grunddata er oprettet views til brug for beregninger specifikt for dette tema. Se [***Resume af tabeller***](./Sygefravær#resume-af-tabeller).
 
 <iframe src="https://flis.regionh.top.local:444/PBIReports/powerbi/L%C3%B8n%20og%20HR/HR%20Strategisk%20Dashboard/HR%20Strategisk%20Dashboard?RC:Toolbar=False&filterPaneEnabled=false&navContentPaneEnabled=false&$initialTab=Sygefrav%C3%A6r" style="border:1px #000000 solid;" frameborder="1" height="434" width="100%"></iframe>
 
