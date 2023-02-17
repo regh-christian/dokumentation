@@ -1,17 +1,23 @@
 # Sygefravær
 
+Fravær er bredt defineret ved lønarterne i v_DimLønartFravær[L1Code].
+Der filtreres globalt _på fanen_ ud fra kriterierne v_DimAnsættelse[Ansat]=J, v_DimAnsættelse[Månedslønnet]=J og v_DimLønartFravær[L1Name]='Fravær'. Dog ikke sidstnævnte filter på fanen (bogmærket), **Fravær pr. type**, hvor samtlige fraværstyper opgøres.
+
+Som udgangspunkt vises altså alle lederens månedslønnede medarbejdere med en aktuel—eller historisk—ansættelse med statuskode 0, 1 eller 3, _hvis_ denne i opgørelsesperioden har registreret fravær i en af førnævnte lønarter. 
+
+Har bruger adgang til medarbejdere på tværs af organisationsstruktur, kan der filtreres herpå, ligesom der kan filtreres på tværs af stillingshieraki.
+
+Foruden brug af grunddata er oprettet views og tabeller til brug i beregninger under dette tema. Se [***Resume af tabeller***](./Sygefravær#resume-af-tabeller). 
+
+
+
 ## Lederdashboard
 
 I dashboardet udstilles data på enkeltmedarbejderniveau tiltænkt ledere. 
 Bruger får her overblik over udvalgte parametre om de medarbejdere, denne i forvejen har adgang til via PersonaleWeb. Se [brugerstyring](./Brugerstyring).
 
-Fravær er bredt defineret ved lønarterne i v_DimLønartFravær[L1Code].
-Der filtreres globalt _på fanen_ ud fra kriterierne v_DimAnsættelse[Ansat]=J, v_DimAnsættelse[Månedslønnet]=J og v_DimLønartFravær[L1Name]='Fravær'. Dog ikke sidstnævnte filter på fanen (bogmærket), **Fravær pr. type**, hvor samtlige fraværstyper opgøres.
-	Som udgangspunkt vises altså alle lederens månedslønnede medarbejdere med en aktuel—eller historisk—ansættelse med statuskode 0, 1 eller 3, _hvis_ denne i opgørelsesperioden har registreret fravær i en af førnævnte lønarter. 
-Har bruger adgang til medarbejdere på tværs af organisationsstruktur, kan der filtreres herpå, ligesom der kan filtreres på tværs af stillingshieraki—med undtagelse af laveste stillingsniveau.
-Foruden brug af grunddata er oprettet views og tabeller til brug i beregninger under dette tema. Se [***Resume af tabeller***](./Sygefravær#resume-af-tabeller). 
-
 <iframe src="https://flis.regionh.top.local:444/PBIReports/powerbi/L%C3%B8n%20og%20HR/HR%20Lederdashboard/Sygefrav%C3%A6r?RC:Toolbar=False" style="border:1px #000000 solid;" frameborder="1" height="435" width="100%"></iframe>
+
 
 
 #### Beregninger
@@ -144,8 +150,6 @@ Bruger får her overblik over organisationer, som denne i forvejen har adgang ti
 Fælles for alle beregninger er implementering af anonymitetsgrænsen. Hvor beregninger baseres på løbende nedslagsdatoer (fig. 2, 3, 4, 7. [Fravær – vægtede fuldtidsfraværsdage gnsnit 12 mdr]) kontrolleres, at antal inkluderede individer på nedslagsdatoer er tilstrækkeligt. Hvis ikke udelades resultat på nedslagsdato. Hvor kun aktuelt ansatte dags dato indgår i beregning sikres, at_antal aktuelt ansatte dags dato er tilstrækkeligt. 
 
 > Anonymitetsgrænsen indbygges i nogle measures for at forhindre identifikation af enkeltindivider.
-
-Foruden brug af grunddata er oprettet views til brug for beregninger specifikt for dette tema. Se [***Resume af tabeller***](./Sygefravær#resume-af-tabeller).
 
 <iframe src="https://flis.regionh.top.local:444/PBIReports/powerbi/L%C3%B8n%20og%20HR/HR%20Strategisk%20Dashboard/HR%20Strategisk%20Dashboard?RC:Toolbar=False&filterPaneEnabled=false&navContentPaneEnabled=false&$initialTab=Sygefrav%C3%A6r" style="border:1px #000000 solid;" frameborder="1" height="434" width="100%"></iframe>
 
