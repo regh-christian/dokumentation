@@ -51,12 +51,9 @@ CALCULATE ( [Ansat på afdeling],
 hvor
 ```DAX
 [Ansat på afdeling] =
-VAR RelevantPersonID =
-    MAX ( 'v_DimAnsættelse'[PersonID] )
-VAR RelevantePersoner =
-    FILTER ( v_DimPerson, [ID] = RelevantPersonID )
-VAR AnsatPaaAfdeling =
-    IF ( COUNTROWS ( RelevantePersoner ) + 0 > 0, 1, 0 )
+VAR RelevantPersonID = MAX ( 'v_DimAnsættelse'[PersonID] )
+VAR RelevantePersoner = FILTER ( v_DimPerson, [ID] = RelevantPersonID )
+VAR AnsatPaaAfdeling = IF ( COUNTROWS ( RelevantePersoner ) + 0 > 0, 1, 0 )
 RETURN
     AnsatPaaAfdeling
 ```
@@ -88,8 +85,7 @@ TIl beregning af **'Gns. løbende sygefravær opgjort over seneste 12 mdr.'** an
 ...fra [Fravær – vægtede fuldtidsfraværsdage gnsnit 12 mdr Ikke anonymiseret])
 VAR DenFoerste = FILTER ( Period, DAY ( [Dato] ) = 1 )
 VAR AntalDageIPerioden = COUNTROWS ( DenFoerste )
-VAR AntalFuldtidsdage =
-    CALCULATE ( SUM ( 'v_FactFravær'[Fuldtidsdage] ), Period )
+VAR AntalFuldtidsdage = CALCULATE ( SUM ( 'v_FactFravær'[Fuldtidsdage] ), Period )
 VAR PeriodMedBeskdec =
     GENERATE (
         DenFoerste,
@@ -103,16 +99,13 @@ VAR PeriodMedBeskdec =
         RETURN ROW ( "BeskSum", BeskSumPaaDagen )
     )
 VAR BeskSumPerioden = SUMX ( PeriodMedBeskdec, [BeskSum] )
-VAR GennemsnitBesksum = 
-	DIVIDE( BeskSumPerioden, AntalDageIPerioden, 0)
+VAR GennemsnitBesksum = DIVIDE( BeskSumPerioden, AntalDageIPerioden, 0)
 ...
 ```
 og (2) månedlig sum af fuldtidsfraværsdage indeværende måned, v_FactFravær[Fuldtidsdage]. Endeligt (3) andel af fuldtidsfraværsdage af den gennemsnitlige beskæftigelsessum. 
 ```DAX
 ...fra [Fravær – vægtede fuldtidsfraværsdage gnsnit 12 mdr Ikke anonymiseret])
-
-VAR GnsnitFuldtidsdage =
-    	DIVIDE ( AntalFuldtidsdage, GennemsnitBesksum, 0 )
+VAR GnsnitFuldtidsdage = DIVIDE ( AntalFuldtidsdage, GennemsnitBesksum, 0 )
 RETURN GnsnitFuldtidsdage
 ...
 ```
