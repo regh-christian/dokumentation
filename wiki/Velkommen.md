@@ -10,7 +10,9 @@ Sektionen har hovedsageligt tekniske medarbejdere med kompetencer i dataudtræk 
 </center>
 <br>
 
-
+<center>
+<iframe src="https://regionh-my.sharepoint.com/personal/stefan_sajin-henningsen_regionh_dk/_layouts/15/Doc.aspx?sourcedoc={9400f055-6ddb-4862-aaa8-e3b2389a9bad}&amp;action=embedview&amp;wdAr=1.7777777777777777" width="476px" height="288px" frameborder="0">This is an embedded <a target="_blank" href="https://office.com">Microsoft Office</a> presentation, powered by <a target="_blank" href="https://office.com/webapps">Office</a>.</iframe>
+</center>
 
 
 # Introduktion til CHRU_HRKube
