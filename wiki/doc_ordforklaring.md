@@ -10,7 +10,7 @@ else AktuelHovedansættelse=0;
 ----------
 
 ### Anciennitet
-I SD har anciennitetsdato ikke en entydig betydning. Den kan betyde startdatoen i første ansættelse i regionen (ligesom _ansættelsesdato_), men den kan også være resultat af fx omregnet anciennitet fra deltidsbeskæftigelse. Et bedre udtryk for en persons egentlige anciennitet i regionen er _AnsLængdeCPR_. 
+I SD har anciennitetsdato ikke en entydig betydning. Den kan betyde startdatoen i første ansættelse i regionen (ligesom _ansættelsesdato_), men den kan også være resultat af fx omregnet anciennitet fra deltidsbeskæftigelse. Et bedre udtryk for en persons egentlige anciennitet i regionen er v_DimAnsættelse[_AnsLængdeCPR_]. 
 
 ----------
 
@@ -168,7 +168,7 @@ Ansættelser kendetegnet ved
 
 ### Orlov
 Kendetegnet ved et skift i ansættelsesstatus fra midlertidigt ude af løn (3) til enten ansat/genåbnet (1) eller ansat uden løn (0). Eller omvendt.
- 
+
 ----------
 
 ### Standardpopulation
