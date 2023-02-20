@@ -165,9 +165,3 @@ I **Udvikling i sygefravær (12 mdr.) fordelt på hovedstillingsgrupper** (Fig. 
 I **figurerne 5 og 6** beregnes igen relative fraværsdage (fraværstimer af planlagt tid), _[Fravær – antal arbejdsdage på tværs af org]_. I **figur 5** bruges dette i _[Fravær – antal i fraværsinterval]_ til beregning af antal personer i perioden—og på tværs af organisation—med antal fraværsdage indenfor definerede intervaller. Measure er designet til at indgå i kontekst af tally-tabellen, v_TallyFraværsintervaller[Interval]. Intervaller inkluderer øvre grænseværdier. 
 
 I **figur 6** relativt fravær i _[Fravær – antal under regionalt niveau]_ og i kontekst af v_TallyFraværMaaltal til gruppering af antal personer over og under **regionens måltal**.
-
- 
- 
- 
- 
- 
