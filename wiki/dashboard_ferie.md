@@ -7,6 +7,8 @@ Feriesaldo, anvendt og planlagt ferie inkluderer alle saldi; med og uden løn, o
 Alle beregninger foretages på sidste, igangværende og næste ferieår.
 Hvor andet ikke er nævnt, medregnes alle ansatte dags dato (v_DimAnsættelse[AnsatDagsDato]=J, v_DimAnsættelse[AktuelRække]=J).
 
+Foruden brug af grunddata er oprettet views til brug for beregninger specifikt for dette tema. Se [***Resume af tabeller***](./data_ferie#resume-af-tabeller).   
+
 
 
 ## Lederdashboard
@@ -16,8 +18,7 @@ I dashboard udstilles data om restferie på enkeltmedarbejderniveau tiltænkt le
 Bruger (ledere) får her overblik over de medarbejdere og enheder, som denne i forvejen har adgang til via PersonaleWeb. Se [***brugerstyring***](./data_brugerstyring).
 
 Hvor andet ikke er nævnt, vises alle lederens medarbejdere med en aktuel ansættelse pågældende dag. Har bruger adgang til medarbejdere på tværs af organisationsstruktur, kan der filtreres herpå, ligesom der kan filtreres på tværs af stillingshieraki. 
-
-Foruden brug af grunddata er oprettet views til brug for beregninger specifikt for dette tema. Se [***Resume af tabeller***](./data_ferie#resume-af-tabeller).     
+ 
 
 <iframe src="https://flis.regionh.top.local:444/PBIReports/powerbi/L%C3%B8n%20og%20HR/HR%20Lederdashboard/Ferieafholdelse?RC:Toolbar=False" style="border:1px #000000 solid;" frameborder="1" height="435" width="100%"></iframe>
 
