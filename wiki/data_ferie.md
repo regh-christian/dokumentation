@@ -105,7 +105,7 @@ Medregnet i feriesaldo, som medarbejder har ret til at afholde, betragtes, som n
 > Antal forventede optjente ferietimer er pr. definition antallet af timer, som medarbejder forventes at have til afhold i hele afviklingsåret baseret på aktuel beskæftigelsesdecimal.
 
 Fra dags dato optælles i Tjenestetid og Optima antal planlagte ferietimer på lønarterne 730 (”Ferietimer”) og 752 (”Ferietimer '6. uge’ ”) indenfor hver afviklingsperiode af ordinær ferie og 6. ferieuge i igangværende og næste ferieår.
-     ’FerieTimer’ udregner da pr. ferieelement (i v_DimFerieTyper[ID]) for alle medarbejdere (TJNR) i alle afviklingsperioder antallet af timer, >0, som er bidrag fra feriesaldo og forventet tilskrivning eller antallet, <0, bidraget af planlagte og anvendte ferietimer. 
+     ’FerieTimer’ udregner da pr. ferieelement (i v_DimFerieTyper[ID]) for alle medarbejdere (TJNR) i alle afviklingsperioder antallet af timer, $$ >0 $$, som er bidrag fra feriesaldo og forventet tilskrivning eller antallet, $$ <0 $$, bidraget af planlagte og anvendte ferietimer. 
 ```SQL
 ,CASE 
 	WHEN FerieKategori IN ('Feriesaldo', 'Forventet tilskrivning') THEN FerieTimer
