@@ -73,5 +73,9 @@
 
 ### v_TallyRestferieIntervaller
 
+| **View** | **Opdateres** |
+| - | - |
+| [chru_cube].[v_TallyRestferieIntervaller] | Dagligt |
+
 
 
