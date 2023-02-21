@@ -39,9 +39,7 @@ VAR RestferieDage = DIVIDE ( [Restferie], 7.4 * BeskDecKorr, 0 )
 ```
 Har denne værdien ≥15% vises et ikon.
 
-
-I **Antal medarbejdere fordelt på restferieintervaller** beregnes antallet af medarbejdere i buckets af restferietimer til afhold, _[AntalRestferieInterval]_. (øvre grænse inkluderet).
-
+I **Antal medarbejdere fordelt på restferieintervaller** beregnes antallet af medarbejdere i buckets af antal restferietimer til afhold, _[AntalRestferieInterval]_. Øvre grænser inkluderet.
 
 
 
@@ -52,7 +50,8 @@ I **Antal medarbejdere fordelt på restferieintervaller** beregnes antallet af m
 
 
 
-> Læs: [Inspiration til measuret _[Fravær – antal i fraværsinterval Ikke anonymiseret]_](https://www.daxpatterns.com/dynamic-segmentation/)
+
+> Læs: [Inspiration til measuret _[AntalRestferieInterval]_](https://www.daxpatterns.com/dynamic-segmentation/)
 > 
 > | [**Daxpatterns.com \ Dynamic segmentation**](https://www.daxpatterns.com/dynamic-segmentation/) | <img src="Images/icons_ref/icon_daxpatterns.png" height="45" width="45"> | 
 
