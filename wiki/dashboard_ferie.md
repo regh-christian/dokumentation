@@ -5,7 +5,7 @@
 
 Dashboardet indeholder data vedrørende ordinær ferie og 6. ferieuge for sidste, igangværende og kommende ferieår. 
 I dashboard udstilles data om restferie på enkeltmedarbejderniveau tiltænkt ledere. 
-Bruger (ledere) får her overblik over de medarbejdere og enheder, som denne i forvejen har adgang til via PersonaleWeb. Se [***brugerstyring***](./Brugerstyring).
+Bruger (ledere) får her overblik over de medarbejdere og enheder, som denne i forvejen har adgang til via PersonaleWeb. Se [***brugerstyring***](./data_brugerstyring).
 
 Hvor andet ikke er nævnt, vises alle lederens medarbejdere med en aktuel ansættelse pågældende dag. Har bruger adgang til medarbejdere på tværs af organisationsstruktur, kan der filtreres herpå, ligesom der kan filtreres på tværs af stillingshieraki—med undtagelse af laveste niveau, stillingskode/stillingskodetekst (’L4Code’ og ’L4Name’). 
 
@@ -15,7 +15,17 @@ Foruden brug af grunddata er oprettet views til brug for beregninger specifikt f
 
 Feriedata opdateres dagligt. 
 
+
+
 #### Beregninger
+
+Ferie er, som det præsenteres i dashboard, bredt defineret som den (rest)ferie, medarbejder har ret til at afholde. Indeholdt i beregningen er positive bidrag fra feriesaldo og forventet tilskrivning samt negative bidrag fra anvendt og planlagt ferie.
+
+Feriesaldo, anvendt og planlagt ferie inkluderer alle saldi; med og uden løn, overførte ferietimer og elevferie. Forventet tilskrivning er udregnet i ikke afsluttede optjeningsperioder, og udgøres af ferietimer, som medarbejder forventes at have til afhold i hele afviklingsåret (baseret på aktuel beskæftigelsesdecimal), fratrukket evt. aktuel optjent feriesaldo. For ferie uden løn medregnes også evt. overført ferie. Fra dags dato indhentes planlagte timer fra Tjenestetid og Optima på lønarterne, 730 og 752. 
+
+Alle beregninger foretages på sidste, igangværende og næste ferieår.
+Hvor andet ikke er nævnt, medregnes alle ansatte dags dato (v_DimAnsættelse[AnsatDagsDato]=J, v_DimAnsættelse[AktuelRække]=J).
+
 
 
 > Læs: [Inspiration til measuret _[Fravær – antal i fraværsinterval Ikke anonymiseret]_](https://www.daxpatterns.com/dynamic-segmentation/)
