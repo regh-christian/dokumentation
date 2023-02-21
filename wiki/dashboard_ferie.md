@@ -15,7 +15,7 @@ Dashboardet indeholder data vedrørende ordinær ferie og 6. ferieuge for sidste
 I dashboard udstilles data om restferie på enkeltmedarbejderniveau tiltænkt ledere. 
 Bruger (ledere) får her overblik over de medarbejdere og enheder, som denne i forvejen har adgang til via PersonaleWeb. Se [***brugerstyring***](./data_brugerstyring).
 
-Hvor andet ikke er nævnt, vises alle lederens medarbejdere med en aktuel ansættelse pågældende dag. Har bruger adgang til medarbejdere på tværs af organisationsstruktur, kan der filtreres herpå, ligesom der kan filtreres på tværs af stillingshieraki—med undtagelse af laveste niveau, stillingskode/stillingskodetekst (’L4Code’ og ’L4Name’). 
+Hvor andet ikke er nævnt, vises alle lederens medarbejdere med en aktuel ansættelse pågældende dag. Har bruger adgang til medarbejdere på tværs af organisationsstruktur, kan der filtreres herpå, ligesom der kan filtreres på tværs af stillingshieraki. 
 
 Foruden brug af grunddata er oprettet views til brug for beregninger specifikt for dette tema. Se [***Resume af tabeller***](./data_ferie#resume-af-tabeller).     
 
