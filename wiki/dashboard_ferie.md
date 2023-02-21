@@ -22,7 +22,7 @@ Hvor andet ikke er nævnt, vises alle lederens medarbejdere med en aktuel ansæt
 
 <iframe src="https://flis.regionh.top.local:444/PBIReports/powerbi/L%C3%B8n%20og%20HR/HR%20Lederdashboard/Ferieafholdelse?RC:Toolbar=False" style="border:1px #000000 solid;" frameborder="1" height="435" width="100%"></iframe>
 
-Feriedata opdateres dagligt. Som default filtreret på ferieperiode med førstkommende afviklingsslutdato.
+Feriedata opdateres dagligt. Som default filtreret på ferieperioden med førstkommende afviklingsslutdato.
 
 
 
