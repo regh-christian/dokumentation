@@ -52,17 +52,26 @@
 |  |  | ([SD].[V_SD_FERIE_FERIE]) |
 
 
+
 ### v_FactFerie6Ferieuge
 
+| **View** | **Opdateres** | **Baseret på** | 
+| - | - | - |
+| [chru_cube].[v_FactFerie6Ferieuge] | Dagligt | [DM_DF_HR].[FactFerieOrdinær] |
+|  |  | ([SD].[V_SD_FERIE_6UGE]) |
 
 
 
 ### v_FactFerieOverført
 
+| **View** | **Opdateres** | **Baseret på** | 
+| - | - | - |
+| [chru_cube].[v_FactFerieOverførte] | Dagligt | [DM_DF_HR].[FactFerieOverfoert] |
+|  |  | ([SD].[V_SD_FERIE_]) |
 
 
 
-v_TallyRestferieIntervaller
+### v_TallyRestferieIntervaller
 
 
 
