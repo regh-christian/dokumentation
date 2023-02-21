@@ -14,19 +14,31 @@
 
 ### v_DimFerieTyper
 
-| **View** | **Opdateres** | **Baseret på** | 
-| - | - | - |
-| [chru_cube].[v_DimFerieTyper] | Dagligt | [DM_FL_HR].[DimLønart] |
+| **View** | **Opdateres** |
+| - | - |
+| [chru_cube].[v_DimFerieTyper] | Dagligt |
+
 
 
 
 ### v_DimFerieÅr
 
+| **View** | **Opdateres** |
+| - | - |
+| [chru_cube].[v_DimFerieÅr] | Dagligt |
 
 
 
 ### v_FactFerie
-
+| **View** | **Opdateres** | **Baseret på** |
+| - | - | - |
+| [chru_cube].[v_FactFerie] |  | [DM_FL_HR].[DactFerieOrdinær] |
+| [chru_cube].[v_FactFerie6Ferieuge] |  | [DM_FL_HR].[FactFerie6uge] |
+| [chru_cube].[v_FactFerieOverført] |  | [DM_FL_HR].[FactFerie6Overfoert] |
+| [SD].[V_SD_FERIE_FERIE] +  + ??? |  | [DM_FL_HR].[FactFerie6uge] |
+| [SD].[V_SD_FERIE_6UGE] |  | [DM_FL_HR].[FactFerie6uge] |
+| [DM_FL_HR].[SD_OPT_HOURSASSIGNMENT] |  | [DM_FL_HR].[FactFerie6uge] |
+| [DM_FL_HR].[FactTjenestetid] |  |  |
 
 
 
@@ -46,3 +58,6 @@
 
 
 v_TallyRestferieIntervaller
+
+
+
