@@ -30,14 +30,15 @@
 
 
 ### v_FactFerie
+
 | **View** | **Opdateres** | **Baseret på** |
 | - | - | - |
-| [chru_cube].[v_FactFerie] |  | [DM_FL_HR].[DactFerieOrdinær] |
+| [chru_cube].[v_FactFerie] | Dagligt | [DM_FL_HR].[DactFerieOrdinær] |
 | [chru_cube].[v_FactFerie6Ferieuge] |  | [DM_FL_HR].[FactFerie6uge] |
 | [chru_cube].[v_FactFerieOverført] |  | [DM_FL_HR].[FactFerie6Overfoert] |
-| [SD].[V_SD_FERIE_FERIE] +  + ??? |  | [DM_FL_HR].[FactFerie6uge] |
-| [SD].[V_SD_FERIE_6UGE] |  | [DM_FL_HR].[FactFerie6uge] |
-| [DM_FL_HR].[SD_OPT_HOURSASSIGNMENT] |  | [DM_FL_HR].[FactFerie6uge] |
+| ([SD].[V_SD_FERIE_FERIE] |  |  |
+| ([SD].[V_SD_FERIE_6UGE] |  |  |
+| [DM_FL_HR].[SD_OPT_HOURSASSIGNMENT] |  |  |
 | [DM_FL_HR].[FactTjenestetid] |  |  |
 
 
@@ -48,7 +49,7 @@
 | **View** | **Opdateres** | **Baseret på** | 
 | - | - | - |
 | [chru_cube].[v_FactFerieOrdinær] | Dagligt | [DM_DF_HR].[FactFerieOrdinær] |
-|   |   | ([SD].[V_SD_FERIE_FERIE]) |
+|  |  | ([SD].[V_SD_FERIE_FERIE]) |
 
 
 ### v_FactFerie6Ferieuge
