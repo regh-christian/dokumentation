@@ -29,14 +29,18 @@ Feriedata opdateres dagligt.
 
 **Feriestatus (timer)** viser summen (*[Restferie]*) af alle ferieelementer i v_FactFerie[FerieTimer] med og uden løn. Summen af feriesaldo og forventet tilskrivning fratrukket summen af anvendt og planlagt ferie vises i kontekst af feriekategorier på individniveau (TJNR).
 
-*[RestferieFlag]* bruges til at indikere, at medarbejder har restferie til snarligt afhold, som endnu ikke er planlagt. Denne beregnes som ratioen af restferiedage (korrigeret  ift. den enkeltes beskæftigelsesdecimal) relativt antal dage til aktuel (valgt) afviklingsperiodens afholdelsesfrist. 
+*[RestferieFlag]* bruges til at indikere, at medarbejder har restferie til snarligt afhold, som endnu ikke er planlagt. Denne beregnes som ratioen af restferiedage (korrigeret ift. den enkeltes beskæftigelsesdecimal) relativt antal dage til aktuel (valgt) afviklingsperiodes afholdelsesfrist. 
 ```DAX
 --(fra [RestferieFlag])
-VAR RestferieDage =
-    DIVIDE ( [Restferie], 7.4 * BeskDecKorr, 0 )
+...
+VAR BeskDecKorr = IF ( BeskDec = 0, 1, BeskDec )
+VAR RestferieDage = DIVIDE ( [Restferie], 7.4 * BeskDecKorr, 0 )
+...
 ```
 Har denne værdien ≥15% vises et ikon.
 
+
+I **Antal medarbejdere fordelt på restferieintervaller** beregnes antallet af medarbejdere i buckets af restferietimer til afhold, _[AntalRestferieInterval]_. (øvre grænse inkluderet).
 
 
 
