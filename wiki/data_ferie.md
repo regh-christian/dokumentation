@@ -42,9 +42,13 @@
 
 
 
+
 ### v_FactFerieOrdinær
 
-
+| **View** | **Opdateres** | **Baseret på** | 
+| - | - | - |
+| [chru_cube].[v_FactFerieOrdinær] | Dagligt | [DM_DF_HR].[FactFerieOrdinær] |
+|   |   | ([SD].[V_SD_FERIE_FERIE]) |
 
 
 ### v_FactFerie6Ferieuge
