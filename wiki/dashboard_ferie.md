@@ -3,7 +3,13 @@
 
 ## Lederdashboard
 
- Se [***brugerstyring***](./Brugerstyring).
+Dashboardet indeholder data vedrørende ordinær ferie og 6. ferieuge for sidste, igangværende og kommende ferieår. Feriedata opdateres dagligt.
+     I dashboard udstilles data om restferie på enkeltmedarbejderniveau tiltænkt ledere. 
+Bruger (ledere) får her overblik over de medarbejdere og enheder, som denne i forvejen har adgang til via PersonaleWeb. Se [***brugerstyring***](./Brugerstyring).
+
+Hvor andet ikke er nævnt, vises alle lederens medarbejdere med en aktuel ansættelse pågældende dag. Har bruger adgang til medarbejdere på tværs af organisationsstruktur, kan der filtreres herpå, ligesom der kan filtreres på tværs af stillingshieraki—med undtagelse af laveste niveau, stillingskode/stillingskodetekst (’L4Code’ og ’L4Name’). 
+
+Foruden brug af grunddata er oprettet views til brug for beregninger specifikt for dette tema. Se [***Resume af tabeller***](./data_sygefravær#resume-af-tabeller).     
 
 <iframe src="https://flis.regionh.top.local:444/PBIReports/powerbi/L%C3%B8n%20og%20HR/HR%20Lederdashboard/Ferieafholdelse?RC:Toolbar=False" style="border:1px #000000 solid;" frameborder="1" height="435" width="100%"></iframe>
 
