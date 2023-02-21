@@ -42,21 +42,9 @@ Har denne værdien ≥15% vises et ikon.
 I **Antal medarbejdere fordelt på restferieintervaller** beregnes antallet af medarbejdere i buckets af antal restferietimer til afhold, _[AntalRestferieInterval]_. Øvre grænser inkluderet.
 
 
-
-
-
-
-
-
-
-
-
 > Læs: [Inspiration til measuret _[AntalRestferieInterval]_](https://www.daxpatterns.com/dynamic-segmentation/)
 > 
 > | [**Daxpatterns.com \ Dynamic segmentation**](https://www.daxpatterns.com/dynamic-segmentation/) | <img src="Images/icons_ref/icon_daxpatterns.png" height="45" width="45"> | 
 
 
-> Læs: [Inspiration til measuret _[Fravær – vægtede fuldtidsfraværsdage gnsnit 12 mdr Ikke anonymiseret]_](https://www.sqlbi.com/articles/rolling-12-months-average-in-dax/)
-> 
-> | [**Sqlbi.com \ Rolling 12 Months Average in DAX**](https://www.sqlbi.com/articles/rolling-12-months-average-in-dax/) | <img src="Images/icons_ref/icon_sqlbi.png" height="45" width="45"> |
-> 
+Measure [Arbejdsdage tilbage i ferieperiode] beregner antal arbejdsdagedage (v_DimTidDato[ArbejdsdagBinær]) fra dags dato til førstkommende afviklingsslutdato i den valgte afviklingsperiode. Beregningen tager højde for eventuelle weekender og helligdage i perioden men figuren **Resterende antal arbejdsdage til afholdelsesfrist** er kun retningsgivende, da mulighederne for at afholde ferie på en given dag er overenskomstafhængig.
