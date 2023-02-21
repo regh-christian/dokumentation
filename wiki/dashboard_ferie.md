@@ -1,5 +1,8 @@
 # Ferieafholdelse
 
+Ferie er, som det præsenteres i dashboard, bredt defineret som den (rest)ferie, medarbejder har ret til at afholde. Indeholdt i beregningen er positive bidrag fra feriesaldo og forventet tilskrivning samt negative bidrag fra anvendt og planlagt ferie.
+
+
 
 ## Lederdashboard
 
@@ -18,8 +21,6 @@ Feriedata opdateres dagligt.
 
 
 #### Beregninger
-
-Ferie er, som det præsenteres i dashboard, bredt defineret som den (rest)ferie, medarbejder har ret til at afholde. Indeholdt i beregningen er positive bidrag fra feriesaldo og forventet tilskrivning samt negative bidrag fra anvendt og planlagt ferie.
 
 Feriesaldo, anvendt og planlagt ferie inkluderer alle saldi; med og uden løn, overførte ferietimer og elevferie. Forventet tilskrivning er udregnet i ikke afsluttede optjeningsperioder, og udgøres af ferietimer, som medarbejder forventes at have til afhold i hele afviklingsåret (baseret på aktuel beskæftigelsesdecimal), fratrukket evt. aktuel optjent feriesaldo. For ferie uden løn medregnes også evt. overført ferie. Fra dags dato indhentes planlagte timer fra Tjenestetid og Optima på lønarterne, 730 og 752. 
 
