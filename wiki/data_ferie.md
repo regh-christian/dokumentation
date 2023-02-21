@@ -95,6 +95,17 @@ WHEN OPSLUT >= CONVERT(date, GETDATE()) THEN
 ELSE 0
 END AS FerieTimer
 ```
+Summering over ’FerieTimer’ indeholder da positive bidrag fra feriesaldo og forventet tilskrivning og negative bidrag fra planlagt og anvendt ferie og giver dén (rest)ferie, som medarbejder har ret til at afholde.
+
+> Der skelnes mellem optjent saldo og saldo, som medarbejder har ret til at afholde. Hvor andet ikke er nævnt, er saldo dét, medarbejder har ret til at afholde. Ferietimer fra alle saldi med og uden løn er inkluderet
+
+Medregnet i feriesaldo, som medarbejder har ret til at afholde, betragtes, som nævnt, alle saldi; med og uden løn, overført ferie og elevferie. Det samme gælder saldo for anvendt og planlagt ferie. 
+’Forventet tilskrivning’ udregnes i ikke-afsluttede, ordinære optjeningsperioder som differensen mellem forventeligt antal ferietimer til afhold og aktuelt optjent saldo. I ferie uden løn medregnes også evt. overført ferie. 
+
+> Antal forventede optjente ferietimer er pr. definition antallet af timer, som medarbejder forventes at have til afhold i hele afviklingsåret baseret på aktuel beskæftigelsesdecimal.
+
+Fra dags dato optælles i Tjenestetid og Optima antal planlagte ferietimer på lønarterne 730 (”Ferietimer”) og 752 (”Ferietimer '6. uge’ ”) indenfor hver afviklingsperiode af ordinær ferie og 6. ferieuge i igangværende og næste ferieår. __
+     ’FerieTimer’ udregner da pr. ferieelement (v_DimFerieTyper[ID]) for alle medarbejdere (TJNR) i alle afviklingsperioder antallet af timer, >0, som er bidrag fra feriesaldo og forventet tilskrivning eller antallet, <0, bidraget af planlagte og anvendte ferietimer. 
 
 
 
