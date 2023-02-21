@@ -121,6 +121,9 @@ Fra dags dato optælles i Tjenestetid og Optima antal planlagte ferietimer på l
 | [chru_cube].[v_FactFerieOrdinær] | Dagligt | [DM_DF_HR].[FactFerieOrdinær] |
 |  |  | ([SD].[V_SD_FERIE_FERIE]) |
 
+Baseret på SD’s V_SD_FERIE_FERIE. Indeholder 3 rækker pr. medarbejder (TJNR)—én for hhv. sidste, igangværende og næste afviklingsperiode—med alle ferieelementer i bredt format. 
+Tabellen indgår ikke i CHRU_HRKube, men bruges som grundlag for v_FactFerie til beregning af ordinær ferie (1. -5. ferieuge).
+
 
 
 ### v_FactFerie6Ferieuge
@@ -129,6 +132,9 @@ Fra dags dato optælles i Tjenestetid og Optima antal planlagte ferietimer på l
 | - | - | - |
 | [chru_cube].[v_FactFerie6Ferieuge] | Dagligt | [DM_DF_HR].[FactFerieOrdinær] |
 |  |  | ([SD].[V_SD_FERIE_6UGE]) |
+
+Baseret på SD’s V_SD_FERIE_6UGE. Indeholder 3 rækker pr. medarbejder (TJNR)—én for hhv. sidste, igangværende og næste afviklingsperiode—med alle ferieelementer i bredt format. 
+Tabellen indgår ikke i CHRU_HRKube, men bruges som grundlag for v_FactFerie til beregning af ordinær ferie (1. -5. ferieuge).
 
 
 
@@ -139,6 +145,8 @@ Fra dags dato optælles i Tjenestetid og Optima antal planlagte ferietimer på l
 | [chru_cube].[v_FactFerieOverførte] | Dagligt | [DM_DF_HR].[FactFerieOverfoert] |
 |  |  | ([SD].[V_SD_FERIE_]) |
 
+Baseret på SD’s ! ___???___ !. Indeholder 3 rækker pr. medarbejder (TJNR)—én for hhv. sidste, igangværende og næste afviklingsperiode—med alle ferieelementer i bredt format. 
+Tabellen indgår ikke i CHRU_HRKube, men bruges som grundlag for v_FactFerie til beregning af ordinær ferie (1. -5. ferieuge).
 
 
 ### v_TallyRestferieIntervaller
@@ -147,5 +155,6 @@ Fra dags dato optælles i Tjenestetid og Optima antal planlagte ferietimer på l
 | - | - |
 | [chru_cube].[v_TallyRestferieIntervaller] | Dagligt |
 
+Tabel med antal timer inddelt i intervaller, [Interval], samt laveste og højeste grænseværdier i disse, [ValueLow] og [ValueHigh]. [IntervalSortering] nummererer [Interval] i kronologisk orden til brug på fx akser i Power BI.
 
 
