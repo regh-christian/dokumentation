@@ -61,4 +61,80 @@ I **Informationstabel** vises udvalgte medarbejderdata herunder ansættelsessted
 <iframe src="https://flis.regionh.top.local:444/PBIReports/powerbi/L%C3%B8n%20og%20HR/HR%20Strategisk%20Dashboard/HR%20Strategisk%20Dashboard?RC:Toolbar=False" style="border:1px #000000 solid;" frameborder="1" height="435" width="100%"></iframe>
 
 
+
 #### Beregninger
+
+Alle visninger er baseret på measure, _[AntalAnsatteNedslagsdatoer]_. Dette er designet som et switch-measure til, i kontekst af valgt **Ansættelsesform**, at beregne
+
+```DAX
+VAR __Ansaettelser =
+    CALCULATE (
+        [Antal medarbejdere],
+        'v_DimAnsættelse'[Start] <= __Dato, __Dato <= 'v_DimAnsættelse'[Slut],
+        'v_DimAnsættelse'[Ansat] = "J",
+        'v_DimAnsættelse'[EksterntFinansieret] <> __Filter_EksterntFinansierede
+    )
+VAR __Maanedsloennede =
+    CALCULATE (
+        [Antal medarbejdere],
+        'v_DimAnsættelse'[Start] <= __Dato, __Dato <= 'v_DimAnsættelse'[Slut],
+        'v_DimAnsættelse'[Ansat] = "J",
+        'v_DimAnsættelse'[Månedslønnet] = "J",
+        'v_DimAnsættelse'[EksterntFinansieret] <> __Filter_EksterntFinansierede
+    )
+VAR __Aarsvaerk =
+    CALCULATE (
+        [Antal årsværk],
+        'v_DimAnsættelse'[Start] <= __Dato, __Dato <= 'v_DimAnsættelse'[Slut],
+        'v_DimAnsættelse'[Ansat] = "J",
+        'v_DimAnsættelse'[Månedslønnet] = "J",
+        'v_DimAnsættelse'[EksterntFinansieret] <> __Filter_EksterntFinansierede
+    )
+VAR __Fuldtidsansatte =
+    CALCULATE (
+        [Antal medarbejdere],
+        'v_DimAnsættelse'[Start] <= __Dato, __Dato <= 'v_DimAnsættelse'[Slut],
+        'v_DimAnsættelse'[Ansat] = "J",
+        'v_DimAnsættelse'[Månedslønnet] = "J",
+        'v_DimAnsættelse'[Fuldtid] = "J",
+        'v_DimAnsættelse'[EksterntFinansieret] <> __Filter_EksterntFinansierede
+    )
+VAR __Deltidsansatte =
+    CALCULATE (
+        [Antal medarbejdere],
+        'v_DimAnsættelse'[Start] <= __Dato, __Dato <= 'v_DimAnsættelse'[Slut],
+        'v_DimAnsættelse'[Ansat] = "J",
+        'v_DimAnsættelse'[Månedslønnet] = "J",
+        'v_DimAnsættelse'[Fuldtid] = "N",
+        'v_DimAnsættelse'[EksterntFinansieret] <> __Filter_EksterntFinansierede
+    )
+VAR __Timeloennede =
+    CALCULATE (
+        [Antal medarbejdere],
+        'v_DimAnsættelse'[Start] <= __Dato, __Dato <= 'v_DimAnsættelse'[Slut],
+        'v_DimAnsættelse'[Ansat] = "J",
+        'v_DimAnsættelse'[Månedslønnet] = "N",
+        'v_DimAnsættelse'[EksterntFinansieret] <> __Filter_EksterntFinansierede
+    )
+VAR __Personer =
+    CALCULATE (
+        [Antal personer],
+        'v_DimAnsættelse'[Start] <= __Dato, __Dato <= 'v_DimAnsættelse'[Slut],
+        'v_DimAnsættelse'[EksterntFinansieret] <> __Filter_EksterntFinansierede
+    )
+VAR __SwitchValue =
+    SWITCH (
+        __ValgtAnsaettelsesform,
+        "Ansættelser", __Ansaettelser,
+        "Månedslønnede", __Maanedsloennede,
+        "Årsværk", __Aarsvaerk,
+        "Fuldtidsansatte", __Fuldtidsansatte,
+        "Deltidsansatte", __Deltidsansatte,
+        "Timelønnede", __Timeloennede,
+        "Personer", __Personer
+    )
+VAR Result =
+    IF ( __SwitchValue = 0, BLANK (), __SwitchValue )
+RETURN
+    Result
+```
