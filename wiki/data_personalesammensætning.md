@@ -59,7 +59,7 @@ Endeligt tilføjes tidssvarende Stillings- og PersonID og rækker indekseres
 
 | **View** | **Opdateres** |
 | - | - |
-| [chru_cube].[v_TallyAlder] | Efter behov |
+| [chru_cube].[v_TallyAlder] | Dagligt / efter behov |
 
 Talrækken 0-124 genereres og døbes ’Alder’. Næste to kolonner beregner placering af denne i 5- og 10 års intervaller døbt ’AldersInterval_5år’ og ’AldersInterval_10år’. Filtreres på alder fra 0-99 år.
 
@@ -69,7 +69,7 @@ Talrækken 0-124 genereres og døbes ’Alder’. Næste to kolonner beregner pl
 
 | **View** | **Opdateres** |
 | - | - |
-| [chru_cube].[v_TallyAnciennitet] | Efter behov |
+| [chru_cube].[v_TallyAnciennitet] | Dagtligt / efter behov |
 
 Identisk i opbygning og beregninger som v_TallyAnsættelseslængde. 
 
@@ -79,7 +79,7 @@ Identisk i opbygning og beregninger som v_TallyAnsættelseslængde.
 
 | **View** | **Opdateres** | 
 | - | - |
-| [chru_cube].[v_TallyAnsættelseslængde] | Efter behov |
+| [chru_cube].[v_TallyAnsættelseslængde] | Dagligt / efter behov |
 
 Talrækken 0-124 genereres og døbes Ansættelseslængde’. Næste to kolonner beregner placering af denne i 5- og 10 års intervaller døbt ’AnsættelseslængdeInterval_5år’ og ’ AnsættelseslængdeInterval_10år’. Filtreres på ’ Ansættelseslængde’ fra 0-99 år. Til brug på fx figurakser, hvor kun et begrænset antal intervaller ønskes vist, beregnes kolonnen ’AnsættelseslængdeIntervalVisualisering’. 
 Endeligt tilføjes ’AnsættelseslængdeIntervalVisualiseringSortering’ mhp. at kunne sortere forrige kolonne på dens ”numeriske” værdi i Power BI-visninger.
@@ -91,7 +91,7 @@ Endeligt tilføjes ’AnsættelseslængdeIntervalVisualiseringSortering’ mhp. 
 
 | **View** | **Opdateres** |
 | - | - |
-| [chru_cube].[v_TallyAnsætelsesform] | Efter behov |
+| [chru_cube].[v_TallyAnsætelsesform] | Dagligt / efter behov |
 
 
 
