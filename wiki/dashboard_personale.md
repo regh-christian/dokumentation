@@ -159,6 +159,7 @@ IF (
 ```
 
 ```DAX
+[Antal årsværk] =
 // Kan kun bruges når man kigger på aktuelle ansættelser eller en bestemt dato
 IF (
     ISBLANK ( SUM ( 'v_DimAnsættelse'[Beskdec] ) ), 
