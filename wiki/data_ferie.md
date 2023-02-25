@@ -153,7 +153,7 @@ Tabellen indgår ikke i CHRU_HRKube, men bruges som grundlag for v_FactFerie til
 
 | **View** | **Opdateres** |
 | - | - |
-| [chru_cube].[v_TallyRestferieIntervaller] | Dagligt |
+| [chru_cube].[v_TallyRestferieIntervaller] | Dagligt / efter behov |
 
 Tabel med antal timer inddelt i intervaller, [Interval], samt laveste og højeste grænseværdier i disse, [ValueLow] og [ValueHigh]. [IntervalSortering] nummererer [Interval] i kronologisk orden til brug på fx akser i Power BI.
 
