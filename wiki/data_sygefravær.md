@@ -71,7 +71,7 @@ Tabellen aggregerer fravær pr. måned pr. afdeling med opgørelses(’Dato’) 
 
 | **View** | **Opdateres** |
 | - | - |
-| [chru_cube].[v_TallyFraværsintervaller] | Efter behov |
+| [chru_cube].[v_TallyFraværsintervaller] | Dagligt / efter behov |
 
 Tabel med dagsintervaller i intervaller af 5 dage. ’Intervaller’ er en tekststreng til beskrivelse af intervallet, fx ’5 til 10 dage’. ’ValueLow’ og ’ValueHigh’ er hhv. ned og øvre grænse (inkluderende—i measures defineres inklusionskriterier nærmere) af intervallet. ’Sortering’ er en numerisk værdi svt. rækkefølgen på intervallerne. Denne bruges til at nummerere tekstværdien i ’Interval’, så disse placeres i ønsket, sorteret rækkefølge på figurer og tabeller i Power BI.
 
@@ -81,7 +81,7 @@ Tabel med dagsintervaller i intervaller af 5 dage. ’Intervaller’ er en tekst
 
 | **View** | **Opdateres** |
 | - | - |
-| [chru_cube].[v_TallyFraværMaaltal] | Efter behov |
+| [chru_cube].[v_TallyFraværMaaltal] | Dagligt / efter behov |
 
 Tabel med regionens måltal for fravær. To rækker beskrivende hhv. under og over måltallet fx ’>11.7 dg./år’. Kolonnerne ’ValueLow’ og ’ValueHigh’ er ned og øvre grænse (inkluderende) af intervallet. ’Sortering’ er en numerisk værdi svt. rækkefølgen på intervallerne. Denne bruges til at nummerere tekstværdien i ’Interval’, så disse placeres i ønsket, sorteret rækkefølge på figurer og tabeller i Power BI.
 
@@ -91,6 +91,6 @@ Tabel med regionens måltal for fravær. To rækker beskrivende hhv. under og ov
 
 | **View** | **Opdateres** | **Baseret på** | 
 | - | - | - |
-| [chru_cube].[v_SlicerNedslagsdatoer] | Efter behov | [DM_FL_HR].[DimDato] |
+| [chru_cube].[v_SlicerNedslagsdatoer] | Dagligt / efter behov | [DM_FL_HR].[DimDato] |
 
 ’Dato’ med udvalgte nedslagsdatoer i intervallet fra dags dato og tre år bagud. ’DagKortmaanedAar’ med dato i formatet ”dd. mmm. yyyy”. Kolonnen ’Filterdatoer’ er tekst til nærmere beskrivelse af datoen; kan fx være ”I dag”, ”Den 1. i denne måned” eller ”Den 1. i tidligere måneder”. Bruges bl.a. til at simplificere i measures, hvor fx ansættelsedecimal evalueres for hver d. 1. i måneden. 
