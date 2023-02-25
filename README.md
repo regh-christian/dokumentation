@@ -1,14 +1,15 @@
 # CHRU | Data & Rapportering
 
 Vi er en sektion under enheden **Data og Digitalisering** i **Center for HR og Uddannelse (CHRU)**. Sektionen udstiller data og leverer ledelsesinformation til regionens personaleledere og topledelser i form af Power BI Dashboards. Tilmed understøtter sektionen andre dele af CHRU med dataanvendelse (intern styring, indsigter, erkendelser, mv.). Sektionen varetager også *postkassehenvendelser* internt fra hele regionen og fra eksterne parter (spørgsmål og aktindsigter fra politikere, og journalister). 
-Sektionen har hovedsageligt tekniske medarbejdere med kompetencer i dataudtræk og datafremstilling (7) og økonomimedarbejdere (2), samt ledelsesmedarbejdere (2) til at understøtte disse.
+Sektionen har hovedsageligt tekniske medarbejdere med kompetencer i dataudtræk og datafremstilling og økonomimedarbejdere, samt ledelsesmedarbejdere til at understøtte disse.
 <br>
 
 <!-- PowerPoint: "lntroduktion og onboarding 2022"  -->
 <center>
-<iframe src="https://regionh-my.sharepoint.com/personal/stefan_sajin-henningsen_regionh_dk/_layouts/15/Doc.aspx?sourcedoc={5e29731f-bf33-4e15-b6f3-11422824f074}&amp;action=embedview&amp;wdAr=1.7777777777777777" width="476px" height="288px" frameborder="0">Dette er et integreret <a target="_blank" href="https://office.com">Microsoft Office</a>-dokument leveret af <a target="_blank" href="https://office.com/webapps">Office</a>.</iframe>
+<iframe src="https://regionh-my.sharepoint.com/personal/stefan_sajin-henningsen_regionh_dk/_layouts/15/Doc.aspx?sourcedoc={5e29731f-bf33-4e15-b6f3-11422824f074}&amp;action=embedview&amp;wdAr=1.7777777777777777" height="1000" width="587" frameborder="0"></iframe>
 </center>
 <br>
+
 
 
 # Introduktion til CHRU_HRKube
