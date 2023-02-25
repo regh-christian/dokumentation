@@ -38,9 +38,16 @@ CALCULATE (
     'v_DimAnsættelse'[Fuldtid] = "J"
 )
 ```
-
    Antal [Årsværk], vist sammen med de fire føromtalte, beregner summen af beskæftigelsesdecimaler, v_DimAnsættelse[Beskdec], som i definitionen er andelen af en 37 timers arbejdsuge, en person er ansat til og her i praksis oversættes til årsværk. Specifikt på visningen af årsværk filtreres v_DimAnsættelse[Månedslønnede]=’J’ i selve figuren.
-    
+```DAX
+[Antal årsværk] =
+// Kan kun bruges når man kigger på aktuelle ansættelser eller en bestemt dato
+IF (
+    ISBLANK ( SUM ( 'v_DimAnsættelse'[Beskdec] ) ), 
+    0,
+    SUM ( 'v_DimAnsættelse'[Beskdec] )
+)
+```
 Til beregning af [Ansættelseslængde] (antal år) anvendes differencen mellem dags dato og v_DimAnsættelse[Ansættelsesdato]. 
 I figuren **Ansættelseslængde** anvendes dette measure af [AnsatteAnsættelseslængdeInterval] til at beregne medarbejders ansættelseslængde i nuværende stilling (+evt tidligere ansættelser på samme tjenestenummer). Dette measure er designet til, i kontekst af v_TallyAnsættelseslænge, at beregne [Ansættelseslængde] evalueret i en filterkontekst af tjenestenummer (og AnsættelsesID for at sikre optælling på unikke individer) og returnerer _antallet af medarbejdere i intervallerne_ specificeret i tally-tabellen.
 Ved mouse-over vises den enkelte medarbejders ansættelseslængde udregnet med [Ansættelseslængde].
@@ -148,14 +155,6 @@ IF (
 )
 ```
 
-```DAX
-[Antal årsværk] =
-// Kan kun bruges når man kigger på aktuelle ansættelser eller en bestemt dato
-IF (
-    ISBLANK ( SUM ( 'v_DimAnsættelse'[Beskdec] ) ), 
-    0,
-    SUM ( 'v_DimAnsættelse'[Beskdec] )
-)
-```
+
 
 
