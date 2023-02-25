@@ -64,7 +64,7 @@ I **Informationstabel** vises udvalgte medarbejderdata herunder ansættelsessted
 
 #### Beregninger
 
-Alle visninger er baseret på measure, _[AntalAnsatteNedslagsdatoer]_. Dette er designet som et switch-measure til, i kontekst af valgt **Ansættelsesform**, at beregne
+Alle visninger er baseret på measure, _[AntalAnsatteNedslagsdatoer]_. Dette er designet som et switch-measure til, i kontekst af valgt **Ansættelsesform**, at beregne [Antal medarbejdere], [Antal personer] eller [Antal årsværk].
 
 ```DAX
 VAR __Ansaettelser =
