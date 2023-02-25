@@ -164,4 +164,4 @@ VAR __Personer =
 ...    
 ```
 
-$$ \frac{ \text{antal_{i dag}}-\text{antal_{nedslagsdato}} }{ \text{antal_{i dag}} } $$
+$$ \frac{ \text{antal_{\text{i dag}}}-antal_{\text{nedslagsdato}} }{ \text{antal_{i dag}} } $$
