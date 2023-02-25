@@ -78,6 +78,7 @@ Alle visninger er baseret på beregningen, _[AntalAnsatteNedslagsdatoer]_. Denne
 
 
 ```DAX
+--...fra [AntalAnsatteNedslagsdatoer] 
 VAR __Ansaettelser =
     CALCULATE (
         [Antal medarbejdere],
@@ -133,19 +134,4 @@ VAR __Personer =
         'v_DimAnsættelse'[Start] <= __Dato, __Dato <= 'v_DimAnsættelse'[Slut],
         'v_DimAnsættelse'[EksterntFinansieret] <> __Filter_EksterntFinansierede
     )
-VAR __SwitchValue =
-    SWITCH (
-        __ValgtAnsaettelsesform,
-        "Ansættelser", __Ansaettelser,
-        "Månedslønnede", __Maanedsloennede,
-        "Årsværk", __Aarsvaerk,
-        "Fuldtidsansatte", __Fuldtidsansatte,
-        "Deltidsansatte", __Deltidsansatte,
-        "Timelønnede", __Timeloennede,
-        "Personer", __Personer
-    )
-VAR Result =
-    IF ( __SwitchValue = 0, BLANK (), __SwitchValue )
-RETURN
-    Result
 ```
