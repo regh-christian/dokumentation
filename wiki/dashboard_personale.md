@@ -73,7 +73,23 @@ _[Ansat til]_ angiver en eventuel slutdato på medarbejders senest tildelte tjen
 
 #### Beregninger
 
-Alle visninger er baseret på beregningen, _[AntalAnsatteNedslagsdatoer]_. Denne er designet som et switch-measure til, i kontekst af valgt **Ansættelsesform**, at beregne enten _[Antal medarbejdere]_, _[Antal personer]_ eller _[Antal årsværk]_. Af ansættelsesformer kan vælges blandt v_TallyAnsættelsesformer[Ansættelsesform].
+Alle visninger er baseret på beregningen, _[AntalAnsatteNedslagsdatoer]_. Denne er designet som et switch-measure til, i kontekst af valgt **Ansættelsesform**, at beregne enten _[Antal medarbejdere]_, _[Antal personer]_ eller _[Antal årsværk]_. 
+Measuret er desuden designet til også at indgå i en tidskontekst, hvilken afhængig af figur er enten dasgs data _eller_ udvalgte nedslagsdatoer. 
+
+<!--
+```DAX
+--fra [AntalAnsatteNedslagsdatoer]
+...
+VAR __Dato = MAX( v_DimTidDato[Dato] )
+VAR __ValgtAnsaettelsesform = SELECTEDVALUE ( v_TallyAnsaettelsesformer[Ansaettelsesform] )
+VAR __Filter_EksterntFinansierede =
+    IF (
+        SELECTEDVALUE ( 'v_SlicerEksterntFinansierede'[FravaelgEksterntFinansierede] ) = "Ja", "J", "Alle" 
+    )
+...
+```
+-->
+
 
 | Ansaettelsesform  | Sortering |
 |       :-          |     -:    |
@@ -85,7 +101,7 @@ Alle visninger er baseret på beregningen, _[AntalAnsatteNedslagsdatoer]_. Denne
 | Timelønnede       |       6   |
 | Personer          |       7   |
 
-I measuret er således defineret bereging og inklusionskriterier for hver af disse populationer
+I measuret er således defineret bereging og inklusionskriterier for summen af hver af disse populationer:
 
 ```DAX
 --...fra [AntalAnsatteNedslagsdatoer] 
@@ -148,11 +164,4 @@ VAR __Personer =
 ...    
 ```
 
-```DAX
-[Antal personer] =
-IF (
-    ISBLANK ( DISTINCTCOUNT ( 'v_DimAnsættelse'[PersonID] ) ), 
-    0,
-    DISTINCTCOUNT ( 'v_DimAnsættelse'[PersonID] )
-)
-```
+
