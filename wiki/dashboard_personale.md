@@ -61,6 +61,8 @@ I **Informationstabel** vises udvalgte medarbejderdata herunder ansættelsessted
 _[Ansat til]_ angiver en eventuel slutdato på medarbejders senest tildelte tjenestenummer, hvis en sådan findes. _[Alder]_, _[Ansættelseslængde]_ og _[Årsværk]_ beregner, i kontekst af unikke personer (her i kontekst af kombinationen v_DimPerson[Navn] og v_DimAnsættelse[Tjnr]) pågældende persons alder og ansættelseslænge på dagen i hele antal år samt beskæftigelsesdecimal (årsværk) på pågældende ansættelse.
 
 
+
+
 ----------
 
 ## Strategisk Dashboard
@@ -155,6 +157,13 @@ IF (
 )
 ```
 
-
+```DAX
+[Antal personer] :=
+IF (
+    ISBLANK ( DISTINCTCOUNT ( 'v_DimAnsættelse'[PersonID] ) ), 
+    0,
+    DISTINCTCOUNT ( 'v_DimAnsættelse'[PersonID] )
+)
+```
 
 
