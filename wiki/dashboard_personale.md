@@ -74,34 +74,8 @@ _[Ansat til]_ angiver en eventuel slutdato på medarbejders senest tildelte tjen
 #### Beregninger
 
 Alle visninger er baseret på beregningen, _[AntalAnsatteNedslagsdatoer]_. Denne er designet som et switch-measure til, i kontekst af valgt **Ansættelsesform**, at beregne enten _[Antal medarbejdere]_, _[Antal personer]_ eller _[Antal årsværk]_. 
-Measuret er desuden designet til også at indgå i en tidskontekst, hvilken afhængig af figur er enten dasgs data _eller_ udvalgte nedslagsdatoer. 
 
-<!--
-```DAX
---fra [AntalAnsatteNedslagsdatoer]
-...
-VAR __Dato = MAX( v_DimTidDato[Dato] )
-VAR __ValgtAnsaettelsesform = SELECTEDVALUE ( v_TallyAnsaettelsesformer[Ansaettelsesform] )
-VAR __Filter_EksterntFinansierede =
-    IF (
-        SELECTEDVALUE ( 'v_SlicerEksterntFinansierede'[FravaelgEksterntFinansierede] ) = "Ja", "J", "Alle" 
-    )
-...
-```
--->
-
-
-| Ansaettelsesform  | Sortering |
-|       :-          |     -:    |
-| Ansættelser       |       1   |
-| Månedslønnede	    |       2   |
-| Fuldtidsansatte   |       3   |
-| Deltidsansatte	|       4   |
-| Årsværk           |       5   |
-| Timelønnede       |       6   |
-| Personer          |       7   |
-
-I measuret er således defineret bereging og inklusionskriterier for summen af hver af disse populationer:
+I measuret er således defineret bereging og inklusionskriterier for summen af hver af populationerne:
 
 ```DAX
 --...fra [AntalAnsatteNedslagsdatoer] 
@@ -162,8 +136,17 @@ VAR __Personer =
         'v_DimAnsættelse'[EksterntFinansieret] <> __Filter_EksterntFinansierede
     )
 ...    
-```
 
-$$ \frac{ \text{antal_{\text{i dag}}}-antal_{\text{nedslagsdato}} }{ \text{antal_{i dag}} } $$
+```DAX
+-- ...fra []AntalAnsatteNedslagsdatoer
+...
+VAR __Dato = MAX( v_DimTidDato[Dato] )
+VAR __ValgtAnsaettelsesform =
+    SELECTEDVALUE ( v_TallyAnsaettelsesformer[Ansaettelsesform] )
+...
+```
+(Se [**tabeller**__](#data_chru_hrkube#tabeller) ).
+
+
 
 $$ \frac{ antal_{i dag} - antal_{nedslagsdato} }{ antal_{i dag} } $$
