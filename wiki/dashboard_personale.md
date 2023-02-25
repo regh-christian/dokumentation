@@ -155,7 +155,13 @@ VAR __ValgtAnsaettelsesform =
 Measuret [AntalAnsatteNedslagsdatoer] er desuden designet til at indgå i en kontekst af tid. I figurerne, der viser **udvikling i [...] fordelt på [..]**, filtreres direkte på figurerne med kriteriet v_DimTidDAto[Nedslagsdatoer]={'1. dag i året', 'I dag'}. Beregningen vises i fagstillings- og organisationskontekst. 
 Til beregning af **Udvikling i antalt måndeslønnede fordelt på hovedstillingsgrupper**
 
+$$ \frac{ antal_{i dag} - antal_{nedslagsdato} }{ antal_{i dag} } $$
+
+
 $$ \frac{ \text{antal_{i dag}} - antal_{nedslagsdato} }{ antal_{i dag} } $$
+
+$$ \frac{ antal_{\text{i dag}} - antal_{\text{nedslagsdato}} }{ antal_{\text{i dag}} } $$
+
 
 ```DAX
 //Measure beregner den procentvise ændring mellem to nedslagsdatoer (d.d. og benchmark)
