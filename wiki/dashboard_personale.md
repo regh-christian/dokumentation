@@ -20,7 +20,7 @@ Foruden brug af grunddata er oprettet views og tabeller til brug i beregninger u
 
 #### Beregninger
 
-Measuret, [Antal medarbejdere], summerer groft antallet af rækker i v_DimAnsættelse. Det anvendes i en række andre measures uden skelnen imellem populationer (månedslønnede, fuldtidsansatte eller andet). 
+Measuret, _[Antal medarbejdere]_, summerer groft antallet af rækker i v_DimAnsættelse. Det anvendes i en række andre measures uden skelnen imellem populationer (månedslønnede, fuldtidsansatte eller andet). 
 ```DAX
 [Antal medarbejdere] =
 IF (
@@ -29,7 +29,7 @@ IF (
     COUNTROWS ( 'v_DimAnsættelse' )
 )
 ```
-Antallet af måneds- og timelønnede, fuldt- og deltidsansatte, der fremgår af visninger (_cards_) til venstre i dashboardet, er alle baseret på [Antal medarbejdere] evalueret i forskellige filterkontekster ved brug af én eller flere af de dikotomiserede J/N-kolonner i v_DimAnsættelse. Et eksempel herpå er [Antal fuldtidsansatte]
+Antallet af måneds- og timelønnede, fuldt- og deltidsansatte, der fremgår af visninger (_cards_) til venstre i dashboardet, er alle baseret på _[Antal medarbejdere]_ evalueret i forskellige filterkontekster ved brug af én eller flere af de dikotomiserede J/N-kolonner i v_DimAnsættelse. Et eksempel herpå er _[Antal fuldtidsansatte]_
 ```DAX
 [Antal fuldtidsansatte] =
 CALCULATE (
@@ -38,7 +38,7 @@ CALCULATE (
     'v_DimAnsættelse'[Fuldtid] = "J"
 )
 ```
-   Antal [Årsværk], vist sammen med de fire føromtalte, beregner summen af beskæftigelsesdecimaler, v_DimAnsættelse[Beskdec], som i definitionen er andelen af en 37 timers arbejdsuge, en person er ansat til og her i praksis oversættes til årsværk. Specifikt på visningen af årsværk filtreres v_DimAnsættelse[Månedslønnede]=’J’ i selve figuren.
+   Antal _[Årsværk]_, vist sammen med de fire føromtalte, beregner summen af beskæftigelsesdecimaler, v_DimAnsættelse[Beskdec], som i definitionen er andelen af en 37 timers arbejdsuge, en person er ansat til og her i praksis oversættes til årsværk. Specifikt på visningen af årsværk filtreres v_DimAnsættelse[Månedslønnede]=’J’ i selve figuren.
 ```DAX
 [Antal årsværk] =
 // Kan kun bruges når man kigger på aktuelle ansættelser eller en bestemt dato
@@ -48,17 +48,17 @@ IF (
     SUM ( 'v_DimAnsættelse'[Beskdec] )
 )
 ```
-Til beregning af [Ansættelseslængde] (antal år) anvendes differencen mellem dags dato og v_DimAnsættelse[Ansættelsesdato]. 
-I figuren **Ansættelseslængde** anvendes dette measure af [AnsatteAnsættelseslængdeInterval] til at beregne medarbejders ansættelseslængde i nuværende stilling (+evt tidligere ansættelser på samme tjenestenummer). Dette measure er designet til, i kontekst af v_TallyAnsættelseslænge, at beregne [Ansættelseslængde] evalueret i en filterkontekst af tjenestenummer (og AnsættelsesID for at sikre optælling på unikke individer) og returnerer _antallet af medarbejdere i intervallerne_ specificeret i tally-tabellen.
-Ved mouse-over vises den enkelte medarbejders ansættelseslængde udregnet med [Ansættelseslængde].
+Til beregning af _[Ansættelseslængde]_ (antal år) anvendes differencen mellem dags dato og v_DimAnsættelse[Ansættelsesdato]. 
+I figuren **Ansættelseslængde** anvendes dette measure af _[AnsatteAnsættelseslængdeInterval]_ til at beregne medarbejders ansættelseslængde i nuværende stilling (+evt tidligere ansættelser på samme tjenestenummer). Dette measure er designet til, i kontekst af v_TallyAnsættelseslænge, at beregne _[Ansættelseslængde]_ evalueret i en filterkontekst af tjenestenummer (og AnsættelsesID for at sikre optælling på unikke individer) og returnerer _antallet af medarbejdere i intervallerne_ specificeret i tally-tabellen.
+Ved mouse-over vises den enkelte medarbejders ansættelseslængde udregnet med _[Ansættelseslængde]_.
 
-Figuren **Aldersfordeling** viser antallet af medarbejdere, [AnsatteAldersinterval], fordelt på aldersintervaller. Også dette measure er designet til visning i kontekst af en tally-tabel, v_TallyAlder. Metodisk er beregning og opbygning af measure identisk med førnævnte, [AnsatteAnsættelseslængdeInterval], hvor der hér regners på alder i stedet for ansættelseslængde. Measuret, [Alder], beregner blot en persons alder som differencen mellem dennes fødselsdag (v_DimPerson[Fødselsdato]) og dags dato. Specifikt på denne figur er nedre og øvre aldersintervaller filtreret fra via v_TallyAlder[AldersInterval_5år], så kun personer i alderen 15-79 år vises.
-Ved mouse-over på **Aldersfordeling** vises enkelte medarbejderes [Alder] inden for hvert interval
+Figuren **Aldersfordeling** viser antallet af medarbejdere, _[AnsatteAldersinterval]_, fordelt på aldersintervaller. Også dette measure er designet til visning i kontekst af en tally-tabel, v_TallyAlder. Metodisk er beregning og opbygning af measure identisk med førnævnte, _[AnsatteAnsættelseslængdeInterval]_, hvor der hér regners på alder i stedet for ansættelseslængde. Measuret, _[Alder]_, beregner blot en persons alder som differencen mellem dennes fødselsdag (v_DimPerson[Fødselsdato]) og dags dato. Specifikt på denne figur er nedre og øvre aldersintervaller filtreret fra via v_TallyAlder[AldersInterval_5år], så kun personer i alderen 15-79 år vises.
+Ved mouse-over på **Aldersfordeling** vises enkelte medarbejderes _[Alder]_ inden for hvert interval
 
 Tabellen **Hændelser 14 dg.** frem viser en kronologisk oversigt over udvalgte personrelaterede hændelser i de kommende 14 dage; fx fødselsdage, jubilæer, orlov, tiltrædelse, fratrædelse m.m. (Tabellen, **Hændelser 12 mdr. frem** via bogmærket af samme navn, er identisk med førnævnte men med filteret, v_DimTidDato[OffsetDato]=[0;365].
 
-I **Informationstabel** vises udvalgte medarbejderdata herunder ansættelsessted (L6/L4, afsnit/afdeling), tjenestenummer, stilling, alder, ansættelseslængde, anciennitet m.m. [Anciennitet] er hér ikke nødvendigvis lig [Ansættelseslængde]! Baseret på ansattes nuværende v_DimAnsættelse[Anciennitetsdato], kan denne dato ligge forud for ansættelse i Region H (ifm. tilskrivning af relevant anciennitet), eller den kan være ændret fx ifm. overflytning til anden overenskomst eller konvertering af deltidsenciennitet. Visse ansættelser med fastlåst anciennitetsforløb kan være uden anciennitetsdato. Measuret [Anciennitet] beregner, i antal hele år, differencen mellem v_DimAnsættelse[Anciennitetsdato] og dags dato. For fremtidige anciennitetsdatoer anvendes dags dato.
-[Ansat til] angiver en eventuel slutdato på medarbejders senest tildelte tjenestenummer, hvis en sådan findes. [Alder], [Ansættelseslængde] og [Årsværk] beregner, i kontekst af unikke personer (her i kontekst af kombinationen v_DimPerson[Navn] og v_DimAnsættelse[Tjnr]) pågældende persons alder og ansættelseslænge på dagen i hele antal år samt beskæftigelsesdecimal (årsværk) på pågældende ansættelse.
+I **Informationstabel** vises udvalgte medarbejderdata herunder ansættelsessted (L6/L4, afsnit/afdeling), tjenestenummer, stilling, alder, ansættelseslængde, anciennitet m.m. _[Anciennitet]_ er hér ikke nødvendigvis lig _[Ansættelseslængde]_! Baseret på ansattes nuværende v_DimAnsættelse[Anciennitetsdato], kan denne dato ligge forud for ansættelse i Region H (ifm. tilskrivning af relevant anciennitet), eller den kan være ændret fx ifm. overflytning til anden overenskomst eller konvertering af deltidsenciennitet. Visse ansættelser med fastlåst anciennitetsforløb kan være uden anciennitetsdato. Measuret _[Anciennitet]_ beregner, i antal hele år, differencen mellem v_DimAnsættelse[Anciennitetsdato] og dags dato. For fremtidige anciennitetsdatoer anvendes dags dato.
+_[Ansat til]_ angiver en eventuel slutdato på medarbejders senest tildelte tjenestenummer, hvis en sådan findes. _[Alder]_, _[Ansættelseslængde]_ og _[Årsværk]_ beregner, i kontekst af unikke personer (her i kontekst af kombinationen v_DimPerson[Navn] og v_DimAnsættelse[Tjnr]) pågældende persons alder og ansættelseslænge på dagen i hele antal år samt beskæftigelsesdecimal (årsværk) på pågældende ansættelse.
 
 
 ----------
