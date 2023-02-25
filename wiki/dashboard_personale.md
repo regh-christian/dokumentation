@@ -64,7 +64,7 @@ I **Informationstabel** vises udvalgte medarbejderdata herunder ansættelsessted
 
 #### Beregninger
 
-Alle visninger er baseret på beregningen, _[AntalAnsatteNedslagsdatoer]_. Denne er designet som et switch-measure til, i kontekst af valgt **Ansættelsesform**, at beregne enten [Antal medarbejdere], [Antal personer] eller [Antal årsværk]. Af ansættelsesformer kan vælges blandt v_TallyAnsættelsesformer[Ansættelsesform].
+Alle visninger er baseret på beregningen, _[AntalAnsatteNedslagsdatoer]_. Denne er designet som et switch-measure til, i kontekst af valgt **Ansættelsesform**, at beregne enten _[Antal medarbejdere]_, _[Antal personer]_ eller _[Antal årsværk]_. Af ansættelsesformer kan vælges blandt v_TallyAnsættelsesformer[Ansættelsesform].
 
 | Ansaettelsesform  | Sortering |
 |       :-          |     -:    |
