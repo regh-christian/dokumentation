@@ -67,13 +67,13 @@ I **Informationstabel** vises udvalgte medarbejderdata herunder ansættelsessted
 Alle visninger er baseret på beregningen, _[AntalAnsatteNedslagsdatoer]_. Denne er designet som et switch-measure til, i kontekst af valgt **Ansættelsesform**, at beregne [Antal medarbejdere], [Antal personer] eller [Antal årsværk]. Af ansættelsesformer kan vælges blandt v_TallyAnsættelsesformer[Ansættelsesform] 
 
 | Ansaettelsesform  | Sortering |
-| Ansættelser       |   1   |
-| Månedslønnede	    |   2   |
-| Fuldtidsansatte   |   3   |
-| Deltidsansatte	|   4   |
-| Årsværk           |   5   |
-| Timelønnede       |   6   |
-| Personer          |   7   |
+| Ansættelser       |       1   |
+| Månedslønnede	    |       2   |
+| Fuldtidsansatte   |       3   |
+| Deltidsansatte	|       4   |
+| Årsværk           |       5   |
+| Timelønnede       |       6   |
+| Personer          |       7   |
 
 
 ```DAX
