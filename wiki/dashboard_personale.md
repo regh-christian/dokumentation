@@ -79,6 +79,7 @@ Alle visninger er baseret på beregningen, _[AntalAnsatteNedslagsdatoer]_. Denne
 
 ```DAX
 --...fra [AntalAnsatteNedslagsdatoer] 
+...
 VAR __Ansaettelser =
     CALCULATE (
         [Antal medarbejdere],
@@ -134,4 +135,5 @@ VAR __Personer =
         'v_DimAnsættelse'[Start] <= __Dato, __Dato <= 'v_DimAnsættelse'[Slut],
         'v_DimAnsættelse'[EksterntFinansieret] <> __Filter_EksterntFinansierede
     )
+...    
 ```
