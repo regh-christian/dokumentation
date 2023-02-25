@@ -136,16 +136,17 @@ VAR __Personer =
         'v_DimAnsættelse'[EksterntFinansieret] <> __Filter_EksterntFinansierede
     )
 ...    
+```
 
 ```DAX
--- ...fra []AntalAnsatteNedslagsdatoer
+-- ...fra [AntalAnsatteNedslagsdatoer]
 ...
 VAR __Dato = MAX( v_DimTidDato[Dato] )
 VAR __ValgtAnsaettelsesform =
     SELECTEDVALUE ( v_TallyAnsaettelsesformer[Ansaettelsesform] )
 ...
 ```
-(Se [**tabeller**__](#data_chru_hrkube#tabeller) ).
+(Se [***tabeller***](#data_chru_hrkube#tabeller) ).
 
 
 
