@@ -143,7 +143,8 @@ VAR __Personer =
 ```DAX
 [Antal medarbejdere] =
 IF (
-    ISBLANK ( COUNTROWS ( 'v_DimAnsættelse' ) ), 0,
+    ISBLANK ( COUNTROWS ( 'v_DimAnsættelse' ) ), 
+    0,
     COUNTROWS ( 'v_DimAnsættelse' )
 )
 ```
@@ -151,7 +152,8 @@ IF (
 ```DAX
 [Antal personer] =
 IF (
-    ISBLANK ( DISTINCTCOUNT ( 'v_DimAnsættelse'[PersonID] ) ), 0,
+    ISBLANK ( DISTINCTCOUNT ( 'v_DimAnsættelse'[PersonID] ) ), 
+    0,
     DISTINCTCOUNT ( 'v_DimAnsættelse'[PersonID] )
 )
 ```
@@ -159,7 +161,8 @@ IF (
 ```DAX
 // Kan kun bruges når man kigger på aktuelle ansættelser eller en bestemt dato
 IF (
-    ISBLANK ( SUM ( 'v_DimAnsættelse'[Beskdec] ) ), 0,
+    ISBLANK ( SUM ( 'v_DimAnsættelse'[Beskdec] ) ), 
+    0,
     SUM ( 'v_DimAnsættelse'[Beskdec] )
 )
 ```
