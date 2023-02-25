@@ -64,7 +64,7 @@ I **Informationstabel** vises udvalgte medarbejderdata herunder ansættelsessted
 
 #### Beregninger
 
-Alle visninger er baseret på beregningen, _[AntalAnsatteNedslagsdatoer]_. Denne er designet som et switch-measure til, i kontekst af valgt **Ansættelsesform**, at beregne [Antal medarbejdere], [Antal personer] eller [Antal årsværk]. Af ansættelsesformer kan vælges blandt v_TallyAnsættelsesformer[Ansættelsesform] 
+Alle visninger er baseret på beregningen, _[AntalAnsatteNedslagsdatoer]_. Denne er designet som et switch-measure til, i kontekst af valgt **Ansættelsesform**, at beregne enten [Antal medarbejdere], [Antal personer] eller [Antal årsværk]. Af ansættelsesformer kan vælges blandt v_TallyAnsættelsesformer[Ansættelsesform].
 
 | Ansaettelsesform  | Sortering |
 |       :-          |     -:    |
@@ -76,6 +76,7 @@ Alle visninger er baseret på beregningen, _[AntalAnsatteNedslagsdatoer]_. Denne
 | Timelønnede       |       6   |
 | Personer          |       7   |
 
+I measuret er således defineret bereging og inklusionskriterier for hver af disse populationer
 
 ```DAX
 --...fra [AntalAnsatteNedslagsdatoer] 
@@ -137,3 +138,30 @@ VAR __Personer =
     )
 ...    
 ```
+
+
+```DAX
+[Antal medarbejdere] =
+IF (
+    ISBLANK ( COUNTROWS ( 'v_DimAnsættelse' ) ), 0,
+    COUNTROWS ( 'v_DimAnsættelse' )
+)
+```
+
+```DAX
+[Antal personer] =
+IF (
+    ISBLANK ( DISTINCTCOUNT ( 'v_DimAnsættelse'[PersonID] ) ), 0,
+    DISTINCTCOUNT ( 'v_DimAnsættelse'[PersonID] )
+)
+```
+
+```DAX
+// Kan kun bruges når man kigger på aktuelle ansættelser eller en bestemt dato
+IF (
+    ISBLANK ( SUM ( 'v_DimAnsættelse'[Beskdec] ) ), 0,
+    SUM ( 'v_DimAnsættelse'[Beskdec] )
+)
+```
+
+
