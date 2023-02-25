@@ -18,7 +18,7 @@ Foruden brug af grunddata er oprettet views og tabeller til brug i beregninger u
 </details> -->
 
 
-#### Beregninger
+#### Beregning
 
 Measuret, _[Antal medarbejdere]_, summerer groft antallet af rækker i v_DimAnsættelse. Det anvendes i en række andre measures uden skelnen imellem populationer (månedslønnede, fuldtidsansatte eller andet). 
 ```DAX
@@ -29,7 +29,7 @@ IF (
     COUNTROWS ( 'v_DimAnsættelse' )
 )
 ```
-Antallet af måneds- og timelønnede, fuldt- og deltidsansatte, der fremgår af visninger (_cards_) til venstre i dashboardet, er alle baseret på _[Antal medarbejdere]_ evalueret i forskellige filterkontekster ved brug af én eller flere af de dikotomiserede J/N-kolonner i v_DimAnsættelse. Et eksempel herpå er _[Antal fuldtidsansatte]_
+Antallet af måneds- og timelønnede, fuld- og deltidsansatte, der fremgår af visninger (_cards_) til venstre i dashboardet, er alle baseret på _[Antal medarbejdere]_ evalueret i forskellige filterkontekster ved brug af én eller flere af de dikotomiserede J/N-kolonner i v_DimAnsættelse. Et eksempel herpå er _[Antal fuldtidsansatte]_
 ```DAX
 [Antal fuldtidsansatte] =
 CALCULATE (
@@ -71,7 +71,7 @@ _[Ansat til]_ angiver en eventuel slutdato på medarbejders senest tildelte tjen
 
 
 
-#### Beregninger
+#### Population
 
 Alle visninger er baseret på beregningen, _[AntalAnsatteNedslagsdatoer]_. Denne er designet som et switch-measure til, i kontekst af valgt **Ansættelsesform**, at beregne enten _[Antal medarbejdere]_, _[Antal personer]_ eller _[Antal årsværk]_. 
 
@@ -150,4 +150,23 @@ VAR __ValgtAnsaettelsesform =
 
 
 
-$$ \frac{ antal_{i dag} - antal_{nedslagsdato} }{ antal_{i dag} } $$
+#### Udvikling over tid
+
+Measuret [AntalAnsatteNedslagsdatoer] er desuden designet til at indgå i en kontekst af tid. I figurerne, der viser **udvikling i [...] fordelt på [..]**, filtreres direkte på figurerne med kriteriet v_DimTidDAto[Nedslagsdatoer]={'1. dag i året', 'I dag'}. Beregningen vises i fagstillings- og organisationskontekst. 
+Til beregning af **Udvikling i antalt måndeslønnede fordelt på hovedstillingsgrupper**
+
+$$ \frac{ \text{antal_{i dag}} - antal_{nedslagsdato} }{ antal_{i dag} } $$
+
+```DAX
+//Measure beregner den procentvise ændring mellem to nedslagsdatoer (d.d. og benchmark)
+VAR __AntalIdag = [AntalAnsatteDagsDato]
+VAR __AntalBenchmark = [AntalAnsatteBenchmark]
+VAR Result =
+    IF ( __AntalIdag = 0 && __AntalBenchmark > 0,
+        -1,
+        DIVIDE ( __AntalIdag - __AntalBenchmark, __AntalBenchmark, 0 )
+    )
+RETURN Result
+```
+
+
