@@ -156,14 +156,3 @@ IF (
     DISTINCTCOUNT ( 'v_DimAnsættelse'[PersonID] )
 )
 ```
-
-```DAX
-[Antal personer] :=
-IF (
-    ISBLANK ( DISTINCTCOUNT ( 'v_DimAnsættelse'[PersonID] ) ), 
-    0,
-    DISTINCTCOUNT ( 'v_DimAnsættelse'[PersonID] )
-)
-```
-
-
