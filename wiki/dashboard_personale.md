@@ -78,7 +78,7 @@ Alle visninger er baseret på beregningen, _[AntalAnsatteNedslagsdatoer]_. Denne
 I measuret er således defineret bereging og inklusionskriterier for summen af hver af populationerne:
 
 ```DAX
---...fra [AntalAnsatteNedslagsdatoer] 
+-- fra [AntalAnsatteNedslagsdatoer] 
 ...
 VAR __Ansaettelser =
     CALCULATE (
@@ -139,7 +139,7 @@ VAR __Personer =
 ```
 
 ```DAX
--- ...fra [AntalAnsatteNedslagsdatoer]
+-- fra [AntalAnsatteNedslagsdatoer]
 ...
 VAR __Dato = MAX( v_DimTidDato[Dato] )
 VAR __ValgtAnsaettelsesform =
