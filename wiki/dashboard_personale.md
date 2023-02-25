@@ -139,16 +139,6 @@ VAR __Personer =
 ...    
 ```
 
-
-```DAX
-[Antal medarbejdere] =
-IF (
-    ISBLANK ( COUNTROWS ( 'v_DimAnsættelse' ) ), 
-    0,
-    COUNTROWS ( 'v_DimAnsættelse' )
-)
-```
-
 ```DAX
 [Antal personer] =
 IF (
