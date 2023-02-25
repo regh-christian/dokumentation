@@ -6,7 +6,7 @@ Sektionen har hovedsageligt tekniske medarbejdere med kompetencer i dataudtræk 
 
 <!-- PowerPoint: "lntroduktion og onboarding 2022"  -->
 <center>
-<iframe src="https://regionh-my.sharepoint.com/personal/stefan_sajin-henningsen_regionh_dk/_layouts/15/Doc.aspx?sourcedoc={5e29731f-bf33-4e15-b6f3-11422824f074}&amp;action=embedview&amp;wdAr=1.7777777777777777" height="1000" width="587" frameborder="0"></iframe>
+<iframe src="https://regionh-my.sharepoint.com/personal/stefan_sajin-henningsen_regionh_dk/_layouts/15/Doc.aspx?sourcedoc={5e29731f-bf33-4e15-b6f3-11422824f074}&amp;action=embedview&amp;wdAr=1.7777777777777777" height="587" width="1000" frameborder="0"></iframe>
 </center>
 <br>
 
