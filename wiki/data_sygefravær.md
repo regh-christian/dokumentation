@@ -46,7 +46,7 @@ I CHRU_HRKube anvendes i tabellen v_DimLønartFravær en anden gruppering af fra
 > Gør rede for ligheder og forskelle. 
 > Hvad er grunden til, at der i chru_cube anvendes en anden gruppering?
 >
-> Se <a href="https://github.com/DataOgDigitalisering/FortroligInformation/blob/main/%C3%98velser/ex_fraværstyper.sql" target="_blank">**løsningsforslag**</a>.
+> Se <a href="https://github.com/DataOgDigitalisering/FortroligInformation/blob/main/Exercises/ex_fraværstyper.sql" target="_blank">**løsningsforslag**</a>.
 
 </details>
 {::options parse_block_html="false" /}
