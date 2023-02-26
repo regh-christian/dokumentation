@@ -108,7 +108,7 @@ Hav altid seneste version af Power BI Desktop installeret for at sikre nyeste og
 
 <!-- ØVELSE -->
 {::options parse_block_html="true" /}
-<details><summary markdown="span">**ØVELSE - KONTROL AF DATAADGANGE** <img src="Images/icons_ref/icon_git.png" height="45" width="45"></summary>
+<details><summary markdown="span">**ØVELSE - KONTROL AF DATAADGANGE** <img src="Images/icons_ref/icon_git.png" height="35" width="35"></summary>
 
  - Følg <a href="https://github.com/DataOgDigitalisering/FortroligInformation/blob/main/%C3%98velse1/ex_dataadgange.sql" target="_blank"> dette link til SQL-script</a>.
 - Åbn og eksekver scriptet i SQL Server Management Studio. Kørslen bør tage omkring 10-15 minutter og returnere en tabel, der beskriver dine adgange. Spørg en kollega om du har de adgange, du har brug for.
