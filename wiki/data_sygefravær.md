@@ -42,10 +42,11 @@ end as l2Name
 <details><summary markdown="span">**ØVELSE - FRAVÆRSTYPER** <img src="Images/icons_ref/icon_git.png" height="35" width="35"></summary>
    
 I CHRU_HRKube anvendes i tabellen v_DimLønartFravær en anden gruppering af fraværstyper (L2Name), end den gruppering SD bruger (LOENARTTXT).
+
 > Gør rede for ligheder og forskelle. 
 > Hvad er grunden til, at der i chru_cube anvendes en anden gruppering?
-
-> Se <a href="https://github.com/DataOgDigitalisering/FortroligInformation/blob/main/%C3%98velser/%C3%B8v_fraværstyper.sql" target="_blank">**løsningsforslag**</a>.
+>
+> Se <a href="https://github.com/DataOgDigitalisering/FortroligInformation/blob/main/%C3%98velser/ex_fraværstyper.sql" target="_blank">**løsningsforslag**</a>.
 
 </details>
 {::options parse_block_html="false" /}
