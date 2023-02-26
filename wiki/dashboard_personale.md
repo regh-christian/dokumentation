@@ -146,7 +146,6 @@ VAR __ValgtAnsaettelsesform =
     SELECTEDVALUE ( v_TallyAnsaettelsesformer[Ansaettelsesform] )
 ...
 ```
-(Se [***tabeller***](#data_chru_hrkube#tabeller) ).
 
 
 
@@ -155,7 +154,7 @@ VAR __ValgtAnsaettelsesform =
 Measuret [AntalAnsatteNedslagsdatoer] er desuden designet til at indgå i en kontekst af tid. I figurerne, der viser **udvikling i [...] fordelt på [..]**, filtreres direkte på figurerne med kriteriet v_DimTidDato[Nedslagsdatoer]={'1. dag i året', 'I dag'}. Beregningen vises i både fagstillings- og organisationskontekst. 
 
 Til beregning af **Udvikling i antal måndeslønnede fordelt på hovedstillingsgrupper** vises desuden benchmarking mod tidligere nedslagsdatoer, 
-$$ \frac{ antal_{\text{i dag}} - antal_{\text{nedslagsdato}} }{ antal_{\text{i dag}} } $$. 
+$$ \frac{ antal_{\text{i dag}} - antal_{\text{nedslagsdato}} }{ antal_{\text{i dag}} } \cdot 100% $$. 
 ```DAX
 [AendringIftBenchmark] =
 //Measure beregner den procentvise ændring mellem to nedslagsdatoer (d.d. og benchmark)
