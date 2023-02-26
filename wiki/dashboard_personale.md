@@ -175,6 +175,8 @@ Her er _[AntalAnsatteBenchmark]_ og _[AntalAnsatteDagsDato]_ opbygget som swith-
 
 
 
+#### Fordeling på intervaller
+
 
 
 
