@@ -154,9 +154,7 @@ Fanespecifikt filter, v_DimStilling[Hovedstillingsgruppe],  fravælger grupperne
 #### **Beregninger**
 I alle figurerne **[Udvikling i sygefravær [..]]** samt **Sygefravær de seneste 12 mdr fordelt på virksomheder** udregnes det vægtede fuldtidsfraværsgennemsnit, _[Fravær – vægtede fuldtidsfraværsdage gnsnit 12 mdr]_. 
 
-I **Udvikling i sygefravær (12 mdr.) fordelt på hovedstillingsgrupper** ses seneste 3 års løbende gennemsnit opgjort sidste dage i respektive år (via filter på v_SlicerNedslagsdatoer). Med input fra slicer kan bruger vælge nedslagsdato og dermed ændre filterkontekst for measure, [Fravær – vægtede fuldtidsfraværsdage gnsnit 12 mdr Benchmark]. Valgt nedslagsdato er bestemmende for, fra hvilken dato dette measure regner 12 måner bagud. Altså en dynamisk størrelse til benchmarking af aktuelt fravær med tidligere perioder.
-
-**Figur 3 og 4** viser **Udvikling i løbende fuldtidsgennemsnit** over hhv. løbende 12 måneder og grupperet på **udvalgte fagstillingsgrupper**.
+I **Udvikling i sygefravær (12 mdr.) fordelt på hovedstillingsgrupper** ses seneste 3 års løbende gennemsnit opgjort sidste dage i respektive år (via filter på v_SlicerNedslagsdatoer). Med input fra slicer kan bruger vælge nedslagsdato og dermed ændre filterkontekst for measure, _[Fravær – vægtede fuldtidsfraværsdage gnsnit 12 mdr Benchmark]_. Valgt nedslagsdato er bestemmende for, fra hvilken dato dette measure regner 12 måner bagud. Altså en dynamisk størrelse til benchmarking af aktuelt fravær med tidligere perioder.
 
 > Læs: [Inspiration til measuret _[Fravær – antal i fraværsinterval Ikke anonymiseret]_](https://www.daxpatterns.com/dynamic-segmentation/)
 > 
