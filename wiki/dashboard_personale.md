@@ -186,35 +186,10 @@ Til **visning af månnedslønnede fordelt på [..-intervaller]** anvendes tre me
 - _[AnsatteAnciennitetsinterStrategisk]_
 - _[AnsatteAnsættelseslængdeintervalStrategisk]_
 
-De tre measures er identiske i funktionen at aggregere og summere unikke individer ( _[AntalAnsatteNedslagsdatoer]_ ) på intervaller defineret i **tally-tabellerne**: 
+De tre measures er identiske i funktionen at aggregere og summere unikke individer (_[AntalAnsatteNedslagsdatoer]_) på intervaller defineret i **tally-tabellerne**: 
 
 - v_TallyAlder
 - v_TallyAnciennitet
 - v_TallyAnsættelseslængde
 
 > Tally-tabeller dannes med dét specifikke formål at kunne gruppere data på en ønsket måde. Vi definerer i disse tabeller bucketsize, intervalgrænser og -antal mhp. fx at gøre læsbarheden af grafer bedre.
-
-```DAX
-//Measure beregner antallet i aldersintervaller på strategisk dashboard baseret på switchmeasure med forskellige ansættelsesformer m.m.
-VAR __IntervalValues =
-    VALUES ( v_TallyAlder[Alder] )
-VAR __AnsatteIInterval =
-    FILTER (
-        SELECTCOLUMNS ( 
-            'v_DimAnsættelse',
-            "@ID", [ID], -- ID er med for at sikre, at vi ikke tæller en person med i flere aldersbuckets.     
-            "@Tjnr", [Tjnr], 
-            "@Alder", [Alder] 
-        ),
-        [@Alder] IN __IntervalValues
-    )
-VAR Result =
-    CALCULATE (
-        [AntalAnsatteNedslagsdatoer],
-        KEEPFILTERS ( 'v_DimAnsættelse' ),
-        __AnsatteIInterval
-    )
-RETURN
-    Result
-```
-
