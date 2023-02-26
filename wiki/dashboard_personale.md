@@ -150,7 +150,7 @@ VAR __ValgtAnsaettelsesform =
     SELECTEDVALUE ( v_TallyAnsaettelsesformer[Ansaettelsesform] )
 ...
 ```
-I figurerne, der viser **udvikling i [...] fordelt på [..]**, filtreres direkte på figurerne med kriteriet v_DimTidDato[Nedslagsdatoer]={'1. dag i året', 'I dag'}. Beregningen vises i både fagstillings- og organisationskontekst. 
+I figurerne, der viser **udvikling i [...] fordelt på [..]**, filtreres direkte på figurerne med kriteriet v_DimTidDato[Nedslagsdatoer]={'1. dag i året', 'I dag'}. Det er samme beregning, der foretages, men vist i hoved-, fagstillings- og organisationskontekster. 
 
 Til beregning af **Udvikling i antal måndeslønnede fordelt på hovedstillingsgrupper** vises desuden benchmarking mod tidligere nedslagsdatoer, 
 $$ \frac{ antal_{\text{i dag}} - antal_{\text{nedslagsdato}} }{ antal_{\text{i dag}} } \cdot 100\% $$. 
