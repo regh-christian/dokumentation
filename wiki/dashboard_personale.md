@@ -75,7 +75,7 @@ _[Ansat til]_ angiver en eventuel slutdato på medarbejders senest tildelte tjen
 
 Alle visninger er baseret på beregningen, _[AntalAnsatteNedslagsdatoer]_. Denne er designet som et switch-measure til, i kontekst af valgt **Ansættelsesform**, at beregne enten _[Antal medarbejdere]_, _[Antal personer]_ eller _[Antal årsværk]_. 
 
-I measuret er således defineret bereging og inklusionskriterier for summen af hver af populationerne:
+I measuret er således defineret bereging og inklusionskriterier for summen af hver af populationerne; fuldtidsansatte, deltidsansatte, månedslønnede osv.
 
 ```DAX
 -- fra [AntalAnsatteNedslagsdatoer] 
