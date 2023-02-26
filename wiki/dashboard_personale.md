@@ -77,6 +77,8 @@ Alle visninger er baseret på beregningen, _[AntalAnsatteNedslagsdatoer]_. Denne
 
 I measuret er således defineret bereging og inklusionskriterier for summen af hver af populationerne; fuldtidsansatte, deltidsansatte, månedslønnede osv.
 
+{::options parse_block_html="true" /}
+<details><summary markdown="span">Measure: [AntalAnsatteNedslagsdatoer]</summary>
 ```DAX
 -- fra [AntalAnsatteNedslagsdatoer] 
 ...
@@ -137,7 +139,10 @@ VAR __Personer =
     )
 ...    
 ```
-
+</details>
+{::options parse_block_html="false" /}
+    
+ 
 
 ### Udvikling over tid
 
