@@ -168,17 +168,43 @@ VAR Result =
     )
 RETURN Result
 ```
-Her er _[AntalAnsatteBenchmark]_ og _[AntalAnsatteDagsDato]_ opbygget som swith-measures på samme måde som _[AntalAnsatteNedslagsdatoer]_.
-
-
-> I flere measures filtreres baseret på vedtagne definitioner om population vha. J/N-kolonnerne i v_DimAnsættelse. 
+Her er _[AntalAnsatteBenchmark]_ og _[AntalAnsatteDagsDato]_ opbygget som swith-measures på samme måde som _[AntalAnsatteNedslagsdatoer]_. Det er på denne måde muligt at gøre benchmarkdatoen dynamisk ift. brugerinput.
 
 
 
 #### Fordeling på intervaller
 
+Til **visning af månnedslønnede fordelt på intervaller** anvendes tre measures alle identiske i funktion til at aggregere og summere [AntasAnsatteNedslagsdatoer] på intervaller defineret i **tally-tabeller**
+        - [AnsatteAldesintervalStrategisk]
+        - [AnsatteAnciennitetsinterStrategisk]
+        - [AnsatteAnsættelseslængdeintervalStrategisk]
+
+vises optælling _dags dato_. 
 
 
+Vha. af tally-tabeller
 
-
+```DAX
+//Measure beregner antallet i aldersintervaller på strategisk dashboard baseret på switchmeasure med forskellige ansættelsesformer m.m.
+VAR __IntervalValues =
+    VALUES ( v_TallyAlder[Alder] )
+VAR __AnsatteIInterval =
+    FILTER (
+        SELECTCOLUMNS ( 
+            'v_DimAnsættelse',
+            "@ID", [ID], -- ID er med for at sikre, at vi ikke tæller en person med i flere aldersbuckets.     
+            "@Tjnr", [Tjnr], 
+            "@Alder", [Alder] 
+        ),
+        [@Alder] IN __IntervalValues
+    )
+VAR Result =
+    CALCULATE (
+        [AntalAnsatteNedslagsdatoer],
+        KEEPFILTERS ( 'v_DimAnsættelse' ),
+        __AnsatteIInterval
+    )
+RETURN
+    Result
+```
 
