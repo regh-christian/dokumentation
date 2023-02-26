@@ -71,7 +71,7 @@ _[Ansat til]_ angiver en eventuel slutdato på medarbejders senest tildelte tjen
 
 
 
-#### Population
+### Population
 
 Alle visninger er baseret på beregningen, _[AntalAnsatteNedslagsdatoer]_. Denne er designet som et switch-measure til, i kontekst af valgt **Ansættelsesform**, at beregne enten _[Antal medarbejdere]_, _[Antal personer]_ eller _[Antal årsværk]_. 
 
@@ -139,7 +139,7 @@ VAR __Personer =
 ```
 
 
-#### Udvikling over tid
+### Udvikling over tid
 
 Measuret [AntalAnsatteNedslagsdatoer] er desuden designet til at indgå i en kontekst af tid. 
 ```DAX
@@ -171,7 +171,7 @@ Her er _[AntalAnsatteBenchmark]_ og _[AntalAnsatteDagsDato]_ opbygget som swith-
 
 
 
-#### Fordeling på intervaller
+### Fordeling på intervaller
 
 Til **visning af månnedslønnede fordelt på [..-intervaller]** anvendes tre measures til beregning i hhv. alders-, anciennitets- og ansættelseslængdeintervaller. 
 
@@ -181,7 +181,11 @@ Til **visning af månnedslønnede fordelt på [..-intervaller]** anvendes tre me
 
 De tre measures er identiske i funktionen at aggregere og summere [AntalAnsatteNedslagsdatoer] på intervaller defineret i **tally-tabeller**. 
 
-> Tally-tabeller dannes med dét specifikke formål at kunne gruppere data på en ønsket måde. Vi definerer i disse bucketsize, intervalgrænser og -antal mhp. at gøre læsbarheden af grafer bedre.
+- _v_TallyAlder_
+- _v_TallyAnciennitet_
+- _v_TallyAnsættelseslængde_
+
+> Tally-tabeller dannes med dét specifikke formål at kunne gruppere data på en ønsket måde. Vi definerer i disse tabeller bucketsize, intervalgrænser og -antal mhp. fx at gøre læsbarheden af grafer bedre.
 
 ```DAX
 //Measure beregner antallet i aldersintervaller på strategisk dashboard baseret på switchmeasure med forskellige ansættelsesformer m.m.
