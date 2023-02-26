@@ -152,18 +152,12 @@ VAR __ValgtAnsaettelsesform =
 
 #### Udvikling over tid
 
-Measuret [AntalAnsatteNedslagsdatoer] er desuden designet til at indgå i en kontekst af tid. I figurerne, der viser **udvikling i [...] fordelt på [..]**, filtreres direkte på figurerne med kriteriet v_DimTidDAto[Nedslagsdatoer]={'1. dag i året', 'I dag'}. Beregningen vises i fagstillings- og organisationskontekst. 
-Til beregning af **Udvikling i antalt måndeslønnede fordelt på hovedstillingsgrupper**
+Measuret [AntalAnsatteNedslagsdatoer] er desuden designet til at indgå i en kontekst af tid. I figurerne, der viser **udvikling i [...] fordelt på [..]**, filtreres direkte på figurerne med kriteriet v_DimTidDato[Nedslagsdatoer]={'1. dag i året', 'I dag'}. Beregningen vises i både fagstillings- og organisationskontekst. 
 
-$$ \frac{ antal_{i dag} - antal_{nedslagsdato} }{ antal_{i dag} } $$
-
-
-$$ \frac{ \text{antal_{i dag}} - antal_{nedslagsdato} }{ antal_{i dag} } $$
-
-$$ \frac{ antal_{\text{i dag}} - antal_{\text{nedslagsdato}} }{ antal_{\text{i dag}} } $$
-
-
+Til beregning af **Udvikling i antal måndeslønnede fordelt på hovedstillingsgrupper** vises desuden benchmarking mod tidligere nedslagsdatoer, 
+$$ \frac{ antal_{\text{i dag}} - antal_{\text{nedslagsdato}} }{ antal_{\text{i dag}} } $$. 
 ```DAX
+[AendringIftBenchmark] =
 //Measure beregner den procentvise ændring mellem to nedslagsdatoer (d.d. og benchmark)
 VAR __AntalIdag = [AntalAnsatteDagsDato]
 VAR __AntalBenchmark = [AntalAnsatteBenchmark]
@@ -174,5 +168,6 @@ VAR Result =
     )
 RETURN Result
 ```
+Her er _[AntalAnsatteBenchmark]_ og _[AntalAnsatteDagsDato]_ udregnet på samme måde som _[AntalAnsatteNedslagsdatoer]_.
 
 
