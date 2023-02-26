@@ -28,7 +28,7 @@
 > - Givet at du ikke er leder, hvorfor kan du se data i HR Lederdashboardet?
 > - Hvad skal vi ændre, hvis flere SD-grupper skal kunne anvende HR Lederdashboardet?
 >  
-> Se <a href="https://github.com/DataOgDigitalisering/FortroligInformation/blob/main/%C3%98velser/ex_brugerstyring.sql" target="_blank">**løsningsforslag**</a>.
+> Se <a href="https://github.com/DataOgDigitalisering/FortroligInformation/blob/main/Exercises/ex_brugerstyring.sql" target="_blank">**løsningsforslag**</a>.
 
 </details>
 {::options parse_block_html="false" /}
