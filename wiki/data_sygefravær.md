@@ -41,7 +41,7 @@ end as l2Name
 {::options parse_block_html="true" /}
 <details><summary markdown="span">**ØVELSE - FRAVÆRSTYPER** <img src="Images/icons_ref/icon_git.png" height="35" width="35"></summary>
    
-I chru_cube anvendes i tabellen v_DimLønartFravær en anden gruppering af fraværstyper (L2Name), end SD bruger (LOENARTTXT).
+I CHRU_HRKube anvendes i tabellen v_DimLønartFravær en anden gruppering af fraværstyper (L2Name), end den gruppering SD bruger (LOENARTTXT).
 > Gør rede for ligheder og forskelle. 
 > Hvad er grunden til, at der i chru_cube anvendes en anden gruppering?
 
