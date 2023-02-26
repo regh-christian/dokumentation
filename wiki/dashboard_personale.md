@@ -174,10 +174,13 @@ Her er _[AntalAnsatteBenchmark]_ og _[AntalAnsatteDagsDato]_ opbygget som swith-
 
 #### Fordeling på intervaller
 
-Til **visning af månnedslønnede fordelt på intervaller** anvendes tre measures alle identiske i funktion til at aggregere og summere [AntasAnsatteNedslagsdatoer] på intervaller defineret i **tally-tabeller**
-        - [AnsatteAldesintervalStrategisk]
-        - [AnsatteAnciennitetsinterStrategisk]
-        - [AnsatteAnsættelseslængdeintervalStrategisk]
+Til **visning af månnedslønnede fordelt på [..-intervaller]** anvendes tre measures til beregning i hhv. alders-, anciennitets- og ansættelseslængdeintervaller. 
+
+- _[AnsatteAldesintervalStrategisk]_
+- _[AnsatteAnciennitetsinterStrategisk]_
+- _[AnsatteAnsættelseslængdeintervalStrategisk]_
+
+De tre measures er identiske i funktion at aggregere og summere [AntalAnsatteNedslagsdatoer] på intervaller defineret i **tally-tabeller**
 
 vises optælling _dags dato_. 
 
