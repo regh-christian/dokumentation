@@ -141,7 +141,7 @@ RETURN DIVIDE ( FravSum, BeskSum, 0 )
 I dashboard udstilles aggregeret data om fravær på organisations- og stillingsniveau. 
 Bruger får her overblik over organisationer, som denne i forvejen har adgang til via PersonaleWeb. Se [***brugerstyring***](./Brugerstyring). 
      
-Fælles for alle beregninger er implementering af anonymitetsgrænsen. Hvor beregninger baseres på løbende nedslagsdatoer (fig. 2, 3, 4, 7. _[Fravær – vægtede fuldtidsfraværsdage gnsnit 12 mdr]_) kontrolleres, at antal inkluderede individer på nedslagsdatoer er tilstrækkeligt. Hvis ikke udelades resultat på nedslagsdato. Hvor kun aktuelt ansatte dags dato indgår i beregning sikres, at_antal aktuelt ansatte dags dato er tilstrækkeligt. 
+Fælles for alle beregninger er implementering af anonymitetsgrænsen. Hvor beregninger baseres på løbende nedslagsdatoer (som i _[Fravær – vægtede fuldtidsfraværsdage gnsnit 12 mdr]_) kontrolleres, at antal inkluderede individer på nedslagsdatoer er tilstrækkeligt. Hvis ikke udelades resultat på nedslagsdato. Hvor kun aktuelt ansatte dags dato indgår i beregning sikres, at_antal aktuelt ansatte dags dato er tilstrækkeligt. 
 
 > Anonymitetsgrænsen indbygges i nogle measures for at forhindre identifikation af enkeltindivider.
 
@@ -152,9 +152,9 @@ Fanespecifikt filter, v_DimStilling[Hovedstillingsgruppe],  fravælger grupperne
 
 
 #### **Beregninger**
-Figurerne 2, 3, 4 og 7 viser det vægtede fuldtidsfraværsgennemsnit, _[Fravær – vægtede fuldtidsfraværsdage gnsnit 12 mdr]_. 
+I alle figurerne **[Udvikling i sygefravær [..]]** samt **Sygefravær de seneste 12 mdr fordelt på virksomheder** udregnes det vægtede fuldtidsfraværsgennemsnit, _[Fravær – vægtede fuldtidsfraværsdage gnsnit 12 mdr]_. 
 
-I **Udvikling i sygefravær (12 mdr.) fordelt på hovedstillingsgrupper** (Fig. 2) ses seneste 3 års løbende gennemsnit opgjort sidste dage i respektive år (via filter på v_SlicerNedslagsdatoer). Med input fra slicer kan bruger vælge nedslagsdato, og dermed ændre filterkontekst for measure, [Fravær – vægtede fuldtidsfraværsdage gnsnit 12 mdr Benchmark]. Valgt nedslagsdato er bestemmende for, fra hvilken dato dette measure regner 12 måner baglæns. Altså en dynamisk størrelse til benchmarking af aktuelt fravær med tidligere perioder.
+I **Udvikling i sygefravær (12 mdr.) fordelt på hovedstillingsgrupper** ses seneste 3 års løbende gennemsnit opgjort sidste dage i respektive år (via filter på v_SlicerNedslagsdatoer). Med input fra slicer kan bruger vælge nedslagsdato og dermed ændre filterkontekst for measure, [Fravær – vægtede fuldtidsfraværsdage gnsnit 12 mdr Benchmark]. Valgt nedslagsdato er bestemmende for, fra hvilken dato dette measure regner 12 måner bagud. Altså en dynamisk størrelse til benchmarking af aktuelt fravær med tidligere perioder.
 
 **Figur 3 og 4** viser **Udvikling i løbende fuldtidsgennemsnit** over hhv. løbende 12 måneder og grupperet på **udvalgte fagstillingsgrupper**.
 
