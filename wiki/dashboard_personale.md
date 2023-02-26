@@ -78,7 +78,7 @@ Alle visninger er baseret på beregningen, _[AntalAnsatteNedslagsdatoer]_. Denne
 I measuret er således defineret bereging og inklusionskriterier for summen af hver af populationerne; fuldtidsansatte, deltidsansatte, månedslønnede osv.
 
 {::options parse_block_html="true" /}
-<details><summary markdown="span">Measure: _[AntalAnsatteNedslagsdatoer]_</summary>
+<details><summary markdown="span">Measure: [AntalAnsatteNedslagsdatoer] </summary>
 ```DAX
 -- fra [AntalAnsatteNedslagsdatoer] 
 ...
@@ -146,7 +146,7 @@ VAR __Personer =
 
 ### Udvikling over tid
 
-Measuret [AntalAnsatteNedslagsdatoer] er desuden designet til at indgå i en kontekst af tid. 
+Measuret [AntalAnsatteNedslagsdatoer] er også designet til at indgå i en kontekst af tid. 
 ```DAX
 -- fra [AntalAnsatteNedslagsdatoer]
 ...
@@ -159,7 +159,7 @@ I figurerne, der viser **udvikling i [...] fordelt på [..-grupper]**, filtreres
 
 Til beregning af **Udvikling i antal måndeslønnede fordelt på hovedstillingsgrupper** vises desuden benchmarking mod tidligere nedslagsdatoer, 
 
-$$ \frac{ antal_{\text{i dag}} - antal_{\text{nedslagsdato}} }{ antal_{\text{i dag}} } \cdot 100\% $$. 
+$$ \frac{ antal_{\text{i dag}} - antal_{\text{nedslagsdato}} }{ antal_{\text{i dag}} } \cdot 100\% $$ 
 
 Dette er implementeret i _[AendringIftBenchmark]_.
 ```DAX
