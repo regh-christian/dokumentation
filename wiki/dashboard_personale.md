@@ -170,7 +170,8 @@ RETURN Result
 ```
 Her er _[AntalAnsatteBenchmark]_ og _[AntalAnsatteDagsDato]_ opbygget som swith-measures på samme måde som _[AntalAnsatteNedslagsdatoer]_.
 
->> I flere measures filtreres baseret på vedtagne definitioner om population vha. J/N-kolonnerne i v_DimAnsættelse. 
+
+> I flere measures filtreres baseret på vedtagne definitioner om population vha. J/N-kolonnerne i v_DimAnsættelse. 
 
 
 
