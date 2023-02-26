@@ -180,12 +180,9 @@ Til **visning af månnedslønnede fordelt på [..-intervaller]** anvendes tre me
 - _[AnsatteAnciennitetsinterStrategisk]_
 - _[AnsatteAnsættelseslængdeintervalStrategisk]_
 
-De tre measures er identiske i funktion at aggregere og summere [AntalAnsatteNedslagsdatoer] på intervaller defineret i **tally-tabeller**
+De tre measures er identiske i funktionen at aggregere og summere [AntalAnsatteNedslagsdatoer] på intervaller defineret i **tally-tabeller**. 
 
-vises optælling _dags dato_. 
-
-
-Vha. af tally-tabeller
+> Tally-tabeller dannes med dét specifikke formål at kunne gruppere data på en ønsket måde. Vi definerer i disse bucketsize, intervalgrænser og -antal mhp. at gøre læsbarheden af grafer bedre.
 
 ```DAX
 //Measure beregner antallet i aldersintervaller på strategisk dashboard baseret på switchmeasure med forskellige ansættelsesformer m.m.
