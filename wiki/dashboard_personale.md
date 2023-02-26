@@ -155,6 +155,7 @@ Measuret [AntalAnsatteNedslagsdatoer] er desuden designet til at indgå i en kon
 
 Til beregning af **Udvikling i antal måndeslønnede fordelt på hovedstillingsgrupper** vises desuden benchmarking mod tidligere nedslagsdatoer, 
 $$ \frac{ antal_{\text{i dag}} - antal_{\text{nedslagsdato}} }{ antal_{\text{i dag}} } \cdot 100\% $$. 
+Dette er implementeret i _[AendringIftBenchmark]_.
 ```DAX
 [AendringIftBenchmark] =
 //Measure beregner den procentvise ændring mellem to nedslagsdatoer (d.d. og benchmark)
