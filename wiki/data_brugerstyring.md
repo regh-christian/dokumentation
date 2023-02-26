@@ -23,10 +23,10 @@
 <details><summary markdown="span">**ØVELSE - BRUGERSTYRING** <img src="Images/icons_ref/icon_git.png" height="35" width="35"></summary>
 
 > - Hvem er din sektionsleder og hvilke(n) rolle(r) er denne tildelt i SD? 
-> - På hvilket organisationsniveau (NY-Niveau) er disse gældende?
+> - På hvilket organisatorisk niveau (NY-niveau) er disse gældende?
 > - Hvilke SD-rolle har du selv?
 > - Givet at du ikke er leder, hvorfor kan du se data i HR Lederdashboardet?
-> - Hvad skal vi ændre, hvis flere AD-grupper skal kunne anvende HR Lederdashboardet?
+> - Hvad skal vi ændre, hvis flere SD-grupper skal kunne anvende HR Lederdashboardet?
 >  
 > Se <a href="https://github.com/DataOgDigitalisering/FortroligInformation/blob/main/%C3%98velser/%C3%B8v_brugerstyring.sql" target="_blank">**løsningsforslag**</a>.
 
