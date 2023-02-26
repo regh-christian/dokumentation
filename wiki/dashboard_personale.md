@@ -186,11 +186,11 @@ Til **visning af månnedslønnede fordelt på [..-intervaller]** anvendes tre me
 - _[AnsatteAnciennitetsinterStrategisk]_
 - _[AnsatteAnsættelseslængdeintervalStrategisk]_
 
-De tre measures er identiske i funktionen at aggregere og summere [AntalAnsatteNedslagsdatoer] på intervaller defineret i **tally-tabeller**. 
+De tre measures er identiske i funktionen at aggregere og summere unikke individer ( _[AntalAnsatteNedslagsdatoer]_ ) på intervaller defineret i **tally-tabellerne**: 
 
-- _v_TallyAlder_
-- _v_TallyAnciennitet_
-- _v_TallyAnsættelseslængde_
+- v_TallyAlder
+- v_TallyAnciennitet
+- v_TallyAnsættelseslængde
 
 > Tally-tabeller dannes med dét specifikke formål at kunne gruppere data på en ønsket måde. Vi definerer i disse tabeller bucketsize, intervalgrænser og -antal mhp. fx at gøre læsbarheden af grafer bedre.
 
