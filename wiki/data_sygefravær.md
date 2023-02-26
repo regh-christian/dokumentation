@@ -37,6 +37,20 @@ end as l2Name
 ```
 > Vær opmærksom på, at gruppering på L2-niveau ikke er identisk er med SD's *LOENARTTXT*
 
+<!-- ØVELSE -->
+{::options parse_block_html="true" /}
+<details><summary markdown="span">**ØVELSE - FRAVÆRSTYPER** <img src="Images/icons_ref/icon_git.png" height="35" width="35"></summary>
+   
+I chru_cube anvendes i tabellen v_DimLønartFravær en anden gruppering af fraværstyper (L2Name), end SD bruger (LOENARTTXT).
+> Gør rede for ligheder og forskelle. 
+> Hvad er grunden til, at der i chru_cube anvendes en anden gruppering?
+
+> Se <a href="https://github.com/DataOgDigitalisering/FortroligInformation/blob/main/%C3%98velser/%C3%B8v_fraværstyper.sql" target="_blank">**løsningsforslag**</a>.
+
+</details>
+{::options parse_block_html="false" /}
+
+
 
 
 ### v_FactFravær
