@@ -90,6 +90,41 @@ Alle personer i v_DimAnsættelse, som er månedslønnede og _ikke_ er fuldtidsan
 
 ----------
 
+### Ferie
+Ferie er, som det præsenteres i dashboard, bredt defineret som den (rest)ferie, medarbejder har ret til at afholde. Indeholdt i beregningen er positive bidrag fra optjent feriesaldo og forventet tilskrivning samt negative bidrag fra anvendt og planlagt ferie.
+
+----------
+
+### Feriekategori
+Feriekategori dækker begreberne feriesaldo, anvendt ferie, planlagt ferie og forventet tilskrivning.
+
+----------
+
+### Ferietype
+Med ferietype menes ordinær ferie (1. - 5. ferieuge) eller 6. ferieuge.
+
+----------
+
+### Ferietilskrivning
+Forventet tilskrivning er det antalt ferietimer, som en person _forventes_ at have til afhold i hele afviklingsåret baseret på aktuel beskæftigelsesdecimal.
+
+----------
+
+### Ferietimer
+Registreret ved lønart 730 (ferietimer) og 752 (Ferietimer '6. uge')
+
+----------
+
+### Ferieår
+Ferieåret opdeles i ordinær og 6. ferieuge med hver en **optjenings**- og en **afviklingsperiode**.
+
+| **FerieType** | **Optjeningsperiode**     | **Afviklingsperiode**     |
+|       -:      |             -             |             -             |
+| Ordinær       | 01-09-yyyy — 31-08-yyyy+1 | 01-09-yyyy — 31-12-yyyy+1 |
+| 6. ferieuge   | 01-01-yyyy — 31-12-yyyy   | 01-05-yyyy — 30-04-yyyy+1 |
+
+----------
+
 ### Fratrædelse
 Kendetegnet ved et skift i ansættelsesstatus til enten emigreret/død (7), fratrådt (8) eller pensioneret (9) fra at have været enten ansat uden løn (0), ansat/genåbnet (1) eller midlertidigt ude af løn (3). Fratrædelsesdatoen er sidste dag i en ansættelsesperiode.
 
@@ -171,6 +206,16 @@ Kendetegnet ved et skift i ansættelsesstatus fra midlertidigt ude af løn (3) t
 
 ----------
 
+### Restferie
+Til beregning af restferie—antal timers ferie til afholdelse, _der endnu ikke er planlagt_—summeres alle ferieelementer i v_FactFerie[FerieTimer] med og uden løn. Dvs. summen af feriesaldo og forventet tilskrivning fratrukket summen af anvendt og planlagt ferie
+
+$$
+\text{Restferie til afhold} = \sum_{\text{optj.start}}^{\text{i dag}} (\text{feriesaldo}) + \sum_{\text{i morgen}}^{\text{optj.slut}} (\text{forv.tilskrivning})
+ - \left( \sum_{\text{afv.start}}^{\text{i dag}} (\text{anvendte timer}) + \sum_{\text{i morgen}}^{\text{afv.slut}} (\text{planlagte timer}) \right)
+$$
+
+----------
+
 ### Standardpopulation
 I bredeste forstand forstås ved v_DimAnsættelse[Standardpopulation]=J, alle [månedslønnede](#månedslønnet) og ikke-eksternt finansierede ansættelser.
 ```
@@ -204,38 +249,6 @@ $$ 1924 \frac{timer}{år} = 52 \frac{uger}{år} \cdot 37 \frac{timer}{uge} = 260
 
 ----------
 
-
-
-
-
-
-
-----------
-----------
-----------
-
-### Ferieelement
-
-### Feriesaldo
-
-
-### Ferietype
-Med ferietype menes ordinær ferie (1. - 5. ferieuge) eller 6. ferieuge.
-
-
-### Feriekategori
-Feriekategori dækker begreberne feriesaldo, anvendt ferie, planlagt ferie og forventet tilskrivning.
-
-
-### Ferieår
-Ferieåret opdeles i ordinær og 6. ferieuge med hver en **optjenings**- og en **afviklingsperiode**.
-
-| **FerieType** | **Optjeningsperiode**     | **Afviklingsperiode**     |
-|       -:      |             -             |             -             |
-| Ordinær       | 01-09-yyyy — 31-08-yyyy+1 | 01-09-yyyy — 31-12-yyyy+1 |
-| 6. ferieuge   | 01-01-yyyy — 31-12-yyyy   | 01-05-yyyy — 30-04-yyyy+1 |
-
-
 ### Restferie
 Til beregning af restferie—antal timers ferie til afholdelse, _der endnu ikke er planlagt_—summeres alle ferieelementer i v_FactFerie[FerieTimer] med og uden løn. Dvs. summen af feriesaldo og forventet tilskrivning fratrukket summen af anvendt og planlagt ferie
 
@@ -245,14 +258,5 @@ $$
 $$
 
 
-### Ferietimer
-Registreret ved lønart 730 (ferietimer) og 752 (Ferietimer '6. uge')
 
-
-### Ferie
-Ferie er, som det præsenteres i dashboard, bredt defineret som den (rest)ferie, medarbejder har ret til at afholde. Indeholdt i beregningen er positive bidrag fra optjent feriesaldo og forventet tilskrivning samt negative bidrag fra anvendt og planlagt ferie.
-
-
-### Ferietilskrivning
-Forventet tilskrivning er det antalt ferietimer, som en person _forventes_ at have til afhold i hele afviklingsåret baseret på aktuel beskæftigelsesdecimal.
  
