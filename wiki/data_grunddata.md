@@ -140,10 +140,11 @@ EksterntFinansieret: J hvis afdelingen på ansættelsesstarttidspunktet var ekst
 {::options parse_block_html="true" /}
 <details><summary markdown="span">**ØVELSE - STAMDATA** <img src="Images/icons_ref/icon_git.png" height="35" width="35"></summary>
 
-> - Hvilke oplysninger er registreret om dig i v_DimAnsættelse? På hvilket afdelings- og centerniveau er din ansættelse tilknyttet? 
-> - Hvad er din fag- og hovedstillingsgruppe?
-> - Hvor mange ansættelser har du haft? Hvis mere end én stemmer din anciennitet da overens med din ansættelseslænge? Hvis ikke, hvorfor?
->
+> - Hvilke oplysninger er registreret om dig i v_DimAnsættelse? 
+>  - På hvilket afdelings- og centerniveau er din ansættelse tilknyttet? 
+>  - Hvad er din fag- og hovedstillingsgruppe?
+>  - Hvor mange ansættelser har du haft? Hvis mere end én stemmer din anciennitet da overens med din ansættelseslænge? Hvis ikke, hvorfor?
+> - Udvælg relevante kolonner fra hhv. SD.SD_PERSON og genskab så mange af de dikotomiserede variable i v_DimAnsættelse.
 > Se <a href="https://github.com/DataOgDigitalisering/FortroligInformation/blob/main/Exercises/ex_stamdata.sql" target="_blank">**løsningsforslag**</a>.
 
 </details>
