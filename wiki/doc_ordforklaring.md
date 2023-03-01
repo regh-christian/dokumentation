@@ -7,6 +7,7 @@ if first.cpr AND AktuelRække = 1 AND Ansat = 1 then AktuelHovedansættelse=1;
 else AktuelHovedansættelse=0;
 ```
 _Ikke at forveklsle med_ [***aktuel ansættelse***](#ansættelse,-aktuel)
+
 ----------
 
 #### Anciennitet
