@@ -86,12 +86,12 @@ Muligheden for at ansatte til- og fratræder eller skifter fra fuld- til deltid 
 ----------
 
 #### Deltidsansat
-Alle personer i v_DimAnsættelse, som er månedslønnede og _ikke_ er fuldtidsansatte. Se [fuldtidsansat](#fuldtidsansat).
+Alle personer i v_DimAnsættelse, som er månedslønnede og _ikke_ er fuldtidsansatte. Se [***fuldtidsansat***](#fuldtidsansat).
 
 ----------
 
 #### Ferie
-Ferie er, som det præsenteres i dashboard, bredt defineret som den (rest)ferie, medarbejder har ret til at afholde. Indeholdt i beregningen er positive bidrag fra optjent feriesaldo og forventet tilskrivning samt negative bidrag fra anvendt og planlagt ferie.
+Ferie er, som det præsenteres i dashboard, bredt defineret som den (rest)ferie, medarbejder har ret til at afholde. Indeholdt i beregningen er positive bidrag fra optjent feriesaldo og forventet tilskrivning samt negative bidrag fra anvendt og planlagt ferie. Se [***restferie***](#restferie)
 
 ----------
 
