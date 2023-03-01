@@ -1,12 +1,12 @@
 #### Aktuel hovedansættelse
-Den ansættelse som opfylder og sorterer højest på kriterierne (i nævnte rækkefølge): Er gældende dags dato; status 0, 1 eller 3; Månedslønnet; Fuldtid; Startdato. Dvs. en person kan have et timelønnet ansættelsesforhold som aktuel hovedansættelse, men kun hvis det ikke overlapper i tid med et månedslønnet. På samme måde kan en deltidsstilling være en aktuel hovedansættelse, men kun hvis dette ikke overlapper en fuldtidsansættelse.
+Den ansættelse som opfylder og sorterer højest på kriterierne (i nævnte rækkefølge): Er gældende dags dato; status 0, 1 eller 3; Månedslønnet; Fuldtid; Startdato. En ansat medarbejder har til alle tider en og kun en aktuel hovedansættelse. Dvs. en person kan have et timelønnet ansættelsesforhold som aktuel hovedansættelse, men kun hvis dette ikke overlapper i tid med et månedslønnet. På samme måde kan en deltidsstilling være en aktuel hovedansættelse, men kun hvis dette ikke overlapper en fuldtidsansættelse.
 ```
 -- AktuelHovedansættelse, 07_FL_110_SD_DimAnsaettelse.sas
 by cpr descending AktuelRække descending Ansat descending Månedslønnet descending Fuldtid descending start tjnr;
 if first.cpr AND AktuelRække = 1 AND Ansat = 1 then AktuelHovedansættelse=1;
 else AktuelHovedansættelse=0;
 ```
-
+_Ikke at forveklsle med_ [***aktuel ansættelse***](#ansættelse,-aktuel)
 ----------
 
 #### Anciennitet
@@ -22,13 +22,13 @@ I alle beregninger, hvor der er risiko for at kunne identificere enkeltindivider
 ----------
 
 #### Ansættelse
-Et ansættelsesforhold med status ansat uden løn (0), ansat/genåbnet (1) eller midlertidigt ude af løn (3). Alle ansættelser er unikt kendetegnet ved en stillings-, tjeneste- og overenskomstkode, en lønklasse og afdeling. Ændring i én eller flere af disse forhold, medfører et nyt registreret ansættelsesforhold. Ansættelsens varighed opgøres fra 1. dag til den sidste dag i pågældende ansættelse begge dage inklusiv. 
+Et ansættelsesforhold med status 'ansat uden løn' (0), 'ansat/genåbnet' (1) eller 'midlertidigt ude af løn' (3). Alle ansættelser er unikt kendetegnet ved en stillings-, tjeneste- og overenskomstkode, en lønklasse og afdeling. Ændring i én eller flere af disse forhold, medfører et nyt registreret ansættelsesforhold (ny AnsættelsesID) men ikke nødvendigvis et nyt tjenestenummer. Ansættelsens varighed opgøres fra 1. dag (v_DimAnsættelse[Start]) til den sidste dag i pågældende ansættelse (v_DimAnsættelse[Slut]) begge dage inklusiv. 
 
 ----------
 
 #### Ansættelse, aktuel
 Med aktuel ansættelse henvises oftest til dét ansættelsesforhold, hvis start- og slutdato inkluderer dags dato og har status ansat/genåbnet (1), ansat uden løn (0) eller midlertidigt ude af løn (3).
-Vi vælger denne population med [Ansat]=J og [AktuelRække]=J. 
+Vi vælger denne population med v_DimAnsættelse[Ansat]=J og v_DimAnsættelse[AktuelRække]=J. 
 ```
 -- Aktuelrække, 07_FL_110_SD_DimAnsaettelse.sas
 ,(CASE
@@ -42,7 +42,7 @@ Vi vælger denne population med [Ansat]=J og [AktuelRække]=J.
     WHEN STAT IN ('0', '1', '3') THEN 1 ELSE 0 
   END) as Ansat length = 3,
 ```
-_Ikke at forveksle med_ [aktuel hovedansættelse](#aktuel-hovedansættelse).
+_Ikke at forveksle med_ v_DimAnsættelse[AktuelHovedansættelse](#aktuel-hovedansættelse).
 
 ----------
 
