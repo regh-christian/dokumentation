@@ -6,7 +6,7 @@ by cpr descending AktuelRække descending Ansat descending Månedslønnet descen
 if first.cpr AND AktuelRække = 1 AND Ansat = 1 then AktuelHovedansættelse=1;
 else AktuelHovedansættelse=0;
 ```
-_Ikke at forveklsle med_ [***aktuel ansættelse***](#ansættelse-aktuel)
+_Ikke at forveklsle med_ [**_aktuel ansættelse_**](#ansættelse-aktuel)
 
 ----------
 
@@ -43,7 +43,7 @@ Vi vælger denne population med v_DimAnsættelse[Ansat]=J og v_DimAnsættelse[Ak
     WHEN STAT IN ('0', '1', '3') THEN 1 ELSE 0 
   END) as Ansat length = 3,
 ```
-_Ikke at forveksle med_ [***AktuelHovedansættelse***](#aktuel-hovedansættelse).
+_Ikke at forveksle med_ [**_AktuelHovedansættelse_**](#aktuel-hovedansættelse).
 
 ----------
 
@@ -86,12 +86,12 @@ Muligheden for at ansatte til- og fratræder eller skifter fra fuld- til deltid 
 ----------
 
 #### Deltidsansat
-Alle personer i v_DimAnsættelse, som er månedslønnede og _ikke_ er fuldtidsansatte. Se [***fuldtidsansat***](#fuldtidsansat).
+Alle personer i v_DimAnsættelse, som er månedslønnede og _ikke_ er fuldtidsansatte. Se også [**_fuldtidsansat_**](#fuldtidsansat).
 
 ----------
 
 #### Ferie
-Ferie er, som det præsenteres i dashboard, bredt defineret som den (rest)ferie, medarbejder har ret til at afholde. Indeholdt i beregningen er positive bidrag fra optjent feriesaldo og forventet tilskrivning samt negative bidrag fra anvendt og planlagt ferie. Se også [***restferie***](#restferie)
+Ferie er, som det præsenteres i dashboard, bredt defineret som den (rest)ferie, medarbejder har ret til at afholde. Indeholdt i beregningen er positive bidrag fra optjent feriesaldo og forventet tilskrivning samt negative bidrag fra anvendt og planlagt ferie. Se også [**_restferie_**](#restferie)
 
 ----------
 
@@ -145,7 +145,7 @@ En fraværsdag er defineret ved
 $$ \frac{\text{antal fraværstimer}}{\text{antal planlagte timer}} = 1 $$
 
 En fraværsdag er altså ikke i sig selv et udtryk for antal timers fravær, men er relativ den på dagen planlagte arbejdstid.
-Se også [***fuldtidsfraværsdag***](#fuldtidsfraværsdag)
+Se også [**_fuldtidsfraværsdag_**](#fuldtidsfraværsdag)
 
 ----------
 
@@ -220,7 +220,7 @@ $$
 ----------
 
 #### Standardpopulation
-I bredeste forstand forstås ved v_DimAnsættelse[Standardpopulation]=J, alle [månedslønnede](#månedslønnet) og ikke-eksternt finansierede ansættelser.
+I bredeste forstand forstås ved v_DimAnsættelse[Standardpopulation]=J, alle [**_månedslønnede_**](#månedslønnet) og ikke-eksternt finansierede ansættelser.
 ```
 -- Standardpopulation, 07_FL_110_SD_DimAnsaettelse.sas
 ,(CASE  
@@ -231,7 +231,7 @@ I bredeste forstand forstås ved v_DimAnsættelse[Standardpopulation]=J, alle [m
     ELSE 1 
   END) as Standardpopulation length = 3,
 ```
-I praksis defineres populationer med filtre på faner i kombination med filter i beregninger og figurer. Kriterier for at indgå i populationen varierer med temaet; den tidslige dimension af en given analyse; samt hvem analysen er rettet imod.
+I praksis defineres populationer med filtre på faner evt. i kombination med filtre i beregninger (measures) og direkte på enkeltfigurer. Kriterier for at indgå i en given populationen varierer med temaet; den tidslige dimension af en given analyse; samt hvem analysen er rettet imod.
 
 ----------
 
@@ -241,14 +241,14 @@ Kendetegnet ved et skift i ansættelsesstatus fra ukendt, emigreret/død (7), fr
 ----------
 
 #### Timelønnet
-Formelt defineret: "Hvis ikke månedslønnet, så timelønnet". Se [månedslønnet](#månedslønnet).
+Formelt defineret: "Hvis ikke månedslønnet, så timelønnet". Se også [**_månedslønnet_**](#månedslønnet).
 
 ----------
 
 #### Årsværk
 I beregninger anvendes
 
-$$ 1924 \frac{timer}{år} = 52 \frac{uger}{år} \cdot 37 \frac{timer}{uge} = 260 \frac{dag}{år} \cdot 7,4 \frac{timer}{dag} $$
+$$ 1924 \frac{\text{timer}}{\text{år}} = 52 \frac{\text{uger}}{\text{år}} \cdot 37 \frac{\text{timer}}{\text{uge}} = 260 \frac{\text{dag}}{\text{år}} \cdot 7,4 \frac{\text{timer}}{\text{dag}} $$
 
 ----------
 
