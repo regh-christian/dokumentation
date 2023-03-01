@@ -162,7 +162,7 @@ Ansættelser kendetegnet ved
 
 #### Fuldtidsfraværsdag
 En fuldtidsfraværsdag er defineret ved sammenhængende 7,4 timers fravær svt. ét dagsværk. Vi bruger denne enhed til sammenligning på tværs i organisationen uagtet forskelle i enkeltindividers beskæftigelsesdecimal. Sygefravær på en hel 12-timersvagt vil således tælle som 
-$$ \frac{12 \text{timer}}{7,4 \frac{\text{timer}}{\text{dag}} } \approx 1,62 \text{dag}  $$
+$$ \frac{12 \text{timer}}{7,4 \sfrac{\text{timer}}{\text{dag}} }\approx 1,6\text{dag}  $$
 
 ----------
 
