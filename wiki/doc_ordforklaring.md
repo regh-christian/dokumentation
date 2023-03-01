@@ -91,7 +91,7 @@ Alle personer i v_DimAnsættelse, som er månedslønnede og _ikke_ er fuldtidsan
 ----------
 
 #### Ferie
-Ferie er, som det præsenteres i dashboard, bredt defineret som den (rest)ferie, medarbejder har ret til at afholde. Indeholdt i beregningen er positive bidrag fra optjent feriesaldo og forventet tilskrivning samt negative bidrag fra anvendt og planlagt ferie. Se [***restferie***](#restferie)
+Ferie er, som det præsenteres i dashboard, bredt defineret som den (rest)ferie, medarbejder har ret til at afholde. Indeholdt i beregningen er positive bidrag fra optjent feriesaldo og forventet tilskrivning samt negative bidrag fra anvendt og planlagt ferie. Se også [***restferie***](#restferie)
 
 ----------
 
@@ -145,7 +145,7 @@ En fraværsdag er defineret ved
 $$ \frac{\text{antal fraværstimer}}{\text{antal planlagte timer}} = 1 $$
 
 En fraværsdag er altså ikke i sig selv et udtryk for antal timers fravær, men er relativ den på dagen planlagte arbejdstid.
-Se også [fuldtidsfraværsdag](#fuldtidsfraværsdag)
+Se også [***fuldtidsfraværsdag***](#fuldtidsfraværsdag)
 
 ----------
 
@@ -161,7 +161,8 @@ Ansættelser kendetegnet ved
 ----------
 
 #### Fuldtidsfraværsdag
-En fuldtidsfraværsdag er defineret ved sammenhængende 7,4 timers fravær svt. ét dagsværk. Vi bruger denne enhed til sammenligning på tværs i organisationen uagtet forskelle i enkeltindividers beskæftigelsesdecimal. 
+En fuldtidsfraværsdag er defineret ved sammenhængende 7,4 timers fravær svt. ét dagsværk. Vi bruger denne enhed til sammenligning på tværs i organisationen uagtet forskelle i enkeltindividers beskæftigelsesdecimal. Sygefravær på en hel 12-timersvagt vil således tælle som 
+$$ \frac{12 \text{timer}}{7,4 \frac{\text{timer}}{\text{dag}} } \approx 1,62 \text{dag}  $$
 
 ----------
 
