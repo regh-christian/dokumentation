@@ -6,12 +6,12 @@ by cpr descending AktuelRække descending Ansat descending Månedslønnet descen
 if first.cpr AND AktuelRække = 1 AND Ansat = 1 then AktuelHovedansættelse=1;
 else AktuelHovedansættelse=0;
 ```
-_Ikke at forveklsle med_ [***aktuel ansættelse***](#ansættelse,-aktuel)
+_Ikke at forveklsle med_ [***aktuel ansættelse***](#ansættelse-aktuel)
 
 ----------
 
 #### Anciennitet
-I SD har anciennitetsdato ikke en entydig betydning. Den kan betyde startdatoen i første ansættelse i regionen (ligesom _ansættelsesdato_), men den kan også være resultat af fx omregnet anciennitet fra deltidsbeskæftigelse. Et bedre udtryk for en persons egentlige anciennitet i regionen er v_DimAnsættelse[_AnsLængdeCPR_]. 
+I SD har anciennitetsdato ikke en entydig betydning. Den kan betyde startdatoen i første ansættelse i regionen (ligesom _ansættelsesdato_), men den kan også være resultat af konverteret anciennitet fx ved skift fra deltids- til fuldtidsansættelse. Et bedre udtryk for en persons egentlige anciennitet i regionen er v_DimAnsættelse[_AnsLængdeCPR_]. 
 
 ----------
 
@@ -23,12 +23,12 @@ I alle beregninger, hvor der er risiko for at kunne identificere enkeltindivider
 ----------
 
 #### Ansættelse
-Et ansættelsesforhold med status 'ansat uden løn' (0), 'ansat/genåbnet' (1) eller 'midlertidigt ude af løn' (3). Alle ansættelser er unikt kendetegnet ved en stillings-, tjeneste- og overenskomstkode, en lønklasse og afdeling. Ændring i én eller flere af disse forhold, medfører et nyt registreret ansættelsesforhold (ny AnsættelsesID) men ikke nødvendigvis et nyt tjenestenummer. Ansættelsens varighed opgøres fra 1. dag (v_DimAnsættelse[Start]) til den sidste dag i pågældende ansættelse (v_DimAnsættelse[Slut]) begge dage inklusiv. 
+Et ansættelsesforhold med status 'ansat uden løn' (0), 'ansat/genåbnet' (1) eller 'midlertidigt ude af løn' (3). Alle ansættelser er unikt kendetegnet ved en stillings-, tjeneste- og overenskomstkode, en lønklasse og afdeling. Ændring i én eller flere af disse forhold, medfører et nyt registreret ansættelsesforhold (nyt AnsættelsesID) men ikke nødvendigvis et nyt tjenestenummer. Ansættelsens varighed opgøres fra 1. dag (v_DimAnsættelse[Start]) til den sidste dag i pågældende ansættelse (v_DimAnsættelse[Slut]) begge dage inklusiv. 
 
 ----------
 
-#### Ansættelse, aktuel
-Med aktuel ansættelse henvises oftest til dét ansættelsesforhold, hvis start- og slutdato inkluderer dags dato og har status ansat/genåbnet (1), ansat uden løn (0) eller midlertidigt ude af løn (3).
+### Ansættelse, aktuel
+Med aktuel ansættelse henvises oftest til dét ansættelsesforhold, hvis start- og slutdato inkluderer dags dato OG har status ansat/genåbnet (1), ansat uden løn (0) eller midlertidigt ude af løn (3).
 Vi vælger denne population med v_DimAnsættelse[Ansat]=J og v_DimAnsættelse[AktuelRække]=J. 
 ```
 -- Aktuelrække, 07_FL_110_SD_DimAnsaettelse.sas
