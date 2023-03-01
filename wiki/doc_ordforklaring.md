@@ -27,7 +27,7 @@ Et ansættelsesforhold med status 'ansat uden løn' (0), 'ansat/genåbnet' (1) e
 
 ----------
 
-### Ansættelse, aktuel
+#### Ansættelse, aktuel
 Med aktuel ansættelse henvises oftest til dét ansættelsesforhold, hvis start- og slutdato inkluderer dags dato OG har status ansat/genåbnet (1), ansat uden løn (0) eller midlertidigt ude af løn (3).
 Vi vælger denne population med v_DimAnsættelse[Ansat]=J og v_DimAnsættelse[AktuelRække]=J. 
 ```
@@ -50,8 +50,7 @@ _Ikke at forveksle med_ [***AktuelHovedansættelse***](#aktuel-hovedansættelse)
 #### Ansættelseslængde
 I opgørelser om personalesammensætning henviser ansættelseslængde til perioden fra _ansættelsensdato_ i SD til dags dato.
 ```DAX
-[Ansættelseslængde]:=
-//Measure beregner ansættelseslængder
+[Ansættelseslængde]=
 VAR __AnsaettelsesDato =
     MAX ( 'v_DimAnsættelse'[Ansættelsesdato] )
 VAR Result =
@@ -82,7 +81,7 @@ Sum af ansattes beskæftigelsesdecimaler. Anvendes flere steder direkte oversat 
 
 #### Beskæftigelsessum, gennemsnitlig
 Gennemsnitlig beskæftigelsessum på udvalgte nedslagsdatoer—d. 1. i en måned. 
-Muligheden for at ansatte til- og fratræder eller skifter fra fuld- til deltid midt i en måned introducerer dilemmaer, hvor vi må vælge i et kompromis imellem tunge og komplekse eller mere grovmaskede beregninger. Ét eksempel herpå er i beregning af det rullende gennemsnit af fuldtidsfraværsdage, hvor vi fx månedsvist d. 1. aggregerer indeværende månedens fravær relativt til beskæftigelsessum. Her antages, at beskæftigelsesdecimaler d. 1. er repræsentativ for hele perioden siden forrige nedslagsdato. 
+Muligheden for at ansatte til- og fratræder eller skifter fra fuld- til deltid midt i en måned introducerer dilemmaer, hvor vi må vælge i et kompromis imellem tunge og komplekse eller mere grovmaskede beregninger. Ét eksempel herpå er i beregning af det rullende gennemsnit af fuldtidsfraværsdage, hvor vi månedsvist d. 1. aggregerer indeværende månedens fravær relativt til beskæftigelsessum. Her antages, at beskæftigelsesdecimaler d. 1. er repræsentativ for hele perioden siden forrige nedslagsdato. 
 
 ----------
 
