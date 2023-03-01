@@ -43,7 +43,7 @@ Vi vælger denne population med v_DimAnsættelse[Ansat]=J og v_DimAnsættelse[Ak
     WHEN STAT IN ('0', '1', '3') THEN 1 ELSE 0 
   END) as Ansat length = 3,
 ```
-_Ikke at forveksle med_ v_DimAnsættelse[AktuelHovedansættelse](#aktuel-hovedansættelse).
+_Ikke at forveksle med_ [***AktuelHovedansættelse***](#aktuel-hovedansættelse).
 
 ----------
 
