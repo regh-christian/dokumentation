@@ -182,7 +182,7 @@ Pr. 2023-01-06 defineret som  en af følgende:
 ----------
 
 #### Jubilæum
-Alle jubilæumsdatoer i 5-årsintervaller samt étårsjubilæum beregnes og betragtes som en hændelse.
+Alle jubilæumsdatoer i 5-årsintervaller (foruden étårsjubilæum) beregnes og betragtes som en hændelse.
 
 ----------
 
@@ -203,7 +203,9 @@ Ansættelser kendetegnet ved
 ----------
 
 #### Orlov
-Kendetegnet ved et skift i ansættelsesstatus fra midlertidigt ude af løn (3) til enten ansat/genåbnet (1) eller ansat uden løn (0). Eller omvendt.
+**Går på orlov**: Kendetegnet ved et skift i ansættelsesstatus _til_ midlertidigt ude af løn (3) efter at have været enten ansat/genåbnet (1) eller ansat uden løn (0).
+
+**Tilbage fra orlov**: Kendetegnet ved et skift i ansættelsesstatus _fra_ midlertidigt ude af løn (3) til enten ansat/genåbnet (1) eller ansat uden løn (0). 
 
 ----------
 
