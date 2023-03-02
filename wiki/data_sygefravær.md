@@ -66,6 +66,19 @@ I chru_cube beregnes desuden kolonnerne ’Arbejdsdage’ som andelen af fravær
 Fraværsdage på dage uden planlagte timer medregnes ikke.
 
 
+<!-- ØVELSE -->
+{::options parse_block_html="true" /}
+<details><summary markdown="span">**ØVELSE - FRAVÆR** <img src="Images/icons_ref/icon_git.png" height="35" width="35"></summary>
+  
+> - Beregn sektionens fravær (fraværsdage og fuldtidsdage) i de seneste 12 hele måneder fordelt på enheder
+> - Sammenlign med HR Lederdashboarder
+>
+> Se <a href="https://github.com/DataOgDigitalisering/FortroligInformation/blob/main/Exercises/ex_fravær.sql.sql" target="_blank">**løsningsforslag**</a>.
+
+</details>
+{::options parse_block_html="false" /}
+
+
 
 ### v_FactAggFravær
 
