@@ -4,7 +4,7 @@ Vi er en sektion under enheden **Data og Digitalisering** i **Center for HR og U
 Sektionen har hovedsageligt tekniske medarbejdere med kompetencer i dataudtræk og datafremstilling og økonomimedarbejdere, samt ledelsesmedarbejdere til at understøtte disse.
 <br>
 
-<!-- PowerPoint: "lntroduktion og onboarding 2022"  -->
+<!-- PowerPoint: "Introduktion og onboarding 2022"  -->
 <center>
 <iframe src="https://regionh-my.sharepoint.com/personal/stefan_sajin-henningsen_regionh_dk/_layouts/15/Doc.aspx?sourcedoc={5e29731f-bf33-4e15-b6f3-11422824f074}&amp;action=embedview&amp;wdAr=1.7777777777777777" height="587" width="1000" frameborder="0"></iframe>
 </center>
@@ -82,6 +82,12 @@ Hav altid seneste version af Power BI Desktop installeret for at sikre nyeste og
 
 
 # Data
+
+<!-- PowerPoint: "Data.pptx"  -->
+<center>
+<iframe src="https://regionh-my.sharepoint.com/personal/stefan_sajin-henningsen_regionh_dk/_layouts/15/Doc.aspx?sourcedoc={1eabb8b8-ee27-4f6b-a998-091ce9ca0872}&amp;action=embedview&amp;wdAr=1.7777777777777777" height="587" width="1000" frameborder="0"></iframe>
+</center>
+
 
 <!-- Embed iFrame. word-doc: "Guide til bestilling af adgange.docx" på OneDrive-->
 {::options parse_block_html="true" /}
