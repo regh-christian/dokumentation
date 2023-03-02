@@ -220,6 +220,24 @@ Variablen MedarbejdereAnsat=1 angiver, om der er >0 ansatte på afdelingen (opta
 Current_row=1 sikrer opdateret organisationshieraki men ignorerer evt. historiske ændringer.
 <br>
 
+<!-- ØVELSE -->
+{::options parse_block_html="true" /}
+<details><summary markdown="span">**ØVELSE - DINE KOLLEGAER** <img src="Images/icons_ref/icon_git.png" height="35" width="35"></summary>
+
+> Kun vha. data fra CHRU_HRKube lav en tabel indeholdende alle dine kollegaer i sektionen. Du må maksimalt bruge ét hard-codet kriterie, fx et navn.
+> Tabellen skal indeholde en og kun en række pr. person med den ansættelse, som er gældende dags dato i samme sektion som dig selv med én af statuskoderne 0, 1 eller 3.
+> Sammensæt kolonnerne:
+> | Navn | Fødselsdato | Alder | Stilling | Hovedstillingsgruppe | Sektion | Enhed | Statuskode | Anciennitet |
+> 
+> - Hvad er aldersfordelingen blandt dine kollegaer
+> - Hvilke funktioner har I ansat i sektionen?
+> - Hvor længe har folk været ansat?
+>
+> Se <a href="https://github.com/DataOgDigitalisering/FortroligInformation/blob/main/Exercises/ex_personale.sql" target="_blank">**løsningsforslag**</a>.
+
+</details>
+{::options parse_block_html="false" /}
+
 
 
 ### v_DimLønart
