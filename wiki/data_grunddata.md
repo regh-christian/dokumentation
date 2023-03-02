@@ -146,20 +146,6 @@ EksterntFinansieret: J hvis afdelingen på ansættelsesstarttidspunktet var ekst
 
 Dimensionstabel med ID som primærnøgle. Derudover navn og fødselsdato.
 
-<!-- ØVELSE -->
-{::options parse_block_html="true" /}
-<details><summary markdown="span">**ØVELSE - PERSONALE** <img src="Images/icons_ref/icon_git.png" height="35" width="35"></summary>
-
-Beregn vha. kuben: og kun ved brug af én persons navn:
-> - Hvor mange måneds- og timelønnede er ansat i sektionen dags dato med statuskode 0, 1 eller 3?
-> - Hvor mange årsværk arbejdes i sektionen?
-> - Hvordan er denne fordelingen mellem sektioner og jobstillinger?
-> - Passer din udregning med hvad HR Lederdashboardet viser?
->
-> Se <a href="https://github.com/DataOgDigitalisering/FortroligInformation/blob/main/Exercises/ex_personale.sql" target="_blank">**løsningsforslag**</a>.
-
-</details>
-{::options parse_block_html="false" /}
 
 
 
