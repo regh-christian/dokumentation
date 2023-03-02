@@ -159,6 +159,7 @@ EksterntFinansieret: J hvis afdelingen på ansættelsesstarttidspunktet var ekst
 Beregn vha. kuben og kun ved brug af én persons navn:
 > - Hvor mange måneds- og timelønnede er ansat i enheden dagsdato med statuskode 0, 1 eller 3?
 > - Passer din udregning med hvad HR Lederdashboardet viser?
+>
 > Se <a href="https://github.com/DataOgDigitalisering/FortroligInformation/blob/main/Exercises/ex_personale.sql" target="_blank">**løsningsforslag**</a>.
 
 </details>
