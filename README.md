@@ -81,7 +81,7 @@ Hav altid seneste version af Power BI Desktop installeret for at sikre nyeste og
 
 
 
-# Dataadgange
+# Data
 
 <!-- Embed iFrame. word-doc: "Guide til bestilling af adgange.docx" på OneDrive-->
 {::options parse_block_html="true" /}
