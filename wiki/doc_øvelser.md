@@ -46,7 +46,7 @@ Beregn vha. kuben:
 
 
 
-ØVELSE - FRAVÆRSTYPER <img src="Images/icons_ref/icon_git.png" height="35" width="35">
+## ØVELSE - FRAVÆRSTYPER <img src="Images/icons_ref/icon_git.png" height="35" width="35">
    
 > I CHRU_HRKube anvendes i tabellen v_DimLønartFravær en anden gruppering af fraværstyper (L2Name), end den gruppering SD bruger (LOENARTTXT).
 >
@@ -57,7 +57,7 @@ Beregn vha. kuben:
 
 
 
-ØVELSE - FRAVÆR <img src="Images/icons_ref/icon_git.png" height="35" width="35">
+## ØVELSE - FRAVÆR <img src="Images/icons_ref/icon_git.png" height="35" width="35">
   
 > - Beregn sektionens fravær (fraværsdage og fuldtidsdage) i de seneste 12 hele måneder fordelt på enheder
 > - Sammenlign med HR Lederdashboarder
