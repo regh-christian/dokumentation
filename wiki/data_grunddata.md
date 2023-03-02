@@ -152,6 +152,15 @@ EksterntFinansieret: J hvis afdelingen på ansættelsesstarttidspunktet var ekst
 {::options parse_block_html="false" /}
 
 
+
+### v_DimPerson
+
+| **View** | **Opdateres** | **Baseret på** |
+|-|-|-|
+| [chru_cube].[v_DimPerson] | Dagligt | [DM_FL_HR].[DimPerson] |
+
+Dimensionstabel med ID som primærnøgle. Derudover navn og fødselsdato.
+
 <!-- ØVELSE -->
 {::options parse_block_html="true" /}
 <details><summary markdown="span">**ØVELSE - PERSONALE** <img src="Images/icons_ref/icon_git.png" height="35" width="35"></summary>
@@ -164,16 +173,6 @@ Beregn vha. kuben og kun ved brug af én persons navn:
 
 </details>
 {::options parse_block_html="false" /}
-
-
-
-### v_DimPerson
-
-| **View** | **Opdateres** | **Baseret på** |
-|-|-|-|
-| [chru_cube].[v_DimPerson] | Dagligt | [DM_FL_HR].[DimPerson] |
-
-Dimensionstabel med ID som primærnøgle. Derudover navn og fødselsdato.
 
 
 
