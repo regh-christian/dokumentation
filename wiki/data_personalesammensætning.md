@@ -56,7 +56,7 @@ Endeligt tilføjes tidssvarende Stillings- og PersonID og rækker indekseres
 
 <!-- ØVELSE -->
 {::options parse_block_html="true" /}
-<details><summary markdown="span">**ØVELSE - PERSONALE** <img src="Images/icons_ref/icon_git.png" height="35" width="35"></summary>
+<details><summary markdown="span">**ØVELSE - PERSONALESAMMENSÆTNING** <img src="Images/icons_ref/icon_git.png" height="35" width="35"></summary>
 
 Beregn vha. kuben:
 > - Hvor mange måneds- og timelønnede er ansat i sektionen dags dato med statuskode 0, 1 eller 3?
