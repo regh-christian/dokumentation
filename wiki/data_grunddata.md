@@ -134,22 +134,7 @@ EksterntFinansieret: J hvis afdelingen på ansættelsesstarttidspunktet var ekst
 **TillInst**: Hvor ’HændelseImellem’ er ”Mellem institutioner”, er denne udfyldt med institutionen på personens nye/kommende ansættelsesforhold.
 
 ***FLERE VARIABLE ER TILFØJET SIDEN !***
-<br>
 
-<!-- ØVELSE -->
-{::options parse_block_html="true" /}
-<details><summary markdown="span">**ØVELSE - PERSONDATA** <img src="Images/icons_ref/icon_git.png" height="35" width="35"></summary>
-
-> - Hvilke oplysninger er registreret om dig i v_DimAnsættelse? 
->  - Hvilket enheds- og sektionsniveau er din ansættelse tilknyttet? 
->  - Hvad er din fag- og hovedstillingsgruppe?
->  - Hvor mange ansættelser har du haft? Hvis mere end én stemmer din anciennitet da overens med din ansættelseslænge? Hvis ikke, hvorfor?
-> - Udvælg relevante kolonner fra hhv. SD.SD_PERSON og genskab så mange af de dikotomiserede variable i v_DimAnsættelse du kan.
->
-> Se <a href="https://github.com/DataOgDigitalisering/FortroligInformation/blob/main/Exercises/ex_persondata.sql" target="_blank">**løsningsforslag**</a>.
-
-</details>
-{::options parse_block_html="false" /}
 
 
 
