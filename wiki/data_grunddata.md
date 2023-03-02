@@ -225,7 +225,7 @@ Current_row=1 sikrer opdateret organisationshieraki men ignorerer evt. historisk
 {::options parse_block_html="true" /}
 <details><summary markdown="span">**ØVELSE - DINE KOLLEGAER** <img src="Images/icons_ref/icon_git.png" height="35" width="35"></summary>
 
-> Kun vha. data fra CHRU_HRKube lav en tabel indeholdende alle dine kollegaer i sektionen. Tabellen skal indeholde en og kun en række pr. person med en af statuskoderne 0, 1 eller 3. Du må maksimalt bruge ét hard-codet kriterie, fx et navn.
+> Kun vha. data fra CHRU_HRKube lav en tabel indeholdende alle dine kollegaer i sektionen. Tabellen skal indeholde en og kun en række pr. person med en af statuskoderne 0, 1 eller 3. Maksimalt ét søgekriterie må være hard-codet, fx et navn eller et id fra organisationshierakiet.
 > Sammensæt kolonnerne:
 >
 > | Navn | Fødselsdato | Alder | Stilling | Hovedstillingsgruppe | Sektion | Enhed | Statuskode | Anciennitet |
