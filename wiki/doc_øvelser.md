@@ -1,36 +1,65 @@
 # Øvelser
 
-Alle øvelser samles her. Fordeles efterfølgende rundt på siden, hvor de passer til emner.
+## ØVELSE - KONTROL AF DATAADGANGE <img src="Images/icons_ref/icon_git.png" height="35" width="35">
 
-> #### ØVELSE – KONTROL AF ADGANGE
-> - Find og kør SQL-scriptet, XXXX. Dette kan tage 10-15min! 
-> - Gennemgå listen med en kollega. Hvad ser I? Har du adgang til de data, du har behov for?
-
-
-> #### ØVELSE - BRUGERSTYRING
-> - Hvem er din nærmeste leder i ’Data og rapportering’ og hvilke(n) AD-rolle(r) er denne tildelt i SD? På hvilket organisationsniveau (NY-Niveau)? **HELLERE VIERØ**
-> - På hvilket organisatorisk niveau er denne tildelt AD-rolle€?
-> - Hvilke afdelinger (sektioner) kan denne se data fra i HR Lederdashboardet?
-> - Givet at du ikke er leder, hvorfor kan du alligevel se data i HR Lederdashboardet?
-> - Hvad skal vi ændre, hvis flere AD-grupper skal kunne anvende HR Lederdashboardet?
+> - Følg <a href="https://github.com/DataOgDigitalisering/FortroligInformation/blob/main/Exercises/ex_dataadgange.sql" target="_blank">**dette link til SQL-script**</a>.
+> - Åbn og eksekver scriptet i SQL Server Management Studio. Kørslen kan tage >20 minutter og returnerer en tabel, der beskriver dine adgange. Spørg en kollega om du har de adgange, du har brug for.
 
 
-> #### ØVELSE – TÆL ÅRSVÆRK
-> Udregn vha. data i databasen, LON_HR, hvor mange årsværk, der arbejdes i din sektion baseret på aktuelt ansatte i dag. 
-> Gruppér dit resultat på time- hhv. månedslønnede, del- og fuldtidsansatte.
-> Lav samme beregning og gruppering baseret på data fra kuben.
-> (Har vi tilladelse til at bruge en specifik persons ansættelseshistorik?)	 
+
+## ØVELSE - BRUGERSTYRING <img src="Images/icons_ref/icon_git.png" height="35" width="35">
+
+> - Hvem er din sektionsleder og hvilke(n) rolle(r) er denne tildelt i SD? 
+> - På hvilket organisatorisk niveau (NY-niveau) er disse gældende?
+> - Hvilke SD-rolle har du selv?
+> - Givet at du ikke er leder, hvorfor kan du se data i HR Lederdashboardet?
+> - Hvad skal vi ændre, hvis flere SD-grupper skal kunne anvende HR Lederdashboardet?
+>  
+> Se <a href="https://github.com/DataOgDigitalisering/FortroligInformation/blob/main/Exercises/ex_brugerstyring.sql" target="_blank">**løsningsforslag**</a>.
 
 
->#### ØVELSE – STAMDATA
->Hvilke oplysninger er registreret om dig i v_DimAnsættelse? På hvilket afdelings- og centerniveau er din ansættelse tilknyttet? 
->Hvad er din fag- og hovedstillingsgruppe?
->Hvor mange ansættelser har du haft? Hvis mere end én stemmer din anciennitet da overens med din ansættelseslænge? Hvis ikke, hvorfor?
 
--- ---------------
+## ØVELSE - KOLLEGAER <img src="Images/icons_ref/icon_git.png" height="35" width="35">
 
-> **ØVELSE — BRUG AF ADGANGE**
-> 
-> Hospital XXX ønsker optælling af alle pr. dd. månedslønnede hhv. fuld- og deltidsansatte sygeplejersker 
-> udspecificeret for alle sygeplejegrupper under fællesbetegnelsen STILKO2TXT = ’Sygepl. Pers’
-> Hvor mange af disse er autoriserede med speciale indenfor anæstesi?
+> Kun vha. data fra CHRU_HRKube lav en tabel indeholdende alle dine kollegaer i sektionen. Tabellen skal indeholde en og kun en række pr. person med en af statuskoderne 0, 1 eller 3. Maksimalt ét søgekriterie må være hard-codet, fx et navn eller et id fra organisationshierakiet.
+> Sammensæt kolonnerne:
+>
+> | Navn | Fødselsdato | Alder | Stilling | Hovedstillingsgruppe | Sektion | Enhed | Statuskode | Anciennitet |
+>
+> - Hvad er aldersfordelingen blandt dine kollegaer
+> - Hvilke funktioner har I ansat i sektionen?
+> - Hvor længe har folk været ansat?
+>
+> Se <a href="https://github.com/DataOgDigitalisering/FortroligInformation/blob/main/Exercises/ex_kollegaer.sql" target="_blank">**løsningsforslag**</a>.
+
+
+
+## ØVELSE - PERSONALESAMMENSÆTNING <img src="Images/icons_ref/icon_git.png" height="35" width="35">
+
+Beregn vha. kuben:
+> - Hvor mange måneds- og timelønnede er ansat i sektionen dags dato med statuskode 0, 1 eller 3?
+> - Hvor mange årsværk arbejdes i sektionen?
+> - Hvordan er denne fordelingen mellem sektioner og jobstillinger?
+> - Passer din udregning med hvad HR Lederdashboardet viser?
+>
+> Se <a href="https://github.com/DataOgDigitalisering/FortroligInformation/blob/main/Exercises/ex_personale.sql" target="_blank">**løsningsforslag**</a>.
+
+
+
+ØVELSE - FRAVÆRSTYPER <img src="Images/icons_ref/icon_git.png" height="35" width="35">
+   
+> I CHRU_HRKube anvendes i tabellen v_DimLønartFravær en anden gruppering af fraværstyper (L2Name), end den gruppering SD bruger (LOENARTTXT).
+>
+> - Gør rede for ligheder og forskelle. 
+> - Hvad er grunden til, at der i CHRU_HRKube anvendes en anden gruppering?
+>
+> Se <a href="https://github.com/DataOgDigitalisering/FortroligInformation/blob/main/Exercises/ex_frav%C3%A6rstyper.sql" target="_blank">**løsningsforslag**</a>.
+
+
+
+ØVELSE - FRAVÆR <img src="Images/icons_ref/icon_git.png" height="35" width="35">
+  
+> - Beregn sektionens fravær (fraværsdage og fuldtidsdage) i de seneste 12 hele måneder fordelt på enheder
+> - Sammenlign med HR Lederdashboarder
+>
+> Se <a href="https://github.com/DataOgDigitalisering/FortroligInformation/blob/main/Exercises/ex_fravær.sql" target="_blank">**løsningsforslag**</a>.
