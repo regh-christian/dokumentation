@@ -73,7 +73,7 @@ Fraværsdage på dage uden planlagte timer medregnes ikke.
 > - Beregn sektionens fravær (fraværsdage og fuldtidsdage) i de seneste 12 hele måneder fordelt på enheder
 > - Sammenlign med HR Lederdashboarder
 >
-> Se <a href="https://github.com/DataOgDigitalisering/FortroligInformation/blob/main/Exercises/ex_fravær.sql.sql" target="_blank">**løsningsforslag**</a>.
+> Se <a href="https://github.com/DataOgDigitalisering/FortroligInformation/blob/main/Exercises/ex_fravær.sql" target="_blank">**løsningsforslag**</a>.
 
 </details>
 {::options parse_block_html="false" /}
