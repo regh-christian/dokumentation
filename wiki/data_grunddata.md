@@ -141,7 +141,7 @@ EksterntFinansieret: J hvis afdelingen på ansættelsesstarttidspunktet var ekst
 <details><summary markdown="span">**ØVELSE - PERSONDATA** <img src="Images/icons_ref/icon_git.png" height="35" width="35"></summary>
 
 > - Hvilke oplysninger er registreret om dig i v_DimAnsættelse? 
->  - På hvilket afdelings- og centerniveau er din ansættelse tilknyttet? 
+>  - På hvilket enheds- og sektions er din ansættelse tilknyttet? 
 >  - Hvad er din fag- og hovedstillingsgruppe?
 >  - Hvor mange ansættelser har du haft? Hvis mere end én stemmer din anciennitet da overens med din ansættelseslænge? Hvis ikke, hvorfor?
 > - Udvælg relevante kolonner fra hhv. SD.SD_PERSON og genskab så mange af de dikotomiserede variable i v_DimAnsættelse du kan.
@@ -165,8 +165,10 @@ Dimensionstabel med ID som primærnøgle. Derudover navn og fødselsdato.
 {::options parse_block_html="true" /}
 <details><summary markdown="span">**ØVELSE - PERSONALE** <img src="Images/icons_ref/icon_git.png" height="35" width="35"></summary>
 
-Beregn vha. kuben og kun ved brug af én persons navn:
-> - Hvor mange måneds- og timelønnede er ansat i enheden dagsdato med statuskode 0, 1 eller 3?
+Beregn vha. kuben: og kun ved brug af én persons navn:
+> - Hvor mange måneds- og timelønnede er ansat i sektionen dags dato med statuskode 0, 1 eller 3?
+> - Hvor mange årsværk arbejdes i sektionen?
+> - Hvordan er denne fordelingen mellem sektioner og jobstillinger?
 > - Passer din udregning med hvad HR Lederdashboardet viser?
 >
 > Se <a href="https://github.com/DataOgDigitalisering/FortroligInformation/blob/main/Exercises/ex_personale.sql" target="_blank">**løsningsforslag**</a>.
