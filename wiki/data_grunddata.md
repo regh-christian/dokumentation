@@ -227,8 +227,11 @@ Current_row=1 sikrer opdateret organisationshieraki men ignorerer evt. historisk
 > Kun vha. data fra CHRU_HRKube lav en tabel indeholdende alle dine kollegaer i sektionen. Du må maksimalt bruge ét hard-codet kriterie, fx et navn.
 > Tabellen skal indeholde en og kun en række pr. person med den ansættelse, som er gældende dags dato i samme sektion som dig selv med én af statuskoderne 0, 1 eller 3.
 > Sammensæt kolonnerne:
+>
 > | Navn | Fødselsdato | Alder | Stilling | Hovedstillingsgruppe | Sektion | Enhed | Statuskode | Anciennitet |
-> 
+>
+> | **Grunddata** | **Temaespecifik data** | **Hjælpetabeller** | **Infotabeller** |
+>
 > - Hvad er aldersfordelingen blandt dine kollegaer
 > - Hvilke funktioner har I ansat i sektionen?
 > - Hvor længe har folk været ansat?
