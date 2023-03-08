@@ -34,6 +34,7 @@ Exitsurvey-undersøgelsen vil indgå som en selvstændig fane/side i HR Strategi
 
 **Beregninger**
 
-Kommer snart
+
+Kommer snart og tester
 
 Tester lige lidt...
