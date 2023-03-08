@@ -159,7 +159,7 @@ I figurerne, der viser **udvikling i [...] fordelt på [..-grupper]**, filtreres
 
 Til beregning af **Udvikling i antal måndeslønnede fordelt på hovedstillingsgrupper** vises desuden benchmarking mod tidligere nedslagsdatoer, 
 
-$$ \frac{ antal_{\text{i dag}} - antal_{\text{nedslagsdato}} }{ antal_{\text{i dag}} } \cdot 100\% $$ 
+$$ \frac{ antal_{\text{i dag}} - antal_{\text{nedslagsdato}} }{ antal_{\text{nedslagsdato}} } \cdot 100\% $$ 
 
 Dette er implementeret i _[AendringIftBenchmark]_.
 ```DAX
