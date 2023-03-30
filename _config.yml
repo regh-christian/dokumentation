@@ -8,8 +8,6 @@ baseurl: "/dokumentation"
 description: # "Denne wiki indeholder dokumentation til intern brug for enhed for Data og Digitalisering"
 # (boolean) disable edit functionalities (edit/delete/add pages)
 disable_edit: true
-# (boolean) disable history/source
-disable_historySource: true
 # (boolean) Enable/disable wiki page list in sidebar
 show_wiki_pages: true
 # (integer) Maximum number of wiki page to shown in sidebar
