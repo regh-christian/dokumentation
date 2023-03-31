@@ -27,7 +27,8 @@ show_downloads: false
 # (string) Specify branch rendered by gitpages allowing wiki tool buttons to work
 git_branch: master
 # (string) Url of logo image, it can be full, absolute or relative.
-logo_url: "sdfghjhttps://www.regionh.dk/_layouts/15/RH/UI/images/logo/RegionH.png" #"https://avatars.githubusercontent.com/u/117913989?s=400&u=db96bfc7cf81da87d5e37a5a42f8cb4cfb68821c&v=4"
+#Dette URL er taget fra regionens hjemmeside. Hvis det ændrer sig kan det betyde at vi skal skifte det her også...
+logo_url: "https://www.regionh.dk/_layouts/15/RH/UI/images/logo/RegionH.png" #"https://avatars.githubusercontent.com/u/117913989?s=400&u=db96bfc7cf81da87d5e37a5a42f8cb4cfb68821c&v=4"
 # (string) The UA-XXXXX-Y code from google analytic to enable GA on your wiki
 google_analytics: 
 # (string) folder where wiki pages are stored, it's needed for tool buttons
